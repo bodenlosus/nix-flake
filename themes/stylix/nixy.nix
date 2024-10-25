@@ -4,34 +4,27 @@
 
     # Edited catppuccin
     base16Scheme = {
-      base00 = "0b0b0b"; # Default Background
-      base01 =
-        "1b1b1b"; # Lighter Background (Used for status bars, line number and folding marks)
-      base02 = "2b2b2b"; # Selection Background
-      base03 = "45475a"; # Comments, Invisibles, Line Highlighting
-      base04 = "585b70"; # Dark Foreground (Used for status bars)
-      base05 = "fcfcfc"; # Default Foreground, Caret, Delimiters, Operators
-      base06 = "f5e0dc"; # Light Foreground (Not often used)
-      base07 = "b4befe"; # Light Background (Not often used)
-      base08 =
-        "f38ba8"; # Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
-      base09 =
-        "fab387"; # Integers, Boolean, Constants, XML Attributes, Markup Link Url
-      base0A = "f9e2af"; # Classes, Markup Bold, Search Text Background
-      base0B = "a6e3a1"; # Strings, Inherited Class, Markup Code, Diff Inserted
-      base0C =
-        "94e2d5"; # Support, Regular Expressions, Escape Characters, Markup Quotes
-      base0D =
-        "A594FD"; # Functions, Methods, Attribute IDs, Headings, Accent color
-      base0E =
-        "cba6f7"; # Keywords, Storage, Selector, Markup Italic, Diff Changed
-      base0F =
-        "f2cdcd"; # Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+      base00= "2E3440";
+      base01= "3B4252";
+      base02= "434C5E";
+      base03= "4C566A";
+      base04= "D8DEE9";
+      base05= "E5E9F0";
+      base06= "ECEFF4";
+      base07= "8FBCBB";
+      base08= "BF616A";
+      base09= "D08770";
+      base0A= "EBCB8B";
+      base0B= "A3BE8C";
+      base0C= "88C0D0";
+      base0D= "81A1C1";
+      base0E= "B48EAD";
+      base0F= "5E81AC";
     };
 
     cursor = {
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
+      package = pkgs.nordzy-cursor-theme;
+    name = "Nordzy-cursors";
       size = 24;
     };
 
@@ -41,12 +34,12 @@
         name = "JetBrains Mono Nerd Font";
       };
       sansSerif = {
-        package = inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd;
-        name = "SFProDisplay Nerd Font";
+        package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
+        name = "FiraCode Nerd Font";
       };
       serif = {
-        package = inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd;
-        name = "SFProDisplay Nerd Font";
+        package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
+        name = "FiraCode Nerd Font";
       };
       emoji = {
         package = pkgs.noto-fonts-emoji;
@@ -59,9 +52,9 @@
         terminal = 13;
       };
     };
-
+    opacity.terminal = 0.8;
     polarity = "dark";
-    image = inputs.nixy-wallpapers + "/wallpapers/black-oil.png";
+    image = ./36.png;
   };
 
 }

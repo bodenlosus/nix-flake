@@ -15,6 +15,7 @@
     ../../home/programs/yazi
     ../../home/programs/markdown
     ../../home/programs/thunar
+    ../../home/programs/nautilus
     ../../home/programs/lazygit
 
     # Scripts
@@ -49,6 +50,7 @@
       vlc # Video player
       blanket # White-noise app
       microsoft-edge-beta
+      obsidian
       
       # Dev
       go

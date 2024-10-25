@@ -38,7 +38,6 @@
     hyprsunset.url = "github:hyprwm/hyprsunset";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     stylix.url = "github:danth/stylix";
-    apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
   };
 
   outputs = inputs@{ nixpkgs, ... }: {

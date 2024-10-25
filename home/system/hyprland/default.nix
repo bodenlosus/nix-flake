@@ -11,7 +11,7 @@ let
   keyboardLayout = config.var.keyboardLayout;
 in {
 
-  imports = [ ./animations.nix ./bindings.nix ./polkitagent.nix ];
+  imports = [ ./animations.nix ./bindings.nix ./polkitagent.nix ./wrules.nix ];
 
   home.packages = with pkgs; [
     qt5.qtwayland
@@ -76,7 +76,7 @@ in {
         "QT_QPA_PLATFORM=wayland,xcb"
         "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
         "ELECTRON_OZONE_PLATFORM_HINT,auto"
-        "GTK_THEME,FlatColor:dark"
+        "GTK_THEME,WhiteSur-Dark-grey-nord"
         "GTK2_RC_FILES,/home/hadi/.local/share/themes/FlatColor/gtk-2.0/gtkrc"
         "__GL_GSYNC_ALLOWED,0"
         "__GL_VRR_ALLOWED,0"
@@ -112,7 +112,13 @@ in {
         drop_shadow = true;
         shadow_range = 20;
         shadow_render_power = 3;
-        blur = { enabled = if blur then "true" else "false"; };
+        blur = { enabled = if blur then "true" else "false"; 
+          size = 12;
+        passes = 3;
+        noise = 0.05;
+        ignore_opacity = true;
+        vibrancy = 0.1696;
+        };
       };
 
       master = {

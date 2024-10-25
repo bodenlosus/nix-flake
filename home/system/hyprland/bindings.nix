@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland.settings = {
     bind = [
       "$mod,Q, exec, ${pkgs.kitty}/bin/kitty" # Kitty
-      "$mod,E, exec, ${pkgs.xfce.thunar}/bin/thunar" # Thunar
+      "$mod,E, exec, ${pkgs.nautilus}/bin/nautilus" # Thunar
       "$mod,B, exec, ${pkgs.qutebrowser}/bin/qutebrowser" # Qutebrowser
       "$mod,M, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
       "$mod,X, exec, powermenu" # Powermenu
