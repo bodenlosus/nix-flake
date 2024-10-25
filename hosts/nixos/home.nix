@@ -48,7 +48,8 @@
       bitwarden # Password manager
       vlc # Video player
       blanket # White-noise app
-
+      microsoft-edge-beta
+      
       # Dev
       go
       nodejs
@@ -76,7 +77,6 @@
       vscode
       firefox
       neovide
-      google-chrome
     ];
 
     # Import my profile picture, used by the hyprpanel dashboard

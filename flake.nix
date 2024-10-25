@@ -43,7 +43,7 @@
 
   outputs = inputs@{ nixpkgs, ... }: {
     nixosConfigurations = {
-      nixy = # CHANGEME: This should match the 'hostname' in your variables.nix file
+      nixos = # DONE: CHANGEME: This should match the 'hostname' in your variables.nix file
         nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
@@ -51,10 +51,10 @@
               nixpkgs.overlays = [ inputs.hyprpanel.overlay ];
               _module.args = { inherit inputs; };
             }
-            inputs.nixos-hardware.nixosModules.omen-16-n0005ne # CHANGEME: check https://github.com/NixOS/nixos-hardware
+            inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14 # DONE: CHANGEME: check https://github.com/NixOS/nixos-hardware
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
-            ./hosts/laptop/configuration.nix # CHANGEME: change the path to match your host folder
+            ./hosts/nixos/configuration.nix # DONE: CHANGEME: change the path to match your host folder
           ];
         };
     };

@@ -1,18 +1,17 @@
 { pkgs, ... }: {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "$mod,RETURN, exec, ${pkgs.kitty}/bin/kitty" # Kitty
+      "$mod,Q, exec, ${pkgs.kitty}/bin/kitty" # Kitty
       "$mod,E, exec, ${pkgs.xfce.thunar}/bin/thunar" # Thunar
       "$mod,B, exec, ${pkgs.qutebrowser}/bin/qutebrowser" # Qutebrowser
-      "$mod,K, exec, ${pkgs.bitwarden}/bin/bitwarden" # Bitwarden
-      "$mod,L, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
+      "$mod,M, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
       "$mod,X, exec, powermenu" # Powermenu
-      "$mod,SPACE, exec, menu" # Launcher
-      "$mod,C, exec, quickmenu" # Quickmenu
-      "$shiftMod,SPACE, exec, hyprfocus-toggle" # Toggle HyprFocus
+      "$mod,R, exec, menu" # Launcher
+      "$mod,A, exec, quickmenu" # Quickmenu
+      "$shiftMod,SPACE , exec, hyprfocus-toggle" # Toggle HyprFocus
       "$mod,TAB, overview:toggle" # Overview
 
-      "$mod,Q, killactive," # Close window
+      "$mod,C, killactive," # Close window
       "$mod,T, togglefloating," # Toggle Floating
       "$mod,F, fullscreen" # Toggle Fullscreen
       "$mod,left, movefocus, l" # Move focus left
@@ -25,8 +24,8 @@
       "$shiftMod,right, layoutmsg, removemaster" # Remove from master
 
       "$mod,PRINT, exec, screenshot window" # Screenshot window
-      ",PRINT, exec, screenshot monitor" # Screenshot monitor
-      "$shiftMod,PRINT, exec, screenshot region" # Screenshot region
+      ",PRINT, exec, screenshot region" # Screenshot monitor
+      "$shiftMod,PRINT, exec, screenshot monitor" # Screenshot region
       "ALT,PRINT, exec, screenshot region swappy" # Screenshot region then edit
 
       "$shiftMod,S, exec, ${pkgs.qutebrowser}/bin/qutebrowser :open $(wofi --show dmenu -L 1 -p ' Search on internet')" # Search on internet with wofi
