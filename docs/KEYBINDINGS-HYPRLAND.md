@@ -8,17 +8,16 @@
 | -- | -- |
 | Switch Workspace | SUPER + {Number} |
 | Move app to Workspace | SHIFT + SUPER + {Number} |
-| Kitty | SUPER + RETURN |
+| Kitty | SUPER + Q |
 | Thunar | SUPER + E |
 | Qutebrowser | SUPER + B |
-| Bitwarden | SUPER + K |
-| Lock | SUPER + L |
+| Lock | SUPER + M |
 | Powermenu | SUPER + X |
-| Launcher | SUPER + SPACE |
-| Quickmenu | SUPER + C |
-| Toggle HyprFocus | SHIFT + SUPER + SPACE |
+| Launcher | SUPER + R |
+| Quickmenu | SUPER + A |
+| Toggle HyprFocus | SHIFT + SUPER + SPACE  |
 | Overview | SUPER + TAB |
-| Close window | SUPER + Q |
+| Close window | SUPER + C |
 | Toggle Floating | SUPER + T |
 | Toggle Fullscreen | SUPER + F |
 | Move focus left | SUPER + left |

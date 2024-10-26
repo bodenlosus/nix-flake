@@ -18,6 +18,7 @@ in {
     qt6.qtwayland
     libsForQt5.qt5ct
     qt6ct
+    libsForQt5.qtstyleplugin-kvantum
     hyprshot
     hyprpicker
     swappy

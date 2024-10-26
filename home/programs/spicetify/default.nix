@@ -13,17 +13,18 @@ in {
 
   programs.spicetify = {
     enable = true;
-    theme = lib.mkForce spicePkgs.themes.text;
+    theme = lib.mkForce spicePkgs.themes.comfy;
 
-    colorScheme = "custom";
+    colorScheme = lib.mkForce "nord";
 
-    customColorScheme = {
+    customColorScheme = lib.mkForce {
       button = accent;
       button-active = accent;
       tab-active = accent;
     };
 
     enabledExtensions = with spicePkgs.extensions; [
+      fullAlbumDate
       playlistIcons
       lastfm
       historyShortcut

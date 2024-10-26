@@ -109,6 +109,8 @@ in {
           "theme.bar.buttons.padding_x": "0.8rem",
           "theme.bar.buttons.padding_y": "0.4rem",
 
+          "theme.bar.buttons.style": "split",
+
           "theme.bar.buttons.workspaces.hover": "${accent-alt}",
           "theme.bar.buttons.workspaces.active": "${accent}",
           "theme.bar.buttons.workspaces.available": "${background}",

@@ -38,16 +38,26 @@
     hyprsunset.url = "github:hyprwm/hyprsunset";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     stylix.url = "github:danth/stylix";
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
-  outputs = inputs@{ nixpkgs, ... }: {
+  outputs = inputs@{ nixpkgs, ... }: 
+  let 
+  system = "x86_64-linux";
+  in
+  {
     nixosConfigurations = {
       nixos = # DONE: CHANGEME: This should match the 'hostname' in your variables.nix file
         nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          system = system;
           modules = [
             {
-              nixpkgs.overlays = [ inputs.hyprpanel.overlay ];
+              nixpkgs.overlays = [ 
+                inputs.hyprpanel.overlay
+                (final: prev: {
+                  zen-browser = inputs.zen-browser.packages."${system}".default;
+                })
+              ];
               _module.args = { inherit inputs; };
             }
             inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14 # DONE: CHANGEME: check https://github.com/NixOS/nixos-hardware
@@ -56,6 +66,24 @@
             ./hosts/nixos/configuration.nix # DONE: CHANGEME: change the path to match your host folder
           ];
         };
+      nixpc = nixpkgs.lib.nixosSystem {
+          system = system;
+          modules = [
+            {
+              nixpkgs.overlays = [ 
+                inputs.hyprpanel.overlay
+                (final: prev: {
+                  zen-browser = inputs.zen-browser.packages."${system}".default;
+                })
+              ];
+              _module.args = { inherit inputs; };
+            }
+            inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14 # DONE: CHANGEME: check https://github.com/NixOS/nixos-hardware
+            inputs.home-manager.nixosModules.home-manager
+            inputs.stylix.nixosModules.stylix
+          ];
+        };
     };
+    
   };
 }

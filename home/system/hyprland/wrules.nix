@@ -5,14 +5,14 @@
 
 # See https://wiki.hyprland.org/Configuring/Window-Rules/
 
-$op_high = 0.95
+$op_high = 1
 $op_mid = 0.85
 $op_low = 0.8;
 
 windowrulev2 = opacity $op_high $op_high,class:^(firefox)$
 windowrulev2 = opacity $op_high $op_high,class:^(Brave-browser)$
-windowrulev2 = opacity $op_mid $op_mid,class:^(code-oss)$
-windowrulev2 = opacity $op_mid $op_mid,class:^(Code)$
+windowrulev2 = opacity $op_high $op_high,class:^(code-oss)$
+windowrulev2 = opacity $op_high $op_highd,class:^(Code)$
 windowrulev2 = opacity $op_mid $op_mid,class:^(code-url-handler)$
 windowrulev2 = opacity $op_mid $op_mid,class:^(code-insiders-url-handler)$
 windowrulev2 = opacity $op_mid $op_mid,class:^(kitty)$

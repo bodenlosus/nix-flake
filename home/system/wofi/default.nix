@@ -29,7 +29,7 @@ in {
       line_wrap = "off";
       dynamic_lines = false;
       allow_images = true;
-      image_size = 24;
+      image_size = 36;
       exec_search = false;
       hide_search = false;
       parse_search = false;
