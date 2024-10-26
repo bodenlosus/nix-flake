@@ -23,4 +23,5 @@ let
       > "$NOTIF_FOLDER/$sender_id"
     '';
 
-in { home.packages = [ pkgs.libnotify notif ]; }
+in
+{ home.packages = [ pkgs.libnotify notif ]; }

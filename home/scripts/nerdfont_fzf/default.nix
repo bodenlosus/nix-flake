@@ -16,7 +16,8 @@ let
     echo "Copied to clipboard: $fzf_result"
     ${pkgs.wl-clipboard}/bin/wl-copy "$fzf_result"
   '';
-in {
+in
+{
   home.packages = [ nerdfont-fzf ];
 
   xdg.configFile."nerdfont_glyphnames.json" = {

@@ -75,4 +75,5 @@ let
       fi
     '';
 
-in { home.packages = [ nixy ]; }
+in
+{ home.packages = [ nixy ]; }

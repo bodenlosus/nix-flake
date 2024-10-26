@@ -4,7 +4,8 @@ let
   foreground = "rgba(216, 222, 233, 0.70)";
   imageStr = toString config.stylix.image;
   font = config.stylix.fonts.serif.name;
-in {
+in
+{
   programs.hyprlock = {
     enable = true;
     settings = {

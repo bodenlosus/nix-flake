@@ -4,7 +4,8 @@ let
   muted = "#${config.lib.stylix.colors.base03}";
   foreground = "#${config.lib.stylix.colors.base05}";
   configDir = config.var.configDirectory;
-in {
+in
+{
 
   programs.nixvim.highlight = {
     AlphaHeaderColor.fg = accent;

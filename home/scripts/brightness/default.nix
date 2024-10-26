@@ -29,7 +29,8 @@ let
     brightness-change down ${increments}
   '';
 
-in {
+in
+{
   home.packages = [
     pkgs.brightnessctl
     brightness-change

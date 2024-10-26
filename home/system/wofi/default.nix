@@ -8,7 +8,8 @@ let
   font = config.stylix.fonts.serif.name;
   rounding = config.var.theme.rounding;
   font-size = config.stylix.fonts.sizes.popups;
-in {
+in
+{
 
   home.packages = with pkgs; [ wofi-emoji ];
 

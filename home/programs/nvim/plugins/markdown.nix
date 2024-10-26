@@ -5,7 +5,8 @@ let
   accent-alt = "#${config.lib.stylix.colors.base08}";
   muted = "#${config.lib.stylix.colors.base03}";
   background = "#${config.lib.stylix.colors.base00}";
-in {
+in
+{
 
   programs.nixvim = {
     plugins.mkdnflow = {

@@ -2,7 +2,8 @@
 let
   hostname = config.var.hostname;
   keyboardLayout = config.var.keyboardLayout;
-in {
+in
+{
 
   networking.hostName = hostname;
 

@@ -50,7 +50,8 @@ let
           echo "󰖕"
         fi
     '';
-in {
+in
+{
   home.packages = [
     inputs.hyprsunset.packages."${pkgs.system}".hyprsunset
     night-shift-on

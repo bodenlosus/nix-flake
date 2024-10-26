@@ -3,6 +3,8 @@
   imports = [
     ./variables.nix
 
+    ../../shared/home.nix
+
     # Programs
     ../../home/programs/kitty
     ../../home/programs/nvim
@@ -42,45 +44,6 @@
   home = {
     inherit (config.var) username;
     homeDirectory = "/home/" + config.var.username;
-
-    packages = with pkgs; [
-      # Apps
-      discord # Chat
-      bitwarden # Password manager
-      vlc # Video player
-      blanket # White-noise app
-      microsoft-edge-beta
-      zen-browser
-      obsidian
-      
-      # Dev
-      go
-      nodejs
-      python3
-      jq
-      figlet
-      just
-
-      # Utils
-      zip
-      unzip
-      optipng
-      pfetch
-      pandoc
-      btop
-
-      # Just cool
-      peaclock
-      cbonsai
-      pipes
-      cmatrix
-      cava
-
-      # Backup
-      vscode
-      firefox
-      neovide
-    ];
 
     # Import my profile picture, used by the hyprpanel dashboard
     file.".profile_picture.png" = { source = ./profile_picture.png; };

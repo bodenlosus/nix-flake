@@ -2,7 +2,8 @@
 let
   nvidiaDriverChannel =
     config.boot.kernelPackages.nvidiaPackages.beta; # stable, latest, beta, etc.
-in {
+in
+{
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers =
     [ "nvidia" "displayLink" ]; # or "nvidiaLegacy470 etc.

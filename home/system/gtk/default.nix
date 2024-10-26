@@ -23,7 +23,8 @@ let
   c14 = "#${config.lib.stylix.colors.base0C}";
   c15 = "#${config.lib.stylix.colors.base07}";
 
-in {
+in
+{
 
   qt = {
     enable = true;
@@ -33,13 +34,13 @@ in {
     enable = true;
 
     theme = lib.mkForce {
-          package = pkgs.whitesur-gtk-theme.override{
-            themeVariants = ["grey" "red"];
-            colorVariants = ["Dark"];
-            nordColor = true;
-          };
-          
-          name = "WhiteSur-Dark-grey-nord";
+      package = pkgs.whitesur-gtk-theme.override {
+        themeVariants = [ "grey" "red" ];
+        colorVariants = [ "Dark" ];
+        nordColor = true;
+      };
+
+      name = "WhiteSur-Dark-grey-nord";
     };
     iconTheme = {
       package = pkgs.nordzy-icon-theme;

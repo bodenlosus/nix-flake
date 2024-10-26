@@ -24,7 +24,8 @@ let
 
   location = config.var.location;
   username = config.var.username;
-in {
+in
+{
   wayland.windowManager.hyprland.settings.exec-once =
     [ "${pkgs.hyprpanel}/bin/hyprpanel" ];
 
@@ -109,7 +110,7 @@ in {
           "theme.bar.buttons.padding_x": "0.8rem",
           "theme.bar.buttons.padding_y": "0.4rem",
 
-          "theme.bar.buttons.style": "split",
+          "theme.bar.buttons.style": "default",
 
           "theme.bar.buttons.workspaces.hover": "${accent-alt}",
           "theme.bar.buttons.workspaces.active": "${accent}",
@@ -209,7 +210,6 @@ in {
           "theme.bar.background": "${
             background + (if transparentButtons then "00" else "")
           }",
-          "theme.bar.buttons.style": "default",
           "theme.bar.buttons.monochrome": true,
           "theme.bar.buttons.text": "${foreground}",
           "theme.bar.buttons.background": "${

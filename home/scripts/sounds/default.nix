@@ -33,6 +33,7 @@ let
   sound-toggle = pkgs.writeShellScriptBin "sound-toggle" ''
     sound-change mute
   '';
-in {
+in
+{
   home.packages = [ sound-change sound-up sound-down sound-toggle sound-set ];
 }

@@ -24,7 +24,8 @@ let
     tmux select-pane -t 0
     tmux attach -t "$SESSION"
   '';
-in {
+in
+{
   programs.tmux = {
     enable = true;
     mouse = true;

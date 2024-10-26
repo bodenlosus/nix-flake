@@ -6,7 +6,8 @@ let
   foreground = config.lib.stylix.colors.base05;
   background-alt = config.lib.stylix.colors.base01;
   foreground-alt = config.lib.stylix.colors.base06;
-in {
+in
+{
   home.file.".duckduckgo-colorscheme.js".text =
     # js
     ''

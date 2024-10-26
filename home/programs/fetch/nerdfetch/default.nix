@@ -366,4 +366,5 @@ let
         """
   '';
 
-in { home.packages = [ nerdfetch ]; }
+in
+{ home.packages = [ nerdfetch ]; }

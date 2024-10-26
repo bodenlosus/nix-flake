@@ -39,4 +39,5 @@ let
         hyprfocus-on
       fi
     '';
-in { home.packages = [ hyprfocus-on hyprfocus-off hyprfocus-toggle ]; }
+in
+{ home.packages = [ hyprfocus-on hyprfocus-off hyprfocus-toggle ]; }

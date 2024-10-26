@@ -28,7 +28,8 @@ let
       exit 0
     fi
   '';
-in {
+in
+{
   home.packages =
     [ pkgs.hyprshot screenshot pkgs.slurp pkgs.grim pkgs.grimblast ];
 }

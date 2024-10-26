@@ -105,4 +105,5 @@ let
       ${pkgs.hyprlock}/bin/hyprlock
     '';
 
-in { home.packages = [ menu powermenu lock quickmenu ]; }
+in
+{ home.packages = [ menu powermenu lock quickmenu ]; }

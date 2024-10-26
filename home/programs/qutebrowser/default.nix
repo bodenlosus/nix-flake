@@ -79,7 +79,8 @@ let
     };
   };
 
-in {
+in
+{
 
   imports = [ ./duckduckgo-colorscheme.nix ];
 

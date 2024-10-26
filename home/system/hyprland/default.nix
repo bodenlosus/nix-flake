@@ -9,7 +9,8 @@ let
   rounding = config.var.theme.rounding;
   blur = config.var.theme.blur;
   keyboardLayout = config.var.keyboardLayout;
-in {
+in
+{
 
   imports = [ ./animations.nix ./bindings.nix ./polkitagent.nix ./wrules.nix ];
 
@@ -60,7 +61,8 @@ in {
         "DP-7, disable"
         "DP-8, disable"
         "DP-9, disable"
-        "HDMI-A-1,3440x1440@99.98,auto,1"
+        "DP-3, 1920x1080@60,-1920x0,1"
+        "HDMI-A-1,1920x1080@60,0x0,1"
         ",prefered,auto,1"
       ];
 
@@ -113,12 +115,13 @@ in {
         drop_shadow = true;
         shadow_range = 20;
         shadow_render_power = 3;
-        blur = { enabled = if blur then "true" else "false"; 
+        blur = {
+          enabled = if blur then "true" else "false";
           size = 12;
-        passes = 3;
-        noise = 0.05;
-        ignore_opacity = true;
-        vibrancy = 0.1696;
+          passes = 3;
+          noise = 0.05;
+          ignore_opacity = true;
+          vibrancy = 0.1696;
         };
       };
 

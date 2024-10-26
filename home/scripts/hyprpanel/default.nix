@@ -40,7 +40,8 @@ let
     [ $(pgrep "ags") ] && pkill ags
     hyprctl dispatch exec hyprpanel
   '';
-in {
+in
+{
   home.packages =
     [ hyprpanel-toggle hyprpanel-reload hyprpanel-hide hyprpanel-show ];
 }
