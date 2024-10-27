@@ -32,7 +32,6 @@
     btop
 
     # nixshit
-    gh
     nixpkgs-fmt
     nixpkgs-lint
     nil
