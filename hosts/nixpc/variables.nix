@@ -15,8 +15,8 @@
     extraLocale = "de_DE.UTF-8";
 
     git = {
-      username = "Hadi";
-      email = "112569860+anotherhadi@users.noreply.github.com";
+      username = "bodenlosus";
+      email = "johannes.till.schmidt@outlook.de";
     };
 
     autoUpgrade = false;

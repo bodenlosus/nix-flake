@@ -1,4 +1,7 @@
 { pkgs, config, ... }: {
+  imports = [
+    ../home/system/wpaperd
+  ];
   programs.gh = {
     enable = true;
   };

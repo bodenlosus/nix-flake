@@ -54,7 +54,7 @@
     };
     opacity.terminal = 0.8;
     polarity = "dark";
-    image = ./17.png;
+    image = ./street_blues.png;
   };
   stylix.targets.chromium.enable = true;
 
