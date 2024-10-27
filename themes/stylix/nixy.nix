@@ -57,5 +57,4 @@
     image = ./street_blues.png;
   };
   stylix.targets.chromium.enable = true;
-
 }
