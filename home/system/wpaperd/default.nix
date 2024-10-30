@@ -1,5 +1,7 @@
 { lib, pkgs, ... }:
 {
+  wayland.windowManager.hyprland.settings.exec-once =
+    [ "${pkgs.wpaperd}/bin/wpaperd -d"];
   programs.wpaperd = {
     enable = true;
     package = pkgs.wpaperd;
