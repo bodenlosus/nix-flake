@@ -5,6 +5,7 @@
 [[ -d "./docs" ]] || (echo "Folder ./docs not found" && exit 1)
 
 KEYBINDINGS_FILE="./docs/KEYBINDINGS-HYPRLAND.md"
+KEYBINDINGS_CONF="./home/system/hyprland/bindings.nix"
 
 function getList() {
   content=$1
@@ -17,9 +18,9 @@ function getList() {
   echo "$list"
 }
 
-[[ -f "./home/system/hyprland/bindings.nix" ]] || (echo "File ./home/system/hyprland/bindings.nix not found" && exit 1)
+[[ -f $KEYBINDINGS_CONF ]] || (echo "File $KEYBINDINGS_CONF not found" && exit 1)
 
-config=$(cat "./home/system/hyprland/bindings.nix")
+config=$(cat $KEYBINDINGS_CONF)
 
 # Bind
 bind=$(getList "$config" "bind")
