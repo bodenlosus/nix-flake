@@ -11,6 +11,7 @@ let
   foreground = "#${config.lib.stylix.colors.base05}";
   font = "${config.stylix.fonts.serif.name}";
   fontSize = "${toString config.stylix.fonts.sizes.desktop}";
+  fontWeight = "400";
 
   rounding = config.var.theme.rounding;
   border-size = config.var.theme.border-size;
@@ -96,6 +97,7 @@ in
           },
           "theme.font.name": "${font}",
           "theme.font.size": "${fontSize}px",
+          "theme.font.weight": "${fontWeight}",
           "theme.bar.outer_spacing": "${
             if floating && transparent then "0" else "8"
           }px",
@@ -110,7 +112,8 @@ in
           "theme.bar.buttons.padding_x": "0.8rem",
           "theme.bar.buttons.padding_y": "0.4rem",
 
-          "theme.bar.buttons.style": "default",
+          "theme.bar.buttons.style": "split",
+          "theme.bar.buttons.icon_background": "${background-alt}",
 
           "theme.bar.buttons.workspaces.hover": "${accent-alt}",
           "theme.bar.buttons.workspaces.active": "${accent}",
@@ -123,8 +126,16 @@ in
             if position == "top" then "0" else toString (gaps-in * 2)
           }px",
           "theme.bar.margin_sides": "${toString gaps-out}px",
-          "theme.bar.border_radius": "${toString rounding}px",
-
+          "theme.bar.border_radius": "${toString (rounding * 2)}px",
+          "theme.bar.border_width": "${toString border-size}px",
+          "theme.bar.border_color": "${accent-alt}px",
+          "theme.bar.menus.slider.slider_radius": "15px",
+          
+          "theme.bar.menus.slider.progress_radius": "15px",
+          "theme.bar.menus.switch.radius": "15px",
+          "theme.bar.menus.switch.slider_radius": "15px",
+          "theme.bar.buttons.enableBorders": false,
+          
           "bar.launcher.icon": "",
           "theme.bar.transparent": ${if transparent then "true" else "false"},
           "bar.workspaces.show_numbered": false,
@@ -145,7 +156,7 @@ in
           "theme.osd.margins": "0px 0px 0px 10px",
           "theme.osd.muted_zero": true,
           "menus.clock.weather.location": "${location}",
-          "menus.clock.weather.key": "myapikey",
+          "menus.clock.weather.key": "620b3d924a8946ffa4c90241242710",
           "menus.clock.weather.unit": "metric",
           "menus.dashboard.powermenu.avatar.image": "/home/${username}/.profile_picture.png",
           "menus.dashboard.powermenu.confirmation": false,
@@ -190,7 +201,7 @@ in
           "theme.bar.menus.label": "${foreground}",
           "theme.bar.menus.text": "${foreground}",
           "theme.bar.menus.border.size": "${toString border-size}px",
-          "theme.bar.menus.border.color": "${accent}",
+          "theme.bar.menus.border.color": "${accent-alt}",
           "theme.bar.menus.border.radius": "${toString rounding}px",
           "theme.bar.menus.popover.text": "${foreground}",
           "theme.bar.menus.popover.background": "${background-alt}",

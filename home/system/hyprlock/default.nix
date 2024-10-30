@@ -19,7 +19,7 @@ in
       background = {
         monitor = "";
         path = imageStr;
-        blur_passes = 0;
+        blur_passes = 3;
         contrast = 0.8916;
         brightness = 0.7172;
         vibrancy = 0.1696;
