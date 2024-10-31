@@ -4,10 +4,10 @@
 let
   transparentButtons = config.var.theme.bar.transparentButtons;
 
-  accent = "#${config.lib.stylix.colors.base0D}";
   accent-alt = "#${config.lib.stylix.colors.base03}";
-  background = "#${config.lib.stylix.colors.base00}";
-  background-alt = "#${config.lib.stylix.colors.base01}";
+  accent = "#${config.lib.stylix.colors.base04}";
+  background = "#${config.lib.stylix.colors.base01}";
+  background-alt = "#${config.lib.stylix.colors.base02}";
   foreground = "#${config.lib.stylix.colors.base05}";
   font = "${config.stylix.fonts.serif.name}";
   fontSize = "${toString config.stylix.fonts.sizes.desktop}";
@@ -112,7 +112,7 @@ in
           "theme.bar.buttons.padding_x": "0.8rem",
           "theme.bar.buttons.padding_y": "0.4rem",
 
-          "theme.bar.buttons.style": "split",
+          "theme.bar.buttons.style": "default",
           "theme.bar.buttons.icon_background": "${background-alt}",
 
           "theme.bar.buttons.workspaces.hover": "${accent-alt}",
