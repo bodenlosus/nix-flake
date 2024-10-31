@@ -16,6 +16,7 @@
     obsidian
 
     # Dev
+    deno
     go
     nodejs
     python3
