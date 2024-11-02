@@ -44,7 +44,7 @@ in
     systemd.enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
-    plugins = [ inputs.hyprspace.packages.${pkgs.system}.Hyprspace ];
+    plugins = [ pkgs.hyprlandPlugins.hyprscroller];
 
     settings = {
       "$mod" = "SUPER";
@@ -106,7 +106,7 @@ in
         gaps_out = gaps-out;
         border_size = border-size;
         border_part_of_window = true;
-        layout = "master";
+        layout = "scroller";
       };
 
       decoration = {

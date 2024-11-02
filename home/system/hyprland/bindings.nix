@@ -9,7 +9,7 @@
       "$mod,R, exec, menu" # Launcher
       "$mod,A, exec, quickmenu" # Quickmenu
       "$shiftMod,SPACE , exec, hyprfocus-toggle" # Toggle HyprFocus
-      "$mod,TAB, overview:toggle" # Overview
+      "$mod,TAB, scroller:toggleoverview" # Overview
 
       "$mod,C, killactive," # Close window
       "$mod,T, togglefloating," # Toggle Floating
