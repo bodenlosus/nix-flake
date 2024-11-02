@@ -614,17 +614,16 @@
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1729427131,
-        "narHash": "sha256-Ablfg1XeD5tEU3yOHe5mcqqWbtdBaePUlwHUtel0Wpk=",
+        "lastModified": 1730569007,
+        "narHash": "sha256-cwbcYg+rPmvHFFtAEie7nw5IaBidrTYe5XsTlhOyoyQ=",
         "owner": "KZDKM",
         "repo": "Hyprspace",
-        "rev": "0a41e37c9112a752ac2a7b9afbbdac5d14c536c6",
+        "rev": "260f386075c7f6818033b05466a368d8821cde2d",
         "type": "github"
       },
       "original": {
         "owner": "KZDKM",
         "repo": "Hyprspace",
-        "rev": "0a41e37c9112a752ac2a7b9afbbdac5d14c536c6",
         "type": "github"
       }
     },

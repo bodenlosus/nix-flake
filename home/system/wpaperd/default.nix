@@ -9,7 +9,7 @@
     settings = {
       default = {
         duration = "30min";
-        mode = "fit";
+        mode = "center";
         sorting = "ascending";
       };
       any = {

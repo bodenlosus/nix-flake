@@ -44,7 +44,7 @@ in
     systemd.enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
-    plugins = [ pkgs.hyprlandPlugins.hyprscroller];
+    plugins = [ inputs.hyprspace.packages.${pkgs.system}.Hyprspace ];
 
     settings = {
       "$mod" = "SUPER";
