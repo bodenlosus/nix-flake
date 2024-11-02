@@ -1,6 +1,8 @@
 { pkgs, config, ... }: {
   imports = [
     ../home/system/wpaperd
+    ../home/programs/vscode
+    ../home/programs/direnv
   ];
   programs.gh = {
     enable = true;
@@ -46,7 +48,6 @@
     cava
 
     # Backup
-    vscode
     firefox
     neovide
   ];
