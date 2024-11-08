@@ -17,7 +17,7 @@ in
     theme = lib.mkForce spicePkgs.themes.comfy;
 
     colorScheme = lib.mkForce "nord";
-S
+
     customColorScheme = lib.mkForce {
       button = accent;
       button-active = accent;
