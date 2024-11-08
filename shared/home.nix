@@ -1,7 +1,6 @@
 { pkgs, config, ... }: {
   imports = [
     ../home/system/wpaperd
-    ../home/programs/vscode
     ../home/programs/direnv
   ];
   programs.gh = {
@@ -16,6 +15,7 @@
     microsoft-edge-beta
     zen-browser
     obsidian
+    vscode
 
     # Dev
     deno
