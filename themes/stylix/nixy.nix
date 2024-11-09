@@ -4,22 +4,22 @@
 
     # Edited catppuccin
     base16Scheme = {
-      base00 = "2E3440"; # #2E3440
-      base01 = "3B4252"; # #3B4252
-      base02 = "434C5E"; # #434C5E
-      base03 = "4C566A"; # #4C566A
-      base04 = "D8DEE9"; # #D8DEE9
-      base05 = "E5E9F0"; # #E5E9F0
-      base06 = "ECEFF4"; # #ECEFF4
-      base07 = "8FBCBB"; # #8FBCBB
-      base08 = "BF616A"; # #BF616A
-      base09 = "D08770"; # #D08770
-      base0A = "EBCB8B"; # #EBCB8B
-      base0B = "A3BE8C"; # #A3BE8C
-      base0C = "88C0D0"; # #88C0D0
-      base0D = "81A1C1"; # #81A1C1
-      base0E = "B48EAD"; # #B48EAD
-      base0F = "5E81AC"; # #5E81AC
+      base00 = "272e33"; # bg0,       palette1 dark
+      base01 = "2e383c"; # bg1,       palette1 dark
+      base02 = "414b50"; # bg3,       palette1 dark
+      base03 = "859289"; # grey1,     palette2 dark
+      base04 = "9da9a0"; # grey2,     palette2 dark
+      base05 = "d3c6aa"; # fg,        palette2 dark
+      base06 = "edeada"; # bg3,       palette1 light
+      base07 = "fffbef"; # bg0,       palette1 light
+      base08 = "e67e80"; # red,       palette2 dark
+      base09 = "e69875"; # orange,    palette2 dark
+      base0A = "dbbc7f"; # yellow,    palette2 dark
+      base0B = "a7c080"; # green,     palette2 dark
+      base0C = "83c092"; # aqua,      palette2 dark
+      base0D = "7fbbb3"; # blue,      palette2 dark
+      base0E = "d699b6"; # purple,    palette2 dark
+      base0F = "9da9a0"; # grey2,     palette2 dark
     };
 
     cursor = {
@@ -54,7 +54,7 @@
     };
     opacity.terminal = 0.8;
     polarity = "dark";
-    image = ./street_blues.png;
+    image = ./forest.png;
   };
   stylix.targets.chromium.enable = true;
 }

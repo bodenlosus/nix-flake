@@ -80,7 +80,7 @@ in
         "QT_QPA_PLATFORM=wayland,xcb"
         "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
         "ELECTRON_OZONE_PLATFORM_HINT,auto"
-        "GTK_THEME,WhiteSur-Dark-grey-nord"
+        "GTK_THEME,Colloid-Green-Dark-Everforest"
         "GTK2_RC_FILES,/home/hadi/.local/share/themes/FlatColor/gtk-2.0/gtkrc"
         "__GL_GSYNC_ALLOWED,0"
         "__GL_VRR_ALLOWED,0"
