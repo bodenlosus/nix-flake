@@ -12,7 +12,7 @@
     bitwarden # Password manager
     vlc # Video player
     blanket # White-noise app
-    microsoft-edge-beta
+    opera
     zen-browser
     obsidian
     vscode
