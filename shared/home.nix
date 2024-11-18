@@ -45,10 +45,8 @@
     cbonsai
     pipes
     cmatrix
-    cava
 
     # Backup
     firefox
-    neovide
   ];
 }

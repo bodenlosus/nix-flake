@@ -27,12 +27,14 @@ in
     wf-recorder
     wlr-randr
     wl-clipboard
+    wl-clipboard-x11
     brightnessctl
     gnome-themes-extra
     libva
     dconf
     wayland-utils
     wayland-protocols
+    wf-recorder
     glib
     direnv
     meson
@@ -113,9 +115,11 @@ in
         active_opacity = active-opacity;
         inactive_opacity = inactive-opacity;
         rounding = rounding;
-        drop_shadow = true;
-        shadow_range = 20;
-        shadow_render_power = 3;
+        shadow = {
+          enabled = true;
+          range = 20;
+          render_power = 3;
+        };
         blur = {
           enabled = if blur then "true" else "false";
           size = 12;

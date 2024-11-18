@@ -57,4 +57,5 @@
     image = ./forest.png;
   };
   stylix.targets.chromium.enable = true;
+  stylix.targets.gtk.enable = true;
 }

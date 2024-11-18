@@ -1,5 +1,5 @@
 # Hyprlock is a lockscreen for Hyprland
-{ config, ... }:
+{ config, lib, ... }:
 let
   foreground = "rgba(216, 222, 233, 0.70)";
   imageStr = toString config.stylix.image;
@@ -8,7 +8,7 @@ in
 {
   programs.hyprlock = {
     enable = true;
-    settings = {
+    settings = lib.mkForce {
       general = {
         grace = 5;
         no_fade_in = false;

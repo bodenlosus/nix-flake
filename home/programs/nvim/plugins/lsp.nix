@@ -6,14 +6,19 @@
       servers = {
         bashls.enable = true;
         clangd.enable = true;
+        cssls.enable = true;
+        eslint.enable = true;
         gopls.enable = true;
+        jsonls.enable = true;
         nixd = {
           enable = true;
           extraOptions = { expr = "import <nixpkgs> {}"; };
         };
+        pylsp.enable = true;
         tailwindcss.enable = true;
         html.enable = true;
         svelte.enable = true;
+        ts_ls = { enable = true; };
         marksman.enable = true;
       };
       keymaps.lspBuf = {
