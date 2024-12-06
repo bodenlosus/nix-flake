@@ -1,5 +1,5 @@
-{config, lib, ...}:
-  let
+{ config, lib, ... }:
+let
   accent = "#${config.lib.stylix.colors.base0D}";
   foreground = "#${config.lib.stylix.colors.base05}";
   background = "#${config.lib.stylix.colors.base00}";
@@ -29,48 +29,48 @@ in
   # Create the home.file for configuration
   home.file = {
     ".config/gtk-4.0/gtk.css".text = lib.mkForce ''
-    @define-color accent_color ${c4};
-    @define-color accent_bg_color ${c1};
-    @define-color accent_fg_color ${c3};
-    @define-color destructive_color ${c7};
-    @define-color destructive_bg_color ${c7};
-    @define-color destructive_fg_color ${c3};
-    @define-color success_color ${cB};
-    @define-color success_bg_color ${cB};
-    @define-color success_fg_color ${c3};
-    @define-color warning_color ${cA};
-    @define-color warning_bg_color ${cA};
-    @define-color warning_fg_color ${c3};
-    @define-color error_color ${c7};
-    @define-color error_bg_color ${c7};
-    @define-color error_fg_color ${c3};
-    @define-color window_bg_color ${c0};
-    @define-color window_fg_color ${c3};
-    @define-color view_bg_color ${c0};
-    @define-color view_fg_color ${c3};
-    @define-color headerbar_bg_color ${c1};
-    @define-color headerbar_fg_color ${c3};
-    @define-color headerbar_border_color rgba(0.179688, 0.218750, 0.234375, 0.7);
-    @define-color headerbar_backdrop_color ${c0};
-    @define-color headerbar_shade_color rgba(0, 0, 0, 0.07);
-    @define-color sidebar_bg_color ${c1};
-    @define-color sidebar_fg_color ${c3};
-    @define-color sidebar_backdrop_color ${c0};
-    @define-color sidebar_shade_color rgba(0, 0, 0, 0.07);
-    @define-color secondary_sidebar_bg_color ${c1};
-    @define-color secondary_sidebar_fg_color ${c3};
-    @define-color secondary_sidebar_backdrop_color ${c0};
-    @define-color secondary_sidebar_shade_color rgba(0, 0, 0, 0.07);
-    @define-color card_bg_color ${c1};
-    @define-color card_fg_color ${c3};
-    @define-color card_shade_color rgba(0, 0, 0, 0.07);
-    @define-color dialog_bg_color ${c1};
-    @define-color dialog_fg_color ${c3};
-    @define-color popover_bg_color ${c1};
-    @define-color popover_fg_color ${c3};
-    @define-color popover_shade_color rgba(0, 0, 0, 0.07);
-    @define-color shade_color rgba(0, 0, 0, 0.07);
-    @define-color scrollbar_outline_color ${c2};
-  '';
+      @define-color accent_color ${c4};
+      @define-color accent_bg_color ${c1};
+      @define-color accent_fg_color ${c3};
+      @define-color destructive_color ${c7};
+      @define-color destructive_bg_color ${c7};
+      @define-color destructive_fg_color ${c3};
+      @define-color success_color ${cB};
+      @define-color success_bg_color ${cB};
+      @define-color success_fg_color ${c3};
+      @define-color warning_color ${cA};
+      @define-color warning_bg_color ${cA};
+      @define-color warning_fg_color ${c3};
+      @define-color error_color ${c7};
+      @define-color error_bg_color ${c7};
+      @define-color error_fg_color ${c3};
+      @define-color window_bg_color ${c0};
+      @define-color window_fg_color ${c3};
+      @define-color view_bg_color ${c0};
+      @define-color view_fg_color ${c3};
+      @define-color headerbar_bg_color ${c1};
+      @define-color headerbar_fg_color ${c3};
+      @define-color headerbar_border_color rgba(0.179688, 0.218750, 0.234375, 0.7);
+      @define-color headerbar_backdrop_color ${c0};
+      @define-color headerbar_shade_color rgba(0, 0, 0, 0.07);
+      @define-color sidebar_bg_color ${c1};
+      @define-color sidebar_fg_color ${c3};
+      @define-color sidebar_backdrop_color ${c0};
+      @define-color sidebar_shade_color rgba(0, 0, 0, 0.07);
+      @define-color secondary_sidebar_bg_color ${c1};
+      @define-color secondary_sidebar_fg_color ${c3};
+      @define-color secondary_sidebar_backdrop_color ${c0};
+      @define-color secondary_sidebar_shade_color rgba(0, 0, 0, 0.07);
+      @define-color card_bg_color ${c1};
+      @define-color card_fg_color ${c3};
+      @define-color card_shade_color rgba(0, 0, 0, 0.07);
+      @define-color dialog_bg_color ${c1};
+      @define-color dialog_fg_color ${c3};
+      @define-color popover_bg_color ${c1};
+      @define-color popover_fg_color ${c3};
+      @define-color popover_shade_color rgba(0, 0, 0, 0.07);
+      @define-color shade_color rgba(0, 0, 0, 0.07);
+      @define-color scrollbar_outline_color ${c2};
+    '';
   };
 }

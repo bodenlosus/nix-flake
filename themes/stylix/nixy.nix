@@ -4,22 +4,22 @@
 
     # Edited catppuccin
     base16Scheme = {
-      base00 = "272e33"; # bg0,       palette1 dark
-      base01 = "2e383c"; # bg1,       palette1 dark
-      base02 = "414b50"; # bg3,       palette1 dark
-      base03 = "859289"; # grey1,     palette2 dark
-      base04 = "9da9a0"; # grey2,     palette2 dark
-      base05 = "d3c6aa"; # fg,        palette2 dark
-      base06 = "edeada"; # bg3,       palette1 light
-      base07 = "fffbef"; # bg0,       palette1 light
-      base08 = "e67e80"; # red,       palette2 dark
-      base09 = "e69875"; # orange,    palette2 dark
-      base0A = "dbbc7f"; # yellow,    palette2 dark
-      base0B = "a7c080"; # green,     palette2 dark
-      base0C = "83c092"; # aqua,      palette2 dark
-      base0D = "7fbbb3"; # blue,      palette2 dark
-      base0E = "d699b6"; # purple,    palette2 dark
-      base0F = "9da9a0"; # grey2,     palette2 dark
+      base00 = "24283b";
+      base01 = "1f2335";
+      base02 = "292e42";
+      base03 = "565f89";
+      base04 = "a9b1d6";
+      base05 = "c0caf5";
+      base06 = "c0caf5";
+      base07 = "c0caf5";
+      base08 = "f7768e";
+      base09 = "ff9e64";
+      base0A = "e0af68";
+      base0B = "9ece6a";
+      base0C = "1abc9c";
+      base0D = "41a6b5";
+      base0E = "bb9af7";
+      base0F = "ff007c";
     };
 
     cursor = {
@@ -30,15 +30,15 @@
 
     fonts = {
       monospace = {
-        package = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
-        name = "JetBrains Mono Nerd Font";
+        package = pkgs.nerd-fonts.fira-mono;
+        name = "FiraMono Nerd Font";
       };
       sansSerif = {
-        package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
+        package = pkgs.nerd-fonts.fira-code;
         name = "FiraCode Nerd Font";
       };
       serif = {
-        package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
+        package = pkgs.nerd-fonts.fira-code;
         name = "FiraCode Nerd Font";
       };
       emoji = {
@@ -54,7 +54,7 @@
     };
     opacity.terminal = 0.8;
     polarity = "dark";
-    image = ./forest.png;
+    image = ./a.jpg;
   };
   stylix.targets.chromium.enable = true;
   stylix.targets.gtk.enable = true;

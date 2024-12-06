@@ -3,13 +3,13 @@
     bind = [
       "$mod,Q, exec, ${pkgs.kitty}/bin/kitty" # Kitty
       "$mod,E, exec, ${pkgs.nautilus}/bin/nautilus" # Thunar
-      "$mod,B, exec, ${pkgs.qutebrowser}/bin/qutebrowser" # Qutebrowser
+      "$mod,B, exec, ${pkgs.zen-browser}/bin/zen" # Qutebrowser
       "$mod,M, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
       "$mod,X, exec, powermenu" # Powermenu
       "$mod,R, exec, menu" # Launcher
       "$mod,A, exec, quickmenu" # Quickmenu
       "$shiftMod,SPACE , exec, hyprfocus-toggle" # Toggle HyprFocus
-      "$mod,TAB, overview:toggle" # Overview
+      "$mod,TAB, hyprexpo:expo, toggle" # Overview
 
 
       "$mod,C, killactive," # Close window

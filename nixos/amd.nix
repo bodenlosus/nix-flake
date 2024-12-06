@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-  hardware.opengl.extraPackages = with pkgs; [ rocmPackages.clr.icd ];
   # For 24.11
   hardware.graphics.extraPackages = with pkgs; [ rocmPackages.clr.icd ];
   hardware.graphics = {

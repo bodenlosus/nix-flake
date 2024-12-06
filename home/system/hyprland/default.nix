@@ -46,7 +46,7 @@ in
     systemd.enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
-    plugins = [ inputs.hyprspace.packages.${pkgs.system}.Hyprspace ];
+    plugins = [ inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo ];
 
     settings = {
       "$mod" = "SUPER";
@@ -82,7 +82,7 @@ in
         "QT_QPA_PLATFORM=wayland,xcb"
         "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
         "ELECTRON_OZONE_PLATFORM_HINT,auto"
-        "GTK_THEME,Colloid-Green-Dark-Everforest"
+        "GTK_THEME,Tokyonight-Red-Dark"
         "GTK2_RC_FILES,/home/hadi/.local/share/themes/FlatColor/gtk-2.0/gtkrc"
         "__GL_GSYNC_ALLOWED,0"
         "__GL_VRR_ALLOWED,0"

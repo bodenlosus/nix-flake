@@ -36,7 +36,7 @@ in {
       bindkey -M vicmd '\es' sesh-sessions
       bindkey -M viins '\es' sesh-sessions
     '';
-    initExtra =  ''eval "$(${pkgs.direnv}/bin/direnv hook zsh)"'';
+    initExtra = ''eval "$(${pkgs.direnv}/bin/direnv hook zsh)"'';
 
     history = {
       ignoreDups = true;

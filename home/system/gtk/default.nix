@@ -1,7 +1,7 @@
 # GTK & QT theme configuration
 { config, pkgs, lib, ... }:
 {
- qt = {
+  qt = {
     enable = true;
   };
 
@@ -18,36 +18,46 @@
     #   name = "WhiteSur-Dark-grey";
     # };
 
+    # theme = lib.mkForce {
+    #   package = pkgs.colloid-gtk-theme.override {
+    #     themeVariants = [ "grey" "red" "green" ];
+    #     colorVariants = [ "dark" ];
+    #     tweaks = [ "all" ];
+    #   };
+
+    #   name = "Colloid-Green-Dark-Everforest";
+    # };
+
     theme = lib.mkForce {
-      package = pkgs.colloid-gtk-theme.override {
-        themeVariants = [ "grey" "red" "green" ];
+      package = pkgs.tokyonight-gtk-theme.override {
+        themeVariants = [ "all" ];
         colorVariants = [ "dark" ];
-        tweaks = ["all"];
+        tweakVariants = [ "macos" ];
       };
 
-      name = "Colloid-Green-Dark-Everforest";
-    };
-
-    iconTheme = {
-      package = pkgs.colloid-icon-theme.override {
-        schemeVariants = [ "all"];
-        colorVariants = [ "grey" "green" ];
-      };
-      name = "Colloid-Green-Everforest";
+      name = "Tokyonight-Red-Dark";
     };
 
     # iconTheme = {
-    #   package = pkgs.nordzy-icon-theme;
-    #   name = "Nordzy-dark";
+    #   package = pkgs.colloid-icon-theme.override {
+    #     schemeVariants = [ "all" ];
+    #     colorVariants = [ "grey" "green" ];
+    #   };
+    #   name = "Colloid-Green-Everforest";
     # };
 
-    font = { name = config.stylix.fonts.serif.name; };
+    iconTheme = {
+      package = pkgs.nordzy-icon-theme;
+      name = "Nordzy-dark";
+    };
+
+    font = { name = config.stylix.fonts.sansSerif.name; };
 
     gtk3.extraConfig = { gtk-application-prefer-dark-theme = 1; };
 
     gtk4.extraConfig = { gtk-application-prefer-dark-theme = 1; };
   };
-  
+
 
 
 

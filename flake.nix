@@ -24,15 +24,15 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprspace = {
-      url = "github:KZDKM/Hyprspace";
-      inputs.hyprland.follows = "hyprland";
-    };
     nixy-wallpapers = {
       url = "github:anotherhadi/nixy-wallpapers";
       flake = false;
     };
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
     hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
     hyprsunset.url = "github:hyprwm/hyprsunset";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
@@ -56,33 +56,33 @@
                   (final: prev: {
                     zen-browser = inputs.zen-browser.packages."${system}".specific;
                   })
-                                  (final: prev: {
-                  matugen = final.rustPlatform.buildRustPackage rec {
-                    pname = "matugen";
-                    version = "2.4.0";
+                  (final: prev: {
+                    matugen = final.rustPlatform.buildRustPackage rec {
+                      pname = "matugen";
+                      version = "2.4.0";
 
-                    src = final.fetchFromGitHub {
-                      owner = "InioX";
-                      repo = "matugen";
-                      rev = "refs/tags/v${version}";
-                      hash =
-                        "sha256-l623fIVhVCU/ylbBmohAtQNbK0YrWlEny0sC/vBJ+dU=";
+                      src = final.fetchFromGitHub {
+                        owner = "InioX";
+                        repo = "matugen";
+                        rev = "refs/tags/v${version}";
+                        hash =
+                          "sha256-l623fIVhVCU/ylbBmohAtQNbK0YrWlEny0sC/vBJ+dU=";
+                      };
+
+                      cargoHash =
+                        "sha256-FwQhhwlldDskDzmIOxhwRuUv8NxXCxd3ZmOwqcuWz64=";
+
+                      meta = {
+                        description = "Material you color generation tool";
+                        homepage = "https://github.com/InioX/matugen";
+                        changelog =
+                          "https://github.com/InioX/matugen/blob/${src.rev}/CHANGELOG.md";
+                        license = final.lib.licenses.gpl2Only;
+                        maintainers = with final.lib.maintainers; [ lampros ];
+                        mainProgram = "matugen";
+                      };
                     };
-
-                    cargoHash =
-                      "sha256-FwQhhwlldDskDzmIOxhwRuUv8NxXCxd3ZmOwqcuWz64=";
-
-                    meta = {
-                      description = "Material you color generation tool";
-                      homepage = "https://github.com/InioX/matugen";
-                      changelog =
-                        "https://github.com/InioX/matugen/blob/${src.rev}/CHANGELOG.md";
-                      license = final.lib.licenses.gpl2Only;
-                      maintainers = with final.lib.maintainers; [ lampros ];
-                      mainProgram = "matugen";
-                    };
-                  };
-                })
+                  })
                 ];
                 _module.args = { inherit inputs; };
               }

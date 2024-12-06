@@ -1,8 +1,8 @@
-{config, pkgs, ...}:
-let 
+{ config, pkgs, ... }:
+let
   gitbin = ''${pkgs.git}/bin/git'';
-in 
+in
 {
   wayland.windowManager.hyprland.settings.exec-once =
-    [ ''cd ${config.var.configDirectory} && ${gitbin} pull origin''];
+    [ ''cd ${config.var.configDirectory} && ${gitbin} pull origin'' ];
 }

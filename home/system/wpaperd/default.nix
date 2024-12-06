@@ -1,7 +1,7 @@
 { lib, pkgs, ... }:
 {
   wayland.windowManager.hyprland.settings.exec-once =
-    [ "wpaperd -d"];
+    [ "wpaperd -d" ];
   programs.wpaperd = {
     enable = true;
     package = pkgs.wpaperd;
@@ -13,7 +13,7 @@
         sorting = "ascending";
       };
       any = {
-        path = lib.mkForce ../../../wallpapers;
+        path = lib.mkForce "~/Pictures/wallpapers";
       };
     };
   };
