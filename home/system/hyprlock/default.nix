@@ -7,7 +7,7 @@ let
 in
 {
   programs.hyprlock = {
-    enable = true;
+    enable = false;
     settings = lib.mkForce {
       general = {
         grace = 5;

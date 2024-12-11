@@ -39,7 +39,7 @@ in
     direnv
     meson
   ];
-
+  
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
