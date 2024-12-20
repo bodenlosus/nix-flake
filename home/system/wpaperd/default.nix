@@ -14,6 +14,7 @@
       };
       any = {
         path = lib.mkForce "~/Pictures/wallpapers";
+        mode = "center";
       };
     };
   };
