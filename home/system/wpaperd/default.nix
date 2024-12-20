@@ -9,12 +9,12 @@
     settings = {
       default = {
         duration = "30min";
-        mode = "center";
+        mode = lib.mkForce "center";
         sorting = "ascending";
       };
       any = {
         path = lib.mkForce "~/Pictures/wallpapers";
-        mode = "center";
+        mode = lib.mkForce "center";
       };
     };
   };
