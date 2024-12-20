@@ -2,6 +2,7 @@
   imports = [
     ../home/system/wpaperd
     ../home/programs/direnv
+    ../home/programs/btop
   ];
   programs.gh = {
     enable = true;
@@ -32,7 +33,6 @@
     optipng
     pfetch
     pandoc
-    btop
 
     # nixshit
     nixpkgs-fmt
