@@ -54,7 +54,7 @@
                 nixpkgs.overlays = [
                   inputs.hyprpanel.overlay
                   (final: prev: {
-                    zen-browser = inputs.zen-browser.packages."${system}".specific;
+                    zen-browser = inputs.zen-browser.packages."${system}";
                   })
                   (final: prev: {
                     matugen = final.rustPlatform.buildRustPackage rec {
@@ -99,7 +99,7 @@
               nixpkgs.overlays = [
                 inputs.hyprpanel.overlay
                 (final: prev: {
-                  zen-browser = inputs.zen-browser.packages."${system}".specific;
+                  zen-browser = inputs.zen-browser.packages."${system}";
                 })
               ];
               _module.args = { inherit inputs; };
