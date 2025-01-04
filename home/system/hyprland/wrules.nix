@@ -42,7 +42,7 @@
     windowrulev2 = opacity $op_mid $op_mid,class:^(com.obsproject.Studio)$ # Obs-Qt
     windowrulev2 = opacity $op_mid $op_mid,class:^(gnome-boxes)$ # Boxes-Gtk
     windowrulev2 = opacity $op_mid $op_mid,class:^(vesktop)$ # Vesktop
-    windowrulev2 = opacity $op_mid $op_mid,class:^(discord)$ # Discord-Electron
+    windowrulev2 = opacity $op_mid $op_mid,class:^(vesktop)$ # Discord-Electron
     windowrulev2 = opacity $op_mid $op_mid,class:^(WebCord)$ # WebCord-Electron
     windowrulev2 = opacity $op_mid $op_mid,class:^(ArmCord)$ # ArmCord-Electron
     windowrulev2 = opacity $op_mid $op_mid,class:^(app.drey.Warp)$ # Warp-Gtk

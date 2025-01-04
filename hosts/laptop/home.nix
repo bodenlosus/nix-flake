@@ -44,7 +44,7 @@
 
     packages = with pkgs; [
       # Apps
-      discord # Chat
+      vesktop # Chat
       bitwarden # Password manager
       vlc # Video player
       blanket # White-noise app
