@@ -27,7 +27,7 @@ in
 
   # Generate the home.file content using the base16 colors
   # Create the home.file for configuration
-  home.file = {
+  home.file = lib.mkForce {
     ".config/gtk-4.0/gtk.css".text = lib.mkForce ''
       @define-color accent_color ${c4};
       @define-color accent_bg_color ${c1};

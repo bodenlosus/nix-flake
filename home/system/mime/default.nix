@@ -19,15 +19,15 @@
       "text/x-dockerfile" = "code.desktop";
       "text/x-xml" = "code.desktop";
       "text/x-php" = "code.desktop";
-      "image/png" = "imv.desktop";
-      "image/jpeg" = "imv.desktop";
-      "image/jpg" = "imv.desktop";
-      "image/webp" = "imv.desktop";
+      "image/png" = "loupe.desktop";
+      "image/jpeg" = "loupe.desktop";
+      "image/jpg" = "loupe.desktop";
+      "image/webp" = "loupe.desktop";
       "image/gif" = "zen.desktop";
       "x-scheme-handler/http" = "zen.desktop";
       "x-scheme-handler/https" = "zen.desktop";
       "text/html" = "zen.desktop";
-      "application/pdf" = "zathura.desktop";
+      "application/pdf" = "evince.desktop";
     };
   };
 }

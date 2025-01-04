@@ -3,11 +3,12 @@
 {
   qt = {
     enable = true;
+    platformTheme = "gtk";
+    style.name = "adwaita-dark";
   };
 
   gtk = {
     enable = true;
-
     # theme = lib.mkForce {
     #   package = pkgs.whitesur-gtk-theme.override {
     #     themeVariants = [ "grey" "red" ];
@@ -29,27 +30,23 @@
     # };
 
     theme = lib.mkForce {
-      package = pkgs.tokyonight-gtk-theme.override {
-        themeVariants = [ "all" ];
-        colorVariants = [ "dark" ];
-        tweakVariants = [ "macos" ];
-      };
+      package = pkgs.adw-gtk3;
 
-      name = "Tokyonight-Red-Dark";
+      name = "adw-gtk3";
+    };
+
+    iconTheme = {
+      package = pkgs.whitesur-icon-theme.override {
+        themeVariants = [ "default" "grey" ];
+        alternativeIcons = true;
+      };
+      name = "WhiteSur-grey";
     };
 
     # iconTheme = {
-    #   package = pkgs.colloid-icon-theme.override {
-    #     schemeVariants = [ "all" ];
-    #     colorVariants = [ "grey" "green" ];
-    #   };
-    #   name = "Colloid-Green-Everforest";
+    #   package = pkgs.nordzy-icon-theme;
+    #   name = "Nordzy-dark";
     # };
-
-    iconTheme = {
-      package = pkgs.nordzy-icon-theme;
-      name = "Nordzy-dark";
-    };
 
     font = { name = config.stylix.fonts.sansSerif.name; };
 

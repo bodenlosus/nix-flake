@@ -46,6 +46,11 @@
     pipes
     cmatrix
 
+    # multimedia
+    loupe
+    totem
+    evince
+
     # Backup
     firefox
   ];
