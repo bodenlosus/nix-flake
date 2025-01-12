@@ -6,8 +6,8 @@
   '';
 
   inputs = {
-    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs.url = "github:nixos/nixpkgs/585f76290ed66a3fdc5aae0933b73f9fd3dca7e3"; # temporary fix for rocm-llvm issue
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:nixos/nixpkgs/585f76290ed66a3fdc5aae0933b73f9fd3dca7e3"; # temporary fix for rocm-llvm issue
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -38,7 +38,7 @@
     hyprsunset.url = "github:hyprwm/hyprsunset";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     stylix.url = "github:danth/stylix";
-    zen-browser.url = "github:bodenlosus/zen-browser-flake";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs = inputs@{ nixpkgs, ... }:
@@ -55,7 +55,7 @@
                 nixpkgs.overlays = [
                   inputs.hyprpanel.overlay
                   (final: prev: {
-                    zen-browser = inputs.zen-browser.packages."${system}";
+                    zen-browser = inputs.zen-browser.packages."${system}".beta;
                   })
                   (final: prev: {
                     matugen = final.rustPlatform.buildRustPackage rec {
@@ -100,7 +100,7 @@
               nixpkgs.overlays = [
                 inputs.hyprpanel.overlay
                 (final: prev: {
-                  zen-browser = inputs.zen-browser.packages."${system}";
+                  zen-browser = inputs.zen-browser.packages."${system}".beta;
                 })
               ];
               _module.args = { inherit inputs; };

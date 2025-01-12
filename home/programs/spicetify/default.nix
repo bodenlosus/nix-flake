@@ -3,29 +3,24 @@
 let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
   accent = "${config.lib.stylix.colors.base0D}";
-in
-{
+in {
   imports = [ inputs.spicetify-nix.homeManagerModules.default ];
-
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [ "spotify" ];
 
   stylix.targets.spicetify.enable = false;
 
   programs.spicetify = {
     enable = true;
-    theme = lib.mkForce spicePkgs.themes.comfy;
+    theme = lib.mkForce spicePkgs.themes.text;
 
-    colorScheme = lib.mkForce "nord";
+    colorScheme = "custom";
 
-    customColorScheme = lib.mkForce {
+    customColorScheme = {
       button = accent;
       button-active = accent;
       tab-active = accent;
     };
 
     enabledExtensions = with spicePkgs.extensions; [
-      fullAlbumDate
       playlistIcons
       lastfm
       historyShortcut

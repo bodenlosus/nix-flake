@@ -31,7 +31,7 @@
     ../../home/system/hyprpaper
     ../../home/system/gtk
     ../../home/system/wofi
-    ../../home/system/batsignal
+    # ../../home/system/batsignal # doesnt make sense on a desktop lol 
     ../../home/system/zathura
     ../../home/system/mime
     ../../home/system/udiskie
