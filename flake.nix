@@ -6,6 +6,7 @@
   '';
 
   inputs = {
+
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # nixpkgs.url = "github:nixos/nixpkgs/585f76290ed66a3fdc5aae0933b73f9fd3dca7e3"; # temporary fix for rocm-llvm issue
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
@@ -25,20 +26,25 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixy-wallpapers = {
-      url = "github:anotherhadi/nixy-wallpapers";
-      flake = false;
-    };
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+
+    palettify.url = "github:bodenlosus/palettify-rust";
+    # # hyprspace = {
+    #   url = "github:KZDKM/Hyprspace";
+
+    #   # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
+    #   inputs.hyprland.follows = "hyprland";
+    # };
     hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
     hyprsunset.url = "github:hyprwm/hyprsunset";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     stylix.url = "github:danth/stylix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    nur.url = "github:nix-community/NUR";
   };
 
   outputs = inputs@{ nixpkgs, ... }:
@@ -54,35 +60,12 @@
               {
                 nixpkgs.overlays = [
                   inputs.hyprpanel.overlay
+                  inputs.nur.overlays.default
                   (final: prev: {
                     zen-browser = inputs.zen-browser.packages."${system}".beta;
                   })
                   (final: prev: {
-                    matugen = final.rustPlatform.buildRustPackage rec {
-                      pname = "matugen";
-                      version = "2.4.0";
-
-                      src = final.fetchFromGitHub {
-                        owner = "InioX";
-                        repo = "matugen";
-                        rev = "refs/tags/v${version}";
-                        hash =
-                          "sha256-l623fIVhVCU/ylbBmohAtQNbK0YrWlEny0sC/vBJ+dU=";
-                      };
-
-                      cargoHash =
-                        "sha256-FwQhhwlldDskDzmIOxhwRuUv8NxXCxd3ZmOwqcuWz64=";
-
-                      meta = {
-                        description = "Material you color generation tool";
-                        homepage = "https://github.com/InioX/matugen";
-                        changelog =
-                          "https://github.com/InioX/matugen/blob/${src.rev}/CHANGELOG.md";
-                        license = final.lib.licenses.gpl2Only;
-                        maintainers = with final.lib.maintainers; [ lampros ];
-                        mainProgram = "matugen";
-                      };
-                    };
+                    palettify = inputs.palettify.packages."${system}".default;
                   })
                 ];
                 _module.args = { inherit inputs; };
@@ -99,9 +82,21 @@
             {
               nixpkgs.overlays = [
                 inputs.hyprpanel.overlay
+                inputs.nur.overlays.default
                 (final: prev: {
                   zen-browser = inputs.zen-browser.packages."${system}".beta;
                 })
+                (final: prev: {
+                    palettify = inputs.palettify.packages."${system}".default;
+                  })
+                # (
+                #   final: prev: {
+                #     rocmPackages.llvm = prev.rocmPackages.llvm.override {
+                #       buildDocs = false;
+
+                #     };
+                #   }
+                # )
               ];
               _module.args = { inherit inputs; };
             }

@@ -1,9 +1,12 @@
-{ config, inputs, ... }:
+{ config, inputs, lib, ... }:
 let autoGarbageCollector = config.var.autoGarbageCollector;
 in {
   nixpkgs.config = {
     allowUnfree = true;
     allowBroken = true;
+    allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+      "copilot.vim"
+    ];
   };
   nix = {
     nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];

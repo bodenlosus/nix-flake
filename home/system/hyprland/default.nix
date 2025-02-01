@@ -19,7 +19,6 @@ in
     qt6.qtwayland
     libsForQt5.qt5ct
     qt6ct
-    libsForQt5.qtstyleplugin-kvantum
     hyprshot
     hyprpicker
     swappy
@@ -27,26 +26,23 @@ in
     wf-recorder
     wlr-randr
     wl-clipboard
-    wl-clipboard-x11
     brightnessctl
     gnome-themes-extra
     libva
     dconf
     wayland-utils
     wayland-protocols
-    wf-recorder
     glib
     direnv
     meson
   ];
-  
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-
-    plugins = [ inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo ];
+    plugins = [ (pkgs.callPackage ./hyprscroller { hyprland = inputs.hyprland.packages."${pkgs.system}".hyprland; }) ]; # [ (pkgs.callPackage ./hyprscroller/default.nix {}) ];
 
     settings = {
       "$mod" = "SUPER";
@@ -110,6 +106,9 @@ in
         border_part_of_window = true;
         layout = "scroller";
       };
+      debug = {
+        disable_logs = false;
+      };
 
       decoration = {
         active_opacity = active-opacity;
@@ -124,7 +123,7 @@ in
           enabled = if blur then "true" else "false";
           size = 12;
           passes = 3;
-          noise = 0.05;
+          noise = 0.02;
           ignore_opacity = true;
           vibrancy = 0.1696;
         };

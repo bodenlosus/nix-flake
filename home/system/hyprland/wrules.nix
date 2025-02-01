@@ -5,7 +5,7 @@
 
     # See https://wiki.hyprland.org/Configuring/Window-Rules/
 
-    $op_high = 1
+    $op_high = 0.95
     $op_mid = 0.85
     $op_low = 0.8;
 
@@ -16,7 +16,12 @@
     windowrulev2 = opacity $op_mid $op_mid,class:^(code-url-handler)$
     windowrulev2 = opacity $op_mid $op_mid,class:^(code-insiders-url-handler)$
     windowrulev2 = opacity $op_mid $op_mid,class:^(kitty)$
+    windowrulev2 = opacity $op_mid $op_lowclass:^(wofi)$
+    windowrulev2 = opacity $op_mid $op_mid,class:^(kitty)$
+    windowrulev2 = opacity $op_mid $op_mid,class:^(.blueman-manager-wrapped)$
+    windowrulev2 = opacity $op_mid $op_mid,class:^(io.github.kaii_lb.Overskride)$
     windowrulev2 = opacity $op_mid $op_mid,class:^(org.kde.dolphin)$
+    windowrulev2 = opacity $op_mid $op_mid,class:^(org.gnome.Nautilus)$
     windowrulev2 = opacity $op_mid $op_mid,class:^(org.kde.ark)$
     windowrulev2 = opacity $op_mid $op_mid,class:^(nwg-look)$
     windowrulev2 = opacity $op_mid $op_mid,class:^(qt5ct)$
@@ -32,9 +37,9 @@
     windowrulev2 = opacity $op_mid $op_low,class:^(org.freedesktop.impl.portal.desktop.hyprland)$
     windowrulev2 = opacity $op_low $op_low,class:^([Ss]team)$
     windowrulev2 = opacity $op_low $op_low,class:^(steamwebhelper)$
-    windowrulev2 = opacity $op_low $op_low,class:^(Spotify)$
-    windowrulev2 = opacity $op_low $op_low,initialTitle:^(Spotify Free)$
-    windowrulev2 = opacity $op_low $op_low,initialTitle:^(Spotify Premium)$
+    windowrulev2 = opacity $op_low $op_high,class:^(Spotify)$
+    windowrulev2 = opacity $op_low $op_high,initialTitle:^(Spotify Free)$
+    windowrulev2 = opacity $op_low $op_high,initialTitle:^(Spotify Premium)$
 
     windowrulev2 = opacity $op_high $op_high,class:^(com.github.rafostar.Clapper)$ # Clapper-Gtk
     windowrulev2 = opacity $op_mid $op_mid,class:^(com.github.tchx84.Flatseal)$ # Flatseal-Gtk
@@ -101,5 +106,23 @@
     layerrule = blur,swaync-control-center
     layerrule = ignorezero,swaync-control-center
     layerrule = blur,logout_dialog
-  '';
+    layerrule = blur,bar-0
+    layerrule = blur,bar-1
+    layerrule = ignorezero,bar-0
+    layerrule = ignorezero,bar-1
+  '' + "\n" + builtins.concatStringsSep "\n" (map (layer: "layerrule = blur,${layer}\nlayerrule = ignorezero,${layer}") [
+    "bar-0"
+    "bar-1"
+    "networkmenu"
+    "bluetoothmenu"
+    "audiomenu"
+    "powermenu"
+    "energymenu"
+    "notifications-window"
+    "calendarmenu"
+    "notificationsmenu"
+    "mediamenu"
+    "dashboardmenu"
+  ])
+  ;
 }

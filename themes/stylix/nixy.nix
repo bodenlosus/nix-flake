@@ -54,7 +54,7 @@
     };
     opacity.terminal = 0.8;
     polarity = "dark";
-    image = ./a.jpg;
+    image = ./a.png;
   };
   stylix.targets.chromium.enable = true;
   stylix.targets.gtk.enable = true;

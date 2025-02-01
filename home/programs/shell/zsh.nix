@@ -16,8 +16,8 @@ in {
 
     initExtraFirst = ''
       bindkey -e
-      ${if fetch == "neofetch" then
-        pkgs.neofetch + "/bin/neofetch"
+      ${if fetch == "fastfetch" then
+        pkgs.fastfetch + "/bin/fastfetch"
       else if fetch == "nerdfetch" then
         "nerdfetch"
       else if fetch == "pfetch" then
@@ -36,7 +36,6 @@ in {
       bindkey -M vicmd '\es' sesh-sessions
       bindkey -M viins '\es' sesh-sessions
     '';
-    initExtra = ''eval "$(${pkgs.direnv}/bin/direnv hook zsh)"'';
 
     history = {
       ignoreDups = true;
@@ -49,6 +48,18 @@ in {
         lib.concatStringsSep ":" config.home.sessionPath
       }"
     '';
+
+    #NOTE- for btop to show gpu usage 
+    #may want to check the driver version with:
+    #nix path-info -r /run/current-system | grep nvidia-x11
+    #and 
+    #nix search nixpkgs nvidia_x11
+    # sessionVariables = {
+    #   LD_LIBRARY_PATH = lib.concatStringsSep ":" [
+    #     "${pkgs.linuxPackages_latest.nvidia_x11_beta}/lib" # change the package name according to nix search result
+    #     "$LD_LIBRARY_PATH"
+    #   ];
+    # };
 
     shellAliases = {
       vim = "nvim";
@@ -64,6 +75,7 @@ in {
       sl = "ls";
       open = "${pkgs.xdg-utils}/bin/xdg-open";
       icat = "${pkgs.kitty}/bin/kitty +kitten icat";
+      ssh = "kitty +kitten ssh";
 
       wireguard-import = "nmcli connection import type wireguard file";
 

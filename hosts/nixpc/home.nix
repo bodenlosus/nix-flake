@@ -7,8 +7,6 @@
 
     # Programs
     ../../home/programs/kitty
-    ../../home/programs/nvim
-    ../../home/programs/qutebrowser
     ../../home/programs/shell
     ../../home/programs/fetch
     ../../home/programs/git
@@ -16,7 +14,6 @@
     ../../home/programs/nextcloud
     ../../home/programs/yazi
     ../../home/programs/markdown
-    ../../home/programs/thunar
     ../../home/programs/nautilus
     ../../home/programs/lazygit
 

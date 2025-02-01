@@ -1,8 +1,9 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, inputs, ... }: {
   imports = [
-    ../home/system/wpaperd
+    # ../home/system/wpaperd
     ../home/programs/direnv
     ../home/programs/btop
+    ../home/system/waypaper
   ];
   programs.gh = {
     enable = true;
@@ -10,13 +11,16 @@
   home.packages = with pkgs; [
     # Apps
     vesktop # Chat
-    bitwarden # Password manager
+    # bitwarden # Password manager
     vlc # Video player
     blanket # White-noise app
+    pomodoro-gtk
+    spot
     opera
     zen-browser
     obsidian
     vscode
+    palettify
 
     # Dev
     deno
@@ -33,6 +37,7 @@
     optipng
     pfetch
     pandoc
+    overskride
 
     # nixshit
     nixpkgs-fmt

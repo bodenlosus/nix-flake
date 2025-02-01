@@ -1,20 +1,19 @@
 {
-  rounding = 10;
-  gaps-in = 10;
-  gaps-out = 10 * 2;
+  rounding = 12;
+  gaps-in = 6;
+  gaps-out = 6 * 2;
+  system-opacity = 0.7;
   active-opacity = 1;
   inactive-opacity = 0.9;
   blur = true;
   border-size = 1;
-  animation-speed = "medium"; # "fast" | "medium" | "slow"
-  fetch = "neofetch"; # "nerdfetch" | "neofetch" | "pfetch" | "none"
+  animation-speed = "fast"; # "fast" | "medium" | "slow"
+  fetch = "fastfetch"; # "nerdfetch" | "neofetch" | "pfetch" | "none"
 
   bar = {
-    position = "top"; # "top" | "bottom"
+    position = "bottom"; # "top" | "bottom"
     transparent = true;
     transparentButtons = false;
-    floating = false;
+    floating = true;
   };
-
-
 }

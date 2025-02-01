@@ -3,13 +3,11 @@
     bind = [
       "$mod,Q, exec, ${pkgs.kitty}/bin/kitty" # Kitty
       "$mod,E, exec, ${pkgs.nautilus}/bin/nautilus" # Thunar
-      "$mod,B, exec, ${pkgs.zen-browser}/bin/zen" # Qutebrowser
-      "$mod,M, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
       "$mod,X, exec, powermenu" # Powermenu
       "$mod,R, exec, menu" # Launcher
       "$mod,A, exec, quickmenu" # Quickmenu
       "$shiftMod,SPACE , exec, hyprfocus-toggle" # Toggle HyprFocus
-      "$mod,TAB, hyprexpo:expo, toggle" # Overview
+      "$shiftMod,T, exec, hyprpanel-toggle" # Toggle hyprpanel
 
 
       "$mod,C, killactive," # Close window
@@ -19,17 +17,24 @@
       "$mod,right, movefocus, r" # Move focus Right
       "$mod,up, movefocus, u" # Move focus Up
       "$mod,down, movefocus, d" # Move focus Down
-      "$shiftMod,up, focusmonitor, -1" # Focus previous monitor
-      "$shiftMod,down, focusmonitor, 1" # Focus next monitor
-      "$shiftMod,left, layoutmsg, addmaster" # Add to master
-      "$shiftMod,right, layoutmsg, removemaster" # Remove from master
+      "$mod, TAB, scroller:toggleoverview"
+      # "$shiftMod,up, focusmonitor, -1" # Focus previous monitor
+      # "$shiftMod,down, focusmonitor, 1" # Focus next monitor
+      "$shiftMod,S, scroller:cycleheight, 1"
+      "$shiftMod,A, scroller:cyclewidth, 1"
+      "$shiftMod,W, scroller:setmode, c"
+      "$shiftMod,D, scroller:setmode, r"
+      "$shiftMod,Q, scroller:fitsize, active"
+      "$shiftMod,left, scroller:admitwindow" # Add to master
+      "$shiftMod,right, scroller:expelwindow" # Remove from master
+      "$shiftMod,code:190 , scroller:pin"
+
 
       "$mod,PRINT, exec, screenshot window" # Screenshot window
       ",PRINT, exec, screenshot region" # Screenshot monitor
       "$shiftMod,PRINT, exec, screenshot monitor" # Screenshot region
       "ALT,PRINT, exec, screenshot region swappy" # Screenshot region then edit
 
-      "$shiftMod,S, exec, ${pkgs.qutebrowser}/bin/qutebrowser :open $(wofi --show dmenu -L 1 -p ' Search on internet')" # Search on internet with wofi
       "$shiftMod,C, exec, clipboard" # Clipboard picker with wofi
       "$shiftMod,E, exec, ${pkgs.wofi-emoji}/bin/wofi-emoji" # Emoji picker with wofi
       "$mod,F2, exec, night-shift" # Toggle night shift
