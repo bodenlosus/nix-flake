@@ -10,13 +10,11 @@
 | Move app to Workspace | SHIFT + SUPER + {Number} |
 | Kitty | SUPER + Q |
 | Thunar | SUPER + E |
-| Qutebrowser | SUPER + B |
-| Lock | SUPER + M |
 | Powermenu | SUPER + X |
 | Launcher | SUPER + R |
 | Quickmenu | SUPER + A |
 | Toggle HyprFocus | SHIFT + SUPER + SPACE  |
-| Overview | SUPER + TAB |
+| Toggle hyprpanel | SHIFT + SUPER + T |
 | Close window | SUPER + C |
 | Toggle Floating | SUPER + T |
 | Toggle Fullscreen | SUPER + F |
@@ -24,15 +22,21 @@
 | Move focus Right | SUPER + right |
 | Move focus Up | SUPER + up |
 | Move focus Down | SUPER + down |
-| Focus previous monitor | SHIFT + SUPER + up |
-| Focus next monitor | SHIFT + SUPER + down |
+| $mod, TAB, scroller:toggleoverview" | SUPER +  TAB |
+| "$shiftMod,up, focusmonitor, -1"  |  |
+| "$shiftMod,down, focusmonitor, 1"  |  |
+| $shiftMod,S, scroller:cycleheight, 1" | SHIFT + SUPER + S |
+| $shiftMod,A, scroller:cyclewidth, 1" | SHIFT + SUPER + A |
+| $shiftMod,W, scroller:setmode, c" | SHIFT + SUPER + W |
+| $shiftMod,D, scroller:setmode, r" | SHIFT + SUPER + D |
+| $shiftMod,Q, scroller:fitsize, active" | SHIFT + SUPER + Q |
 | Add to master | SHIFT + SUPER + left |
 | Remove from master | SHIFT + SUPER + right |
+| $shiftMod,code:190 , scroller:pin" | SHIFT + SUPER + code:190  |
 | Screenshot window | SUPER + PRINT |
 | Screenshot monitor | PRINT |
 | Screenshot region | SHIFT + SUPER + PRINT |
 | Screenshot region then edit | ALTPRINT |
-| Search on internet with wofi | SHIFT + SUPER + S |
 | Clipboard picker with wofi | SHIFT + SUPER + C |
 | Emoji picker with wofi | SHIFT + SUPER + E |
 | Toggle night shift | SUPER + F2 |
