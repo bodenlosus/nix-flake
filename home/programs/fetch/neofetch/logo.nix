@@ -4,7 +4,7 @@
 
 stdenv.mkDerivation {
   pname = "logo";
-  version = "1.0";
+  version = "1.1";
 
   src = ./src;
 

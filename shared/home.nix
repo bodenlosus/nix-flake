@@ -3,6 +3,7 @@
     # ../home/system/wpaperd
     ../home/programs/direnv
     ../home/programs/btop
+    ../home/programs/cava
     ../home/system/waypaper
   ];
   programs.gh = {

@@ -1,10 +1,4 @@
 {
-  # https://github.com/anotherhadi/nixy
-  description = ''
-    Nixy is a NixOS configuration with home-manager, secrets and custom theming all in one place.
-    It's a simple way to manage your system configuration and dotfiles.
-  '';
-
   inputs = {
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";

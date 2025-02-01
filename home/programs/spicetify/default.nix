@@ -2,8 +2,8 @@
 { pkgs, config, lib, inputs, ... }:
 let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-
   colors = config.lib.stylix.colors;
+  
 in
 {
   imports = [ inputs.spicetify-nix.homeManagerModules.default ];
