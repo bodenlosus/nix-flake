@@ -7,16 +7,12 @@
 
     # Programs
     ../../home/programs/kitty
-    ../../home/programs/nvim
-    ../../home/programs/qutebrowser
     ../../home/programs/shell
     ../../home/programs/fetch
     ../../home/programs/git
     ../../home/programs/spicetify
-    ../../home/programs/nextcloud
     ../../home/programs/yazi
     ../../home/programs/markdown
-    ../../home/programs/thunar
     ../../home/programs/nautilus
     ../../home/programs/lazygit
 
@@ -26,7 +22,6 @@
     # System (Desktop environment like stuff)
     ../../home/system/hyprland
     ../../home/system/hypridle
-    ../../home/system/hyprlock
     ../../home/system/hyprpanel
     ../../home/system/hyprpaper
     ../../home/system/gtk
@@ -46,7 +41,6 @@
     homeDirectory = "/home/" + config.var.username;
 
     # Import my profile picture, used by the hyprpanel dashboard
-    file.".profile_picture.png" = { source = ./profile_picture.png; };
 
     # Don't touch this
     stateVersion = "24.05";

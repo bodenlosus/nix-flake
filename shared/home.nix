@@ -4,7 +4,6 @@
     ../home/programs/direnv
     ../home/programs/btop
     ../home/programs/cava
-    ../home/system/waypaper
   ];
   programs.gh = {
     enable = true;
