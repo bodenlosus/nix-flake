@@ -53,7 +53,16 @@ in
         "wpaperd -d"
       ];
 
-      plugin = { overview = { autoDrag = false; }; };
+      plugin = { 
+        overview = {
+          autoDrag = false; 
+        };
+        scroller = {
+          center_row_if_space_available = true;
+          jump_labels_scale = 0.1;
+          jump_labels_keys = "qwerasdf";
+        };
+      };
 
       monitor = [
         "eDP-2,highres,0x0,1"

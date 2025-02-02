@@ -17,17 +17,15 @@
       "$mod,right, movefocus, r" # Move focus Right
       "$mod,up, movefocus, u" # Move focus Up
       "$mod,down, movefocus, d" # Move focus Down
-      "$mod, TAB, scroller:toggleoverview"
-      # "$shiftMod,up, focusmonitor, -1" # Focus previous monitor
-      # "$shiftMod,down, focusmonitor, 1" # Focus next monitor
-      "$shiftMod,S, scroller:cycleheight, 1"
-      "$shiftMod,A, scroller:cyclewidth, 1"
-      "$shiftMod,W, scroller:setmode, c"
-      "$shiftMod,D, scroller:setmode, r"
-      "$shiftMod,Q, scroller:fitsize, active"
+      "$mod, TAB, scroller:toggleoverview" # Scroller Overview
+      "$shiftMod,S, scroller:cycleheight, 1" # Cycle height
+      "$shiftMod,A, scroller:cyclewidth, 1" # Cycle width
+      "$shiftMod,W, scroller:setmode, c" # Set mode column
+      "$shiftMod,D, scroller:setmode, r" # Set mode row
+      "$shiftMod,Q, scroller:fitsize, active" # Maximize Window
       "$shiftMod,left, scroller:admitwindow" # Add to master
       "$shiftMod,right, scroller:expelwindow" # Remove from master
-      "$shiftMod,code:190 , scroller:pin"
+      "$shiftMod,code:190 , scroller:jump" # jump
 
 
       "$mod,PRINT, exec, screenshot window" # Screenshot window
