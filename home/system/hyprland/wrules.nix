@@ -13,6 +13,9 @@
     windowrulev2 = opacity $op_high $op_high,class:^(Brave-browser)$
     windowrulev2 = opacity $op_high $op_high,class:^(code-oss)$
     windowrulev2 = opacity $op_high $op_high,class:^(Code)$
+    windowrulev2 = opacity $op_mid $op_mid,class:^(spotify)$
+    windowrulev2 = opacity $op_mid $op_mid,initialTitle:^(spotify Free)$
+    windowrulev2 = opacity $op_mid $op_mid,initialTitle:^(spotify Premium)$
     windowrulev2 = opacity $op_mid $op_mid,class:^(code-url-handler)$
     windowrulev2 = opacity $op_mid $op_mid,class:^(code-insiders-url-handler)$
     windowrulev2 = opacity $op_mid $op_mid,class:^(kitty)$
@@ -37,9 +40,7 @@
     windowrulev2 = opacity $op_mid $op_low,class:^(org.freedesktop.impl.portal.desktop.hyprland)$
     windowrulev2 = opacity $op_low $op_low,class:^([Ss]team)$
     windowrulev2 = opacity $op_low $op_low,class:^(steamwebhelper)$
-    windowrulev2 = opacity $op_low $op_high,class:^(Spotify)$
-    windowrulev2 = opacity $op_low $op_high,initialTitle:^(Spotify Free)$
-    windowrulev2 = opacity $op_low $op_high,initialTitle:^(Spotify Premium)$
+
 
     windowrulev2 = opacity $op_high $op_high,class:^(com.github.rafostar.Clapper)$ # Clapper-Gtk
     windowrulev2 = opacity $op_mid $op_mid,class:^(com.github.tchx84.Flatseal)$ # Flatseal-Gtk
