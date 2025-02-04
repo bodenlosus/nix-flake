@@ -22,17 +22,15 @@
 | Move focus Right | SUPER + right |
 | Move focus Up | SUPER + up |
 | Move focus Down | SUPER + down |
-| $mod, TAB, scroller:toggleoverview" | SUPER +  TAB |
-| "$shiftMod,up, focusmonitor, -1"  |  |
-| "$shiftMod,down, focusmonitor, 1"  |  |
-| $shiftMod,S, scroller:cycleheight, 1" | SHIFT + SUPER + S |
-| $shiftMod,A, scroller:cyclewidth, 1" | SHIFT + SUPER + A |
-| $shiftMod,W, scroller:setmode, c" | SHIFT + SUPER + W |
-| $shiftMod,D, scroller:setmode, r" | SHIFT + SUPER + D |
-| $shiftMod,Q, scroller:fitsize, active" | SHIFT + SUPER + Q |
+| Scroller Overview | SUPER +  TAB |
+| Cycle height | SHIFT + SUPER + S |
+| Cycle width | SHIFT + SUPER + A |
+| Set mode column | SHIFT + SUPER + W |
+| Set mode row | SHIFT + SUPER + D |
+| Maximize Window | SHIFT + SUPER + Q |
 | Add to master | SHIFT + SUPER + left |
 | Remove from master | SHIFT + SUPER + right |
-| $shiftMod,code:190 , scroller:pin" | SHIFT + SUPER + code:190  |
+| jump | SHIFT + SUPER + code:190  |
 | Screenshot window | SUPER + PRINT |
 | Screenshot monitor | PRINT |
 | Screenshot region | SHIFT + SUPER + PRINT |
