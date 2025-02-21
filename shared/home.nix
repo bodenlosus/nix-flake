@@ -19,6 +19,7 @@
     opera
     zen-browser
     obsidian
+    planify
     vscode
     palettify
 

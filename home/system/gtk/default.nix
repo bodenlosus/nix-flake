@@ -4,9 +4,9 @@
   qt = {
     enable = true;
     platformTheme = {
-      name = "gtk";
+      name = lib.mkForce "gtk";
     };
-    style.name = "adwaita-dark";
+    style.name = lib.mkForce "adwaita-dark";
   };
 
   gtk = {
@@ -37,18 +37,18 @@
       name = "adw-gtk3";
     };
 
-    iconTheme = {
-      package = pkgs.whitesur-icon-theme.override {
-        themeVariants = [ "all" ];
-        alternativeIcons = true;
-      };
-      name = "WhiteSur";
-    };
-
     # iconTheme = {
-    #   package = pkgs.nordzy-icon-theme;
-    #   name = "Nordzy-dark";
+    #   package = pkgs.whitesur-icon-theme.override {
+    #     themeVariants = [ "all" ];
+    #     alternativeIcons = true;
+    #   };
+    #   name = "WhiteSur";
     # };
+
+    iconTheme = {
+      package = pkgs.nordzy-icon-theme;
+      name = "Nordzy-dark";
+    };
 
     font = { name = config.stylix.fonts.sansSerif.name; };
 

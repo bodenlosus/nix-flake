@@ -1,7 +1,10 @@
 { pkgs, ... }:
 {
   # For 24.11
-  hardware.graphics.extraPackages = with pkgs; [ rocmPackages.clr.icd ];
+  hardware.graphics.extraPackages = with pkgs; [
+    rocmPackages.clr.icd
+    amdvlk
+  ];
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -11,18 +14,18 @@
   #   # driSupport = true;
   #   # driSupport32Bit = true;
   # };
-  # systemd.tmpfiles.rules =
-  #   let
-  #     rocmEnv = pkgs.symlinkJoin {
-  #       name = "rocm-combined";
-  #       paths = with pkgs.rocmPackages_5; [
-  #         rocblas
-  #         hipblas
-  #         clr
-  #       ];
-  #     };
-  #   in
-  #   [
-  #     "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
-  #   ];
+  systemd.tmpfiles.rules =
+    let
+      rocmEnv = pkgs.symlinkJoin {
+        name = "rocm-combined";
+        paths = with pkgs.rocmPackages; [
+          rocblas
+          hipblas
+          clr
+        ];
+      };
+    in
+    [
+      "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
+    ];
 }

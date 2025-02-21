@@ -20,7 +20,8 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    # };hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprland.url = "github:hyprwm/Hyprland/04ac46c54357278fc68f0a95d26347ea0db99496";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
@@ -81,8 +82,8 @@
                   zen-browser = inputs.zen-browser.packages."${system}".beta;
                 })
                 (final: prev: {
-                    palettify = inputs.palettify.packages."${system}".default;
-                  })
+                  palettify = inputs.palettify.packages."${system}".default;
+                })
                 # (
                 #   final: prev: {
                 #     rocmPackages.llvm = prev.rocmPackages.llvm.override {

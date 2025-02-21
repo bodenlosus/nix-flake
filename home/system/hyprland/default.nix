@@ -42,8 +42,7 @@ in
     xwayland.enable = true;
     systemd.enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-    plugins = [ (pkgs.callPackage ./hyprscroller { hyprland = inputs.hyprland.packages."${pkgs.system}".hyprland; }) ]; # [ (pkgs.callPackage ./hyprscroller/default.nix {}) ];
-
+    plugins = [ (pkgs.callPackage ./hyprscroller/default.nix { hyprland = inputs.hyprland.packages."${pkgs.system}".hyprland; }) ];
     settings = {
       "$mod" = "SUPER";
       "$shiftMod" = "SUPER_SHIFT";
@@ -53,9 +52,9 @@ in
         "wpaperd -d"
       ];
 
-      plugin = { 
+      plugin = {
         overview = {
-          autoDrag = false; 
+          autoDrag = false;
         };
         scroller = {
           center_row_if_space_available = true;

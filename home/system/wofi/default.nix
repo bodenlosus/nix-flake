@@ -5,106 +5,221 @@ let
   background = "#${config.lib.stylix.colors.base00}";
   background-alt = "#${config.lib.stylix.colors.base01}";
   foreground = "#${config.lib.stylix.colors.base05}";
+  selected = "#${config.lib.stylix.colors.base00}";
+  urgent = "#${config.lib.stylix.colors.base09}";
   font = config.stylix.fonts.serif.name;
   rounding = config.var.theme.rounding;
   font-size = config.stylix.fonts.sizes.popups;
 in
 {
 
-  home.packages = with pkgs; [ wofi-emoji ];
+  home.packages = with pkgs; [ rofi-wayland ];
 
-  programs.wofi = {
-    enable = true;
 
-    settings = {
-      allow_markup = true;
-      width = 450;
-      show = "drun";
-      prompt = "Apps";
-      normal_window = true;
-      layer = "top";
-      term = "foot";
-      height = "305px";
-      orientation = "vertical";
-      halign = "fill";
-      line_wrap = "off";
-      dynamic_lines = false;
-      allow_images = true;
-      image_size = 36;
-      exec_search = false;
-      hide_search = false;
-      parse_search = false;
-      insensitive = true;
-      hide_scroll = true;
-      no_actions = true;
-      sort_order = "default";
-      gtk_dark = true;
-      filter_rate = 100;
-      key_expand = "Tab";
-      key_exit = "Escape";
-    };
+   xdg.configFile."rofi/config.rasi".text =''
+      /**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
+ **/
 
-    style = lib.mkForce
-      # css
-      ''
-        * {
-          font-family: "${font}";
-          font-weight: 500;
-          font-size: ${toString font-size}px;
-        }
+/*****----- Configuration -----*****/
+configuration {
+	modi:                       "drun,filebrowser,window";
+    show-icons:                 true;
+    display-drun:               "";
+    display-run:                "";
+    display-filebrowser:        "";
+    display-window:             "";
+	drun-display-format:        "{name}";
+	window-format:              "{w} · {c} · {t}";
+}
 
-        #window {
-          background-color: ${background};
-          color: ${foreground};
-          border-radius: ${toString rounding}px;
-        }
+/*****----- Global Properties -----*****/
+* {
+    font:                        "${font} ${toString font-size}";
+    background:                  ${background};
+    background-alt:              ${background-alt};
+    foreground:                  ${foreground};
+    selected:                    ${accent}BB;
+    active:                      ${accent}BB;
+    urgent:                      ${urgent};
+}
 
-        #outer-box {
-          padding: 20px;
-        }
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
+ **/
 
-        #input {
-          background-color: ${background-alt};
-          border: 0px solid ${accent};
-          color: ${foreground};
-          padding: 8px 12px;
-        }
+/*****----- Configuration -----*****/
+configuration {
+	modi:                       "drun";
+    show-icons:                 true;
+	drun-display-format:        "{name}";
+}
 
-        #scroll {
-          margin-top: 20px;
-        }
 
-        #inner-box {}
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       320px;
+    x-offset:                    0px;
+    y-offset:                    0px;
 
-        #img {
-          padding-right: 8px;
-        }
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      1px solid;
+    border-radius:               12px;
+    border-color:                ${accent};
+    background-color:            @background;
+    cursor:                      "default";
+}
 
-        #text {
-          color: ${foreground};
-        }
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     20px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
 
-        #text:selected {
-          color: ${foreground};
-        }
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     15px;
+    border:                      0px solid;
+    border-radius:               12px;
+    border-color:                @selected;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    children:                    [ "prompt", "entry" ];
+}
 
-        #entry {
-          padding: 6px;
-        }
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "::";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+entry {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           inherit;
+}
 
-        #entry:selected {
-          background-color: ${accent};
-          color: ${foreground};
-        }
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     5px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+scrollbar {
+    handle-width:                5px ;
+    handle-color:                @selected;
+    border-radius:               0px;
+    background-color:            @background-alt;
+}
 
-        #unselected {}
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     5px;
+    border:                      0px solid;
+    border-radius:               ${toString rounding};
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+element normal.normal {
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+element alternate.normal {
+    background-color: @background;
+    text-color:       @forground;
+}
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @background;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        32px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
 
-        #selected {}
-
-        #input,
-        #entry:selected {
-          border-radius: ${toString rounding}px;
-        }
-      '';
-  };
+/*****----- Message -----*****/
+error-message {
+    padding:                     15px;
+    border:                      2px solid;
+    border-radius:               12px;
+    border-color:                @selected;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+textbox {
+    background-color:            @background;
+    text-color:                  @foreground;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    highlight:                   none;
+}
+    
+    '';
 }

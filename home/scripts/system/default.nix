@@ -11,11 +11,7 @@ let
   menu = pkgs.writeShellScriptBin "menu"
     # bash
     ''
-      if pgrep wofi; then
-      	pkill wofi
-      else
-      	wofi -p " Apps" --show drun
-      fi
+      rofi -show drun
       # if pgrep tofi; then
       # 	pkill tofi
       # else
@@ -26,77 +22,61 @@ let
   powermenu = pkgs.writeShellScriptBin "powermenu"
     # bash
     ''
-      if pgrep wofi; then
-      	pkill wofi
-      # if pgrep tofi; then
-      #   pkill tofi
-      else
-        options=(
-          "󰌾 Lock"
-          "󰍃 Logout"
-          " Suspend"
-          "󰑐 Reboot"
-          "󰿅 Shutdown"
-        )
+      #/usr/bin/env bash
+options=(
+    " 󰍃  Logout"
+    "   Suspend"
+    " 󰑐  Reboot"
+    " 󰿅  Shutdown"
+)
 
-        selected=$(printf '%s\n' "''${options[@]}" | wofi -p " Powermenu" --dmenu)
-        # selected=$(printf '%s\n' "''${options[@]}" | tofi --prompt-text "> ")
-        selected=''${selected:2}
+selected=$(printf '%s\n' "''${options[@]}" | rofi -no-show-icons -dmenu)
+selected=$(echo "$selected" | cut -d' ' -f4-)
 
-        case $selected in
-          "Lock")
-            ${pkgs.hyprlock}/bin/hyprlock
-            ;;
-          "Logout")
-            hyprctl dispatch exit
-            ;;
-          "Suspend")
-            systemctl suspend
-            ;;
-          "Reboot")
-            systemctl reboot
-            ;;
-          "Shutdown")
-            systemctl poweroff
-            ;;
-        esac
-      fi
+case $selected in
+    "Logout")
+    hyprctl dispatch exit
+    ;;
+    "Suspend")
+    systemctl suspend
+    ;;
+    "Reboot")
+    systemctl reboot
+    ;;
+    "Shutdown")
+    systemctl poweroff
+    ;;
+esac
     '';
 
-  quickmenu = pkgs.writeShellScriptBin "quickmenu"
-    # bash
-    ''
-      if pgrep wofi; then
-      	pkill wofi
-      # if pgrep tofi; then
-      #   pkill tofi
-      else
-        options=(
-          "󰅶 Caffeine"
-          "󰖔 Night-shift"
-          " Nixy"
-          "󰈊 Hyprpicker"
-        )
+  quickmenu = pkgs.writeShellScriptBin "quickmenu" ''
 
-        selected=$(printf '%s\n' "''${options[@]}" | wofi -p " Quickmenu" --dmenu)
-        # selected=$(printf '%s\n' "''${options[@]}" | tofi --prompt-text "> ")
-        selected=''${selected:2}
+#/usr/bin/env bash
+options=(
+    " 󰅶  Caffeine"
+    " 󰖔  Night-shift"
+    "   Nixy"
+    " 󰈊  Hyprpicker"
+)
 
-        case $selected in
-          "Caffeine")
-            caffeine
-            ;;
-          "Night-shift")
-            night-shift
-            ;;
-          "Nixy")
-            kitty zsh -c nixy
-            ;;
-          "Hyprpicker")
-            sleep 0.2 && ${pkgs.hyprpicker}/bin/hyprpicker -a
-            ;;
-        esac
-      fi
+selected=$(printf '%s\n' "''${options[@]}" | rofi -no-show-icons -dmenu)
+selected=$(echo "$selected" | cut -d' ' -f4-)
+
+case $selected in
+    "Caffeine")
+    caffeine
+    ;;
+    "Night-shift")
+    night-shift
+    ;;
+    "Nixy")
+    kitty zsh -c nixy
+    ;;
+    "Hyprpicker")
+    sleep 0.2
+    ${pkgs.hyprpicker}/bin/hyprpicker -a
+    ;;
+esac
     '';
 
   lock = pkgs.writeShellScriptBin "lock"

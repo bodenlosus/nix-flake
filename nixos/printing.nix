@@ -3,7 +3,7 @@
   services.printing = {
     enable = true;
     webInterface = true;
-    drivers = with pkgs; [ hplip canon-cups-ufr2 canon-capt ];
+    drivers = with pkgs; [ hplip ];
   };
   services.avahi = {
     enable = true;

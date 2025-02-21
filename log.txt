@@ -1,0 +1,1091 @@
+Jan 19 17:59:59 nixpc systemd[1]: home-manager-johannes.service: Consumed 726ms CPU time, 9.8M memory peak, 4.2M read from disk.
+Jan 19 17:59:59 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Jan 19 17:59:59 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Jan 19 17:59:59 nixpc hm-activate-johannes[959657]: Skipping plasma-apply-lookandfeel: command not found
+Jan 19 17:59:59 nixpc hm-activate-johannes[959657]: Skipping plasma-apply-wallpaperimage: command not found
+Jan 19 17:59:59 nixpc hm-activate-johannes[959252]: Activating stylixLookAndFeel
+Jan 19 17:59:59 nixpc hm-activate-johannes[959635]: Starting units: clipman.service, hypridle.service, hyprland-session.target, hyprpaper.service, nextcloud-client.service, tray.target
+Jan 19 17:59:59 nixpc hm-activate-johannes[959635]: Stopping units: hypridle.service, hyprpaper.service, nextcloud-client.service
+Jan 19 17:59:59 nixpc hm-activate-johannes[959635]: Attempting to continue anyway...
+Jan 19 17:59:59 nixpc hm-activate-johannes[959635]: Failed services: hyprpolkitagent.service, clipman.service
+Jan 19 17:59:59 nixpc hm-activate-johannes[959635]: The service manager is degraded.
+Jan 19 17:59:59 nixpc hm-activate-johannes[959252]: Attempting to reload services anyway...
+Jan 19 17:59:59 nixpc hm-activate-johannes[959634]: 2 loaded units listed.
+Jan 19 17:59:59 nixpc hm-activate-johannes[959634]:         SUB    → The low-level unit activation state, values depend on unit type.
+Jan 19 17:59:59 nixpc hm-activate-johannes[959634]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Jan 19 17:59:59 nixpc hm-activate-johannes[959634]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Jan 19 17:59:59 nixpc hm-activate-johannes[959634]: ● hyprpolkitagent.service loaded failed failed Hyprland Polkit Authentication Agent
+Jan 19 17:59:59 nixpc hm-activate-johannes[959634]: ● clipman.service         loaded failed failed Clipboard management daemon
+Jan 19 17:59:59 nixpc hm-activate-johannes[959634]:   UNIT                    LOAD   ACTIVE SUB    DESCRIPTION
+Jan 19 17:59:59 nixpc hm-activate-johannes[959252]: The user systemd session is degraded:
+Jan 19 17:59:59 nixpc hm-activate-johannes[959252]: Activating reloadSystemd
+Jan 19 17:59:59 nixpc hm-activate-johannes[959627]: ok
+Jan 19 17:59:59 nixpc hm-activate-johannes[959252]: Activating onFilesChange
+Jan 19 17:59:58 nixpc hm-activate-johannes[959252]: Creating home file links in /home/johannes
+Jan 19 17:59:58 nixpc hm-activate-johannes[959252]: Cleaning up orphan links from /home/johannes
+Jan 19 17:59:58 nixpc hm-activate-johannes[959252]: Activating linkGeneration
+Jan 19 17:59:58 nixpc hm-activate-johannes[959252]: Activating migrateGhAccounts
+Jan 19 17:59:58 nixpc hm-activate-johannes[959252]: Activating dconfSettings
+Jan 19 17:59:58 nixpc hm-activate-johannes[959252]: Activating installPackages
+Jan 19 17:59:58 nixpc hm-activate-johannes[959252]: Creating new profile generation
+Jan 19 17:59:58 nixpc hm-activate-johannes[959252]: Activating writeBoundary
+Jan 19 17:59:58 nixpc hm-activate-johannes[959252]: Activating checkLinkTargets
+Jan 19 17:59:58 nixpc hm-activate-johannes[959252]: Activating checkFilesChanged
+Jan 19 17:59:58 nixpc hm-activate-johannes[959252]: Starting Home Manager activation
+Jan 19 17:59:58 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 19 17:57:57 nixpc systemd[1]: home-manager-johannes.service: Consumed 234ms CPU time, 6.4M memory peak, 2.7M read from disk.
+Jan 19 17:57:57 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Jan 19 17:57:57 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Jan 19 17:57:57 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Jan 19 17:57:57 nixpc hm-activate-johannes[958212]:   to, for example, 'backup' and rebuild.
+Jan 19 17:57:57 nixpc hm-activate-johannes[958212]:     'home-manager.backupFileExtension'
+Jan 19 17:57:57 nixpc hm-activate-johannes[958212]: - When used as a NixOS or nix-darwin module, set
+Jan 19 17:57:57 nixpc hm-activate-johannes[958212]:   files automatically.
+Jan 19 17:57:57 nixpc hm-activate-johannes[958212]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Jan 19 17:57:57 nixpc hm-activate-johannes[958212]: - Move or remove the above files and try again.
+Jan 19 17:57:57 nixpc hm-activate-johannes[958212]: Please do one of the following:
+Jan 19 17:57:57 nixpc hm-activate-johannes[958212]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Jan 19 17:57:57 nixpc hm-activate-johannes[958081]: Activating checkLinkTargets
+Jan 19 17:57:57 nixpc hm-activate-johannes[958081]: Activating checkFilesChanged
+Jan 19 17:57:57 nixpc hm-activate-johannes[958081]: Starting Home Manager activation
+Jan 19 17:57:57 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 16 17:37:19 nixpc systemd[1]: home-manager-johannes.service: Consumed 234ms CPU time, 41.9M memory peak, 37.9M read from disk.
+Jan 16 17:37:19 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Jan 16 17:37:19 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Jan 16 17:37:19 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Jan 16 17:37:18 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 16 17:37:21 nixpc hm-activate-johannes[1051]:   to, for example, 'backup' and rebuild.
+Jan 16 17:37:21 nixpc hm-activate-johannes[1051]:     'home-manager.backupFileExtension'
+Jan 16 17:37:21 nixpc hm-activate-johannes[1051]: - When used as a NixOS or nix-darwin module, set
+Jan 16 17:37:21 nixpc hm-activate-johannes[1051]:   files automatically.
+Jan 16 17:37:21 nixpc hm-activate-johannes[1051]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Jan 16 17:37:21 nixpc hm-activate-johannes[1051]: - Move or remove the above files and try again.
+Jan 16 17:37:21 nixpc hm-activate-johannes[1051]: Please do one of the following:
+Jan 16 17:37:21 nixpc hm-activate-johannes[1051]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Jan 16 17:37:21 nixpc hm-activate-johannes[867]: Activating checkLinkTargets
+Jan 16 17:37:21 nixpc hm-activate-johannes[867]: Activating checkFilesChanged
+Jan 16 17:37:21 nixpc hm-activate-johannes[867]: Starting Home Manager activation
+-- Boot 1f350be9f2464da38ba104d618037273 --
+Jan 14 18:17:22 nixpc systemd[1]: home-manager-johannes.service: Consumed 234ms CPU time, 42M memory peak, 38M read from disk.
+Jan 14 18:17:22 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Jan 14 18:17:22 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Jan 14 18:17:22 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Jan 14 18:17:21 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 14 18:17:24 nixpc hm-activate-johannes[1035]:   to, for example, 'backup' and rebuild.
+Jan 14 18:17:24 nixpc hm-activate-johannes[1035]:     'home-manager.backupFileExtension'
+Jan 14 18:17:24 nixpc hm-activate-johannes[1035]: - When used as a NixOS or nix-darwin module, set
+Jan 14 18:17:24 nixpc hm-activate-johannes[1035]:   files automatically.
+Jan 14 18:17:24 nixpc hm-activate-johannes[1035]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Jan 14 18:17:24 nixpc hm-activate-johannes[1035]: - Move or remove the above files and try again.
+Jan 14 18:17:24 nixpc hm-activate-johannes[1035]: Please do one of the following:
+Jan 14 18:17:24 nixpc hm-activate-johannes[1035]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Jan 14 18:17:24 nixpc hm-activate-johannes[869]: Activating checkLinkTargets
+Jan 14 18:17:24 nixpc hm-activate-johannes[869]: Activating checkFilesChanged
+Jan 14 18:17:24 nixpc hm-activate-johannes[869]: Starting Home Manager activation
+-- Boot 02373cd47da74777bcf2af886d5f34d1 --
+Jan 13 19:21:15 nixpc systemd[1]: home-manager-johannes.service: Consumed 239ms CPU time, 42.2M memory peak, 38M read from disk.
+Jan 13 19:21:15 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Jan 13 19:21:15 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Jan 13 19:21:15 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Jan 13 19:21:14 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 13 19:21:17 nixpc hm-activate-johannes[1031]:   to, for example, 'backup' and rebuild.
+Jan 13 19:21:17 nixpc hm-activate-johannes[1031]:     'home-manager.backupFileExtension'
+Jan 13 19:21:17 nixpc hm-activate-johannes[1031]: - When used as a NixOS or nix-darwin module, set
+Jan 13 19:21:17 nixpc hm-activate-johannes[1031]:   files automatically.
+Jan 13 19:21:17 nixpc hm-activate-johannes[1031]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Jan 13 19:21:17 nixpc hm-activate-johannes[1031]: - Move or remove the above files and try again.
+Jan 13 19:21:17 nixpc hm-activate-johannes[1031]: Please do one of the following:
+Jan 13 19:21:17 nixpc hm-activate-johannes[1031]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Jan 13 19:21:17 nixpc hm-activate-johannes[847]: Activating checkLinkTargets
+Jan 13 19:21:17 nixpc hm-activate-johannes[847]: Activating checkFilesChanged
+Jan 13 19:21:17 nixpc hm-activate-johannes[847]: Starting Home Manager activation
+-- Boot d6d55cf6a1774f2b8d3dd2af6e33cace --
+Jan 12 19:01:10 nixpc systemd[1]: home-manager-johannes.service: Consumed 795ms CPU time, 7.9M memory peak, 2.5M read from disk.
+Jan 12 19:01:10 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Jan 12 19:01:10 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Jan 12 19:01:10 nixpc hm-activate-johannes[1113204]: Skipping plasma-apply-lookandfeel: command not found
+Jan 12 19:01:10 nixpc hm-activate-johannes[1113204]: Skipping plasma-apply-wallpaperimage: command not found
+Jan 12 19:01:10 nixpc hm-activate-johannes[1112716]: Activating stylixLookAndFeel
+Jan 12 19:01:10 nixpc hm-activate-johannes[1113189]: Starting units: clipman.service, hyprland-session.target, tray.target
+Jan 12 19:01:10 nixpc hm-activate-johannes[1113189]: Attempting to continue anyway...
+Jan 12 19:01:10 nixpc hm-activate-johannes[1113189]: Failed services: clipman.service, batsignal.service
+Jan 12 19:01:10 nixpc hm-activate-johannes[1113189]: The service manager is degraded.
+Jan 12 19:01:10 nixpc hm-activate-johannes[1112716]: Attempting to reload services anyway...
+Jan 12 19:01:10 nixpc hm-activate-johannes[1113188]: 2 loaded units listed.
+Jan 12 19:01:10 nixpc hm-activate-johannes[1113188]:         SUB    → The low-level unit activation state, values depend on unit type.
+Jan 12 19:01:10 nixpc hm-activate-johannes[1113188]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Jan 12 19:01:10 nixpc hm-activate-johannes[1113188]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Jan 12 19:01:10 nixpc hm-activate-johannes[1113188]: ● clipman.service   loaded failed failed Clipboard management daemon
+Jan 12 19:01:10 nixpc hm-activate-johannes[1113188]: ● batsignal.service loaded failed failed batsignal - battery monitor daemon
+Jan 12 19:01:10 nixpc hm-activate-johannes[1113188]:   UNIT              LOAD   ACTIVE SUB    DESCRIPTION
+Jan 12 19:01:10 nixpc hm-activate-johannes[1112716]: The user systemd session is degraded:
+Jan 12 19:01:10 nixpc hm-activate-johannes[1112716]: Activating reloadSystemd
+Jan 12 19:01:10 nixpc hm-activate-johannes[1113184]: ok
+Jan 12 19:01:10 nixpc hm-activate-johannes[1112716]: Activating onFilesChange
+Jan 12 19:01:09 nixpc hm-activate-johannes[1112716]: Creating home file links in /home/johannes
+Jan 12 19:01:09 nixpc hm-activate-johannes[1112716]: Cleaning up orphan links from /home/johannes
+Jan 12 19:01:09 nixpc hm-activate-johannes[1112716]: Activating linkGeneration
+Jan 12 19:01:09 nixpc hm-activate-johannes[1112716]: Activating migrateGhAccounts
+Jan 12 19:01:09 nixpc hm-activate-johannes[1112716]: Activating dconfSettings
+Jan 12 19:01:09 nixpc hm-activate-johannes[1112716]: Activating installPackages
+Jan 12 19:01:09 nixpc hm-activate-johannes[1112716]: Creating new profile generation
+Jan 12 19:01:09 nixpc hm-activate-johannes[1112716]: Activating writeBoundary
+Jan 12 19:01:09 nixpc hm-activate-johannes[1112830]: Existing file '/home/johannes/.config/hyprpanel/config.json' is in the way of '/nix/store/f1xh67kzqkpw20487w48k4gk6lh3kvd8-home-manager-files/.config/hyprpanel/config.json', will be moved to '/home/johannes/.config/hyprpanel/config.json.backup'
+Jan 12 19:01:09 nixpc hm-activate-johannes[1112716]: Activating checkLinkTargets
+Jan 12 19:01:09 nixpc hm-activate-johannes[1112716]: Activating checkFilesChanged
+Jan 12 19:01:09 nixpc hm-activate-johannes[1112716]: Starting Home Manager activation
+Jan 12 19:01:09 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 12 18:55:04 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Jan 12 18:55:04 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Jan 12 18:55:04 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Jan 12 18:55:04 nixpc hm-activate-johannes[1106984]:   to, for example, 'backup' and rebuild.
+Jan 12 18:55:04 nixpc hm-activate-johannes[1106984]:     'home-manager.backupFileExtension'
+Jan 12 18:55:04 nixpc hm-activate-johannes[1106984]: - When used as a NixOS or nix-darwin module, set
+Jan 12 18:55:04 nixpc hm-activate-johannes[1106984]:   files automatically.
+Jan 12 18:55:04 nixpc hm-activate-johannes[1106984]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Jan 12 18:55:04 nixpc hm-activate-johannes[1106984]: - Move or remove the above files and try again.
+Jan 12 18:55:04 nixpc hm-activate-johannes[1106984]: Please do one of the following:
+Jan 12 18:55:04 nixpc hm-activate-johannes[1106984]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Jan 12 18:55:04 nixpc hm-activate-johannes[1106875]: Activating checkLinkTargets
+Jan 12 18:55:04 nixpc hm-activate-johannes[1106875]: Activating checkFilesChanged
+Jan 12 18:55:04 nixpc hm-activate-johannes[1106875]: Starting Home Manager activation
+Jan 12 18:55:04 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 11 13:05:32 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Jan 11 13:05:32 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Jan 11 13:05:32 nixpc hm-activate-johannes[840927]: Skipping plasma-apply-lookandfeel: command not found
+Jan 11 13:05:32 nixpc hm-activate-johannes[840927]: Skipping plasma-apply-wallpaperimage: command not found
+Jan 11 13:05:32 nixpc hm-activate-johannes[840436]: Activating stylixLookAndFeel
+Jan 11 13:05:32 nixpc hm-activate-johannes[840910]: Starting units: batsignal.service, clipman.service, hyprland-session.target, nextcloud-client.service, tray.target, udiskie.service
+Jan 11 13:05:32 nixpc hm-activate-johannes[840910]: Attempting to continue anyway...
+Jan 11 13:05:32 nixpc hm-activate-johannes[840910]: Failed services: batsignal.service, clipman.service, hyprpolkitagent.service, app-blueman@autostart.service, nextcloud-client.service, udiskie.service
+Jan 11 13:05:32 nixpc hm-activate-johannes[840910]: The service manager is degraded.
+Jan 11 13:05:32 nixpc hm-activate-johannes[840436]: Attempting to reload services anyway...
+Jan 11 13:05:32 nixpc hm-activate-johannes[840909]: 6 loaded units listed.
+Jan 11 13:05:32 nixpc hm-activate-johannes[840909]:         SUB    → The low-level unit activation state, values depend on unit type.
+Jan 11 13:05:32 nixpc hm-activate-johannes[840909]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Jan 11 13:05:32 nixpc hm-activate-johannes[840909]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Jan 11 13:05:32 nixpc hm-activate-johannes[840909]: ● udiskie.service               loaded failed failed udiskie mount daemon
+Jan 11 13:05:32 nixpc hm-activate-johannes[840909]: ● nextcloud-client.service      loaded failed failed Nextcloud Client
+Jan 11 13:05:32 nixpc hm-activate-johannes[840909]: ● hyprpolkitagent.service       loaded failed failed Hyprland Polkit Authentication Agent
+Jan 11 13:05:32 nixpc hm-activate-johannes[840909]: ● clipman.service               loaded failed failed Clipboard management daemon
+Jan 11 13:05:32 nixpc hm-activate-johannes[840909]: ● batsignal.service             loaded failed failed batsignal - battery monitor daemon
+Jan 11 13:05:32 nixpc hm-activate-johannes[840909]: ● app-blueman@autostart.service loaded failed failed Blueman Applet
+Jan 11 13:05:32 nixpc hm-activate-johannes[840909]:   UNIT                          LOAD   ACTIVE SUB    DESCRIPTION
+Jan 11 13:05:32 nixpc hm-activate-johannes[840436]: The user systemd session is degraded:
+Jan 11 13:05:32 nixpc hm-activate-johannes[840436]: Activating reloadSystemd
+Jan 11 13:05:32 nixpc hm-activate-johannes[840902]: ok
+Jan 11 13:05:31 nixpc hm-activate-johannes[840436]: Activating onFilesChange
+Jan 11 13:05:31 nixpc hm-activate-johannes[840436]: Creating home file links in /home/johannes
+Jan 11 13:05:31 nixpc hm-activate-johannes[840436]: Cleaning up orphan links from /home/johannes
+Jan 11 13:05:31 nixpc hm-activate-johannes[840436]: Activating linkGeneration
+Jan 11 13:05:31 nixpc hm-activate-johannes[840436]: Activating migrateGhAccounts
+Jan 11 13:05:31 nixpc hm-activate-johannes[840436]: Activating dconfSettings
+Jan 11 13:05:31 nixpc hm-activate-johannes[840436]: Activating installPackages
+Jan 11 13:05:31 nixpc hm-activate-johannes[840436]: Creating new profile generation
+Jan 11 13:05:31 nixpc hm-activate-johannes[840436]: Activating writeBoundary
+Jan 11 13:05:31 nixpc hm-activate-johannes[840549]: Existing file '/home/johannes/.config/hyprpanel/config.json' is in the way of '/nix/store/mfk88ljxx2hhln4nnsaib5dig2kzmgn7-home-manager-files/.config/hyprpanel/config.json', will be moved to '/home/johannes/.config/hyprpanel/config.json.backup'
+Jan 11 13:05:31 nixpc hm-activate-johannes[840436]: Activating checkLinkTargets
+Jan 11 13:05:31 nixpc hm-activate-johannes[840436]: Activating checkFilesChanged
+Jan 11 13:05:31 nixpc hm-activate-johannes[840436]: Starting Home Manager activation
+Jan 11 13:05:30 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 11 13:04:32 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Jan 11 13:04:32 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Jan 11 13:04:32 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Jan 11 13:04:32 nixpc hm-activate-johannes[840038]:   to, for example, 'backup' and rebuild.
+Jan 11 13:04:32 nixpc hm-activate-johannes[840038]:     'home-manager.backupFileExtension'
+Jan 11 13:04:32 nixpc hm-activate-johannes[840038]: - When used as a NixOS or nix-darwin module, set
+Jan 11 13:04:32 nixpc hm-activate-johannes[840038]:   files automatically.
+Jan 11 13:04:32 nixpc hm-activate-johannes[840038]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Jan 11 13:04:32 nixpc hm-activate-johannes[840038]: - Move or remove the above files and try again.
+Jan 11 13:04:32 nixpc hm-activate-johannes[840038]: Please do one of the following:
+Jan 11 13:04:32 nixpc hm-activate-johannes[840038]: Existing file '/home/johannes/.config/hyprpanel/config.json' is in the way of '/nix/store/mfk88ljxx2hhln4nnsaib5dig2kzmgn7-home-manager-files/.config/hyprpanel/config.json', will be moved to '/home/johannes/.config/hyprpanel/config.json.backup'
+Jan 11 13:04:32 nixpc hm-activate-johannes[840038]: Existing file '/home/johannes/.config/hypr/hyprland.conf.backup' would be clobbered by backing up '/home/johannes/.config/hypr/hyprland.conf'
+Jan 11 13:04:32 nixpc hm-activate-johannes[840008]: Activating checkLinkTargets
+Jan 11 13:04:32 nixpc hm-activate-johannes[840008]: Activating checkFilesChanged
+Jan 11 13:04:32 nixpc hm-activate-johannes[840008]: Starting Home Manager activation
+Jan 11 13:04:32 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 11 13:02:46 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Jan 11 13:02:46 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Jan 11 13:02:46 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Jan 11 13:02:46 nixpc hm-activate-johannes[838679]:   to, for example, 'backup' and rebuild.
+Jan 11 13:02:46 nixpc hm-activate-johannes[838679]:     'home-manager.backupFileExtension'
+Jan 11 13:02:46 nixpc hm-activate-johannes[838679]: - When used as a NixOS or nix-darwin module, set
+Jan 11 13:02:46 nixpc hm-activate-johannes[838679]:   files automatically.
+Jan 11 13:02:46 nixpc hm-activate-johannes[838679]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Jan 11 13:02:46 nixpc hm-activate-johannes[838679]: - Move or remove the above files and try again.
+Jan 11 13:02:46 nixpc hm-activate-johannes[838679]: Please do one of the following:
+Jan 11 13:02:46 nixpc hm-activate-johannes[838679]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Jan 11 13:02:46 nixpc hm-activate-johannes[838565]: Activating checkLinkTargets
+Jan 11 13:02:46 nixpc hm-activate-johannes[838565]: Activating checkFilesChanged
+Jan 11 13:02:46 nixpc hm-activate-johannes[838565]: Starting Home Manager activation
+Jan 11 13:02:46 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 11 10:38:06 nixpc systemd[1]: home-manager-johannes.service: Consumed 767ms CPU time, 9.4M memory peak, 3.5M read from disk.
+Jan 11 10:38:06 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Jan 11 10:38:06 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Jan 11 10:38:06 nixpc hm-activate-johannes[774696]: Skipping plasma-apply-lookandfeel: command not found
+Jan 11 10:38:06 nixpc hm-activate-johannes[774696]: Skipping plasma-apply-wallpaperimage: command not found
+Jan 11 10:38:06 nixpc hm-activate-johannes[774208]: Activating stylixLookAndFeel
+Jan 11 10:38:06 nixpc hm-activate-johannes[774683]: Starting units: batsignal.service, clipman.service, hyprland-session.target, tray.target
+Jan 11 10:38:05 nixpc hm-activate-johannes[774683]: Attempting to continue anyway...
+Jan 11 10:38:05 nixpc hm-activate-johannes[774683]: Failed services: batsignal.service, hyprpolkitagent.service, clipman.service
+Jan 11 10:38:05 nixpc hm-activate-johannes[774683]: The service manager is degraded.
+Jan 11 10:38:05 nixpc hm-activate-johannes[774208]: Attempting to reload services anyway...
+Jan 11 10:38:05 nixpc hm-activate-johannes[774682]: 3 loaded units listed.
+Jan 11 10:38:05 nixpc hm-activate-johannes[774682]:         SUB    → The low-level unit activation state, values depend on unit type.
+Jan 11 10:38:05 nixpc hm-activate-johannes[774682]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Jan 11 10:38:05 nixpc hm-activate-johannes[774682]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Jan 11 10:38:05 nixpc hm-activate-johannes[774682]: ● hyprpolkitagent.service loaded failed failed Hyprland Polkit Authentication Agent
+Jan 11 10:38:05 nixpc hm-activate-johannes[774682]: ● clipman.service         loaded failed failed Clipboard management daemon
+Jan 11 10:38:05 nixpc hm-activate-johannes[774682]: ● batsignal.service       loaded failed failed batsignal - battery monitor daemon
+Jan 11 10:38:05 nixpc hm-activate-johannes[774682]:   UNIT                    LOAD   ACTIVE SUB    DESCRIPTION
+Jan 11 10:38:05 nixpc hm-activate-johannes[774208]: The user systemd session is degraded:
+Jan 11 10:38:05 nixpc hm-activate-johannes[774208]: Activating reloadSystemd
+Jan 11 10:38:05 nixpc hm-activate-johannes[774674]: ok
+Jan 11 10:38:05 nixpc hm-activate-johannes[774208]: Activating onFilesChange
+Jan 11 10:38:05 nixpc hm-activate-johannes[774208]: Creating home file links in /home/johannes
+Jan 11 10:38:05 nixpc hm-activate-johannes[774208]: Cleaning up orphan links from /home/johannes
+Jan 11 10:38:05 nixpc hm-activate-johannes[774208]: Activating linkGeneration
+Jan 11 10:38:05 nixpc hm-activate-johannes[774208]: Activating migrateGhAccounts
+Jan 11 10:38:05 nixpc hm-activate-johannes[774208]: Activating dconfSettings
+Jan 11 10:38:05 nixpc hm-activate-johannes[774208]: Activating installPackages
+Jan 11 10:38:05 nixpc hm-activate-johannes[774208]: Creating new profile generation
+Jan 11 10:38:05 nixpc hm-activate-johannes[774208]: Activating writeBoundary
+Jan 11 10:38:05 nixpc hm-activate-johannes[774321]: Existing file '/home/johannes/.config/hyprpanel/config.json' is in the way of '/nix/store/s2259igyppbslhi9r8k3zdg63dnjiha3-home-manager-files/.config/hyprpanel/config.json', will be moved to '/home/johannes/.config/hyprpanel/config.json.backup'
+Jan 11 10:38:05 nixpc hm-activate-johannes[774208]: Activating checkLinkTargets
+Jan 11 10:38:05 nixpc hm-activate-johannes[774208]: Activating checkFilesChanged
+Jan 11 10:38:05 nixpc hm-activate-johannes[774208]: Starting Home Manager activation
+Jan 11 10:38:05 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 11 10:36:37 nixpc systemd[1]: home-manager-johannes.service: Consumed 232ms CPU time, 5.9M memory peak, 1.3M read from disk.
+Jan 11 10:36:37 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Jan 11 10:36:37 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Jan 11 10:36:37 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Jan 11 10:36:37 nixpc hm-activate-johannes[773484]:   to, for example, 'backup' and rebuild.
+Jan 11 10:36:37 nixpc hm-activate-johannes[773484]:     'home-manager.backupFileExtension'
+Jan 11 10:36:37 nixpc hm-activate-johannes[773484]: - When used as a NixOS or nix-darwin module, set
+Jan 11 10:36:37 nixpc hm-activate-johannes[773484]:   files automatically.
+Jan 11 10:36:37 nixpc hm-activate-johannes[773484]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Jan 11 10:36:37 nixpc hm-activate-johannes[773484]: - Move or remove the above files and try again.
+Jan 11 10:36:37 nixpc hm-activate-johannes[773484]: Please do one of the following:
+Jan 11 10:36:37 nixpc hm-activate-johannes[773484]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Jan 11 10:36:36 nixpc hm-activate-johannes[773454]: Activating checkLinkTargets
+Jan 11 10:36:36 nixpc hm-activate-johannes[773454]: Activating checkFilesChanged
+Jan 11 10:36:36 nixpc hm-activate-johannes[773454]: Starting Home Manager activation
+Jan 11 10:36:36 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 09 21:46:27 nixpc systemd[1]: home-manager-johannes.service: Consumed 859ms CPU time, 9.1M memory peak, 3.5M read from disk.
+Jan 09 21:46:27 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Jan 09 21:46:27 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Jan 09 21:46:27 nixpc hm-activate-johannes[683046]: Skipping plasma-apply-lookandfeel: command not found
+Jan 09 21:46:27 nixpc hm-activate-johannes[683046]: Skipping plasma-apply-wallpaperimage: command not found
+Jan 09 21:46:27 nixpc hm-activate-johannes[682617]: Activating stylixLookAndFeel
+Jan 09 21:46:27 nixpc hm-activate-johannes[683019]: Starting units: batsignal.service, clipman.service, hypridle.service, hyprland-session.target, hyprpaper.service, nextcloud-client.service, tray.target, udiskie.service
+Jan 09 21:46:27 nixpc hm-activate-johannes[683019]: Stopping units: clipman.service, hypridle.service, hyprpaper.service, nextcloud-client.service, udiskie.service
+Jan 09 21:46:27 nixpc hm-activate-johannes[683019]: Attempting to continue anyway...
+Jan 09 21:46:27 nixpc hm-activate-johannes[683019]: Failed services: batsignal.service
+Jan 09 21:46:27 nixpc hm-activate-johannes[683019]: The service manager is degraded.
+Jan 09 21:46:27 nixpc hm-activate-johannes[682617]: Attempting to reload services anyway...
+Jan 09 21:46:27 nixpc hm-activate-johannes[683017]: 1 loaded units listed.
+Jan 09 21:46:27 nixpc hm-activate-johannes[683017]:         SUB    → The low-level unit activation state, values depend on unit type.
+Jan 09 21:46:27 nixpc hm-activate-johannes[683017]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Jan 09 21:46:27 nixpc hm-activate-johannes[683017]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Jan 09 21:46:27 nixpc hm-activate-johannes[683017]: ● batsignal.service loaded failed failed batsignal - battery monitor daemon
+Jan 09 21:46:27 nixpc hm-activate-johannes[683017]:   UNIT              LOAD   ACTIVE SUB    DESCRIPTION
+Jan 09 21:46:27 nixpc hm-activate-johannes[682617]: The user systemd session is degraded:
+Jan 09 21:46:27 nixpc hm-activate-johannes[682617]: Activating reloadSystemd
+Jan 09 21:46:27 nixpc hm-activate-johannes[683005]: ok
+Jan 09 21:46:27 nixpc hm-activate-johannes[682617]: Activating onFilesChange
+Jan 09 21:46:26 nixpc hm-activate-johannes[682617]: Creating home file links in /home/johannes
+Jan 09 21:46:26 nixpc hm-activate-johannes[682617]: Cleaning up orphan links from /home/johannes
+Jan 09 21:46:26 nixpc hm-activate-johannes[682617]: Activating linkGeneration
+Jan 09 21:46:26 nixpc hm-activate-johannes[682617]: Activating migrateGhAccounts
+Jan 09 21:46:26 nixpc hm-activate-johannes[682617]: Activating dconfSettings
+Jan 09 21:46:26 nixpc hm-activate-johannes[682617]: Activating installPackages
+Jan 09 21:46:26 nixpc hm-activate-johannes[682617]: Creating new profile generation
+Jan 09 21:46:26 nixpc hm-activate-johannes[682617]: Activating writeBoundary
+Jan 09 21:46:26 nixpc hm-activate-johannes[682648]: Existing file '/home/johannes/.config/hyprpanel/config.json' is in the way of '/nix/store/0ax73hfz6a1z609wrkmjcsvbg5vy9l2k-home-manager-files/.config/hyprpanel/config.json', will be moved to '/home/johannes/.config/hyprpanel/config.json.backup'
+Jan 09 21:46:26 nixpc hm-activate-johannes[682617]: Activating checkLinkTargets
+Jan 09 21:46:26 nixpc hm-activate-johannes[682617]: Activating checkFilesChanged
+Jan 09 21:46:26 nixpc hm-activate-johannes[682617]: Starting Home Manager activation
+Jan 09 21:46:26 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 09 21:25:12 nixpc systemd[1]: home-manager-johannes.service: Consumed 260ms CPU time, 8.3M memory peak, 5.2M read from disk.
+Jan 09 21:25:12 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Jan 09 21:25:12 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Jan 09 21:25:12 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Jan 09 21:25:12 nixpc hm-activate-johannes[680232]:   to, for example, 'backup' and rebuild.
+Jan 09 21:25:12 nixpc hm-activate-johannes[680232]:     'home-manager.backupFileExtension'
+Jan 09 21:25:12 nixpc hm-activate-johannes[680232]: - When used as a NixOS or nix-darwin module, set
+Jan 09 21:25:12 nixpc hm-activate-johannes[680232]:   files automatically.
+Jan 09 21:25:12 nixpc hm-activate-johannes[680232]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Jan 09 21:25:12 nixpc hm-activate-johannes[680232]: - Move or remove the above files and try again.
+Jan 09 21:25:12 nixpc hm-activate-johannes[680232]: Please do one of the following:
+Jan 09 21:25:12 nixpc hm-activate-johannes[680232]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Jan 09 21:25:12 nixpc hm-activate-johannes[680059]: Activating checkLinkTargets
+Jan 09 21:25:12 nixpc hm-activate-johannes[680059]: Activating checkFilesChanged
+Jan 09 21:25:12 nixpc hm-activate-johannes[680059]: Starting Home Manager activation
+Jan 09 21:25:12 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 04 12:42:12 nixpc systemd[1]: home-manager-johannes.service: Consumed 688ms CPU time, 63.2M memory peak, 55.9M read from disk.
+Jan 04 12:42:12 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Jan 04 12:42:12 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Jan 04 12:42:11 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 04 12:42:13 nixpc hm-activate-johannes[845]: Activating stylixLookAndFeel
+Jan 04 12:42:13 nixpc hm-activate-johannes[845]: User systemd daemon not running. Skipping reload.
+Jan 04 12:42:13 nixpc hm-activate-johannes[845]: Activating reloadSystemd
+Jan 04 12:42:13 nixpc hm-activate-johannes[845]: Activating onFilesChange
+Jan 04 12:42:13 nixpc hm-activate-johannes[845]: Creating home file links in /home/johannes
+Jan 04 12:42:13 nixpc hm-activate-johannes[845]: Creating profile generation 14
+Jan 04 12:42:13 nixpc hm-activate-johannes[845]: Cleaning up orphan links from /home/johannes
+Jan 04 12:42:13 nixpc hm-activate-johannes[845]: Activating linkGeneration
+Jan 04 12:42:13 nixpc hm-activate-johannes[845]: Activating migrateGhAccounts
+Jan 04 12:42:13 nixpc hm-activate-johannes[1147]: dbus-daemon[1147]: [session uid=1000 pid=1147] Successfully activated service 'ca.desrt.dconf'
+Jan 04 12:42:13 nixpc hm-activate-johannes[1147]: dbus-daemon[1147]: [session uid=1000 pid=1147] Activating service name='ca.desrt.dconf' requested by ':1.0' (uid=1000 pid=1148 comm="/nix/store/lry4x0dkwallnj73pg8cbkd5pshvy342-dconf-" label="kernel")
+Jan 04 12:42:13 nixpc hm-activate-johannes[845]: Activating dconfSettings
+Jan 04 12:42:13 nixpc hm-activate-johannes[845]: Activating installPackages
+Jan 04 12:42:13 nixpc hm-activate-johannes[845]: Activating writeBoundary
+Jan 04 12:42:13 nixpc hm-activate-johannes[845]: Activating checkLinkTargets
+Jan 04 12:42:13 nixpc hm-activate-johannes[845]: Activating checkFilesChanged
+Jan 04 12:42:13 nixpc hm-activate-johannes[845]: Starting Home Manager activation
+-- Boot 1f4c9310012d4a92a153690515136d03 --
+Jan 04 12:23:58 nixpc systemd[1]: home-manager-johannes.service: Consumed 774ms CPU time, 10.2M memory peak, 4.4M read from disk.
+Jan 04 12:23:58 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Jan 04 12:23:58 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Jan 04 12:23:58 nixpc hm-activate-johannes[166642]: Skipping plasma-apply-lookandfeel: command not found
+Jan 04 12:23:58 nixpc hm-activate-johannes[166642]: Skipping plasma-apply-wallpaperimage: command not found
+Jan 04 12:23:58 nixpc hm-activate-johannes[166217]: Activating stylixLookAndFeel
+Jan 04 12:23:58 nixpc hm-activate-johannes[166620]: Starting units: batsignal.service, clipman.service, hypridle.service, hyprland-session.target, hyprpaper.service, tray.target
+Jan 04 12:23:58 nixpc hm-activate-johannes[166620]: Stopping units: clipman.service, hypridle.service, hyprpaper.service
+Jan 04 12:23:57 nixpc hm-activate-johannes[166620]: Attempting to continue anyway...
+Jan 04 12:23:57 nixpc hm-activate-johannes[166620]: Failed services: batsignal.service
+Jan 04 12:23:57 nixpc hm-activate-johannes[166620]: The service manager is degraded.
+Jan 04 12:23:57 nixpc hm-activate-johannes[166217]: Attempting to reload services anyway...
+Jan 04 12:23:57 nixpc hm-activate-johannes[166618]: 1 loaded units listed.
+Jan 04 12:23:57 nixpc hm-activate-johannes[166618]:         SUB    → The low-level unit activation state, values depend on unit type.
+Jan 04 12:23:57 nixpc hm-activate-johannes[166618]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Jan 04 12:23:57 nixpc hm-activate-johannes[166618]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Jan 04 12:23:57 nixpc hm-activate-johannes[166618]: ● batsignal.service loaded failed failed batsignal - battery monitor daemon
+Jan 04 12:23:57 nixpc hm-activate-johannes[166618]:   UNIT              LOAD   ACTIVE SUB    DESCRIPTION
+Jan 04 12:23:57 nixpc hm-activate-johannes[166217]: The user systemd session is degraded:
+Jan 04 12:23:57 nixpc hm-activate-johannes[166217]: Activating reloadSystemd
+Jan 04 12:23:57 nixpc hm-activate-johannes[166607]: ok
+Jan 04 12:23:57 nixpc hm-activate-johannes[166217]: Activating onFilesChange
+Jan 04 12:23:57 nixpc hm-activate-johannes[166217]: Creating home file links in /home/johannes
+Jan 04 12:23:57 nixpc hm-activate-johannes[166217]: Cleaning up orphan links from /home/johannes
+Jan 04 12:23:57 nixpc hm-activate-johannes[166217]: Activating linkGeneration
+Jan 04 12:23:57 nixpc hm-activate-johannes[166217]: Activating migrateGhAccounts
+Jan 04 12:23:57 nixpc hm-activate-johannes[166217]: Activating dconfSettings
+Jan 04 12:23:57 nixpc hm-activate-johannes[166217]: Activating installPackages
+Jan 04 12:23:57 nixpc hm-activate-johannes[166217]: Creating new profile generation
+Jan 04 12:23:57 nixpc hm-activate-johannes[166217]: Activating writeBoundary
+Jan 04 12:23:57 nixpc hm-activate-johannes[166244]: Existing file '/home/johannes/.config/hyprpanel/config.json' is in the way of '/nix/store/628xr7w6752bp7w9xpxdfa8x8msw4vrs-home-manager-files/.config/hyprpanel/config.json', will be moved to '/home/johannes/.config/hyprpanel/config.json.backup'
+Jan 04 12:23:57 nixpc hm-activate-johannes[166244]: Existing file '/home/johannes/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml' is in the way of '/nix/store/628xr7w6752bp7w9xpxdfa8x8msw4vrs-home-manager-files/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml', will be moved to '/home/johannes/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml.backup'
+Jan 04 12:23:57 nixpc hm-activate-johannes[166217]: Activating checkLinkTargets
+Jan 04 12:23:57 nixpc hm-activate-johannes[166217]: Activating checkFilesChanged
+Jan 04 12:23:57 nixpc hm-activate-johannes[166217]: Starting Home Manager activation
+Jan 04 12:23:57 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 04 12:23:03 nixpc systemd[1]: home-manager-johannes.service: Consumed 221ms CPU time, 5.7M memory peak, 2.2M read from disk.
+Jan 04 12:23:03 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Jan 04 12:23:03 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Jan 04 12:23:03 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Jan 04 12:23:03 nixpc hm-activate-johannes[165569]:   to, for example, 'backup' and rebuild.
+Jan 04 12:23:03 nixpc hm-activate-johannes[165569]:     'home-manager.backupFileExtension'
+Jan 04 12:23:03 nixpc hm-activate-johannes[165569]: - When used as a NixOS or nix-darwin module, set
+Jan 04 12:23:03 nixpc hm-activate-johannes[165569]:   files automatically.
+Jan 04 12:23:03 nixpc hm-activate-johannes[165569]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Jan 04 12:23:03 nixpc hm-activate-johannes[165569]: - Move or remove the above files and try again.
+Jan 04 12:23:03 nixpc hm-activate-johannes[165569]: Please do one of the following:
+Jan 04 12:23:03 nixpc hm-activate-johannes[165569]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Jan 04 12:23:03 nixpc hm-activate-johannes[165569]: Existing file '/home/johannes/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml' is in the way of '/nix/store/628xr7w6752bp7w9xpxdfa8x8msw4vrs-home-manager-files/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml', will be moved to '/home/johannes/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml.backup'
+Jan 04 12:23:03 nixpc hm-activate-johannes[165541]: Activating checkLinkTargets
+Jan 04 12:23:03 nixpc hm-activate-johannes[165541]: Activating checkFilesChanged
+Jan 04 12:23:03 nixpc hm-activate-johannes[165541]: Starting Home Manager activation
+Jan 04 12:23:03 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 04 10:42:16 nixpc systemd[1]: home-manager-johannes.service: Consumed 246ms CPU time, 49.3M memory peak, 45.4M read from disk.
+Jan 04 10:42:16 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Jan 04 10:42:16 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Jan 04 10:42:16 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Jan 04 10:42:15 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Jan 04 10:42:17 nixpc hm-activate-johannes[1031]:   to, for example, 'backup' and rebuild.
+Jan 04 10:42:17 nixpc hm-activate-johannes[1031]:     'home-manager.backupFileExtension'
+Jan 04 10:42:17 nixpc hm-activate-johannes[1031]: - When used as a NixOS or nix-darwin module, set
+Jan 04 10:42:17 nixpc hm-activate-johannes[1031]:   files automatically.
+Jan 04 10:42:17 nixpc hm-activate-johannes[1031]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Jan 04 10:42:17 nixpc hm-activate-johannes[1031]: - Move or remove the above files and try again.
+Jan 04 10:42:17 nixpc hm-activate-johannes[1031]: Please do one of the following:
+Jan 04 10:42:17 nixpc hm-activate-johannes[1031]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Jan 04 10:42:17 nixpc hm-activate-johannes[1031]: Existing file '/home/johannes/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml' is in the way of '/nix/store/3axvgjhzsjydx1761hpbxr3207g8h5fn-home-manager-files/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml', will be moved to '/home/johannes/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml.backup'
+Jan 04 10:42:17 nixpc hm-activate-johannes[864]: Activating checkLinkTargets
+Jan 04 10:42:17 nixpc hm-activate-johannes[864]: Activating checkFilesChanged
+Jan 04 10:42:17 nixpc hm-activate-johannes[864]: Starting Home Manager activation
+-- Boot 05159dc95b2e4ff78c9bddf7a4e90d3f --
+Dez 31 23:30:59 nixpc systemd[1]: home-manager-johannes.service: Consumed 241ms CPU time, 48M memory peak, 43.8M read from disk.
+Dez 31 23:30:59 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Dez 31 23:30:59 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Dez 31 23:30:59 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Dez 31 23:30:58 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 31 23:31:01 nixpc hm-activate-johannes[1049]:   to, for example, 'backup' and rebuild.
+Dez 31 23:31:01 nixpc hm-activate-johannes[1049]:     'home-manager.backupFileExtension'
+Dez 31 23:31:01 nixpc hm-activate-johannes[1049]: - When used as a NixOS or nix-darwin module, set
+Dez 31 23:31:01 nixpc hm-activate-johannes[1049]:   files automatically.
+Dez 31 23:31:01 nixpc hm-activate-johannes[1049]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Dez 31 23:31:01 nixpc hm-activate-johannes[1049]: - Move or remove the above files and try again.
+Dez 31 23:31:01 nixpc hm-activate-johannes[1049]: Please do one of the following:
+Dez 31 23:31:01 nixpc hm-activate-johannes[1049]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Dez 31 23:31:01 nixpc hm-activate-johannes[1049]: Existing file '/home/johannes/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml' is in the way of '/nix/store/3axvgjhzsjydx1761hpbxr3207g8h5fn-home-manager-files/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml', will be moved to '/home/johannes/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml.backup'
+Dez 31 23:31:01 nixpc hm-activate-johannes[878]: Activating checkLinkTargets
+Dez 31 23:31:01 nixpc hm-activate-johannes[878]: Activating checkFilesChanged
+Dez 31 23:31:01 nixpc hm-activate-johannes[878]: Starting Home Manager activation
+-- Boot 9d5870f96dc94e2d869fbb36621475d4 --
+Dez 30 21:44:20 nixpc systemd[1]: home-manager-johannes.service: Consumed 241ms CPU time, 49.4M memory peak, 45.3M read from disk.
+Dez 30 21:44:20 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Dez 30 21:44:20 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Dez 30 21:44:20 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Dez 30 21:44:19 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 30 21:44:22 nixpc hm-activate-johannes[1032]:   to, for example, 'backup' and rebuild.
+Dez 30 21:44:22 nixpc hm-activate-johannes[1032]:     'home-manager.backupFileExtension'
+Dez 30 21:44:22 nixpc hm-activate-johannes[1032]: - When used as a NixOS or nix-darwin module, set
+Dez 30 21:44:22 nixpc hm-activate-johannes[1032]:   files automatically.
+Dez 30 21:44:22 nixpc hm-activate-johannes[1032]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Dez 30 21:44:22 nixpc hm-activate-johannes[1032]: - Move or remove the above files and try again.
+Dez 30 21:44:22 nixpc hm-activate-johannes[1032]: Please do one of the following:
+Dez 30 21:44:22 nixpc hm-activate-johannes[1032]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Dez 30 21:44:22 nixpc hm-activate-johannes[1032]: Existing file '/home/johannes/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml' is in the way of '/nix/store/3axvgjhzsjydx1761hpbxr3207g8h5fn-home-manager-files/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml', will be moved to '/home/johannes/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml.backup'
+Dez 30 21:44:22 nixpc hm-activate-johannes[846]: Activating checkLinkTargets
+Dez 30 21:44:22 nixpc hm-activate-johannes[846]: Activating checkFilesChanged
+Dez 30 21:44:22 nixpc hm-activate-johannes[846]: Starting Home Manager activation
+-- Boot d51f3a06be564097acfbdfa323586f07 --
+Dez 30 17:32:05 nixpc systemd[1]: home-manager-johannes.service: Consumed 236ms CPU time, 47.3M memory peak, 43.2M read from disk.
+Dez 30 17:32:05 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Dez 30 17:32:05 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Dez 30 17:32:05 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Dez 30 17:32:04 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 30 17:32:07 nixpc hm-activate-johannes[1034]:   to, for example, 'backup' and rebuild.
+Dez 30 17:32:07 nixpc hm-activate-johannes[1034]:     'home-manager.backupFileExtension'
+Dez 30 17:32:07 nixpc hm-activate-johannes[1034]: - When used as a NixOS or nix-darwin module, set
+Dez 30 17:32:07 nixpc hm-activate-johannes[1034]:   files automatically.
+Dez 30 17:32:07 nixpc hm-activate-johannes[1034]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Dez 30 17:32:07 nixpc hm-activate-johannes[1034]: - Move or remove the above files and try again.
+Dez 30 17:32:07 nixpc hm-activate-johannes[1034]: Please do one of the following:
+Dez 30 17:32:07 nixpc hm-activate-johannes[1034]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Dez 30 17:32:07 nixpc hm-activate-johannes[849]: Activating checkLinkTargets
+Dez 30 17:32:07 nixpc hm-activate-johannes[849]: Activating checkFilesChanged
+Dez 30 17:32:07 nixpc hm-activate-johannes[849]: Starting Home Manager activation
+-- Boot a201bfb194a145649ca8a3dd72e082bf --
+Dez 30 13:43:52 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 30 13:43:52 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 30 13:43:52 nixpc hm-activate-johannes[168014]: Activating stylixLookAndFeel
+Dez 30 13:43:52 nixpc hm-activate-johannes[168014]: Attempting to reload services anyway...
+Dez 30 13:43:52 nixpc hm-activate-johannes[168482]: 3 loaded units listed.
+Dez 30 13:43:52 nixpc hm-activate-johannes[168482]:         SUB    → The low-level unit activation state, values depend on unit type.
+Dez 30 13:43:52 nixpc hm-activate-johannes[168482]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Dez 30 13:43:52 nixpc hm-activate-johannes[168482]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Dez 30 13:43:52 nixpc hm-activate-johannes[168482]: ● hyprpolkitagent.service loaded failed failed Hyprland Polkit Authentication Agent
+Dez 30 13:43:52 nixpc hm-activate-johannes[168482]: ● clipman.service         loaded failed failed Clipboard management daemon
+Dez 30 13:43:52 nixpc hm-activate-johannes[168482]: ● batsignal.service       loaded failed failed batsignal - battery monitor daemon
+Dez 30 13:43:52 nixpc hm-activate-johannes[168482]:   UNIT                    LOAD   ACTIVE SUB    DESCRIPTION
+Dez 30 13:43:52 nixpc hm-activate-johannes[168014]: The user systemd session is degraded:
+Dez 30 13:43:52 nixpc hm-activate-johannes[168014]: Activating reloadSystemd
+Dez 30 13:43:52 nixpc hm-activate-johannes[168477]: ok
+Dez 30 13:43:52 nixpc hm-activate-johannes[168014]: Activating onFilesChange
+Dez 30 13:43:51 nixpc hm-activate-johannes[168014]: Creating home file links in /home/johannes
+Dez 30 13:43:51 nixpc hm-activate-johannes[168014]: Creating profile generation 12
+Dez 30 13:43:51 nixpc hm-activate-johannes[168014]: Cleaning up orphan links from /home/johannes
+Dez 30 13:43:51 nixpc hm-activate-johannes[168014]: Activating linkGeneration
+Dez 30 13:43:51 nixpc hm-activate-johannes[168014]: Activating migrateGhAccounts
+Dez 30 13:43:51 nixpc hm-activate-johannes[168014]: Activating dconfSettings
+Dez 30 13:43:51 nixpc hm-activate-johannes[168014]: Activating installPackages
+Dez 30 13:43:51 nixpc hm-activate-johannes[168014]: Activating writeBoundary
+Dez 30 13:43:51 nixpc hm-activate-johannes[168125]: Existing file '/home/johannes/.config/hyprpanel/config.json' is in the way of '/nix/store/3axvgjhzsjydx1761hpbxr3207g8h5fn-home-manager-files/.config/hyprpanel/config.json', will be moved to '/home/johannes/.config/hyprpanel/config.json.backup'
+Dez 30 13:43:51 nixpc hm-activate-johannes[168014]: Activating checkLinkTargets
+Dez 30 13:43:51 nixpc hm-activate-johannes[168014]: Activating checkFilesChanged
+Dez 30 13:43:51 nixpc hm-activate-johannes[168014]: Starting Home Manager activation
+Dez 30 13:43:51 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 30 13:37:34 nixpc systemd[1]: home-manager-johannes.service: Consumed 935ms CPU time, 6.2M memory peak, 1M read from disk.
+Dez 30 13:37:34 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 30 13:37:34 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 30 13:37:34 nixpc hm-activate-johannes[158862]: Activating stylixLookAndFeel
+Dez 30 13:37:34 nixpc hm-activate-johannes[158862]: Attempting to reload services anyway...
+Dez 30 13:37:34 nixpc hm-activate-johannes[159365]: 1 loaded units listed.
+Dez 30 13:37:34 nixpc hm-activate-johannes[159365]:         SUB    → The low-level unit activation state, values depend on unit type.
+Dez 30 13:37:34 nixpc hm-activate-johannes[159365]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Dez 30 13:37:34 nixpc hm-activate-johannes[159365]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Dez 30 13:37:34 nixpc hm-activate-johannes[159365]: ● batsignal.service loaded failed failed batsignal - battery monitor daemon
+Dez 30 13:37:34 nixpc hm-activate-johannes[159365]:   UNIT              LOAD   ACTIVE SUB    DESCRIPTION
+Dez 30 13:37:34 nixpc hm-activate-johannes[158862]: The user systemd session is degraded:
+Dez 30 13:37:34 nixpc hm-activate-johannes[158862]: Activating reloadSystemd
+Dez 30 13:37:34 nixpc hm-activate-johannes[159353]: ok
+Dez 30 13:37:34 nixpc hm-activate-johannes[158862]: Activating onFilesChange
+Dez 30 13:37:33 nixpc hm-activate-johannes[158862]: Creating home file links in /home/johannes
+Dez 30 13:37:33 nixpc hm-activate-johannes[158862]: Creating profile generation 11
+Dez 30 13:37:33 nixpc hm-activate-johannes[158862]: Cleaning up orphan links from /home/johannes
+Dez 30 13:37:33 nixpc hm-activate-johannes[158862]: Activating linkGeneration
+Dez 30 13:37:33 nixpc hm-activate-johannes[158862]: Activating migrateGhAccounts
+Dez 30 13:37:33 nixpc hm-activate-johannes[158862]: Activating dconfSettings
+Dez 30 13:37:33 nixpc hm-activate-johannes[158862]: Activating installPackages
+Dez 30 13:37:33 nixpc hm-activate-johannes[158862]: Activating writeBoundary
+Dez 30 13:37:33 nixpc hm-activate-johannes[158985]: Existing file '/home/johannes/.config/hyprpanel/config.json' is in the way of '/nix/store/sybyx2dvvpc2fhipnl8sbr84xqvfrz3v-home-manager-files/.config/hyprpanel/config.json', will be moved to '/home/johannes/.config/hyprpanel/config.json.backup'
+Dez 30 13:37:33 nixpc hm-activate-johannes[158985]: Existing file '/home/johannes/.config/mimeapps.list' is in the way of '/nix/store/sybyx2dvvpc2fhipnl8sbr84xqvfrz3v-home-manager-files/.config/mimeapps.list', will be moved to '/home/johannes/.config/mimeapps.list.backup'
+Dez 30 13:37:33 nixpc hm-activate-johannes[158862]: Activating checkLinkTargets
+Dez 30 13:37:33 nixpc hm-activate-johannes[158862]: Activating checkFilesChanged
+Dez 30 13:37:33 nixpc hm-activate-johannes[158862]: Starting Home Manager activation
+Dez 30 13:37:33 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 30 13:30:30 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Dez 30 13:30:30 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Dez 30 13:30:30 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Dez 30 13:30:30 nixpc hm-activate-johannes[149619]:   to, for example, 'backup' and rebuild.
+Dez 30 13:30:30 nixpc hm-activate-johannes[149619]:     'home-manager.backupFileExtension'
+Dez 30 13:30:30 nixpc hm-activate-johannes[149619]: - When used as a NixOS or nix-darwin module, set
+Dez 30 13:30:30 nixpc hm-activate-johannes[149619]:   files automatically.
+Dez 30 13:30:30 nixpc hm-activate-johannes[149619]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Dez 30 13:30:30 nixpc hm-activate-johannes[149619]: - Move or remove the above files and try again.
+Dez 30 13:30:30 nixpc hm-activate-johannes[149619]: Please do one of the following:
+Dez 30 13:30:30 nixpc hm-activate-johannes[149619]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Dez 30 13:30:30 nixpc hm-activate-johannes[149619]: Existing file '/home/johannes/.config/mimeapps.list' is in the way of '/nix/store/j9wa8f5lsm2dpxnfgi7i4qmi4yqz5hpq-home-manager-files/.config/mimeapps.list', will be moved to '/home/johannes/.config/mimeapps.list.backup'
+Dez 30 13:30:30 nixpc hm-activate-johannes[149493]: Activating checkLinkTargets
+Dez 30 13:30:30 nixpc hm-activate-johannes[149493]: Activating checkFilesChanged
+Dez 30 13:30:29 nixpc hm-activate-johannes[149493]: Starting Home Manager activation
+Dez 30 13:30:29 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 30 12:58:15 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 30 12:58:15 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 30 12:58:15 nixpc hm-activate-johannes[127914]: Activating stylixLookAndFeel
+Dez 30 12:58:15 nixpc hm-activate-johannes[127914]: Attempting to reload services anyway...
+Dez 30 12:58:15 nixpc hm-activate-johannes[128377]: 1 loaded units listed.
+Dez 30 12:58:15 nixpc hm-activate-johannes[128377]:         SUB    → The low-level unit activation state, values depend on unit type.
+Dez 30 12:58:15 nixpc hm-activate-johannes[128377]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Dez 30 12:58:15 nixpc hm-activate-johannes[128377]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Dez 30 12:58:15 nixpc hm-activate-johannes[128377]: ● batsignal.service loaded failed failed batsignal - battery monitor daemon
+Dez 30 12:58:15 nixpc hm-activate-johannes[128377]:   UNIT              LOAD   ACTIVE SUB    DESCRIPTION
+Dez 30 12:58:15 nixpc hm-activate-johannes[127914]: The user systemd session is degraded:
+Dez 30 12:58:14 nixpc hm-activate-johannes[127914]: Activating reloadSystemd
+Dez 30 12:58:14 nixpc hm-activate-johannes[128370]: ok
+Dez 30 12:58:14 nixpc hm-activate-johannes[127914]: Activating onFilesChange
+Dez 30 12:58:14 nixpc hm-activate-johannes[127914]: Creating home file links in /home/johannes
+Dez 30 12:58:14 nixpc hm-activate-johannes[127914]: Creating profile generation 10
+Dez 30 12:58:14 nixpc hm-activate-johannes[127914]: Cleaning up orphan links from /home/johannes
+Dez 30 12:58:14 nixpc hm-activate-johannes[127914]: Activating linkGeneration
+Dez 30 12:58:14 nixpc hm-activate-johannes[127914]: Activating migrateGhAccounts
+Dez 30 12:58:14 nixpc hm-activate-johannes[127914]: Activating dconfSettings
+Dez 30 12:58:14 nixpc hm-activate-johannes[127914]: Activating installPackages
+Dez 30 12:58:14 nixpc hm-activate-johannes[127914]: Activating writeBoundary
+Dez 30 12:58:14 nixpc hm-activate-johannes[128023]: Existing file '/home/johannes/.config/hyprpanel/config.json' is in the way of '/nix/store/mxb2lylsin76yg2i5f7hyl80xmnjkgzf-home-manager-files/.config/hyprpanel/config.json', will be moved to '/home/johannes/.config/hyprpanel/config.json.backup'
+Dez 30 12:58:14 nixpc hm-activate-johannes[127914]: Activating checkLinkTargets
+Dez 30 12:58:14 nixpc hm-activate-johannes[127914]: Activating checkFilesChanged
+Dez 30 12:58:14 nixpc hm-activate-johannes[127914]: Starting Home Manager activation
+Dez 30 12:58:14 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 30 12:56:04 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Dez 30 12:56:04 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Dez 30 12:56:04 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Dez 30 12:56:04 nixpc hm-activate-johannes[126494]:   to, for example, 'backup' and rebuild.
+Dez 30 12:56:04 nixpc hm-activate-johannes[126494]:     'home-manager.backupFileExtension'
+Dez 30 12:56:04 nixpc hm-activate-johannes[126494]: - When used as a NixOS or nix-darwin module, set
+Dez 30 12:56:04 nixpc hm-activate-johannes[126494]:   files automatically.
+Dez 30 12:56:04 nixpc hm-activate-johannes[126494]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Dez 30 12:56:04 nixpc hm-activate-johannes[126494]: - Move or remove the above files and try again.
+Dez 30 12:56:04 nixpc hm-activate-johannes[126494]: Please do one of the following:
+Dez 30 12:56:04 nixpc hm-activate-johannes[126494]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Dez 30 12:56:03 nixpc hm-activate-johannes[126467]: Activating checkLinkTargets
+Dez 30 12:56:03 nixpc hm-activate-johannes[126467]: Activating checkFilesChanged
+Dez 30 12:56:03 nixpc hm-activate-johannes[126467]: Starting Home Manager activation
+Dez 30 12:56:03 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 30 12:48:43 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 30 12:48:43 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 30 12:48:43 nixpc hm-activate-johannes[114628]: Activating stylixLookAndFeel
+Dez 30 12:48:43 nixpc hm-activate-johannes[114628]: Attempting to reload services anyway...
+Dez 30 12:48:43 nixpc hm-activate-johannes[115093]: 2 loaded units listed.
+Dez 30 12:48:43 nixpc hm-activate-johannes[115093]:         SUB    → The low-level unit activation state, values depend on unit type.
+Dez 30 12:48:43 nixpc hm-activate-johannes[115093]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Dez 30 12:48:43 nixpc hm-activate-johannes[115093]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Dez 30 12:48:43 nixpc hm-activate-johannes[115093]: ● xdg-desktop-portal-gtk.service loaded failed failed Portal service (GTK/GNOME implementation)
+Dez 30 12:48:43 nixpc hm-activate-johannes[115093]: ● batsignal.service              loaded failed failed batsignal - battery monitor daemon
+Dez 30 12:48:43 nixpc hm-activate-johannes[115093]:   UNIT                           LOAD   ACTIVE SUB    DESCRIPTION
+Dez 30 12:48:43 nixpc hm-activate-johannes[114628]: The user systemd session is degraded:
+Dez 30 12:48:43 nixpc hm-activate-johannes[114628]: Activating reloadSystemd
+Dez 30 12:48:43 nixpc hm-activate-johannes[115088]: ok
+Dez 30 12:48:43 nixpc hm-activate-johannes[114628]: Activating onFilesChange
+Dez 30 12:48:43 nixpc hm-activate-johannes[114628]: Creating home file links in /home/johannes
+Dez 30 12:48:42 nixpc hm-activate-johannes[114628]: Creating profile generation 9
+Dez 30 12:48:42 nixpc hm-activate-johannes[114628]: Cleaning up orphan links from /home/johannes
+Dez 30 12:48:42 nixpc hm-activate-johannes[114628]: Activating linkGeneration
+Dez 30 12:48:42 nixpc hm-activate-johannes[114628]: Activating migrateGhAccounts
+Dez 30 12:48:42 nixpc hm-activate-johannes[114628]: Activating dconfSettings
+Dez 30 12:48:42 nixpc hm-activate-johannes[114628]: Activating installPackages
+Dez 30 12:48:42 nixpc hm-activate-johannes[114628]: Activating writeBoundary
+Dez 30 12:48:42 nixpc hm-activate-johannes[114746]: Existing file '/home/johannes/.config/hyprpanel/config.json' is in the way of '/nix/store/4dwhinc5fhgnaj60gi5min9q233j5aqh-home-manager-files/.config/hyprpanel/config.json', will be moved to '/home/johannes/.config/hyprpanel/config.json.backup'
+Dez 30 12:48:42 nixpc hm-activate-johannes[114628]: Activating checkLinkTargets
+Dez 30 12:48:42 nixpc hm-activate-johannes[114628]: Activating checkFilesChanged
+Dez 30 12:48:42 nixpc hm-activate-johannes[114628]: Starting Home Manager activation
+Dez 30 12:48:42 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 30 12:47:51 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Dez 30 12:47:51 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Dez 30 12:47:51 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Dez 30 12:47:51 nixpc hm-activate-johannes[113877]:   to, for example, 'backup' and rebuild.
+Dez 30 12:47:51 nixpc hm-activate-johannes[113877]:     'home-manager.backupFileExtension'
+Dez 30 12:47:51 nixpc hm-activate-johannes[113877]: - When used as a NixOS or nix-darwin module, set
+Dez 30 12:47:51 nixpc hm-activate-johannes[113877]:   files automatically.
+Dez 30 12:47:51 nixpc hm-activate-johannes[113877]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Dez 30 12:47:51 nixpc hm-activate-johannes[113877]: - Move or remove the above files and try again.
+Dez 30 12:47:51 nixpc hm-activate-johannes[113877]: Please do one of the following:
+Dez 30 12:47:51 nixpc hm-activate-johannes[113877]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Dez 30 12:47:51 nixpc hm-activate-johannes[113768]: Activating checkLinkTargets
+Dez 30 12:47:51 nixpc hm-activate-johannes[113768]: Activating checkFilesChanged
+Dez 30 12:47:51 nixpc hm-activate-johannes[113768]: Starting Home Manager activation
+Dez 30 12:47:51 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 30 12:45:58 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 30 12:45:58 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 30 12:45:57 nixpc hm-activate-johannes[108847]: Activating stylixLookAndFeel
+Dez 30 12:45:57 nixpc hm-activate-johannes[109258]: systemctl --user start batsignal.service clipman.service hypridle.service hyprpaper.service nextcloud-client.service udiskie.service
+Dez 30 12:45:57 nixpc hm-activate-johannes[109258]: Suggested commands:
+Dez 30 12:45:57 nixpc hm-activate-johannes[108847]: Attempting to reload services anyway...
+Dez 30 12:45:57 nixpc hm-activate-johannes[109257]: 5 loaded units listed.
+Dez 30 12:45:57 nixpc hm-activate-johannes[109257]:         SUB    → The low-level unit activation state, values depend on unit type.
+Dez 30 12:45:57 nixpc hm-activate-johannes[109257]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Dez 30 12:45:57 nixpc hm-activate-johannes[109257]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Dez 30 12:45:57 nixpc hm-activate-johannes[109257]: ● udiskie.service          not-found failed failed udiskie.service
+Dez 30 12:45:57 nixpc hm-activate-johannes[109257]: ● nextcloud-client.service not-found failed failed nextcloud-client.service
+Dez 30 12:45:57 nixpc hm-activate-johannes[109257]: ● hyprpaper.service        not-found failed failed hyprpaper.service
+Dez 30 12:45:57 nixpc hm-activate-johannes[109257]: ● clipman.service          not-found failed failed clipman.service
+Dez 30 12:45:57 nixpc hm-activate-johannes[109257]: ● batsignal.service        not-found failed failed batsignal.service
+Dez 30 12:45:57 nixpc hm-activate-johannes[109257]:   UNIT                     LOAD      ACTIVE SUB    DESCRIPTION
+Dez 30 12:45:57 nixpc hm-activate-johannes[108847]: The user systemd session is degraded:
+Dez 30 12:45:57 nixpc hm-activate-johannes[108847]: Activating reloadSystemd
+Dez 30 12:45:57 nixpc hm-activate-johannes[109233]: ok
+Dez 30 12:45:56 nixpc hm-activate-johannes[108847]: Activating onFilesChange
+Dez 30 12:45:55 nixpc hm-activate-johannes[108847]: Creating home file links in /home/johannes
+Dez 30 12:45:55 nixpc hm-activate-johannes[108847]: Creating profile generation 8
+Dez 30 12:45:55 nixpc hm-activate-johannes[108847]: Cleaning up orphan links from /home/johannes
+Dez 30 12:45:55 nixpc hm-activate-johannes[108847]: Activating linkGeneration
+Dez 30 12:45:55 nixpc hm-activate-johannes[108847]: Activating migrateGhAccounts
+Dez 30 12:45:55 nixpc hm-activate-johannes[108847]: Activating dconfSettings
+Dez 30 12:45:55 nixpc hm-activate-johannes[108847]: Activating installPackages
+Dez 30 12:45:55 nixpc hm-activate-johannes[108847]: Activating writeBoundary
+Dez 30 12:45:55 nixpc hm-activate-johannes[108952]: Existing file '/home/johannes/.config/hyprpanel/config.json' is in the way of '/nix/store/niq34ivqb8bdjmfnfv7sagz1c76mgz29-home-manager-files/.config/hyprpanel/config.json', will be moved to '/home/johannes/.config/hyprpanel/config.json.backup'
+Dez 30 12:45:55 nixpc hm-activate-johannes[108952]: Existing file '/home/johannes/.config/hypr/hyprland.conf' is in the way of '/nix/store/niq34ivqb8bdjmfnfv7sagz1c76mgz29-home-manager-files/.config/hypr/hyprland.conf', will be moved to '/home/johannes/.config/hypr/hyprland.conf.backup'
+Dez 30 12:45:55 nixpc hm-activate-johannes[108847]: Activating checkLinkTargets
+Dez 30 12:45:55 nixpc hm-activate-johannes[108847]: Activating checkFilesChanged
+Dez 30 12:45:55 nixpc hm-activate-johannes[108847]: Starting Home Manager activation
+Dez 30 12:45:55 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 30 12:42:48 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Dez 30 12:42:48 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Dez 30 12:42:48 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Dez 30 12:42:48 nixpc hm-activate-johannes[108119]:   to, for example, 'backup' and rebuild.
+Dez 30 12:42:48 nixpc hm-activate-johannes[108119]:     'home-manager.backupFileExtension'
+Dez 30 12:42:48 nixpc hm-activate-johannes[108119]: - When used as a NixOS or nix-darwin module, set
+Dez 30 12:42:48 nixpc hm-activate-johannes[108119]:   files automatically.
+Dez 30 12:42:48 nixpc hm-activate-johannes[108119]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Dez 30 12:42:48 nixpc hm-activate-johannes[108119]: - Move or remove the above files and try again.
+Dez 30 12:42:48 nixpc hm-activate-johannes[108119]: Please do one of the following:
+Dez 30 12:42:48 nixpc hm-activate-johannes[108119]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Dez 30 12:42:48 nixpc hm-activate-johannes[108119]: Existing file '/home/johannes/.config/hypr/hyprland.conf' is in the way of '/nix/store/niq34ivqb8bdjmfnfv7sagz1c76mgz29-home-manager-files/.config/hypr/hyprland.conf', will be moved to '/home/johannes/.config/hypr/hyprland.conf.backup'
+Dez 30 12:42:48 nixpc hm-activate-johannes[108009]: Activating checkLinkTargets
+Dez 30 12:42:48 nixpc hm-activate-johannes[108009]: Activating checkFilesChanged
+Dez 30 12:42:47 nixpc hm-activate-johannes[108009]: Starting Home Manager activation
+Dez 30 12:42:47 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 30 12:39:35 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 30 12:39:35 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 30 12:39:35 nixpc hm-activate-johannes[103302]: Activating stylixLookAndFeel
+Dez 30 12:39:35 nixpc hm-activate-johannes[103661]: systemctl --user stop batsignal.service clipman.service hypridle.service hyprpaper.service nextcloud-client.service udiskie.service
+Dez 30 12:39:35 nixpc hm-activate-johannes[103661]: Suggested commands:
+Dez 30 12:39:35 nixpc hm-activate-johannes[103302]: Attempting to reload services anyway...
+Dez 30 12:39:35 nixpc hm-activate-johannes[103659]: 1 loaded units listed.
+Dez 30 12:39:35 nixpc hm-activate-johannes[103659]:         SUB    → The low-level unit activation state, values depend on unit type.
+Dez 30 12:39:35 nixpc hm-activate-johannes[103659]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Dez 30 12:39:35 nixpc hm-activate-johannes[103659]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Dez 30 12:39:35 nixpc hm-activate-johannes[103659]: ● batsignal.service loaded failed failed batsignal - battery monitor daemon
+Dez 30 12:39:35 nixpc hm-activate-johannes[103659]:   UNIT              LOAD   ACTIVE SUB    DESCRIPTION
+Dez 30 12:39:35 nixpc hm-activate-johannes[103302]: The user systemd session is degraded:
+Dez 30 12:39:35 nixpc hm-activate-johannes[103302]: Activating reloadSystemd
+Dez 30 12:39:35 nixpc hm-activate-johannes[103302]: Activating onFilesChange
+Dez 30 12:39:35 nixpc hm-activate-johannes[103302]: Creating home file links in /home/johannes
+Dez 30 12:39:35 nixpc hm-activate-johannes[103302]: Creating profile generation 7
+Dez 30 12:39:35 nixpc hm-activate-johannes[103352]: Path '/home/johannes/.config/hyprpanel/config.json' does not link into a Home Manager generation. Skipping delete.
+Dez 30 12:39:34 nixpc hm-activate-johannes[103302]: Cleaning up orphan links from /home/johannes
+Dez 30 12:39:34 nixpc hm-activate-johannes[103302]: Activating linkGeneration
+Dez 30 12:39:34 nixpc hm-activate-johannes[103302]: Activating migrateGhAccounts
+Dez 30 12:39:34 nixpc hm-activate-johannes[103302]: Activating dconfSettings
+Dez 30 12:39:34 nixpc hm-activate-johannes[103302]: Activating installPackages
+Dez 30 12:39:34 nixpc hm-activate-johannes[103302]: Activating writeBoundary
+Dez 30 12:39:34 nixpc hm-activate-johannes[103302]: Activating checkLinkTargets
+Dez 30 12:39:34 nixpc hm-activate-johannes[103302]: Activating checkFilesChanged
+Dez 30 12:39:34 nixpc hm-activate-johannes[103302]: Starting Home Manager activation
+Dez 30 12:39:34 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 30 01:30:16 nixpc systemd[1]: home-manager-johannes.service: Consumed 244ms CPU time, 50.5M memory peak, 46.7M read from disk.
+Dez 30 01:30:16 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Dez 30 01:30:16 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Dez 30 01:30:16 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Dez 30 01:30:15 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 30 01:30:18 nixpc hm-activate-johannes[1030]:   to, for example, 'backup' and rebuild.
+Dez 30 01:30:18 nixpc hm-activate-johannes[1030]:     'home-manager.backupFileExtension'
+Dez 30 01:30:18 nixpc hm-activate-johannes[1030]: - When used as a NixOS or nix-darwin module, set
+Dez 30 01:30:18 nixpc hm-activate-johannes[1030]:   files automatically.
+Dez 30 01:30:18 nixpc hm-activate-johannes[1030]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Dez 30 01:30:18 nixpc hm-activate-johannes[1030]: - Move or remove the above files and try again.
+Dez 30 01:30:18 nixpc hm-activate-johannes[1030]: Please do one of the following:
+Dez 30 01:30:18 nixpc hm-activate-johannes[1030]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Dez 30 01:30:18 nixpc hm-activate-johannes[844]: Activating checkLinkTargets
+Dez 30 01:30:18 nixpc hm-activate-johannes[844]: Activating checkFilesChanged
+Dez 30 01:30:18 nixpc hm-activate-johannes[844]: Starting Home Manager activation
+-- Boot 15fe5be7e69b4e81a565ffb63ba7fdcb --
+Dez 29 23:41:09 nixpc systemd[1]: home-manager-johannes.service: Consumed 239ms CPU time, 47.7M memory peak, 44M read from disk.
+Dez 29 23:41:09 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Dez 29 23:41:09 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Dez 29 23:41:09 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Dez 29 23:41:08 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 29 23:41:11 nixpc hm-activate-johannes[1001]:   to, for example, 'backup' and rebuild.
+Dez 29 23:41:11 nixpc hm-activate-johannes[1001]:     'home-manager.backupFileExtension'
+Dez 29 23:41:11 nixpc hm-activate-johannes[1001]: - When used as a NixOS or nix-darwin module, set
+Dez 29 23:41:11 nixpc hm-activate-johannes[1001]:   files automatically.
+Dez 29 23:41:11 nixpc hm-activate-johannes[1001]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Dez 29 23:41:11 nixpc hm-activate-johannes[1001]: - Move or remove the above files and try again.
+Dez 29 23:41:11 nixpc hm-activate-johannes[1001]: Please do one of the following:
+Dez 29 23:41:11 nixpc hm-activate-johannes[1001]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Dez 29 23:41:11 nixpc hm-activate-johannes[837]: Activating checkLinkTargets
+Dez 29 23:41:11 nixpc hm-activate-johannes[837]: Activating checkFilesChanged
+Dez 29 23:41:11 nixpc hm-activate-johannes[837]: Starting Home Manager activation
+-- Boot 9820da9b8d524fef9e23ebe8c9617ec2 --
+Dez 29 22:22:15 nixpc systemd[1]: home-manager-johannes.service: Consumed 238ms CPU time, 48.3M memory peak, 44.4M read from disk.
+Dez 29 22:22:15 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Dez 29 22:22:15 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Dez 29 22:22:15 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Dez 29 22:22:14 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 29 22:22:17 nixpc hm-activate-johannes[1027]:   to, for example, 'backup' and rebuild.
+Dez 29 22:22:17 nixpc hm-activate-johannes[1027]:     'home-manager.backupFileExtension'
+Dez 29 22:22:17 nixpc hm-activate-johannes[1027]: - When used as a NixOS or nix-darwin module, set
+Dez 29 22:22:17 nixpc hm-activate-johannes[1027]:   files automatically.
+Dez 29 22:22:17 nixpc hm-activate-johannes[1027]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Dez 29 22:22:17 nixpc hm-activate-johannes[1027]: - Move or remove the above files and try again.
+Dez 29 22:22:17 nixpc hm-activate-johannes[1027]: Please do one of the following:
+Dez 29 22:22:17 nixpc hm-activate-johannes[1027]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Dez 29 22:22:17 nixpc hm-activate-johannes[842]: Activating checkLinkTargets
+Dez 29 22:22:17 nixpc hm-activate-johannes[842]: Activating checkFilesChanged
+Dez 29 22:22:17 nixpc hm-activate-johannes[842]: Starting Home Manager activation
+-- Boot 12346519f0384310b20e9c0215fe10a9 --
+Dez 28 17:14:33 nixpc systemd[1]: home-manager-johannes.service: Consumed 243ms CPU time, 49M memory peak, 45.1M read from disk.
+Dez 28 17:14:33 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Dez 28 17:14:33 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Dez 28 17:14:33 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Dez 28 17:14:33 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 28 17:14:35 nixpc hm-activate-johannes[1024]:   to, for example, 'backup' and rebuild.
+Dez 28 17:14:35 nixpc hm-activate-johannes[1024]:     'home-manager.backupFileExtension'
+Dez 28 17:14:35 nixpc hm-activate-johannes[1024]: - When used as a NixOS or nix-darwin module, set
+Dez 28 17:14:35 nixpc hm-activate-johannes[1024]:   files automatically.
+Dez 28 17:14:35 nixpc hm-activate-johannes[1024]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Dez 28 17:14:35 nixpc hm-activate-johannes[1024]: - Move or remove the above files and try again.
+Dez 28 17:14:35 nixpc hm-activate-johannes[1024]: Please do one of the following:
+Dez 28 17:14:35 nixpc hm-activate-johannes[1024]: Existing file '/home/johannes/.config/hyprpanel/config.json.backup' would be clobbered by backing up '/home/johannes/.config/hyprpanel/config.json'
+Dez 28 17:14:35 nixpc hm-activate-johannes[838]: Activating checkLinkTargets
+Dez 28 17:14:35 nixpc hm-activate-johannes[838]: Activating checkFilesChanged
+Dez 28 17:14:35 nixpc hm-activate-johannes[838]: Starting Home Manager activation
+-- Boot ac6dc409ba704c5c91e907db046501e3 --
+Dez 27 00:03:06 nixpc systemd[1]: home-manager-johannes.service: Consumed 948ms CPU time, 8.5M memory peak, 3.3M read from disk.
+Dez 27 00:03:06 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 27 00:03:06 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 27 00:03:06 nixpc hm-activate-johannes[3465995]: Activating stylixLookAndFeel
+Dez 27 00:03:06 nixpc hm-activate-johannes[3465995]: Attempting to reload services anyway...
+Dez 27 00:03:06 nixpc hm-activate-johannes[3466386]: 1 loaded units listed.
+Dez 27 00:03:06 nixpc hm-activate-johannes[3466386]:         SUB    → The low-level unit activation state, values depend on unit type.
+Dez 27 00:03:06 nixpc hm-activate-johannes[3466386]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Dez 27 00:03:06 nixpc hm-activate-johannes[3466386]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Dez 27 00:03:06 nixpc hm-activate-johannes[3466386]: ● batsignal.service loaded failed failed batsignal - battery monitor daemon
+Dez 27 00:03:06 nixpc hm-activate-johannes[3466386]:   UNIT              LOAD   ACTIVE SUB    DESCRIPTION
+Dez 27 00:03:06 nixpc hm-activate-johannes[3465995]: The user systemd session is degraded:
+Dez 27 00:03:06 nixpc hm-activate-johannes[3465995]: Activating reloadSystemd
+Dez 27 00:03:06 nixpc hm-activate-johannes[3466372]: ok
+Dez 27 00:03:05 nixpc hm-activate-johannes[3466365]: ok
+Dez 27 00:03:05 nixpc hm-activate-johannes[3465995]: Activating onFilesChange
+Dez 27 00:03:05 nixpc hm-activate-johannes[3465995]: Creating home file links in /home/johannes
+Dez 27 00:03:04 nixpc hm-activate-johannes[3465995]: Creating profile generation 6
+Dez 27 00:03:04 nixpc hm-activate-johannes[3465995]: Cleaning up orphan links from /home/johannes
+Dez 27 00:03:04 nixpc hm-activate-johannes[3465995]: Activating linkGeneration
+Dez 27 00:03:04 nixpc hm-activate-johannes[3465995]: Activating migrateGhAccounts
+Dez 27 00:03:04 nixpc hm-activate-johannes[3465995]: Activating dconfSettings
+Dez 27 00:03:04 nixpc hm-activate-johannes[3465995]: Activating installPackages
+Dez 27 00:03:04 nixpc hm-activate-johannes[3465995]: Activating writeBoundary
+Dez 27 00:03:04 nixpc hm-activate-johannes[3466022]: Existing file '/home/johannes/.config/hyprpanel/config.json' is in the way of '/nix/store/qcdkzl3gdn24a5mq82pgifjk016fs7yj-home-manager-files/.config/hyprpanel/config.json', will be moved to '/home/johannes/.config/hyprpanel/config.json.backup'
+Dez 27 00:03:04 nixpc hm-activate-johannes[3465995]: Activating checkLinkTargets
+Dez 27 00:03:04 nixpc hm-activate-johannes[3465995]: Activating checkFilesChanged
+Dez 27 00:03:04 nixpc hm-activate-johannes[3465995]: Starting Home Manager activation
+Dez 27 00:03:04 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 22 15:41:07 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 22 15:41:07 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 22 15:41:07 nixpc hm-activate-johannes[464815]: Activating stylixLookAndFeel
+Dez 22 15:41:06 nixpc hm-activate-johannes[464815]: Attempting to reload services anyway...
+Dez 22 15:41:06 nixpc hm-activate-johannes[465261]: 3 loaded units listed.
+Dez 22 15:41:06 nixpc hm-activate-johannes[465261]:         SUB    → The low-level unit activation state, values depend on unit type.
+Dez 22 15:41:06 nixpc hm-activate-johannes[465261]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Dez 22 15:41:06 nixpc hm-activate-johannes[465261]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Dez 22 15:41:06 nixpc hm-activate-johannes[465261]: ● hyprpolkitagent.service loaded failed failed Hyprland Polkit Authentication Agent
+Dez 22 15:41:06 nixpc hm-activate-johannes[465261]: ● clipman.service         loaded failed failed Clipboard management daemon
+Dez 22 15:41:06 nixpc hm-activate-johannes[465261]: ● batsignal.service       loaded failed failed batsignal - battery monitor daemon
+Dez 22 15:41:06 nixpc hm-activate-johannes[465261]:   UNIT                    LOAD   ACTIVE SUB    DESCRIPTION
+Dez 22 15:41:06 nixpc hm-activate-johannes[464815]: The user systemd session is degraded:
+Dez 22 15:41:06 nixpc hm-activate-johannes[464815]: Activating reloadSystemd
+Dez 22 15:41:06 nixpc hm-activate-johannes[464815]: Activating onFilesChange
+Dez 22 15:41:06 nixpc hm-activate-johannes[464815]: Creating home file links in /home/johannes
+Dez 22 15:41:06 nixpc hm-activate-johannes[464815]: Creating profile generation 5
+Dez 22 15:41:06 nixpc hm-activate-johannes[464815]: Cleaning up orphan links from /home/johannes
+Dez 22 15:41:06 nixpc hm-activate-johannes[464815]: Activating linkGeneration
+Dez 22 15:41:06 nixpc hm-activate-johannes[464815]: Activating migrateGhAccounts
+Dez 22 15:41:06 nixpc hm-activate-johannes[464815]: Activating dconfSettings
+Dez 22 15:41:06 nixpc hm-activate-johannes[464815]: Activating installPackages
+Dez 22 15:41:06 nixpc hm-activate-johannes[464815]: Activating writeBoundary
+Dez 22 15:41:06 nixpc hm-activate-johannes[464815]: Activating checkLinkTargets
+Dez 22 15:41:06 nixpc hm-activate-johannes[464815]: Activating checkFilesChanged
+Dez 22 15:41:06 nixpc hm-activate-johannes[464815]: Starting Home Manager activation
+Dez 22 15:41:06 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 22 15:18:08 nixpc systemd[1]: home-manager-johannes.service: Consumed 865ms CPU time, 8.8M memory peak, 4.2M read from disk.
+Dez 22 15:18:08 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 22 15:18:08 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 22 15:18:08 nixpc hm-activate-johannes[456680]: Activating stylixLookAndFeel
+Dez 22 15:18:08 nixpc hm-activate-johannes[457140]: systemctl --user restart hypridle.service
+Dez 22 15:18:08 nixpc hm-activate-johannes[457140]: Suggested commands:
+Dez 22 15:18:07 nixpc hm-activate-johannes[456680]: Attempting to reload services anyway...
+Dez 22 15:18:07 nixpc hm-activate-johannes[457139]: 1 loaded units listed.
+Dez 22 15:18:07 nixpc hm-activate-johannes[457139]:         SUB    → The low-level unit activation state, values depend on unit type.
+Dez 22 15:18:07 nixpc hm-activate-johannes[457139]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Dez 22 15:18:07 nixpc hm-activate-johannes[457139]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Dez 22 15:18:07 nixpc hm-activate-johannes[457139]: ● batsignal.service loaded failed failed batsignal - battery monitor daemon
+Dez 22 15:18:07 nixpc hm-activate-johannes[457139]:   UNIT              LOAD   ACTIVE SUB    DESCRIPTION
+Dez 22 15:18:07 nixpc hm-activate-johannes[456680]: The user systemd session is degraded:
+Dez 22 15:18:07 nixpc hm-activate-johannes[456680]: Activating reloadSystemd
+Dez 22 15:18:07 nixpc hm-activate-johannes[457125]: ok
+Dez 22 15:18:07 nixpc hm-activate-johannes[456680]: Activating onFilesChange
+Dez 22 15:18:06 nixpc hm-activate-johannes[456680]: Creating home file links in /home/johannes
+Dez 22 15:18:06 nixpc hm-activate-johannes[456680]: Creating profile generation 4
+Dez 22 15:18:06 nixpc hm-activate-johannes[456888]: Path '/home/johannes/.cache/ags/hyprpanel/options.json' does not link into a Home Manager generation. Skipping delete.
+Dez 22 15:18:06 nixpc hm-activate-johannes[456680]: Cleaning up orphan links from /home/johannes
+Dez 22 15:18:06 nixpc hm-activate-johannes[456680]: Activating linkGeneration
+Dez 22 15:18:06 nixpc hm-activate-johannes[456680]: Activating migrateGhAccounts
+Dez 22 15:18:06 nixpc hm-activate-johannes[456680]: Activating dconfSettings
+Dez 22 15:18:06 nixpc hm-activate-johannes[456680]: Activating installPackages
+Dez 22 15:18:06 nixpc hm-activate-johannes[456680]: Activating writeBoundary
+Dez 22 15:18:06 nixpc hm-activate-johannes[456680]: Activating checkLinkTargets
+Dez 22 15:18:06 nixpc hm-activate-johannes[456680]: Activating checkFilesChanged
+Dez 22 15:18:06 nixpc hm-activate-johannes[456680]: Starting Home Manager activation
+Dez 22 15:18:06 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 21 00:42:03 nixpc systemd[1]: home-manager-johannes.service: Consumed 576ms CPU time, 51.2M memory peak, 46.2M read from disk.
+Dez 21 00:42:03 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 21 00:42:03 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 21 00:42:02 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 21 00:42:05 nixpc hm-activate-johannes[829]: Activating stylixLookAndFeel
+Dez 21 00:42:05 nixpc hm-activate-johannes[829]: User systemd daemon not running. Skipping reload.
+Dez 21 00:42:05 nixpc hm-activate-johannes[829]: Activating reloadSystemd
+Dez 21 00:42:05 nixpc hm-activate-johannes[829]: Activating onFilesChange
+Dez 21 00:42:05 nixpc hm-activate-johannes[829]: Creating home file links in /home/johannes
+Dez 21 00:42:05 nixpc hm-activate-johannes[829]: No change so reusing latest profile generation 3
+Dez 21 00:42:05 nixpc hm-activate-johannes[829]: Cleaning up orphan links from /home/johannes
+Dez 21 00:42:05 nixpc hm-activate-johannes[829]: Activating linkGeneration
+Dez 21 00:42:05 nixpc hm-activate-johannes[829]: Activating migrateGhAccounts
+Dez 21 00:42:05 nixpc hm-activate-johannes[1113]: dbus-daemon[1113]: [session uid=1000 pid=1113] Successfully activated service 'ca.desrt.dconf'
+Dez 21 00:42:05 nixpc hm-activate-johannes[1113]: dbus-daemon[1113]: [session uid=1000 pid=1113] Activating service name='ca.desrt.dconf' requested by ':1.0' (uid=1000 pid=1117 comm="/nix/store/lry4x0dkwallnj73pg8cbkd5pshvy342-dconf-" label="kernel")
+Dez 21 00:42:05 nixpc hm-activate-johannes[829]: Activating dconfSettings
+Dez 21 00:42:05 nixpc hm-activate-johannes[829]: Activating installPackages
+Dez 21 00:42:05 nixpc hm-activate-johannes[829]: Activating writeBoundary
+Dez 21 00:42:05 nixpc hm-activate-johannes[1004]: Existing file '/home/johannes/.cache/ags/hyprpanel/options.json' is in the way of '/nix/store/d1yy7ys5m5j2p6l9nzsq2f9l3jwzbcgm-home-manager-files/.cache/ags/hyprpanel/options.json', will be moved to '/home/johannes/.cache/ags/hyprpanel/options.json.backup'
+Dez 21 00:42:05 nixpc hm-activate-johannes[829]: Activating checkLinkTargets
+Dez 21 00:42:05 nixpc hm-activate-johannes[829]: Activating checkFilesChanged
+Dez 21 00:42:05 nixpc hm-activate-johannes[829]: Starting Home Manager activation
+-- Boot e23138626c1b462da9e411aecdfe5db0 --
+Dez 20 13:57:08 nixpc systemd[1]: home-manager-johannes.service: Consumed 906ms CPU time, 6.6M memory peak, 1M read from disk.
+Dez 20 13:57:08 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 20 13:57:08 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 20 13:57:08 nixpc hm-activate-johannes[17806]: Activating stylixLookAndFeel
+Dez 20 13:57:07 nixpc hm-activate-johannes[17806]: Attempting to reload services anyway...
+Dez 20 13:57:07 nixpc hm-activate-johannes[18258]: 1 loaded units listed.
+Dez 20 13:57:07 nixpc hm-activate-johannes[18258]:         SUB    → The low-level unit activation state, values depend on unit type.
+Dez 20 13:57:07 nixpc hm-activate-johannes[18258]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Dez 20 13:57:07 nixpc hm-activate-johannes[18258]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Dez 20 13:57:07 nixpc hm-activate-johannes[18258]: ● batsignal.service loaded failed failed batsignal - battery monitor daemon
+Dez 20 13:57:07 nixpc hm-activate-johannes[18258]:   UNIT              LOAD   ACTIVE SUB    DESCRIPTION
+Dez 20 13:57:07 nixpc hm-activate-johannes[17806]: The user systemd session is degraded:
+Dez 20 13:57:07 nixpc hm-activate-johannes[17806]: Activating reloadSystemd
+Dez 20 13:57:07 nixpc hm-activate-johannes[18254]: ok
+Dez 20 13:57:07 nixpc hm-activate-johannes[17806]: Activating onFilesChange
+Dez 20 13:57:07 nixpc hm-activate-johannes[17806]: Creating home file links in /home/johannes
+Dez 20 13:57:06 nixpc hm-activate-johannes[17806]: Creating profile generation 3
+Dez 20 13:57:06 nixpc hm-activate-johannes[17806]: Cleaning up orphan links from /home/johannes
+Dez 20 13:57:06 nixpc hm-activate-johannes[17806]: Activating linkGeneration
+Dez 20 13:57:06 nixpc hm-activate-johannes[17806]: Activating migrateGhAccounts
+Dez 20 13:57:06 nixpc hm-activate-johannes[17806]: Activating dconfSettings
+Dez 20 13:57:06 nixpc hm-activate-johannes[17806]: Activating installPackages
+Dez 20 13:57:06 nixpc hm-activate-johannes[17806]: Activating writeBoundary
+Dez 20 13:57:06 nixpc hm-activate-johannes[17806]: Activating checkLinkTargets
+Dez 20 13:57:06 nixpc hm-activate-johannes[17806]: Activating checkFilesChanged
+Dez 20 13:57:06 nixpc hm-activate-johannes[17806]: Starting Home Manager activation
+Dez 20 13:57:06 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 20 13:56:25 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Dez 20 13:56:25 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Dez 20 13:56:25 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Dez 20 13:56:25 nixpc hm-activate-johannes[17355]:   to, for example, 'backup' and rebuild.
+Dez 20 13:56:25 nixpc hm-activate-johannes[17355]:     'home-manager.backupFileExtension'
+Dez 20 13:56:25 nixpc hm-activate-johannes[17355]: - When used as a NixOS or nix-darwin module, set
+Dez 20 13:56:25 nixpc hm-activate-johannes[17355]:   files automatically.
+Dez 20 13:56:25 nixpc hm-activate-johannes[17355]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Dez 20 13:56:25 nixpc hm-activate-johannes[17355]: - Move or remove the above files and try again.
+Dez 20 13:56:25 nixpc hm-activate-johannes[17355]: Please do one of the following:
+Dez 20 13:56:25 nixpc hm-activate-johannes[17355]: Existing file '/home/johannes/.cache/ags/hyprpanel/options.json.backup' would be clobbered by backing up '/home/johannes/.cache/ags/hyprpanel/options.json'
+Dez 20 13:56:25 nixpc hm-activate-johannes[17244]: Activating checkLinkTargets
+Dez 20 13:56:25 nixpc hm-activate-johannes[17244]: Activating checkFilesChanged
+Dez 20 13:56:25 nixpc hm-activate-johannes[17244]: Starting Home Manager activation
+Dez 20 13:56:25 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 20 13:46:22 nixpc systemd[1]: home-manager-johannes.service: Consumed 221ms CPU time, 45.2M memory peak, 40.9M read from disk.
+Dez 20 13:46:22 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Dez 20 13:46:22 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Dez 20 13:46:22 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Dez 20 13:46:21 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 20 13:46:24 nixpc hm-activate-johannes[1016]:   to, for example, 'backup' and rebuild.
+Dez 20 13:46:24 nixpc hm-activate-johannes[1016]:     'home-manager.backupFileExtension'
+Dez 20 13:46:24 nixpc hm-activate-johannes[1016]: - When used as a NixOS or nix-darwin module, set
+Dez 20 13:46:24 nixpc hm-activate-johannes[1016]:   files automatically.
+Dez 20 13:46:24 nixpc hm-activate-johannes[1016]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Dez 20 13:46:24 nixpc hm-activate-johannes[1016]: - Move or remove the above files and try again.
+Dez 20 13:46:24 nixpc hm-activate-johannes[1016]: Please do one of the following:
+Dez 20 13:46:24 nixpc hm-activate-johannes[1016]: Existing file '/home/johannes/.cache/ags/hyprpanel/options.json.backup' would be clobbered by backing up '/home/johannes/.cache/ags/hyprpanel/options.json'
+Dez 20 13:46:24 nixpc hm-activate-johannes[841]: Activating checkLinkTargets
+Dez 20 13:46:24 nixpc hm-activate-johannes[841]: Activating checkFilesChanged
+Dez 20 13:46:24 nixpc hm-activate-johannes[841]: Starting Home Manager activation
+-- Boot 703b274b27ca49b3a2c57d20874ca2c8 --
+Dez 20 10:49:56 nixpc systemd[1]: home-manager-johannes.service: Consumed 582ms CPU time, 49.4M memory peak, 44.2M read from disk.
+Dez 20 10:49:56 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 20 10:49:56 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 20 10:49:55 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 20 10:49:58 nixpc hm-activate-johannes[828]: Activating stylixLookAndFeel
+Dez 20 10:49:58 nixpc hm-activate-johannes[828]: User systemd daemon not running. Skipping reload.
+Dez 20 10:49:58 nixpc hm-activate-johannes[828]: Activating reloadSystemd
+Dez 20 10:49:58 nixpc hm-activate-johannes[828]: Activating onFilesChange
+Dez 20 10:49:58 nixpc hm-activate-johannes[828]: Creating home file links in /home/johannes
+Dez 20 10:49:58 nixpc hm-activate-johannes[828]: No change so reusing latest profile generation 2
+Dez 20 10:49:58 nixpc hm-activate-johannes[828]: Cleaning up orphan links from /home/johannes
+Dez 20 10:49:58 nixpc hm-activate-johannes[828]: Activating linkGeneration
+Dez 20 10:49:58 nixpc hm-activate-johannes[828]: Activating migrateGhAccounts
+Dez 20 10:49:58 nixpc hm-activate-johannes[1106]: dbus-daemon[1106]: [session uid=1000 pid=1106] Successfully activated service 'ca.desrt.dconf'
+Dez 20 10:49:58 nixpc hm-activate-johannes[1106]: dbus-daemon[1106]: [session uid=1000 pid=1106] Activating service name='ca.desrt.dconf' requested by ':1.0' (uid=1000 pid=1117 comm="/nix/store/lry4x0dkwallnj73pg8cbkd5pshvy342-dconf-" label="kernel")
+Dez 20 10:49:58 nixpc hm-activate-johannes[828]: Activating dconfSettings
+Dez 20 10:49:58 nixpc hm-activate-johannes[828]: Activating installPackages
+Dez 20 10:49:58 nixpc hm-activate-johannes[828]: Activating writeBoundary
+Dez 20 10:49:58 nixpc hm-activate-johannes[1004]: Existing file '/home/johannes/.cache/ags/hyprpanel/options.json' is in the way of '/nix/store/0ynic2q3a9x55q9d9ap84shb03dsmz67-home-manager-files/.cache/ags/hyprpanel/options.json', will be moved to '/home/johannes/.cache/ags/hyprpanel/options.json.backup'
+Dez 20 10:49:58 nixpc hm-activate-johannes[828]: Activating checkLinkTargets
+Dez 20 10:49:58 nixpc hm-activate-johannes[828]: Activating checkFilesChanged
+Dez 20 10:49:58 nixpc hm-activate-johannes[828]: Starting Home Manager activation
+-- Boot e6c66b13872249b7874417a31add5fd1 --
+Dez 19 09:32:04 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 19 09:32:04 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 19 09:32:04 nixpc hm-activate-johannes[296331]: Activating stylixLookAndFeel
+Dez 19 09:32:04 nixpc hm-activate-johannes[296775]: systemctl --user restart hypridle.service udiskie.service
+Dez 19 09:32:04 nixpc hm-activate-johannes[296775]: Suggested commands:
+Dez 19 09:32:03 nixpc hm-activate-johannes[296331]: Attempting to reload services anyway...
+Dez 19 09:32:03 nixpc hm-activate-johannes[296774]: 1 loaded units listed.
+Dez 19 09:32:03 nixpc hm-activate-johannes[296774]:         SUB    → The low-level unit activation state, values depend on unit type.
+Dez 19 09:32:03 nixpc hm-activate-johannes[296774]:         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+Dez 19 09:32:03 nixpc hm-activate-johannes[296774]: Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+Dez 19 09:32:03 nixpc hm-activate-johannes[296774]: ● batsignal.service loaded failed failed batsignal - battery monitor daemon
+Dez 19 09:32:03 nixpc hm-activate-johannes[296774]:   UNIT              LOAD   ACTIVE SUB    DESCRIPTION
+Dez 19 09:32:03 nixpc hm-activate-johannes[296331]: The user systemd session is degraded:
+Dez 19 09:32:03 nixpc hm-activate-johannes[296331]: Activating reloadSystemd
+Dez 19 09:32:03 nixpc hm-activate-johannes[296770]: ok
+Dez 19 09:32:03 nixpc hm-activate-johannes[296331]: Activating onFilesChange
+Dez 19 09:32:03 nixpc hm-activate-johannes[296331]: Creating home file links in /home/johannes
+Dez 19 09:32:03 nixpc hm-activate-johannes[296331]: Creating profile generation 2
+Dez 19 09:32:03 nixpc hm-activate-johannes[296331]: Cleaning up orphan links from /home/johannes
+Dez 19 09:32:03 nixpc hm-activate-johannes[296331]: Activating linkGeneration
+Dez 19 09:32:03 nixpc hm-activate-johannes[296331]: Activating migrateGhAccounts
+Dez 19 09:32:03 nixpc hm-activate-johannes[296331]: Activating dconfSettings
+Dez 19 09:32:03 nixpc hm-activate-johannes[296331]: Activating installPackages
+Dez 19 09:32:03 nixpc hm-activate-johannes[296331]: Activating writeBoundary
+Dez 19 09:32:03 nixpc hm-activate-johannes[296331]: Activating checkLinkTargets
+Dez 19 09:32:03 nixpc hm-activate-johannes[296331]: Activating checkFilesChanged
+Dez 19 09:32:03 nixpc hm-activate-johannes[296331]: Starting Home Manager activation
+Dez 19 09:32:02 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 19 09:30:43 nixpc systemd[1]: home-manager-johannes.service: Consumed 220ms CPU time, 6.7M memory peak, 1.2M read from disk.
+Dez 19 09:30:43 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Dez 19 09:30:43 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Dez 19 09:30:43 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Dez 19 09:30:43 nixpc hm-activate-johannes[295405]:   to, for example, 'backup' and rebuild.
+Dez 19 09:30:43 nixpc hm-activate-johannes[295405]:     'home-manager.backupFileExtension'
+Dez 19 09:30:43 nixpc hm-activate-johannes[295405]: - When used as a NixOS or nix-darwin module, set
+Dez 19 09:30:43 nixpc hm-activate-johannes[295405]:   files automatically.
+Dez 19 09:30:43 nixpc hm-activate-johannes[295405]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Dez 19 09:30:43 nixpc hm-activate-johannes[295405]: - Move or remove the above files and try again.
+Dez 19 09:30:43 nixpc hm-activate-johannes[295405]: Please do one of the following:
+Dez 19 09:30:43 nixpc hm-activate-johannes[295405]: Existing file '/home/johannes/.cache/ags/hyprpanel/options.json.backup' would be clobbered by backing up '/home/johannes/.cache/ags/hyprpanel/options.json'
+Dez 19 09:30:43 nixpc hm-activate-johannes[295292]: Activating checkLinkTargets
+Dez 19 09:30:43 nixpc hm-activate-johannes[295292]: Activating checkFilesChanged
+Dez 19 09:30:43 nixpc hm-activate-johannes[295292]: Starting Home Manager activation
+Dez 19 09:30:43 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 17 11:45:56 nixpc systemd[1]: home-manager-johannes.service: Consumed 222ms CPU time, 44.8M memory peak, 41.1M read from disk.
+Dez 17 11:45:56 nixpc systemd[1]: Failed to start Home Manager environment for johannes.
+Dez 17 11:45:56 nixpc systemd[1]: home-manager-johannes.service: Failed with result 'exit-code'.
+Dez 17 11:45:56 nixpc systemd[1]: home-manager-johannes.service: Main process exited, code=exited, status=1/FAILURE
+Dez 17 11:45:55 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 17 11:45:57 nixpc hm-activate-johannes[1027]:   to, for example, 'backup' and rebuild.
+Dez 17 11:45:57 nixpc hm-activate-johannes[1027]:     'home-manager.backupFileExtension'
+Dez 17 11:45:57 nixpc hm-activate-johannes[1027]: - When used as a NixOS or nix-darwin module, set
+Dez 17 11:45:57 nixpc hm-activate-johannes[1027]:   files automatically.
+Dez 17 11:45:57 nixpc hm-activate-johannes[1027]: - In standalone mode, use 'home-manager switch -b backup' to back up
+Dez 17 11:45:57 nixpc hm-activate-johannes[1027]: - Move or remove the above files and try again.
+Dez 17 11:45:57 nixpc hm-activate-johannes[1027]: Please do one of the following:
+Dez 17 11:45:57 nixpc hm-activate-johannes[1027]: Existing file '/home/johannes/.cache/ags/hyprpanel/options.json.backup' would be clobbered by backing up '/home/johannes/.cache/ags/hyprpanel/options.json'
+Dez 17 11:45:57 nixpc hm-activate-johannes[850]: Activating checkLinkTargets
+Dez 17 11:45:57 nixpc hm-activate-johannes[850]: Activating checkFilesChanged
+Dez 17 11:45:57 nixpc hm-activate-johannes[850]: Starting Home Manager activation
+-- Boot f648e798f67743678dbda57319585640 --
+Dez 15 15:18:15 nixpc systemd[1]: home-manager-johannes.service: Consumed 590ms CPU time, 49.6M memory peak, 44.4M read from disk.
+Dez 15 15:18:15 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 15 15:18:15 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 15 15:18:14 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 15 15:18:16 nixpc hm-activate-johannes[833]: Activating stylixLookAndFeel
+Dez 15 15:18:16 nixpc hm-activate-johannes[833]: User systemd daemon not running. Skipping reload.
+Dez 15 15:18:16 nixpc hm-activate-johannes[833]: Activating reloadSystemd
+Dez 15 15:18:16 nixpc hm-activate-johannes[833]: Activating onFilesChange
+Dez 15 15:18:16 nixpc hm-activate-johannes[833]: Creating home file links in /home/johannes
+Dez 15 15:18:16 nixpc hm-activate-johannes[833]: No change so reusing latest profile generation 1
+Dez 15 15:18:16 nixpc hm-activate-johannes[833]: Cleaning up orphan links from /home/johannes
+Dez 15 15:18:16 nixpc hm-activate-johannes[833]: Activating linkGeneration
+Dez 15 15:18:16 nixpc hm-activate-johannes[833]: Activating migrateGhAccounts
+Dez 15 15:18:16 nixpc hm-activate-johannes[1107]: dbus-daemon[1107]: [session uid=1000 pid=1107] Successfully activated service 'ca.desrt.dconf'
+Dez 15 15:18:16 nixpc hm-activate-johannes[1107]: dbus-daemon[1107]: [session uid=1000 pid=1107] Activating service name='ca.desrt.dconf' requested by ':1.0' (uid=1000 pid=1120 comm="/nix/store/lry4x0dkwallnj73pg8cbkd5pshvy342-dconf-" label="kernel")
+Dez 15 15:18:16 nixpc hm-activate-johannes[833]: Activating dconfSettings
+Dez 15 15:18:16 nixpc hm-activate-johannes[833]: Activating installPackages
+Dez 15 15:18:16 nixpc hm-activate-johannes[833]: Activating writeBoundary
+Dez 15 15:18:16 nixpc hm-activate-johannes[1009]: Existing file '/home/johannes/.cache/ags/hyprpanel/options.json' is in the way of '/nix/store/8pckkizxjmq0xan6d40sf9sniniq7m5i-home-manager-files/.cache/ags/hyprpanel/options.json', will be moved to '/home/johannes/.cache/ags/hyprpanel/options.json.backup'
+Dez 15 15:18:16 nixpc hm-activate-johannes[833]: Activating checkLinkTargets
+Dez 15 15:18:16 nixpc hm-activate-johannes[833]: Activating checkFilesChanged
+Dez 15 15:18:16 nixpc hm-activate-johannes[833]: Starting Home Manager activation
+-- Boot 523dc1f9e50144d6a30f9d86b25aa411 --
+Dez 14 15:43:51 nixpc systemd[1]: home-manager-johannes.service: Consumed 574ms CPU time, 49.8M memory peak, 44.7M read from disk.
+Dez 14 15:43:51 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 14 15:43:51 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 14 15:43:50 nixpc systemd[1]: Starting Home Manager environment for johannes...
+Dez 14 15:43:53 nixpc hm-activate-johannes[833]: Activating stylixLookAndFeel
+Dez 14 15:43:53 nixpc hm-activate-johannes[833]: User systemd daemon not running. Skipping reload.
+Dez 14 15:43:53 nixpc hm-activate-johannes[833]: Activating reloadSystemd
+Dez 14 15:43:53 nixpc hm-activate-johannes[833]: Activating onFilesChange
+Dez 14 15:43:53 nixpc hm-activate-johannes[833]: Creating home file links in /home/johannes
+Dez 14 15:43:53 nixpc hm-activate-johannes[833]: No change so reusing latest profile generation 1
+Dez 14 15:43:53 nixpc hm-activate-johannes[833]: Cleaning up orphan links from /home/johannes
+Dez 14 15:43:53 nixpc hm-activate-johannes[833]: Activating linkGeneration
+Dez 14 15:43:53 nixpc hm-activate-johannes[833]: Activating migrateGhAccounts
+Dez 14 15:43:53 nixpc hm-activate-johannes[1094]: dbus-daemon[1094]: [session uid=1000 pid=1094] Successfully activated service 'ca.desrt.dconf'
+Dez 14 15:43:53 nixpc hm-activate-johannes[1094]: dbus-daemon[1094]: [session uid=1000 pid=1094] Activating service name='ca.desrt.dconf' requested by ':1.0' (uid=1000 pid=1098 comm="/nix/store/lry4x0dkwallnj73pg8cbkd5pshvy342-dconf-" label="kernel")
+Dez 14 15:43:53 nixpc hm-activate-johannes[833]: Activating dconfSettings
+Dez 14 15:43:53 nixpc hm-activate-johannes[833]: Activating installPackages
+Dez 14 15:43:53 nixpc hm-activate-johannes[833]: Activating writeBoundary
+Dez 14 15:43:53 nixpc hm-activate-johannes[833]: Activating checkLinkTargets
+Dez 14 15:43:53 nixpc hm-activate-johannes[833]: Activating checkFilesChanged
+Dez 14 15:43:53 nixpc hm-activate-johannes[833]: Starting Home Manager activation
+-- Boot 9ff616c07e064bda8e6a2671fbede78e --
+Dez 14 15:43:18 nixpc systemd[1]: home-manager-johannes.service: Consumed 591ms CPU time, 10M memory peak, 4.4M read from disk.
+Dez 14 15:43:18 nixpc systemd[1]: Finished Home Manager environment for johannes.
+Dez 14 15:43:18 nixpc systemd[1]: home-manager-johannes.service: Deactivated successfully.
+Dez 14 15:43:18 nixpc hm-activate-johannes[51612]: Activating stylixLookAndFeel
+Dez 14 15:43:18 nixpc hm-activate-johannes[52119]: systemctl --user start batsignal.service clipman.service hypridle.service hyprpaper.service nextcloud-client.service udiskie.service
+Dez 14 15:43:18 nixpc hm-activate-johannes[52119]: Suggested commands:
+Dez 14 15:43:17 nixpc hm-activate-johannes[51612]: Activating reloadSystemd
+Dez 14 15:43:17 nixpc hm-activate-johannes[51612]: Activating onFilesChange
+Dez 14 15:43:17 nixpc hm-activate-johannes[51612]: Creating home file links in /home/johannes
+Dez 14 15:43:17 nixpc hm-activate-johannes[51612]: Creating profile generation 1
+Dez 14 15:43:17 nixpc hm-activate-johannes[51612]: Activating linkGeneration
+Dez 14 15:43:17 nixpc hm-activate-johannes[51612]: Activating migrateGhAccounts
+Dez 14 15:43:17 nixpc hm-activate-johannes[51612]: Activating dconfSettings
+Dez 14 15:43:17 nixpc hm-activate-johannes[51612]: Activating installPackages
+Dez 14 15:43:17 nixpc hm-activate-johannes[51612]: Activating writeBoundary
+Dez 14 15:43:17 nixpc hm-activate-johannes[51612]: Activating checkLinkTargets
+Dez 14 15:43:17 nixpc hm-activate-johannes[51612]: Activating checkFilesChanged
+Dez 14 15:43:17 nixos hm-activate-johannes[51612]: Starting Home Manager activation
+Dez 14 15:43:17 nixos systemd[1]: Starting Home Manager environment for johannes...
