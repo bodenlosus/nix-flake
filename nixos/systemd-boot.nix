@@ -8,6 +8,7 @@
         consoleMode = "auto";
       };
     };
+    binfmt.emulatedSystems = [ "aarch64-linux" ];
     tmp.cleanOnBoot = true;
     kernelPackages =
       pkgs.linuxPackages_latest; # _zen, _hardened, _rt, _rt_latest, etc.

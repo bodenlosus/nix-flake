@@ -53,7 +53,6 @@ let
 in
 {
   home.packages = [
-    inputs.hyprsunset.packages."${pkgs.system}".hyprsunset
     night-shift-on
     night-shift-off
     night-shift

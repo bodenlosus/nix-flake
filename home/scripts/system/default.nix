@@ -22,31 +22,31 @@ let
   powermenu = pkgs.writeShellScriptBin "powermenu"
     # bash
     ''
-      #/usr/bin/env bash
-options=(
-    " 󰍃  Logout"
-    "   Suspend"
-    " 󰑐  Reboot"
-    " 󰿅  Shutdown"
-)
+            #/usr/bin/env bash
+      options=(
+          " 󰍃  Logout"
+          "   Suspend"
+          " 󰑐  Reboot"
+          " 󰿅  Shutdown"
+      )
 
-selected=$(printf '%s\n' "''${options[@]}" | rofi -no-show-icons -dmenu)
-selected=$(echo "$selected" | cut -d' ' -f4-)
+      selected=$(printf '%s\n' "''${options[@]}" | rofi -no-show-icons -dmenu)
+      selected=$(echo "$selected" | cut -d' ' -f4-)
 
-case $selected in
-    "Logout")
-    hyprctl dispatch exit
-    ;;
-    "Suspend")
-    systemctl suspend
-    ;;
-    "Reboot")
-    systemctl reboot
-    ;;
-    "Shutdown")
-    systemctl poweroff
-    ;;
-esac
+      case $selected in
+          "Logout")
+          hyprctl dispatch exit
+          ;;
+          "Suspend")
+          systemctl suspend
+          ;;
+          "Reboot")
+          systemctl reboot
+          ;;
+          "Shutdown")
+          systemctl poweroff
+          ;;
+      esac
     '';
 
   quickmenu = pkgs.writeShellScriptBin "quickmenu" ''

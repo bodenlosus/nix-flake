@@ -15,6 +15,7 @@
     ../../nixos/utils.nix
     ../../nixos/xdg-portal.nix
     ../../nixos/variables-config.nix
+    ../../nixos/qemu.nix
 
     ../../themes/stylix/nixy.nix
 

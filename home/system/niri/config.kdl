@@ -1,0 +1,172 @@
+prefer-no-csd
+spawn-at-startup "hyprpanel"
+
+
+
+  environment {
+    XDG_SESSION_TYPE "wayland"
+    XDG_CURRENT_DESKTOP "Hyprland"
+    MOZ_ENABLE_WAYLAND "1"
+    ANKI_WAYLAND "1"
+    DISABLE_QT5_COMPAT "0"
+    NIXOS_OZONE_WL "1"
+    XDG_SESSION_TYPE "wayland"
+    XDG_SESSION_DESKTOP "Hyprland"
+    QT_AUTO_SCREEN_SCALE_FACTOR "1"
+    QT_QPA_PLATFORM "wayland"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    GTK_THEME "adw-gtk3"
+    GTK2_RC_FILES "/home/hadi/.local/share/themes/FlatColor/gtk-2.0/gtkrc"
+    __GL_GSYNC_ALLOWED "0"
+    __GL_VRR_ALLOWED "0"
+    DISABLE_QT5_COMPAT "0"
+    WLR_DRM_NO_ATOMIC "1"
+    WLR_BACKEND "vulkan"
+    WLR_RENDERER "vulkan"
+    WLR_NO_HARDWARE_CURSORS "1"
+    XDG_SESSION_TYPE "wayland"
+    SDL_VIDEODRIVER "wayland"
+    CLUTTER_BACKEND "wayland"
+  }
+
+
+  input {
+    keyboard {
+        xkb {
+            layout "de"
+            // variant "colemak_dh_ortho"
+            // options "compose:ralt,ctrl:nocaps"
+            // model ""
+            // rules ""
+            // file "~/.config/keymap.xkb"
+        }
+
+        repeat-delay 300
+        repeat-rate 50
+        // track-layout "global"
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+        // accel-speed 0.2
+        // accel-profile "flat"
+        // scroll-factor 1.0
+        // scroll-method "two-finger"
+        // scroll-button 273
+        // tap-button-map "left-middle-right"
+        click-method "clickfinger"
+        // left-handed
+        // disabled-on-external-mouse
+        // middle-emulation
+    }
+
+    mouse {
+        // off
+        // natural-scroll
+        // accel-speed 0.2
+        // accel-profile "flat"
+        // scroll-factor 1.0
+        // scroll-method "no-scroll"
+        // scroll-button 273
+        // left-handed
+        // middle-emulation
+    }
+    
+}
+
+binds {
+    Mod+Q { spawn "/nix/store/8h3d079ngpr14q14icpjd6jz346ia7j6-kitty-0.39.0/bin/kitty"; }
+    Mod+E { spawn "/nix/store/chx6s5314bglxh96ip9aml6v611kqz56-nautilus-47.1/bin/nautilus"; }
+    Mod+X cooldown-ms=500 { spawn "powermenu"; }
+    Mod+R cooldown-ms=500 { spawn "menu"; }
+    Mod+Y cooldown-ms=500 { spawn "quickmenu"; }
+    Mod+Shift+SPACE cooldown-ms=500 { spawn " hyprfocus-toggle"; }
+    Mod+Shift+T cooldown-ms=500 { spawn "hyprpanel-toggle"; }
+    
+
+    Mod+C { close-window; }
+
+    Print { screenshot; }
+    Ctrl+Print { screenshot-screen; }
+    Alt+Print { screenshot-window; }
+    
+    Mod+Shift+E { quit; }
+
+    Mod+A  { focus-column-left; }
+    Mod+S  { focus-window-down; }
+    Mod+W    { focus-window-up; }
+    Mod+D { focus-column-right; }
+
+    Mod+Shift+A     { move-column-left; }
+    Mod+Shift+S    { move-window-down; }
+    Mod+Shift+W     { move-window-up; }
+    Mod+Shift+D    { move-column-right; }
+
+    Mod+Next    { focus-window-or-workspace-down; }
+    Mod+Prior { focus-window-or-workspace-up; }
+    Mod+Shift+Next     { move-window-down-or-to-workspace-down; }
+    Mod+Shift+Prior    { move-window-up-or-to-workspace-up; }
+    Mod+V       { toggle-window-floating; }
+
+    Mod+WheelScrollDown    cooldown-ms=500 { focus-window-or-workspace-down; }
+    Mod+WheelScrollUp      cooldown-ms=50 { move-window-up-or-to-workspace-up; }
+    Mod+Ctrl+WheelScrollDown cooldown-ms=50 { move-column-to-workspace-down; }
+    Mod+Ctrl+WheelScrollUp  cooldown-ms=50 { move-column-to-workspace-up; }
+
+    MouseForward { focus-column-left; } 
+    MouseBack {  focus-column-right; }
+
+    Shift+MouseForward { focus-column-left; } 
+    Shift+MouseBack {  focus-column-right; }
+
+    Mod+Return { do-screen-transition; }
+
+    Mod+Ctrl+Q { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+
+    Mod+Shift+Q { switch-preset-column-width; }
+}
+
+layout {
+    
+    empty-workspace-above-first
+    gaps 10
+    center-focused-column "on-overflow"
+    always-center-single-column
+    focus-ring {
+        width 1
+    }
+    border {
+        width 1
+    }
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        proportion 1.0
+    }
+    insert-hint {
+        // off
+        color "#ffc87f80"
+        gradient from="#6b8c61" to="#a6da95" angle=45 relative-to="workspace-view"
+    }
+
+}
+
+cursor {
+    // Hide the cursor after one second of inactivity.
+    hide-after-inactive-ms 1000
+}
+
+
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+animations {
+
+
+}

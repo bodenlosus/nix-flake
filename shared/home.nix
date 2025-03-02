@@ -1,9 +1,29 @@
 { pkgs, config, inputs, ... }: {
   imports = [
-    # ../home/system/wpaperd
     ../home/programs/direnv
     ../home/programs/btop
     ../home/programs/cava
+    ../home/system/niri
+    ../home/system/gtk
+    ../home/system/wofi
+    ../home/system/batsignal
+    ../home/system/zathura
+    ../home/system/mime
+    ../home/system/udiskie
+    ../home/system/clipman
+    ../home/system/tofi
+    ../home/programs/winapps
+    ../home/scripts
+    
+    ../home/programs/kitty
+    ../home/programs/shell
+    ../home/programs/fetch
+    ../home/programs/git
+    ../home/programs/spicetify
+    ../home/programs/yazi
+    ../home/programs/markdown
+    ../home/programs/nautilus
+    ../home/programs/lazygit
   ];
   programs.gh = {
     enable = true;

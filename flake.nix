@@ -16,33 +16,36 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # };hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    hyprland.url = "github:hyprwm/Hyprland/04ac46c54357278fc68f0a95d26347ea0db99496";
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
+    winapps = {
+      url = "github:winapps-org/winapps";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    palettify.url = "github:bodenlosus/palettify-rust";
-    # # hyprspace = {
-    #   url = "github:KZDKM/Hyprspace";
-
-    #   # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
+    # };hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    # hyprland.url = "github:hyprwm/Hyprland/04ac46c54357278fc68f0a95d26347ea0db99496";
+    # hyprland-plugins = {
+    #   url = "github:hyprwm/hyprland-plugins";
     #   inputs.hyprland.follows = "hyprland";
     # };
-    hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
-    hyprsunset.url = "github:hyprwm/hyprsunset";
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+
+    palettify.url = "github:bodenlosus/palettify-rust";
+    # hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
+    # hyprsunset.url = "github:hyprwm/hyprsunset";
+    # hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     stylix.url = "github:danth/stylix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nur.url = "github:nix-community/NUR";
   };
 
-  outputs = inputs@{ nixpkgs, ... }:
+  outputs = inputs@{ nixpkgs, winapps, ... }:
     let
       system = "x86_64-linux";
     in
@@ -54,8 +57,9 @@
             modules = [
               {
                 nixpkgs.overlays = [
-                  inputs.hyprpanel.overlay
+                  # inputs.hyprpanel.overlay
                   inputs.nur.overlays.default
+                  inputs.niri.overlays.niri
                   (final: prev: {
                     zen-browser = inputs.zen-browser.packages."${system}".beta;
                   })
@@ -68,6 +72,7 @@
               inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14 # DONE: CHANGEME: check https://github.com/NixOS/nixos-hardware
               inputs.home-manager.nixosModules.home-manager
               inputs.stylix.nixosModules.stylix
+              inputs.niri.nixosModules.niri
               ./hosts/nixos/configuration.nix # DONE: CHANGEME: change the path to match your host folder
             ];
           };
@@ -76,26 +81,21 @@
           modules = [
             {
               nixpkgs.overlays = [
-                inputs.hyprpanel.overlay
+                # inputs.hyprpanel.overlay
                 inputs.nur.overlays.default
+                inputs.niri.overlays.niri
                 (final: prev: {
                   zen-browser = inputs.zen-browser.packages."${system}".beta;
                 })
                 (final: prev: {
                   palettify = inputs.palettify.packages."${system}".default;
                 })
-                # (
-                #   final: prev: {
-                #     rocmPackages.llvm = prev.rocmPackages.llvm.override {
-                #       buildDocs = false;
-
-                #     };
-                #   }
-                # )
               ];
               _module.args = { inherit inputs; };
             }
             inputs.home-manager.nixosModules.home-manager
+            inputs.niri.nixosModules.niri
+
             inputs.stylix.nixosModules.stylix
             ./hosts/nixpc/configuration.nix # DONE: CHANGEME: change the path to match your host folder
           ];

@@ -6,7 +6,7 @@ let
   '';
 
   clipboard = pkgs.writeShellScriptBin "clipboard" ''
-    clipman pick --tool=wofi
+    clipman pick --tool=rofi
   '';
 
 in
