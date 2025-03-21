@@ -8,10 +8,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -28,18 +24,22 @@
       url = "github:winapps-org/winapps";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    # };hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    # hyprland.url = "github:hyprwm/Hyprland/04ac46c54357278fc68f0a95d26347ea0db99496";
-    # hyprland-plugins = {
-    #   url = "github:hyprwm/hyprland-plugins";
-    #   inputs.hyprland.follows = "hyprland";
-    # };
+    # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprland.url = "github:hyprwm/Hyprland/882f7ad7d2bbfc7440d0ccaef93b1cdd78e8e3ff";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
 
     palettify.url = "github:bodenlosus/palettify-rust";
-    # hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
-    # hyprsunset.url = "github:hyprwm/hyprsunset";
-    # hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
+    hyprsunset.url = "github:hyprwm/hyprsunset";
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     stylix.url = "github:danth/stylix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nur.url = "github:nix-community/NUR";
@@ -57,7 +57,7 @@
             modules = [
               {
                 nixpkgs.overlays = [
-                  # inputs.hyprpanel.overlay
+                  inputs.hyprpanel.overlay
                   inputs.nur.overlays.default
                   inputs.niri.overlays.niri
                   (final: prev: {
@@ -81,7 +81,7 @@
           modules = [
             {
               nixpkgs.overlays = [
-                # inputs.hyprpanel.overlay
+                inputs.hyprpanel.overlay
                 inputs.nur.overlays.default
                 inputs.niri.overlays.niri
                 (final: prev: {

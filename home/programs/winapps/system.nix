@@ -1,4 +1,4 @@
-{inputs, pkgs, config, ...}:
+{ inputs, pkgs, config, ... }:
 {
   environment.systemPackages = [
     inputs.winapps.packages."${pkgs.system}".winapps

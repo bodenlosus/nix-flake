@@ -1,4 +1,4 @@
-{pkgs, config, ...}:
+{ pkgs, config, ... }:
 {
   xdg.configFile."winapps/winapps.conf".text = ''
     RDP_USER="windows"
@@ -12,6 +12,6 @@
     DEBUG="true"
     AUTOPAUSE="off"
     AUTOPAUSE_TIME="300"
-    FREERDP_COMMAND=""
+    FREERDP_COMMAND="xfreerdp"
   '';
 }

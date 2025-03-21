@@ -1,28 +1,28 @@
-{pkgs, config, ...}:
+{ pkgs, config, ... }:
 {
   programs.niri.settings.binds = with config.lib.niri.actions; {
     "Mod+Q".action = spawn "${pkgs.kitty}/bin/kitty";
     "Mod+E".action = spawn "${pkgs.nautilus}/bin/nautilus";
     "Mod+X" = {
-      cooldown-ms=500;
+      cooldown-ms = 500;
       action.spawn = "powermenu";
     };
     "Mod+Y" = {
-      cooldown-ms=500;
+      cooldown-ms = 500;
       action.spawn = "quickmenu";
     };
     "Mod+R" = {
-      cooldown-ms=500;
+      cooldown-ms = 500;
       action.spawn = "menu";
     };
-    
+
 
     "Mod+C".action = close-window;
 
     "Print" = "screenshot";
     "Ctrl+Print" = "screenshot-screen";
     "Alt+Print" = "screenshot-window";
-    
+
     "Ctrl+Alt+Delete" = quit;
 
     "Mod+A".action = focus-column-or-monitor-left;
@@ -42,28 +42,28 @@
     "Mod+V" = toggle-window-floating;
 
     "Mod+WheelScrollDown" = {
-      cooldown-ms=500;
-      action = focus-window-or-workspace-down; 
+      cooldown-ms = 500;
+      action = focus-window-or-workspace-down;
     };
     "Mod+WheelScrollUp" = {
-      cooldown-ms=500;
-      action = focus-window-or-workspace-up; 
+      cooldown-ms = 500;
+      action = focus-window-or-workspace-up;
     };
     "Mod+Ctrl+WheelScrollDown" = {
-      cooldown-ms=500;
-      action = move-window-up-or-to-workspace-up; 
+      cooldown-ms = 500;
+      action = move-window-up-or-to-workspace-up;
     };
     "Mod+Ctrl+WheelScrollUp" = {
-      cooldown-ms=500;
-      action = move-window-down-or-to-workspace-down; 
+      cooldown-ms = 500;
+      action = move-window-down-or-to-workspace-down;
     };
     "Mod+Left".action = consume-window-into-column;
     "Mod+Right".action = expel-window-from-column;
 
-    "MouseForward".action = focus-column-or-monitor-left; 
-    "MouseBack".action =  focus-column-or-monitor-right;
+    "MouseForward".action = focus-column-or-monitor-left;
+    "MouseBack".action = focus-column-or-monitor-right;
 
-    "Shift+MouseForward".action = move-column-left-or-to-monitor-left; 
+    "Shift+MouseForward".action = move-column-left-or-to-monitor-left;
     "Shift+MouseBack".action = move-column-right-or-to-monitor-right;
 
     "Shift+MouseMiddle".action = switch-preset-column-width;

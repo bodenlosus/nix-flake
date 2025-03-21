@@ -52,10 +52,10 @@
   };
 
   # IOMMU and virtualization CPU flags
-  boot.kernelParams = [ 
+  boot.kernelParams = [
     # Uncomment the appropriate line for your CPU
     # "intel_iommu=on"  # For Intel CPUs
-    "amd_iommu=on"    # For AMD CPUs
+    "amd_iommu=on" # For AMD CPUs
     "iommu=pt"
   ];
   boot.kernelModules = [
@@ -64,7 +64,7 @@
     "vfio_pci"
     "vfio_virqfd"
     "vfio_iommu_type1"
-    
+
   ];
 }
 

@@ -14,7 +14,7 @@
     ../home/system/tofi
     ../home/programs/winapps
     ../home/scripts
-    
+    # ../home/system/waybar
     ../home/programs/kitty
     ../home/programs/shell
     ../home/programs/fetch
@@ -24,6 +24,11 @@
     ../home/programs/markdown
     ../home/programs/nautilus
     ../home/programs/lazygit
+    # ../home/programs/nvim/default.nix
+    # ../home/system/hyprland
+    # ../home/system/hypridle
+    # ../home/system/hyprpanel
+    # ../home/system/hyprpaper
   ];
   programs.gh = {
     enable = true;
@@ -42,6 +47,10 @@
     planify
     vscode
     palettify
+    
+    # office
+    onlyoffice-desktopeditors
+
 
     # Dev
     deno
@@ -73,6 +82,7 @@
     cmatrix
 
     # multimedia
+    pavucontrol
     loupe
     totem
     evince
