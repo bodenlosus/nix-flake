@@ -16,7 +16,7 @@ hyprland.stdenv.mkDerivation {
     owner = "dawsers";
     repo = "hyprscroller";
     rev = "de8e4bf8c419d849b053299d67bd554ac3f5c231";
-#    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    #    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
     hash = "sha256-NZPCWWJuBF8xhg27puq9sHmEs1cxyPkiNpNCoHwqGcc=";
   };
 

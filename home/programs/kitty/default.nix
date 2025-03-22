@@ -24,7 +24,8 @@
       cursor_shape = "Underline";
       cursor_underline_thickness = 3;
       window_padding_width = 10;
-      background_opacity = lib.mkForce 1;
+      background_opacity = lib.mkForce 0.8;
+      background_blur = 64;
     };
   };
 }

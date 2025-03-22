@@ -78,7 +78,7 @@
       pumheight = 10;
 
       # Display line numbers relative to current line
-      relativenumber = true;
+      relativenumber = false;
 
       # Minimal number of lines to keep around the cursor
       # This has the effect to move the view along with current line

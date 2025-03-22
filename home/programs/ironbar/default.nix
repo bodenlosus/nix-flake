@@ -1,4 +1,4 @@
-{pkgs, config, ...}:
+{ pkgs, config, ... }:
 let
   accent = "#${config.lib.stylix.colors.base0D}";
   accent-alt = "#${config.lib.stylix.colors.base03}";
@@ -28,270 +28,270 @@ in
     ironbar
   ];
   xdg.configFile."ironbar/style.css".text = ''
-    @define-color color_bg ${background};
-@define-color color_bg_dark ${background-alt};
-@define-color color_border ${border};
-@define-color color_border_active ${accent};
-@define-color color_text ${foreground};
-@define-color color_urgent ${urgent};
-@define-color color_accent ${accent};
+        @define-color color_bg ${background};
+    @define-color color_bg_dark ${background-alt};
+    @define-color color_border ${border};
+    @define-color color_border_active ${accent};
+    @define-color color_text ${foreground};
+    @define-color color_urgent ${urgent};
+    @define-color color_accent ${accent};
 
-/* -- base styles -- */
+    /* -- base styles -- */
 
-* {
-    font-family: ${font}, sans-serif;
-    font-size: ${font-size}px;
-    border: none;
+    * {
+        font-family: ${font}, sans-serif;
+        font-size: ${font-size}px;
+        border: none;
     
-}
+    }
 
-box, menubar, button {
-    background-color: @color_bg;
-    background-image: none;
-    box-shadow: none;
-}
+    box, menubar, button {
+        background-color: @color_bg;
+        background-image: none;
+        box-shadow: none;
+    }
 
-window, #bar {
-    border-radius: ${toString rounding}px;
-    background: transparent;
-}
+    window, #bar {
+        border-radius: ${toString rounding}px;
+        background: transparent;
+    }
 
-#start, #center, #end {
-    background-color: @color_bg;
-    padding: 1px;
-    border: 1px solid @color_border;
-}
+    #start, #center, #end {
+        background-color: @color_bg;
+        padding: 1px;
+        border: 1px solid @color_border;
+    }
 
-#start * , #center * , #end * {
-    background-color: transparent;
-}
+    #start * , #center * , #end * {
+        background-color: transparent;
+    }
 
-#start {
-    border-radius: 0px ${toString rounding}px ${toString rounding}px 0px;
-}
+    #start {
+        border-radius: 0px ${toString rounding}px ${toString rounding}px 0px;
+    }
 
-#center {
-    border-radius: ${toString rounding}px;
-}
+    #center {
+        border-radius: ${toString rounding}px;
+    }
 
-#end {
-    border-radius: ${toString rounding}px 0px 0px ${toString rounding}px;
-}
+    #end {
+        border-radius: ${toString rounding}px 0px 0px ${toString rounding}px;
+    }
 
 
 
 
-button, label {
-    color: @color_text;
-}
+    button, label {
+        color: @color_text;
+    }
 
-button:hover {
-    background-color: @color_bg_dark;
-}
+    button:hover {
+        background-color: @color_bg_dark;
+    }
 
-scale trough {
-    min-width: 1px;
-    min-height: 2px;
-}
+    scale trough {
+        min-width: 1px;
+        min-height: 2px;
+    }
 
-#bar {
-    margin-top: 0px;
-}
+    #bar {
+        margin-top: 0px;
+    }
 
-.popup {
-    border: 1px solid @color_border;
-    padding: 1em;
-    border-radius: ${toString rounding}px;
+    .popup {
+        border: 1px solid @color_border;
+        padding: 1em;
+        border-radius: ${toString rounding}px;
 
-}
+    }
 
 
-/* -- clipboard -- */
+    /* -- clipboard -- */
 
-.clipboard {
-    margin-left: 5px;
-    font-size: 1.1em;
-}
+    .clipboard {
+        margin-left: 5px;
+        font-size: 1.1em;
+    }
 
-.popup-clipboard .item {
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid @color_border;
-}
+    .popup-clipboard .item {
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid @color_border;
+    }
 
 
-/* -- clock -- */
+    /* -- clock -- */
 
-.clock {
-    font-weight: bold;
-    margin-left: 5px;
-}
+    .clock {
+        font-weight: bold;
+        margin-left: 5px;
+    }
 
-.popup-clock .calendar-clock {
-    color: @color_text;
-    font-size: 2.5em;
-    padding-bottom: 0.1em;
-}
+    .popup-clock .calendar-clock {
+        color: @color_text;
+        font-size: 2.5em;
+        padding-bottom: 0.1em;
+    }
 
-.popup-clock .calendar {
-    background-color: @color_bg;
-    color: @color_text;
-}
+    .popup-clock .calendar {
+        background-color: @color_bg;
+        color: @color_text;
+    }
 
-.popup-clock .calendar .header {
-    padding-top: 1em;
-    border-top: 1px solid @color_border;
-    font-size: 1.5em;
-}
+    .popup-clock .calendar .header {
+        padding-top: 1em;
+        border-top: 1px solid @color_border;
+        font-size: 1.5em;
+    }
 
-.popup-clock .calendar:selected {
-    background-color: @color_border_active;
-}
+    .popup-clock .calendar:selected {
+        background-color: @color_border_active;
+    }
 
 
-/* -- launcher -- */
+    /* -- launcher -- */
 
-.launcher .item {
-    margin-right: 4px;
-    background-color: transparent;
-}
+    .launcher .item {
+        margin-right: 4px;
+        background-color: transparent;
+    }
 
-.launcher .ifix examtem:not(.focused):hover {
-    background-color: transparent;
-}
+    .launcher .ifix examtem:not(.focused):hover {
+        background-color: transparent;
+    }
 
-.launcher * {
-    background-color: transparent;
-}
+    .launcher * {
+        background-color: transparent;
+    }
 
-.launcher .focused {
-    border-radius: 0;
-    border-bottom: 1px solid alpha(@color_border_active, 0.7);
-}
+    .launcher .focused {
+        border-radius: 0;
+        border-bottom: 1px solid alpha(@color_border_active, 0.7);
+    }
 
-.launcher .urgent {
-    border-radius: 0;
-    border-bottom: 1px solid alpha(@color_urgent, 0.7);
-}
+    .launcher .urgent {
+        border-radius: 0;
+        border-bottom: 1px solid alpha(@color_urgent, 0.7);
+    }
 
-.popup-launcher {
-    padding: 0;
-}
+    .popup-launcher {
+        padding: 0;
+    }
 
-.popup-launcher .popup-item:not(:first-child) {
-    border-top: 1px solid @color_border;
-}
+    .popup-launcher .popup-item:not(:first-child) {
+        border-top: 1px solid @color_border;
+    }
 
 
-/* -- music -- */
+    /* -- music -- */
 
-.music:hover * {
-    background-color: @color_bg_dark;
-}
+    .music:hover * {
+        background-color: @color_bg_dark;
+    }
 
-.popup-music .album-art {
-    margin-right: 1em;
-}
+    .popup-music .album-art {
+        margin-right: 1em;
+    }
 
-.popup-music .icon-box {
-    margin-right: 0.4em;
-}
+    .popup-music .icon-box {
+        margin-right: 0.4em;
+    }
 
-.popup-music .title .icon, .popup-music .title .label {
-    font-size: 1.7em;
-}
+    .popup-music .title .icon, .popup-music .title .label {
+        font-size: 1.7em;
+    }
 
-.popup-music .controls *:disabled {
-    color: @color_border;
-}
+    .popup-music .controls *:disabled {
+        color: @color_border;
+    }
 
-.popup-music .volume .slider slider {
-    border-radius: 100%;
-}
+    .popup-music .volume .slider slider {
+        border-radius: 100%;
+    }
 
-.popup-music .volume .icon {
-    margin-left: 4px;
-}
+    .popup-music .volume .icon {
+        margin-left: 4px;
+    }
 
-.popup-music .progress .slider slider {
-    border-radius: 100%;
-}
+    .popup-music .progress .slider slider {
+        border-radius: 100%;
+    }
 
-/* notifications */
+    /* notifications */
 
-.notifications .count {
-    font-size: 0.6rem;
-    background-color: @color_text;
-    color: @color_bg;
-    border-radius: 100%;
-    margin-right: 3px;
-    margin-top: 3px;
-    padding-left: 4px;
-    padding-right: 4px;
-    opacity: 0.7;
-}
+    .notifications .count {
+        font-size: 0.6rem;
+        background-color: @color_text;
+        color: @color_bg;
+        border-radius: 100%;
+        margin-right: 3px;
+        margin-top: 3px;
+        padding-left: 4px;
+        padding-right: 4px;
+        opacity: 0.7;
+    }
 
-/* -- script -- */
+    /* -- script -- */
 
-.script {
-    padding-left: 10px;
-}
+    .script {
+        padding-left: 10px;
+    }
 
 
-/* -- sys_info -- */
+    /* -- sys_info -- */
 
-.sysinfo {
-    margin-left: 10px;
-}
+    .sysinfo {
+        margin-left: 10px;
+    }
 
-.sysinfo .item {
-    margin-left: 5px;
-}
+    .sysinfo .item {
+        margin-left: 5px;
+    }
 
 
-/* -- tray -- */
+    /* -- tray -- */
 
-.tray {
-    margin-left: 10px;
-}
+    .tray {
+        margin-left: 10px;
+    }
 
-/* -- volume -- */
+    /* -- volume -- */
 
-.popup-volume .device-box {
-    border-right: 1px solid @color_border;
-}
+    .popup-volume .device-box {
+        border-right: 1px solid @color_border;
+    }
 
-/* -- workspaces -- */
+    /* -- workspaces -- */
 
-.workspaces .item.focused {
-    box-shadow: inset 0 -3px;
-    background-color: @color_bg_dark;
-}
+    .workspaces .item.focused {
+        box-shadow: inset 0 -3px;
+        background-color: @color_bg_dark;
+    }
 
-.workspaces .item.urgent {
-    background-color: @color_urgent;
-}
+    .workspaces .item.urgent {
+        background-color: @color_urgent;
+    }
 
-.workspaces .item:hover {
-    box-shadow: inset 0 -3px;
-}
+    .workspaces .item:hover {
+        box-shadow: inset 0 -3px;
+    }
 
 
-/* -- custom: power menu -- */
+    /* -- custom: power menu -- */
 
-.popup-power-menu #header {
-    font-size: 1.4em;
-    padding-bottom: 0.4em;
-    margin-bottom: 0.6em;
-    border-bottom: 1px solid @color_border;
-}
+    .popup-power-menu #header {
+        font-size: 1.4em;
+        padding-bottom: 0.4em;
+        margin-bottom: 0.6em;
+        border-bottom: 1px solid @color_border;
+    }
 
-.popup-power-menu .power-btn {
-    border: 1px solid @color_border;
-    padding: 0.6em 1em;
-}
+    .popup-power-menu .power-btn {
+        border: 1px solid @color_border;
+        padding: 0.6em 1em;
+    }
 
-.popup-power-menu #buttons > *:nth-child(1) .power-btn {
-    margin-right: 1em;
-}
+    .popup-power-menu #buttons > *:nth-child(1) .power-btn {
+        margin-right: 1em;
+    }
   '';
 }

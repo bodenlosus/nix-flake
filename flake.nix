@@ -2,7 +2,6 @@
   inputs = {
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # nixpkgs.url = "github:nixos/nixpkgs/585f76290ed66a3fdc5aae0933b73f9fd3dca7e3"; # temporary fix for rocm-llvm issue
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -18,10 +17,6 @@
     };
     sops-nix = {
       url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    winapps = {
-      url = "github:winapps-org/winapps";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixvim = {
@@ -45,60 +40,38 @@
     nur.url = "github:nix-community/NUR";
   };
 
-  outputs = inputs@{ nixpkgs, winapps, ... }:
+  outputs = inputs@{ nixpkgs, ... }:
     let
       system = "x86_64-linux";
+      utils = import ./utils.nix { inherit nixpkgs inputs; };
+      overlays = [
+        inputs.hyprpanel.overlay
+        inputs.nur.overlays.default
+        inputs.niri.overlays.niri
+        (final: prev: {
+          zen-browser = inputs.zen-browser.packages."${system}".beta;
+        })
+        (final: prev: {
+          palettify = inputs.palettify.packages."${system}".default;
+        })
+      ];
+      modules = with inputs; [
+        nixos-hardware.nixosModules.lenovo-thinkpad-t14 # DONE: CHANGEME: check https://github.com/NixOS/nixos-hardware
+        home-manager.nixosModules.home-manager
+        stylix.nixosModules.stylix
+        niri.nixosModules.niri
+      ];
+
     in
     {
       nixosConfigurations = {
-        nixos = # DONE: CHANGEME: This should match the 'hostname' in your variables.nix file
-          nixpkgs.lib.nixosSystem {
-            system = system;
-            modules = [
-              {
-                nixpkgs.overlays = [
-                  inputs.hyprpanel.overlay
-                  inputs.nur.overlays.default
-                  inputs.niri.overlays.niri
-                  (final: prev: {
-                    zen-browser = inputs.zen-browser.packages."${system}".beta;
-                  })
-                  (final: prev: {
-                    palettify = inputs.palettify.packages."${system}".default;
-                  })
-                ];
-                _module.args = { inherit inputs; };
-              }
-              inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14 # DONE: CHANGEME: check https://github.com/NixOS/nixos-hardware
-              inputs.home-manager.nixosModules.home-manager
-              inputs.stylix.nixosModules.stylix
-              inputs.niri.nixosModules.niri
-              ./hosts/nixos/configuration.nix # DONE: CHANGEME: change the path to match your host folder
-            ];
-          };
-        nixpc = nixpkgs.lib.nixosSystem {
-          system = system;
-          modules = [
-            {
-              nixpkgs.overlays = [
-                inputs.hyprpanel.overlay
-                inputs.nur.overlays.default
-                inputs.niri.overlays.niri
-                (final: prev: {
-                  zen-browser = inputs.zen-browser.packages."${system}".beta;
-                })
-                (final: prev: {
-                  palettify = inputs.palettify.packages."${system}".default;
-                })
-              ];
-              _module.args = { inherit inputs; };
-            }
-            inputs.home-manager.nixosModules.home-manager
-            inputs.niri.nixosModules.niri
-
-            inputs.stylix.nixosModules.stylix
-            ./hosts/nixpc/configuration.nix # DONE: CHANGEME: change the path to match your host folder
-          ];
+        nixos = utils.mkDesktopSystem {
+          inherit system overlays modules;
+          config = ./hosts/nixos/configuration.nix;
+        };
+        nixpc = utils.mkDesktopSystem {
+          inherit system overlays modules;
+          config = ./hosts/nixpc/configuration.nix;
         };
       };
 

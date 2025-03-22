@@ -12,7 +12,6 @@
     ../home/system/udiskie
     ../home/system/clipman
     ../home/system/tofi
-    ../home/programs/winapps
     ../home/scripts
     # ../home/system/waybar
     ../home/programs/kitty
@@ -24,7 +23,7 @@
     ../home/programs/markdown
     ../home/programs/nautilus
     ../home/programs/lazygit
-    # ../home/programs/nvim/default.nix
+    ../home/programs/nvim/default.nix
     # ../home/system/hyprland
     # ../home/system/hypridle
     # ../home/system/hyprpanel
@@ -47,7 +46,7 @@
     planify
     vscode
     palettify
-    
+
     # office
     onlyoffice-desktopeditors
 

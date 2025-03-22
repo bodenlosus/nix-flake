@@ -4,7 +4,7 @@
     ./variables.nix
 
     ../../shared/home.nix
-    
+
     # Programs
     ../../home/programs/kitty
     ../../home/programs/shell

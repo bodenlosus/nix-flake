@@ -1,7 +1,24 @@
 # Nixvim is a NixOS module that installs and configures Neovim
-{ inputs, pkgs, ... }: {
+{ inputs, ... }: {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+    ./plugins/default.nix
+    ./colors.nix
+    ./options.nix
   ];
+  programs.neovide.enable = true;
+  programs.neovide.settings = {
+    fork = true;
+    frame = "full";
+    srgb = false;
+    font = {
+      size = 11;
+      normal = [{
+        family = "JetBrainsMono Nerd Font";
+      }];
+    };
+  };
   programs.nixvim.enable = true;
+  stylix.targets.neovim.enable = false;
+  stylix.targets.nixvim.enable = false;
 }
