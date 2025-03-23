@@ -4,7 +4,6 @@
       highlightyank.clear = true;
       q_close_windows.clear = true;
     };
-
     autoCmd = [
       # highlightyank
       # https://github.com/AstroNvim/AstroNvim/blob/v4.7.7/lua/astronvim/plugins/_astrocore_autocmds.lua#L206-L211

@@ -22,11 +22,108 @@ let
   opacity = config.var.theme.system-opacity;
 
   location = config.var.location;
-in
-{
-  home.packages = with pkgs; [
-    ironbar
-  ];
+in {
+  home.packages = with pkgs; [ ironbar ];
+  xdg.configFile."ironbar/config.toml".text = ''
+    anchor_to_edges = true
+    position = "bottom"
+    icon_theme = "Nordzy-dark"
+    height = 0
+    [margin]
+    bottom = 6
+
+    # [[start]]
+    # type = "workspaces"
+    # all_monitors = false
+
+    # [start.name_map]
+    # 1 = "󰙯"
+    # 2 = "icon:firefox"
+    # 3 = ""
+    # Games = "icon:steam"
+    # Code = ""
+
+    [[center]]
+    type = "launcher"
+    show_names = false
+    show_icons = true
+    icon_size = 20
+
+    [[start]]
+    type = "music"
+    player_type = "mpris"
+
+    [start.truncate]
+    mode = "end"
+    max_length = 50
+
+
+    [[end]]
+    type = "volume"
+    format = "{icon} {percentage}%"
+    max_volume = 100
+
+    [end.icons]
+    volume_high = "󰕾"
+    volume_medium = "󰖀"
+    volume_low = "󰕿"
+    muted = "󰝟"
+
+    [[end]]
+    type = "clipboard"
+    max_items = 3
+
+    [end.truncate]
+    mode = "end"
+    length = 50
+
+    [[end]]
+    type="network_manager"
+
+    [[end]]
+    type = "clock"
+    format = "%d.%m.%Y %H:%M"
+
+    [[end]]
+    type = "custom"
+    class = "power-menu"
+    tooltip = "Up: {{30000:uptime -p | cut -d ' ' -f2-}}"
+
+    [[end.bar]]
+    type = "button"
+    name = "power-btn"
+    label = ""
+    on_click = "popup:toggle"
+
+    [[end.popup]]
+    type = "box"
+    orientation = "vertical"
+
+    [[end.popup.widgets]]
+    type = "label"
+    name = "header"
+    label = "Power menu"
+
+    [[end.popup.widgets]]
+    type = "box"
+
+    [[end.popup.widgets.widgets]]
+    type = "button"
+    class = "power-btn"
+    label = "<span font-size='16pt'></span>"
+    on_click = "!shutdown now"
+
+    [[end.popup.widgets.widgets]]
+    type = "button"
+    class = "power-btn"
+    label = "<span font-size='16pt'></span>"
+    on_click = "!reboot"
+
+    [[end.popup.widgets]]
+    type = "label"
+    name = "uptime"
+    label = "Uptime: {{30000:uptime -p | cut -d ' ' -f2-}}"
+  '';
   xdg.configFile."ironbar/style.css".text = ''
         @define-color color_bg ${background};
     @define-color color_bg_dark ${background-alt};
@@ -42,7 +139,7 @@ in
         font-family: ${font}, sans-serif;
         font-size: ${font-size}px;
         border: none;
-    
+
     }
 
     box, menubar, button {
@@ -58,7 +155,7 @@ in
 
     #start, #center, #end {
         background-color: @color_bg;
-        padding: 1px;
+        padding: 0px;
         border: 1px solid @color_border;
     }
 
@@ -67,7 +164,7 @@ in
     }
 
     #start {
-        border-radius: 0px ${toString rounding}px ${toString rounding}px 0px;
+        border-radius: ${toString rounding}px;
     }
 
     #center {
@@ -75,7 +172,7 @@ in
     }
 
     #end {
-        border-radius: ${toString rounding}px 0px 0px ${toString rounding}px;
+        border-radius: ${toString rounding}px;
     }
 
 
@@ -95,6 +192,8 @@ in
     }
 
     #bar {
+        margin-left: ${toString gaps-out}px;
+        margin-right: ${toString gaps-out}px;
         margin-top: 0px;
     }
 
