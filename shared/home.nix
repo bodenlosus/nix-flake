@@ -24,10 +24,11 @@
     ../home/programs/nautilus
     ../home/programs/lazygit
     ../home/programs/nvim/default.nix
+    ../home/programs/zed
     ../home/system/hyprland
     ../home/system/hypridle
     ../home/system/hyprpanel
-    # ../home/system/hyprpaper
+    ../home/system/hyprpaper
   ];
   programs.gh = { enable = true; };
   home.packages = with pkgs; [
@@ -43,6 +44,8 @@
     obsidian
     planify
     vscode
+
+
     palettify
 
     # office

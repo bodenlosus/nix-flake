@@ -62,6 +62,7 @@ in {
     # };
 
     shellAliases = {
+      n = "neovide";
       vim = "nvim";
       vi = "nvim";
       v = "nvim";
