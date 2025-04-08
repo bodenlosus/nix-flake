@@ -3,7 +3,7 @@
 {
   # The wallpaper is set by stylix
   services.hyprpaper = {
-    enable = lib.mkForce true;
+    enable = lib.mkForce false;
     settings = {
       ipc = "on";
       splash = false;

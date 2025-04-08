@@ -9,8 +9,7 @@ let
   rounding = config.var.theme.rounding;
   blur = config.var.theme.blur;
   keyboardLayout = config.var.keyboardLayout;
-in
-{
+in {
 
   imports = [ ./animations.nix ./bindings.nix ./polkitagent.nix ./wrules.nix ];
 
@@ -42,20 +41,22 @@ in
     xwayland.enable = true;
     systemd.enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-    plugins = [ (pkgs.callPackage ./hyprscroller/default.nix { hyprland = inputs.hyprland.packages."${pkgs.system}".hyprland; }) ];
+    plugins = [
+      (pkgs.callPackage ./hyprscroller/default.nix {
+        hyprland = inputs.hyprland.packages."${pkgs.system}".hyprland;
+      })
+    ];
     settings = {
       "$mod" = "SUPER";
       "$shiftMod" = "SUPER_SHIFT";
 
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "wpaperd -d"
+        "swww-daemon &"
       ];
 
       plugin = {
-        overview = {
-          autoDrag = false;
-        };
+        overview = { autoDrag = false; };
         scroller = {
           center_row_if_space_available = true;
           jump_labels_scale = 0.1;
@@ -111,27 +112,26 @@ in
         gaps_in = gaps-in;
         gaps_out = gaps-out;
         border_size = border-size;
-        border_part_of_window = true;
+
         layout = "scroller";
       };
-      debug = {
-        disable_logs = false;
-      };
+      debug = { disable_logs = false; };
 
       decoration = {
         active_opacity = active-opacity;
         inactive_opacity = inactive-opacity;
         rounding = rounding;
+        rounding_power = 4.0;
         shadow = {
-          enabled = true;
+          enabled = false;
           range = 20;
           render_power = 3;
         };
         blur = {
-          enabled = if blur then "true" else "false";
+          enabled = false; # if blur then "true" else "false";
           size = 12;
           passes = 3;
-          noise = 0.02;
+          noise = 2.0e-2;
           ignore_opacity = true;
           vibrancy = 0.1696;
         };

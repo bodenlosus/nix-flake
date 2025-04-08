@@ -4,22 +4,22 @@
 
     # Horizon Terminal
     base16Scheme = {
-      base00 = "191724";
-      base01 = "1f1d2e";
-      base02 = "26233a";
-      base03 = "6e6a86";
-      base04 = "908caa";
-      base05 = "e0def4";
-      base06 = "e0def4";
-      base07 = "524f67";
-      base08 = "eb6f92";
-      base09 = "f6c177";
-      base0A = "ebbcba";
-      base0B = "31748f";
-      base0C = "9ccfd8";
-      base0D = "c4a7e7";
-      base0E = "f6c177";
-      base0F = "524f67";
+      base00 = "#242933";
+      base01 = "#2E3440";
+      base02 = "#3B4252";
+      base03 = "#434C5E";
+      base04 = "#4C566A";
+      base05 = "#BBC3D4";
+      base06 = "#D8DEE9";
+      base07 = "#ECEFF4";
+      base08 = "#BF616A";
+      base09 = "#81A1C1";
+      base0A = "#EBCB8B";
+      base0B = "#A3BE8C";
+      base0C = "#8FBCBB";
+      base0D = "#D08770";
+      base0E = "#B48EAD";
+      base0F = "#5E81AC";
     };
 
     cursor = {
@@ -58,7 +58,6 @@
   };
   stylix.targets.chromium.enable = true;
   stylix.targets.gtk.enable = true;
-  # stylix.targets.hyprland.hyprpaper.enable = false;
 
   stylix.targets.nixvim.enable = false;
 }

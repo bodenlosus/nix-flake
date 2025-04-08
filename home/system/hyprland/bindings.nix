@@ -5,28 +5,31 @@
       "$mod,E, exec, ${pkgs.nautilus}/bin/nautilus" # Thunar
       "$mod,X, exec, powermenu" # Powermenu
       "$mod,R, exec, menu" # Launcher
-      "$mod,A, exec, quickmenu" # Quickmenu
+      "$mod,Y, exec, quickmenu" # Quickmenu
       "$shiftMod,SPACE , exec, hyprfocus-toggle" # Toggle HyprFocus
       "$shiftMod,T, exec, hyprpanel-toggle" # Toggle hyprpanel
-
 
       "$mod,C, killactive," # Close window
       "$mod,T, togglefloating," # Toggle Floating
       "$mod,F, fullscreen" # Toggle Fullscreen
-      "$mod,left, movefocus, l" # Move focus left
-      "$mod,right, movefocus, r" # Move focus Right
-      "$mod,up, movefocus, u" # Move focus Up
-      "$mod,down, movefocus, d" # Move focus Down
+      "$mod,A, movefocus, l" # Move focus left
+      "$mod,D, movefocus, r" # Move focus Right
+      "$mod,W, movefocus, u" # Move focus Up
+      "$mod,S, movefocus, d" # Move focus <D-d>Down
       "$mod, TAB, scroller:toggleoverview" # Scroller Overview
-      "$shiftMod,S, scroller:cycleheight, 1" # Cycle height
-      "$shiftMod,A, scroller:cyclewidth, 1" # Cycle width
-      "$shiftMod,W, scroller:setmode, c" # Set mode column
-      "$shiftMod,D, scroller:setmode, r" # Set mode row
-      "$shiftMod,Q, scroller:fitsize, active" # Maximize Window
-      "$shiftMod,left, scroller:admitwindow" # Add to master
-      "$shiftMod,right, scroller:expelwindow" # Remove from master
+      "$shiftMod,S, movewindow, d" # Cycle height
+      "$shiftMod,A, movewindow, l" # Cycle width
+      "$shiftMod,W, movewindow, u" # Set mode column
+      "$shiftMod,D, movewindow, r" # Set mode row
+      "$shiftMod,Q, scroller:cyclesize, 1" # Maximize Window
+      "$mod,left, scroller:admitwindow" # Add to master
+      "$mod,right, scroller:expelwindow" # Remove from master
       "$shiftMod,code:190 , scroller:jump" # jump
+      "$mod,1, workspace, -1"
+      "$mod,2, workspace, +1"
 
+      "$shiftMod,1, movetoworkspace, -1"
+      "$shiftMod,2, movetoworkspace, +1"
 
       "$mod,PRINT, exec, screenshot window" # Screenshot window
       ",PRINT, exec, screenshot region" # Screenshot monitor
@@ -37,13 +40,7 @@
       "$shiftMod,E, exec, ${pkgs.wofi-emoji}/bin/wofi-emoji" # Emoji picker with wofi
       "$mod,F2, exec, night-shift" # Toggle night shift
       "$mod,F3, exec, night-shift" # Toggle night shift
-    ] ++ (builtins.concatLists (builtins.genList
-      (i:
-        let ws = i + 1;
-        in [
-          "$mod,code:1${toString i}, workspace, ${toString ws}"
-          "$mod SHIFT,code:1${toString i}, movetoworkspace, ${toString ws}"
-        ]) 9));
+    ];
 
     bindm = [
       "$mod,mouse:272, movewindow" # Move Window (mouse)

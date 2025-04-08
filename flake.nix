@@ -25,7 +25,8 @@
     };
 
     # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    hyprland.url = "github:hyprwm/Hyprland/882f7ad7d2bbfc7440d0ccaef93b1cdd78e8e3ff";
+    hyprland.url =
+      "github:hyprwm/Hyprland/29e2e59fdbab8ed2cc23a20e3c6043d5decb5cdc";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
@@ -62,8 +63,7 @@
         niri.nixosModules.niri
       ];
 
-    in
-    {
+    in {
       nixosConfigurations = {
         nixos = utils.mkDesktopSystem {
           inherit system overlays modules;

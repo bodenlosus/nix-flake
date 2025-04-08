@@ -27,8 +27,7 @@ let
   opacity = config.var.theme.system-opacity;
 
   location = config.var.location;
-in
-{
+in {
 
   imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
 
@@ -37,20 +36,22 @@ in
     hyprland.enable = true;
     overwrite.enable = true;
     overlay.enable = true;
-    layout = {
-      "bar.layouts" = {
-        "0" = {
-          "left" = [ "workspaces" "windowtitle" ];
-          "middle" = [ "media" "cava" ];
-          "right" = [
-            "systray"
-            "volume"
-            "bluetooth"
-            "battery"
-            "network"
-            "clock"
-            "notifications"
-          ];
+    settings = {
+      layout = {
+        "bar.layouts" = {
+          "0" = {
+            "left" = [ "workspaces" "windowtitle" ];
+            "middle" = [ "media" "cava" ];
+            "right" = [
+              "systray"
+              "volume"
+              "bluetooth"
+              "battery"
+              "network"
+              "clock"
+              "notifications"
+            ];
+          };
         };
       };
     };
@@ -65,7 +66,10 @@ in
         "${if floating && transparent then "0" else "4"}px";
       "theme.bar.buttons.spacing" = "0.3em";
       "theme.bar.buttons.radius" = "${
-          if transparent then toString (rounding + 2) else toString (rounding - 6)
+          if transparent then
+            toString (rounding + 2)
+          else
+            toString (rounding - 6)
         }px";
       "theme.bar.floating" = "${if floating then "true" else "false"}";
       "theme.bar.buttons.padding_x" = "0.7rem";

@@ -24,14 +24,12 @@
     ../home/programs/nautilus
     ../home/programs/lazygit
     ../home/programs/nvim/default.nix
-    # ../home/system/hyprland
-    # ../home/system/hypridle
-    # ../home/system/hyprpanel
+    ../home/system/hyprland
+    ../home/system/hypridle
+    ../home/system/hyprpanel
     # ../home/system/hyprpaper
   ];
-  programs.gh = {
-    enable = true;
-  };
+  programs.gh = { enable = true; };
   home.packages = with pkgs; [
     # Apps
     vesktop # Chat
@@ -49,7 +47,6 @@
 
     # office
     onlyoffice-desktopeditors
-
 
     # Dev
     deno
