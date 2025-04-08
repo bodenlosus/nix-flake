@@ -12,25 +12,29 @@
 | Thunar | SUPER + E |
 | Powermenu | SUPER + X |
 | Launcher | SUPER + R |
-| Quickmenu | SUPER + A |
+| Quickmenu | SUPER + Y |
 | Toggle HyprFocus | SHIFT + SUPER + SPACE  |
 | Toggle hyprpanel | SHIFT + SUPER + T |
 | Close window | SUPER + C |
 | Toggle Floating | SUPER + T |
 | Toggle Fullscreen | SUPER + F |
-| Move focus left | SUPER + left |
-| Move focus Right | SUPER + right |
-| Move focus Up | SUPER + up |
-| Move focus Down | SUPER + down |
+| Move focus left | SUPER + A |
+| Move focus Right | SUPER + D |
+| Move focus Up | SUPER + W |
+| Move focus <D-d>Down | SUPER + S |
 | Scroller Overview | SUPER +  TAB |
 | Cycle height | SHIFT + SUPER + S |
 | Cycle width | SHIFT + SUPER + A |
 | Set mode column | SHIFT + SUPER + W |
 | Set mode row | SHIFT + SUPER + D |
 | Maximize Window | SHIFT + SUPER + Q |
-| Add to master | SHIFT + SUPER + left |
-| Remove from master | SHIFT + SUPER + right |
+| Add to master | SUPER + left |
+| Remove from master | SUPER + right |
 | jump | SHIFT + SUPER + code:190  |
+| $mod,1, workspace, -1" | SUPER + 1 |
+| $mod,2, workspace, +1" | SUPER + 2 |
+| $shiftMod,1, movetoworkspace, -1" | SHIFT + SUPER + 1 |
+| $shiftMod,2, movetoworkspace, +1" | SHIFT + SUPER + 2 |
 | Screenshot window | SUPER + PRINT |
 | Screenshot monitor | PRINT |
 | Screenshot region | SHIFT + SUPER + PRINT |
