@@ -36,6 +36,7 @@
         html.enable = true;
         svelte.enable = true;
         sourcekit.enable = true;
+        vhdl_ls.enable = true;
       };
     };
     none-ls = {

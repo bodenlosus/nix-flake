@@ -1,5 +1,6 @@
 { ... }: {
   imports = [
+    ./typescript.nix
     ./colorizer.nix
     ./lsp.nix
     ./cmp.nix
