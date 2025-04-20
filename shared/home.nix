@@ -15,6 +15,7 @@
     ../home/scripts
     # ../home/system/waybar
     ../home/programs/kitty
+    ../home/programs/floorp
     ../home/programs/shell
     ../home/programs/fetch
     ../home/programs/git
@@ -29,6 +30,7 @@
     ../home/system/hypridle
     ../home/system/hyprpanel
     ../home/system/hyprpaper
+    ../home/programs/helix
   ];
   programs.gh = { enable = true; };
   home.packages = with pkgs; [
@@ -44,7 +46,6 @@
     obsidian
     planify
     vscode
-
 
     palettify
 

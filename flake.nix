@@ -63,7 +63,8 @@
         niri.nixosModules.niri
       ];
 
-    in {
+    in
+    {
       nixosConfigurations = {
         nixos = utils.mkDesktopSystem {
           inherit system overlays modules;

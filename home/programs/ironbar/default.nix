@@ -22,7 +22,8 @@ let
   opacity = config.var.theme.system-opacity;
 
   location = config.var.location;
-in {
+in
+{
   home.packages = with pkgs; [ ironbar ];
   xdg.configFile."ironbar/config.toml".text = ''
     anchor_to_edges = true

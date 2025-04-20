@@ -9,7 +9,8 @@ let
   rounding = config.var.theme.rounding;
   blur = config.var.theme.blur;
   keyboardLayout = config.var.keyboardLayout;
-in {
+in
+{
 
   imports = [ ./animations.nix ./bindings.nix ./polkitagent.nix ./wrules.nix ];
 
@@ -52,7 +53,7 @@ in {
 
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "swww-daemon &"
+        "${pkgs.swww}/bin/swww-daemon &"
       ];
 
       plugin = {
@@ -123,8 +124,8 @@ in {
         rounding = rounding;
         rounding_power = 4.0;
         shadow = {
-          enabled = false;
-          range = 20;
+          enabled = true;
+          range = 6;
           render_power = 3;
         };
         blur = {

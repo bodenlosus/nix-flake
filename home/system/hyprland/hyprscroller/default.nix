@@ -1,4 +1,11 @@
-{ lib, pkg-config, hyprland, cmake, fetchFromGitHub, nix-update-script, stdenv,
+{ lib
+, pkg-config
+, hyprland
+, cmake
+, fetchFromGitHub
+, nix-update-script
+, stdenv
+,
 }:
 
 hyprland.stdenv.mkDerivation {

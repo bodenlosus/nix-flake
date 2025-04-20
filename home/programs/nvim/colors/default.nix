@@ -1,5 +1,5 @@
-{pkgs,...}:
+{ pkgs, ... }:
 {
-  tdark = pkgs.callPackage ./tdark.nix {};
-  nordic = pkgs.callPackage ./nordic.nix {};
+  tdark = pkgs.callPackage ./tdark.nix { };
+  nordic = pkgs.callPackage ./nordic.nix { };
 }

@@ -111,20 +111,21 @@
         layerrule = blur,bar-1
         layerrule = ignorezero,bar-0
         layerrule = ignorezero,bar-1
-  '' + "\n" + builtins.concatStringsSep "\n" (map (layer: ''
-    layerrule = blur,${layer}
-    layerrule = ignorezero,${layer}'') [
-      "bar-0"
-      "bar-1"
-      "networkmenu"
-      "bluetoothmenu"
-      "audiomenu"
-      "powermenu"
-      "energymenu"
-      "notifications-window"
-      "calendarmenu"
-      "notificationsmenu"
-      "mediamenu"
-      "dashboardmenu"
-    ]);
+  '' + "\n" + builtins.concatStringsSep "\n" (map
+    (layer: ''
+      layerrule = blur,${layer}
+      layerrule = ignorezero,${layer}'') [
+    "bar-0"
+    "bar-1"
+    "networkmenu"
+    "bluetoothmenu"
+    "audiomenu"
+    "powermenu"
+    "energymenu"
+    "notifications-window"
+    "calendarmenu"
+    "notificationsmenu"
+    "mediamenu"
+    "dashboardmenu"
+  ]);
 }

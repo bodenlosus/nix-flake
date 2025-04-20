@@ -27,7 +27,8 @@ let
   opacity = config.var.theme.system-opacity;
 
   location = config.var.location;
-in {
+in
+{
 
   imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
 

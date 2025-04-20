@@ -20,8 +20,8 @@ in {
   };
   programs.nixvim = {
     extraPlugins = with pkgs.vimPlugins;
-      [ embark-vim adwaita-nvim vim-horizon aurora rose-pine ]
+      [ embark-vim adwaita-nvim vim-horizon aurora rose-pine github-nvim-theme ]
       ++ (with custom-schemes; [ tdark nordic ]);
-    colorscheme = "rose-pine";
+    colorscheme = "github_dark_default";
   };
 }
