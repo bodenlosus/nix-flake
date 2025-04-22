@@ -1,5 +1,6 @@
 { pkgs, config, inputs, ... }: {
   imports = [
+    ../home/programs/obsidian
     ../home/programs/direnv
     ../home/programs/btop
     ../home/programs/cava

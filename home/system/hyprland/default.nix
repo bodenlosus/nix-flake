@@ -9,8 +9,7 @@ let
   rounding = config.var.theme.rounding;
   blur = config.var.theme.blur;
   keyboardLayout = config.var.keyboardLayout;
-in
-{
+in {
 
   imports = [ ./animations.nix ./bindings.nix ./polkitagent.nix ./wrules.nix ];
 
@@ -70,7 +69,7 @@ in
         "DP-7, disable"
         "DP-8, disable"
         "DP-9, disable"
-        "DP-3, 1920x1080@60,-1920x0,1"
+        "DP-3, 1920x1080@60,1920x0,1"
         "HDMI-A-1,1920x1080@60,0x0,1"
         ",prefered,auto,1"
       ];
