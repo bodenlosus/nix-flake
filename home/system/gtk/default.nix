@@ -1,11 +1,8 @@
 # GTK & QT theme configuration
-{ config, pkgs, lib, ... }:
-{
+{ config, pkgs, lib, ... }: {
   qt = {
     enable = true;
-    platformTheme = {
-      name = lib.mkForce "gtk";
-    };
+    platformTheme = { name = lib.mkForce "adwaita"; };
     style.name = lib.mkForce "adwaita-dark";
   };
 

@@ -1,8 +1,7 @@
-{ pkgs, config, ... }:
-{
+{ pkgs, config, ... }: {
   programs.niri.settings.binds = with config.lib.niri.actions; {
-    "Mod+Q".action = spawn "${pkgs.kitty}/bin/kitty";
-    "Mod+E".action = spawn "${pkgs.nautilus}/bin/nautilus";
+    "Mod+Q".action.spawn = "${pkgs.kitty}/bin/kitty";
+    "Mod+E".action.spawn = "${pkgs.nautilus}/bin/nautilus";
     "Mod+X" = {
       cooldown-ms = 500;
       action.spawn = "powermenu";
@@ -16,14 +15,13 @@
       action.spawn = "menu";
     };
 
-
     "Mod+C".action = close-window;
 
     "Print" = "screenshot";
     "Ctrl+Print" = "screenshot-screen";
     "Alt+Print" = "screenshot-window";
 
-    "Ctrl+Alt+Delete" = quit;
+    "Ctrl+Alt+Delete".action = quit;
 
     "Mod+A".action = focus-column-or-monitor-left;
     "Mod+S".action = focus-window-or-workspace-down;
@@ -37,9 +35,9 @@
 
     "Mod+Next".action = focus-window-or-workspace-down;
     "Mod+Prior".action = focus-window-or-workspace-up;
-    "Mod+Shift+Next" = move-window-down-or-to-workspace-down;
+    "Mod+Shift+Next".action = move-window-down-or-to-workspace-down;
     "Mod+Shift+Prior" = move-window-up-or-to-workspace-up;
-    "Mod+V" = toggle-window-floating;
+    "Mod+V".action = toggle-window-floating;
 
     "Mod+WheelScrollDown" = {
       cooldown-ms = 500;
@@ -69,11 +67,11 @@
     "Shift+MouseMiddle".action = switch-preset-column-width;
     "Shift+Mod+MouseMiddle".action = maximize-column;
 
-    "Mod+Ctrl+Q" = maximize-column;
-    "Mod+Shift+F" = fullscreen-window;
+    "Mod+Ctrl+Q".action = maximize-column;
+    "Mod+Shift+F".action = fullscreen-window;
 
-    "Mod+Shift+Q" = switch-preset-column-width;
-    "Mod+Shift+C".action = spawn "clipboard";
+    "Mod+Shift+Q".action = switch-preset-column-width;
+    "Mod+Shift+C".action.spawn = "clipboard";
 
     "Mod+Home".action = focus-window-previous;
   };

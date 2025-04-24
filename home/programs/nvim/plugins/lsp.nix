@@ -26,7 +26,11 @@
         mesonlsp.enable = true;
         postgres_lsp.enable = true;
         pyright.enable = true;
-        rust_analyzer.enable = true;
+        # rust_analyzer = {
+        #   enable = true;
+        #   installRustc = false;
+        #   installCargo = false;
+        # };
         swift_mesonls.enable = true;
         systemd_ls.enable = true;
         gopls.enable = true;

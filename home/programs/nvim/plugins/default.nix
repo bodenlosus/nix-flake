@@ -10,19 +10,21 @@
     ./util.nix
     ./telescope.nix
     ./auto-session.nix
+    ./rust.nix
   ];
   programs.nixvim.plugins = {
+    auto-save.enable = true;
     # Status line
     lualine = {
       enable = true;
-      theme = "auto";
+      settings.options.theme = "auto";
     };
 
     # Buffer line for tabs
     bufferline = {
       enable = true;
 
-      diagnostics = "nvim_lsp";
+      settings.options.diagnostics = "nvim_lsp";
     };
 
     # File explorer
@@ -38,12 +40,17 @@
     # Better UI elements
     dressing = { enable = true; };
 
+    web-devicons.enable = true;
+
     # Which-key for keybinding help
     which-key = { enable = true; };
 
     # Indent guides
     indent-blankline = { enable = true; };
 
+    treesitter-context.enable = true;
     # Colorschemes
+    nvim-surround.enable = true;
+    project-nvim.enable = true;
   };
 }
