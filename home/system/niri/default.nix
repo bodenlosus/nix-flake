@@ -4,7 +4,7 @@ let
   accent = "#${config.lib.stylix.colors.base0D}";
   accent-alt = "#${config.lib.stylix.colors.base03}";
   background = "#${config.lib.stylix.colors.base00}";
-  background-alt = "#${config.lib.stylix.colors.base01}";
+  background-alt = "#${config.lib.stylix.colors.base02}";
   border = "#${config.lib.stylix.colors.base04}";
   foreground = "#${config.lib.stylix.colors.base05}";
   font = "${config.stylix.fonts.serif.name}";
@@ -17,17 +17,10 @@ let
   rounding = config.var.theme.rounding;
   blur = config.var.theme.blur;
   keyboardLayout = config.var.keyboardLayout;
-in
-{
-  imports = [
-    ./binds.nix
-    ../../programs/ironbar/default.nix
-  ];
+in {
+  imports = [ ./binds.nix  ];
   programs.niri.settings = {
-    spawn-at-startup = [
-      { command = [ "${pkgs.swww}/bin/swww-daemon" ]; }
-      { command = [ "${pkgs.ironbar}/bin/ironbar" ]; }
-    ];
+    spawn-at-startup = [{ command = [ "${pkgs.swww}/bin/swww-daemon" ]; }];
     screenshot-path = "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png";
     hotkey-overlay.skip-at-startup = true;
     clipboard.disable-primary = true;
@@ -54,6 +47,14 @@ in
       "SDL_VIDEODRIVER" = "wayland";
       "CLUTTER_BACKEND" = "wayland";
       "DISPLAY" = ":0";
+    };
+    overview = {
+      zoom = 0.333;
+      backdrop-color = background-alt;
+      workspace-shadow = {
+        on = true;
+
+      };
     };
     input = {
       focus-follows-mouse = {
@@ -104,16 +105,13 @@ in
       };
     };
     window-rules = [{
-      geometry-corner-radius =
-        let
-          r = rounding + 0.0;
-        in
-        {
-          top-left = r;
-          top-right = r;
-          bottom-left = r;
-          bottom-right = r;
-        };
+      geometry-corner-radius = let r = rounding + 0.0;
+      in {
+        top-left = r;
+        top-right = r;
+        bottom-left = r;
+        bottom-right = r;
+      };
       clip-to-geometry = true;
       draw-border-with-background = false;
     }];

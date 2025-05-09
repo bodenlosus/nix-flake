@@ -4,8 +4,8 @@
     {
       "assistant": {
         "default_model": {
-          "provider": "deepseek",
-          "model": "deepseek-chat"
+          "provider": "zed.dev",
+          "model": "claude-3-7-sonnet-thinking-latest"
         },
         "version": "2"
       },
@@ -38,7 +38,7 @@
         "svelte": true,
         "vscode-icons": true,
         "xml": true,
-        "zig": true,
+        "zig": true
       },
       "language_models": {
         "deepseek": {
@@ -106,7 +106,27 @@
         "code_actions": true
       },
       "edit_predictions": {
-        "mode": "subtle"
+        "mode": "eager"
+      },
+      "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": true,
+        "show_background": true
+      },
+      "enable_language_server": true,
+      "languages": {
+        "XML": { "formatter": "prettier", "tab_size": 2 }
+      },
+      "lsp": {
+        "rust-analyzer": {
+          "initialization_options": {
+            "diagnostics": {
+              "experimental": {
+                "enable": true
+              }
+            }
+          }
+        }
       }
     }
 

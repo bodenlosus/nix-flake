@@ -27,10 +27,10 @@
     ../home/programs/lazygit
     ../home/programs/nvim/default.nix
     ../home/programs/zed
-    ../home/system/hyprland
-    ../home/system/hypridle
-    ../home/system/hyprpanel
-    ../home/system/hyprpaper
+    # ../home/system/hyprland
+    # ../home/system/hypridle
+    # ../home/system/hyprpanel
+    # ../home/system/hyprpaper
     ../home/programs/helix
   ];
   programs.gh = { enable = true; };
