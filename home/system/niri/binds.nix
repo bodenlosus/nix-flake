@@ -23,6 +23,8 @@
 
     "Ctrl+Alt+Delete".action = quit;
 
+    "Mod+Tab".action = toggle-overview;
+
     "Mod+A".action = focus-column-or-monitor-left;
     "Mod+S".action = focus-window-or-workspace-down;
     "Mod+W".action = focus-window-or-workspace-up;

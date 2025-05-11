@@ -32,6 +32,7 @@
     # ../home/system/hyprpanel
     # ../home/system/hyprpaper
     ../home/programs/helix
+    ../home/programs/flatpak
   ];
   programs.gh = { enable = true; };
   home.packages = with pkgs; [
@@ -47,6 +48,15 @@
     obsidian
     planify
     vscode
+
+    # gnome
+    apostrophe
+    bustle
+    citations
+    hieroglyphic
+    solanum
+    gnome-builder
+     
 
     palettify
 

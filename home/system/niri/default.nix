@@ -18,7 +18,7 @@ let
   blur = config.var.theme.blur;
   keyboardLayout = config.var.keyboardLayout;
 in {
-  imports = [ ./binds.nix  ];
+  imports = [ ./binds.nix ];
   programs.niri.settings = {
     spawn-at-startup = [{ command = [ "${pkgs.swww}/bin/swww-daemon" ]; }];
     screenshot-path = "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png";
@@ -47,14 +47,6 @@ in {
       "SDL_VIDEODRIVER" = "wayland";
       "CLUTTER_BACKEND" = "wayland";
       "DISPLAY" = ":0";
-    };
-    overview = {
-      zoom = 0.333;
-      backdrop-color = background-alt;
-      workspace-shadow = {
-        on = true;
-
-      };
     };
     input = {
       focus-follows-mouse = {
@@ -104,6 +96,8 @@ in {
         length.total-proportion = 0.3333333;
       };
     };
+
+    outputs."*".backdrop-color = background;
     window-rules = [{
       geometry-corner-radius = let r = rounding + 0.0;
       in {
@@ -115,7 +109,6 @@ in {
       clip-to-geometry = true;
       draw-border-with-background = false;
     }];
-
   };
 
   services.mako.enable = true;

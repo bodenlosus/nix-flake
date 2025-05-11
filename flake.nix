@@ -11,6 +11,7 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
     niri = {
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -57,6 +58,7 @@
         })
       ];
       modules = with inputs; [
+        nix-flatpak.nixosModules.nix-flatpak
         nixos-hardware.nixosModules.lenovo-thinkpad-t14 # DONE: CHANGEME: check https://github.com/NixOS/nixos-hardware
         home-manager.nixosModules.home-manager
         stylix.nixosModules.stylix
