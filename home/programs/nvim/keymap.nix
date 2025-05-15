@@ -16,5 +16,9 @@
       key = "<leader>fh";
       action = "<cmd>Telescope help_tags<cr>";
     }
+    {
+      key = "<leader>cd";
+      action = "vim.diagnostic.open_float";
+    }
   ];
 }

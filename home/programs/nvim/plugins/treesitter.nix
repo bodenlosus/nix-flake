@@ -14,7 +14,7 @@
       };
       grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
         bash
-        #     blueprint
+        blueprint
         c
         c_sharp
         cmake

@@ -3,6 +3,7 @@
     lsp-format.enable = true;
     lsp = {
       enable = true;
+      inlayHints = true;
       servers = {
         bashls.enable = true;
         biome.enable = true;
@@ -23,6 +24,7 @@
         ltex.enable = true;
         lua_ls.enable = true;
         marksman.enable = true;
+        nginx_language_server.enable = true;
         mesonlsp.enable = true;
         postgres_lsp.enable = true;
         pyright.enable = true;
