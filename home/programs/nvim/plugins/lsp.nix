@@ -2,6 +2,7 @@
   programs.nixvim.plugins = {
     lsp-format.enable = true;
     lsp = {
+      inlayHints = true;
       enable = true;
       inlayHints = true;
       servers = {
@@ -44,6 +45,13 @@
         sourcekit.enable = true;
         vhdl_ls.enable = true;
       };
+      keymaps = {
+        diagnostic = {
+          "<leader>j" = "goto_next";
+          "<leader>k" = "goto_prev";
+          "<leader>K" = "open_float";
+        };
+      };
     };
     none-ls = {
       enable = true;
@@ -70,4 +78,13 @@
       };
     };
   };
+  programs.nixvim.extraConfigLua = ''
+    vim.o.updatetime = 10
+    vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+      group = vim.api.nvim_create_augroup("float_diagnostic", { clear = true }),
+      callback = function ()
+        vim.diagnostic.open_float(nil, {focus=false})
+      end
+    })
+  '';
 }
