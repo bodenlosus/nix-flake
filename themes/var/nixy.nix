@@ -1,7 +1,7 @@
 {
   rounding = 12;
-  gaps-in = 12;
-  gaps-out = 12 * 2;
+  gaps-in = 6;
+  gaps-out = 6 * 2;
   system-opacity = 0.7;
   active-opacity = 1;
   inactive-opacity = 0.9;
