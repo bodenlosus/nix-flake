@@ -2,8 +2,7 @@
 let
   hostname = config.var.hostname;
   keyboardLayout = config.var.keyboardLayout;
-in
-{
+in {
 
   networking.hostName = hostname;
 
@@ -16,6 +15,11 @@ in
     gnome.gnome-keyring.enable = true;
   };
   console.keyMap = keyboardLayout;
+  console = {
+    earlySetup = true;
+    font = "${pkgs.terminus_font}/share/consolefonts/ter-132n.psf.gz";
+    packages = with pkgs; [ terminus_font ];
+  };
 
   environment.variables = {
     XDG_DATA_HOME = "$HOME/.local/share";

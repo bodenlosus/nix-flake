@@ -11,7 +11,7 @@
 let
 
   night-shift-on = pkgs.writeShellScriptBin "night-shift-on" ''
-    ${pkgs.hyprshade}/bin/hyprshade on blue-light-filter
+    ${pkgs.wlsunset}/bin/wlsunset -t 3000 -T 3001
     title="󰖔  Night-Shift Activated"
     description="Night-Shift is now activated! Your screen will be warmer and easier on the eyes."
 
@@ -19,7 +19,7 @@ let
   '';
 
   night-shift-off = pkgs.writeShellScriptBin "night-shift-off" ''
-    ${pkgs.hyprshade}/bin/hyprshade off
+    kill $(pgrep -x "wlsunset")
     title="󰖕  Night-Shift Deactivated"
     description="Night-Shift is now deactivated! Your screen will return to normal."
 
@@ -27,7 +27,8 @@ let
   '';
 
   night-shift = pkgs.writeShellScriptBin "night-shift" ''
-    if [[ $(${pkgs.hyprshade}/bin/hyprshade current) ]]; then
+    if pgrep -x "wlsunset" > /dev/null;
+    then
       night-shift-off
     else
       night-shift-on
