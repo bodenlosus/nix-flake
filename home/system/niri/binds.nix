@@ -57,9 +57,11 @@
       cooldown-ms = 500;
       action = move-window-down-or-to-workspace-down;
     };
-    "Mod+Left".action = consume-window-into-column;
-    "Mod+Right".action = expel-window-from-column;
+    "Mod+Left".action = consume-or-expel-window-left;
+    "Mod+Right".action = consume-or-expel-window-right;
 
+    "Mod+Up".action = consume-window-into-column;
+    "Mod+Down".action = expel-window-from-column;
     "MouseForward".action = focus-column-or-monitor-left;
     "MouseBack".action = focus-column-or-monitor-right;
 

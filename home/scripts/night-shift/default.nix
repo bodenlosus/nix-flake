@@ -50,8 +50,7 @@ let
           echo "󰖕"
         fi
     '';
-in
-{
+in {
   home.packages = [
     night-shift-on
     night-shift-off

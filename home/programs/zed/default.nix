@@ -3,21 +3,28 @@
   xdg.configFile."zed/default-settings.json".text = ''
     {
       "assistant": {
+        "inline_assistant_model": {
+          "provider": "deepseek",
+          "model": "deepseek-chat"
+        },
         "default_model": {
-          "provider": "zed.dev",
-          "model": "claude-3-7-sonnet-thinking-latest"
+          "provider": "deepseek",
+          "model": "deepseek-chat"
         },
         "version": "2"
       },
       "auto_install_extensions": {
+        "basedpyright": true,
         "basher": true,
         "biome": true,
+        "blueprint": true,
         "catppuccin-icons": true,
         "charmed-icons": true,
         "colored-zed-icons-theme": true,
         "deno": true,
         "docker-compose": true,
         "dockerfile": true,
+        "git-firefly": true,
         "github-theme": true,
         "graphql": true,
         "html": true,
@@ -27,6 +34,7 @@
         "lua": true,
         "make": true,
         "material-icon-theme": true,
+        "meson": true,
         "nix": true,
         "nordic-nvim-theme": true,
         "nordic-theme": true,
@@ -36,6 +44,7 @@
         "scss": true,
         "sql": true,
         "svelte": true,
+        "toml": true,
         "vscode-icons": true,
         "xml": true,
         "zig": true
@@ -71,7 +80,7 @@
       "theme": {
         "mode": "system",
         "light": "Github Dark",
-        "dark": "Rosé Pine"
+        "dark": "Github Dark"
       },
       "outline_panel": {
         "dock": "right",

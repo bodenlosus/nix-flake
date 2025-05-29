@@ -4,7 +4,6 @@
     lsp = {
       inlayHints = true;
       enable = true;
-      inlayHints = true;
       servers = {
         bashls.enable = true;
         biome.enable = true;

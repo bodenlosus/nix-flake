@@ -17,8 +17,13 @@
       action = "<cmd>Telescope help_tags<cr>";
     }
     {
-      key = "<leader>cd";
-      action = "vim.diagnostic.open_float";
+      mode = "n";
+      key = "gcd";
+      action = "<cmd>lua vim.diagnostic.open_float()<cr>";
+      options = {
+        desc = "Open diagnostic float window";
+        silent = true;
+      };
     }
   ];
 }
