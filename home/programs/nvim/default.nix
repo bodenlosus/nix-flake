@@ -11,6 +11,7 @@
     enable = true;
     settings = {
       fork = true;
+      title-hidden = true;
       frame = "full";
       srgb = false;
       font = {

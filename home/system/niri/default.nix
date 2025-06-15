@@ -1,5 +1,7 @@
 { pkgs, config, ... }:
 let
+
+  ext = pkgs.callPackage ./cosmic-ext-alt-startup.nix { };
   stylix = config.lib.stylix.colors.base00;
   accent = "#${config.lib.stylix.colors.base0D}";
   accent-alt = "#${config.lib.stylix.colors.base03}";
@@ -20,7 +22,11 @@ let
 in {
   imports = [ ./binds.nix ];
   programs.niri.settings = {
-    spawn-at-startup = [{ command = [ "${pkgs.swww}/bin/swww-daemon" ]; }];
+    spawn-at-startup = [
+      { command = [ "${pkgs.swww}/bin/swww-daemon" ]; }
+      { command = [ "${ext}/bin/cosmic-ext-alternative-startup" ]; }
+      { command = [ "${pkgs.cosmic-panel}/bin/cosmic-panel" ]; }
+    ];
     screenshot-path = "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png";
     hotkey-overlay.skip-at-startup = true;
     clipboard.disable-primary = true;
@@ -47,6 +53,7 @@ in {
       "SDL_VIDEODRIVER" = "wayland";
       "CLUTTER_BACKEND" = "wayland";
       "DISPLAY" = ":0";
+      "QT_QPA_PLATFORMTHEME" = "gtk3";
     };
     input = {
       focus-follows-mouse = {
@@ -115,11 +122,12 @@ in {
       draw-border-with-background = false;
     }];
   };
+  home.packages = with pkgs; [ cosmic-panel ];
 
   services.mako.enable = true;
-  services.mako = {
-    borderRadius = rounding;
-    borderSize = border-size;
+  services.mako.settings = {
+    border-radius = rounding;
+    border-size = border-size;
     padding = "6";
   };
 }

@@ -14,6 +14,13 @@
       appId = "org.gaphor.Gaphor";
       origin = "flathub";
     }
+    {
+      appId = "org.gnome.Sdk";
+      origin = "flathub";
+    }
+    {
+      appId = "org.gnome.Platform";
+      origin = "flathub";
+    }
   ];
-
 }

@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  environment.systemPackages = with pkgs; [ blueman ];
+  environment.systemPackages = with pkgs; [ blueman bluez bluez-alsa ];
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;

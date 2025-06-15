@@ -33,5 +33,5 @@
   home-manager.users."${config.var.username}" = import ./home.nix;
   home-manager.backupFileExtension = "backup";
   # Don't touch this
-  system.stateVersion = "24.05";
+  system.stateVersion = "25.05";
 }

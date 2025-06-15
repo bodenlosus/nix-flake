@@ -1,5 +1,4 @@
-{ lib, ... }:
-{
+{ lib, ... }: {
   programs.kitty = {
     enable = true;
     keybindings = {
@@ -26,6 +25,7 @@
       window_padding_width = 10;
       background_opacity = lib.mkForce 0.8;
       background_blur = 64;
+      hide_window_decorations = true;
     };
   };
 }

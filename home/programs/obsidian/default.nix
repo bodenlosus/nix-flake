@@ -1,8 +1,10 @@
 { config, lib, ... }:
 let
   capitalize = set:
-    builtins.mapAttrs (name: value:
-      if builtins.isString value then "#" + (lib.toUpper value) else value) set;
+    builtins.mapAttrs
+      (name: value:
+        if builtins.isString value then "#" + (lib.toUpper value) else value)
+      set;
   colors = capitalize config.lib.stylix.colors;
   content = {
     "Appearance-dark@@theme-dark-style-select" = "theme-dark-background-darker";
@@ -59,4 +61,5 @@ let
     "Editor@@callout-title-color@@light" = "#000FFF";
     "Appearance-dark@@background-primary@@dark" = "${colors.base00}";
   };
-in { home.file.".style-settings.json".text = builtins.toJSON content; }
+in
+{ home.file.".style-settings.json".text = builtins.toJSON content; }

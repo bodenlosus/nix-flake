@@ -9,7 +9,8 @@ let
   rounding = config.var.theme.rounding;
   blur = config.var.theme.blur;
   keyboardLayout = config.var.keyboardLayout;
-in {
+in
+{
 
   imports = [ ./animations.nix ./bindings.nix ./polkitagent.nix ./wrules.nix ];
 

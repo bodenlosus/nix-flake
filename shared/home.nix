@@ -31,6 +31,7 @@
     # ../home/system/hypridle
     # ../home/system/hyprpanel
     # ../home/system/hyprpaper
+    ../home/system/gnome/default.nix
     ../home/programs/helix
     ../home/programs/flatpak
   ];
@@ -38,16 +39,15 @@
   home.packages = with pkgs; [
     # Apps
     vesktop # Chat
-    # bitwarden # Password manager
     vlc # Video player
     blanket # White-noise app
     pomodoro-gtk
     spot
-    opera
+
     zen-browser
     obsidian
-    planify
     vscode
+    kdePackages.kdenlive
 
     # gnome
     apostrophe
@@ -56,7 +56,6 @@
     hieroglyphic
     solanum
     gnome-builder
-     
 
     palettify
 

@@ -14,7 +14,7 @@ in {
     syntaxHighlighting.enable = true;
     historySubstringSearch.enable = true;
 
-    initExtraFirst = ''
+    initContent = lib.mkBefore ''
       bindkey -e
       ${if fetch == "fastfetch" then
         pkgs.fastfetch + "/bin/fastfetch"
@@ -24,7 +24,7 @@ in {
         "echo; ${pkgs.pfetch}/bin/pfetch"
       else
         ""}
-
+        
       function sesh-sessions() {
         session=$(sesh list -t -c | fzf --height 70% --reverse)
         [[ -z "$session" ]] && return

@@ -3,31 +3,11 @@
   qt = {
     enable = true;
     platformTheme = { name = lib.mkForce "adwaita"; };
-    style.name = lib.mkForce "adwaita-dark";
+    # style.name = lib.mkForce "adwaita-dark";
   };
 
   gtk = {
     enable = true;
-    # theme = lib.mkForce {
-    #   package = pkgs.whitesur-gtk-theme.override {
-    #     themeVariants = [ "grey" "red" ];
-    #     colorVariants = [ "Dark" ];
-    #     nordColor = false;
-    #   };
-
-    #   name = "WhiteSur-Dark-grey";
-    # };
-
-    # theme = lib.mkForce {
-    #   package = pkgs.colloid-gtk-theme.override {
-    #     themeVariants = [ "grey" "red" "green" ];
-    #     colorVariants = [ "dark" ];
-    #     tweaks = [ "all" ];
-    #   };
-
-    #   name = "Colloid-Green-Dark-Everforest";
-    # };
-
     theme = lib.mkForce {
       package = pkgs.adw-gtk3;
 
