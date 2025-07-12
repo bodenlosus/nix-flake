@@ -31,7 +31,7 @@
     # ../home/system/hypridle
     # ../home/system/hyprpanel
     # ../home/system/hyprpaper
-    ../home/system/gnome/default.nix
+    # ../home/system/gnome/default.nix
     ../home/programs/helix
     ../home/programs/flatpak
   ];

@@ -1,12 +1,10 @@
 { pkgs, config, ... }: {
-  imports = [
-    ./start-cosmic-ext.nix
-  ];
+
   programs.niri = {
     enable = true;
     package = pkgs.niri-unstable;
   };
-  niri-flake.cache.enable = false;
+  niri-flake.cache.enable = true;
   environment = {
     variables.NIXOS_OZONE_WL = "1";
     sessionVariables.COSMIC_DATA_CONTROL_ENABLED = 1;
@@ -18,6 +16,6 @@
       gamescope
       xwayland-satellite-unstable
       swww
-    ];
+      xdg-desktop-portal-gtk    ];
   };
 }

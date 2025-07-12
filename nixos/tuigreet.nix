@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   services.greetd = {
-    # enable = true;
+    enable = true;
     settings = {
       default_session = {
         command =

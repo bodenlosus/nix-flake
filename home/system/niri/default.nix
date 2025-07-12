@@ -1,7 +1,6 @@
 { pkgs, config, ... }:
 let
 
-  ext = pkgs.callPackage ./cosmic-ext-alt-startup.nix { };
   stylix = config.lib.stylix.colors.base00;
   accent = "#${config.lib.stylix.colors.base0D}";
   accent-alt = "#${config.lib.stylix.colors.base03}";
@@ -19,13 +18,13 @@ let
   rounding = config.var.theme.rounding;
   blur = config.var.theme.blur;
   keyboardLayout = config.var.keyboardLayout;
-in {
+in
+{
   imports = [ ./binds.nix ];
   programs.niri.settings = {
     spawn-at-startup = [
       { command = [ "${pkgs.swww}/bin/swww-daemon" ]; }
-      { command = [ "${ext}/bin/cosmic-ext-alternative-startup" ]; }
-      { command = [ "${pkgs.cosmic-panel}/bin/cosmic-panel" ]; }
+
     ];
     screenshot-path = "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png";
     hotkey-overlay.skip-at-startup = true;
@@ -78,6 +77,7 @@ in {
       center-focused-column = "on-overflow";
       always-center-single-column = true;
 
+      background-color = "transparent";
       focus-ring = {
         width = border-size;
         active.color = accent;
@@ -93,7 +93,9 @@ in {
         { proportion = 1.0 / 1.0; }
         { proportion = 2.0 / 3.0; }
       ];
-      default-column-width = { proportion = 1.0 / 2.0; };
+      default-column-width = {
+        proportion = 1.0 / 2.0;
+      };
 
       tab-indicator = {
         enable = true;
@@ -104,26 +106,33 @@ in {
       };
     };
 
-    overview = { backdrop-color = background; };
-    layer-rules = [{
-      matches = [{ namespace = "swww-daemon"; }];
-      # place-within-backdrop = true;
-    }];
+    overview = {
+      backdrop-color = background;
+    };
+    layer-rules = [
+      {
+        matches = [ { namespace = "swww-daemon"; } ];
+        place-within-backdrop = true;
+      }
+    ];
 
-    window-rules = [{
-      geometry-corner-radius = let r = rounding + 0.0;
-      in {
-        top-left = r;
-        top-right = r;
-        bottom-left = r;
-        bottom-right = r;
-      };
-      clip-to-geometry = true;
-      draw-border-with-background = false;
-    }];
+    window-rules = [
+      {
+        geometry-corner-radius =
+          let
+            r = rounding + 0.0;
+          in
+          {
+            top-left = r;
+            top-right = r;
+            bottom-left = r;
+            bottom-right = r;
+          };
+        clip-to-geometry = true;
+        draw-border-with-background = false;
+      }
+    ];
   };
-  home.packages = with pkgs; [ cosmic-panel ];
-
   services.mako.enable = true;
   services.mako.settings = {
     border-radius = rounding;

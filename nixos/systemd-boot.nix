@@ -13,7 +13,17 @@
     kernelPackages =
       pkgs.linuxPackages_latest; # _zen, _hardened, _rt, _rt_latest, etc.
 
-    # Silent boot
+    
+    plymouth = {
+      enable = true;
+    #   theme = "dna";
+    #   themePackages = with pkgs; [
+    #     # By default we would install all themes
+    #     (adi1090x-plymouth-themes.override {
+    #       selected_themes = [ "rings" ];
+    #     })
+    #   ];
+    };    # Silent boot
     kernelParams = [
       "quiet"
       "splash"
@@ -23,7 +33,7 @@
       "udev.log_priority=3"
       "psmouse.synaptics_intertouch=0"
     ];
-    consoleLogLevel = 0;
+    consoleLogLevel = 3;
     initrd.verbose = false;
   };
 }
