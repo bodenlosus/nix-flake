@@ -4,22 +4,22 @@
 
     # Horizon Terminal
     base16Scheme = {
-      base00 = "#0B0B0F";
-      base01 = "#161616";
-      base02 = "#16161E";
-      base03 = "#46474F";
-      base04 = "#9099A1";
-      base05 = "#E6E6E6";
-      base06 = "#F0F0F0";
+      base00 = "#070A11";
+      base01 = "#0d1117";
+      base02 = "#151b23";
+      base03 = "#9198a1";
+      base04 = "#656c76";
+      base05 = "#f0f6fc";
+      base06 = "#ffffff";
       base07 = "#ffffff";
-      base08 = "#D84F68";
-      base09 = "#F9B98C";
-      base0A = "#FFA16C";
-      base0B = "#54C0A3";
-      base0C = "#9592A4";
-      base0D = "#E6E7A3";
-      base0E = "#9099A1";
-      base0F = "#479FFA";
+      base08 = "#ff7b72";
+      base09 = "#ffa657";
+      base0A = "#d29922";
+      base0B = "#3fb950";
+      base0C = "#39c5cf";
+      base0D = "#58a6ff";
+      base0E = "#be8fff";
+      base0F = "#eb3342";
     };
 
     cursor = {

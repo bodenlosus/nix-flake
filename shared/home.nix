@@ -1,4 +1,10 @@
-{ pkgs, config, inputs, ... }: {
+{
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
+{
   imports = [
     ../home/programs/obsidian
     ../home/programs/direnv
@@ -35,14 +41,16 @@
     ../home/programs/helix
     ../home/programs/flatpak
   ];
-  programs.gh = { enable = true; };
+  programs.gh = {
+    enable = true;
+  };
   home.packages = with pkgs; [
     # Apps
+    # jetbrains.rust-rover
     vesktop # Chat
     vlc # Video player
     blanket # White-noise app
     pomodoro-gtk
-    spot
 
     zen-browser
     obsidian
@@ -50,12 +58,9 @@
     kdePackages.kdenlive
 
     # gnome
-    apostrophe
     bustle
     citations
     hieroglyphic
-    solanum
-    gnome-builder
 
     palettify
 
@@ -63,9 +68,6 @@
     onlyoffice-desktopeditors
 
     # Dev
-    deno
-    go
-    nodejs
     python3
     jq
     figlet
@@ -84,12 +86,6 @@
     nixpkgs-lint
     nil
     nixd
-
-    # Just cool
-    peaclock
-    cbonsai
-    pipes
-    cmatrix
 
     # multimedia
     pavucontrol

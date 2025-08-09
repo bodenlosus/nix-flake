@@ -1,10 +1,10 @@
 { config, lib, ... }:
 let
-  capitalize = set:
-    builtins.mapAttrs
-      (name: value:
-        if builtins.isString value then "#" + (lib.toUpper value) else value)
-      set;
+  capitalize =
+    set:
+    builtins.mapAttrs (
+      name: value: if builtins.isString value then "#" + (lib.toUpper value) else value
+    ) set;
   colors = capitalize config.lib.stylix.colors;
   content = {
     "Appearance-dark@@theme-dark-style-select" = "theme-dark-background-darker";
@@ -18,8 +18,7 @@ let
     "Components@@tab-title-bar-autohide" = false;
     "Components@@vault-profile-autohide" = false;
     "Appearance-dark@@background-primary-alt@@dark" = "${colors.base00}";
-    "Appearance-dark@@background-underlying-select-dark" =
-      "background-underlying-primary-dark";
+    "Appearance-dark@@background-underlying-select-dark" = "background-underlying-primary-dark";
     "Appearance-dark@@background-secondary@@dark" = "${colors.base01}";
     "Appearance-dark@@accent-color-override-dark" = true;
     "Appearance-dark@@color-red-rgb@@dark" = "${colors.base0F}";
@@ -32,16 +31,13 @@ let
     "Appearance-dark@@color-purple-rgb@@dark" = "${colors.base0E}";
     "Appearance-dark@@background-tertiary@@dark" = "${colors.base01}";
     "Appearance-dark@@background-modifier-hover@@dark" = "${colors.base02}";
-    "Appearance-dark@@background-modifier-active-hover@@dark" =
-      "${colors.base04}";
+    "Appearance-dark@@background-modifier-active-hover@@dark" = "${colors.base04}";
     "Appearance-dark@@background-modifier-border@@dark" = "${colors.base02}";
-    "Appearance-dark@@background-modifier-border-hover@@dark" =
-      "${colors.base04}";
-    "Appearance-dark@@background-modifier-border-focus@@dark" =
-      "${colors.base03}";
+    "Appearance-dark@@background-modifier-border-hover@@dark" = "${colors.base04}";
+    "Appearance-dark@@background-modifier-border-focus@@dark" = "${colors.base03}";
+    
     "Appearance-dark@@background-secondary-alt@@dark" = "${colors.base01}";
-    "Appearance-dark@@workspace-background-translucent@@dark" =
-      "${colors.base02}";
+    "Appearance-dark@@workspace-background-translucent@@dark" = "${colors.base02}";
     "Appearance-dark@@text-normal@@dark" = "${colors.base07}";
     "Appearance-dark@@text-muted@@dark" = "${colors.base06}";
     "Appearance-dark@@text-faint@@dark" = "${colors.base05}";
@@ -62,4 +58,6 @@ let
     "Appearance-dark@@background-primary@@dark" = "${colors.base00}";
   };
 in
-{ home.file.".style-settings.json".text = builtins.toJSON content; }
+{
+  home.file.".style-settings.json".text = builtins.toJSON content;
+}

@@ -21,7 +21,7 @@ in {
   programs.nixvim = {
     extraPlugins = with pkgs.vimPlugins;
       [ embark-vim adwaita-nvim vim-horizon aurora rose-pine github-nvim-theme ]
-      ++ (with custom-schemes; [ tdark nordic ]);
-    colorscheme = "github_dark_default";
+      ++ (with custom-schemes; [ tdark nordic oscura ]);
+    colorscheme = "oscura";
   };
 }

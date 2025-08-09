@@ -1,4 +1,15 @@
 {
+  programs.nixvim.filetype = {
+    filename = {
+      docker-compose = [
+        "compose.yaml"
+        "compose.yml"
+        "docker-compose.yaml"
+        "docker-compose.yml"
+      ];
+    };
+  };
+
   programs.nixvim.plugins = {
     lsp-format.enable = true;
     lsp = {
@@ -20,6 +31,19 @@
           package = null;
         };
         dockerls.enable = true;
+        docker_compose_language_service = {
+          enable = true;
+          settings = {
+            cmd = [
+              "docker-compose-langserver"
+              "--stdio"
+            ];
+            filetypes = [
+              "docker-compose"
+            ];
+          };
+        };
+
         jsonls.enable = true;
         ltex.enable = true;
         lua_ls.enable = true;

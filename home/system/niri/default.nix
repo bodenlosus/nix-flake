@@ -18,19 +18,20 @@ let
   rounding = config.var.theme.rounding;
   blur = config.var.theme.blur;
   keyboardLayout = config.var.keyboardLayout;
-in
-{
+in {
   imports = [ ./binds.nix ];
   programs.niri.settings = {
-    spawn-at-startup = [
-      { command = [ "${pkgs.swww}/bin/swww-daemon" ]; }
+    spawn-at-startup = [{
+      command = [ "${pkgs.swww}/bin/swww-daemon" ];
+    }
 
-    ];
+      ];
     screenshot-path = "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png";
     hotkey-overlay.skip-at-startup = true;
     clipboard.disable-primary = true;
     prefer-no-csd = true;
     environment = {
+      "TERMINAL" = "kitty";
       "XDG_CURRENT_DESKTOP" = "Niri";
       "MOZ_ENABLE_WAYLAND" = "1";
       "ANKI_WAYLAND" = "1";
@@ -93,9 +94,7 @@ in
         { proportion = 1.0 / 1.0; }
         { proportion = 2.0 / 3.0; }
       ];
-      default-column-width = {
-        proportion = 1.0 / 2.0;
-      };
+      default-column-width = { proportion = 1.0 / 2.0; };
 
       tab-indicator = {
         enable = true;
@@ -106,37 +105,32 @@ in
       };
     };
 
-    overview = {
-      backdrop-color = background;
-    };
-    layer-rules = [
-      {
-        matches = [ { namespace = "swww-daemon"; } ];
-        place-within-backdrop = true;
-      }
-    ];
+    overview = { backdrop-color = background; };
+    layer-rules = [{
+      matches = [{ namespace = "swww-daemon"; }];
+      place-within-backdrop = true;
+    }];
 
-    window-rules = [
-      {
-        geometry-corner-radius =
-          let
-            r = rounding + 0.0;
-          in
-          {
-            top-left = r;
-            top-right = r;
-            bottom-left = r;
-            bottom-right = r;
-          };
-        clip-to-geometry = true;
-        draw-border-with-background = false;
-      }
-    ];
+    window-rules = [{
+      geometry-corner-radius = let r = rounding + 0.0;
+      in {
+        top-left = r;
+        top-right = r;
+        bottom-left = r;
+        bottom-right = r;
+      };
+      clip-to-geometry = true;
+      draw-border-with-background = false;
+    }];
   };
   services.mako.enable = true;
   services.mako.settings = {
     border-radius = rounding;
-    border-size = border-size;
+    inherit border-size;
+    icon-border-radius = border-size * 3 / 4;
     padding = "6";
+    group-by = "app-name";
+    layer = "overlay";
+    default-timeout = 3000;
   };
 }

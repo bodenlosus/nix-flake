@@ -8,6 +8,32 @@
 { pkgs, ... }:
 
 let
+  utsiktt = pkgs.writeShellScriptBin "utsiktt"  ''
+    
+      fd . $1  -a | \
+      fzf \
+      --preview-border=none \
+      --no-separator \
+      --border=none \
+      --keep-right \
+      --list-border=none \
+      --highlight-line \
+      --preview-window=right:30% \
+      --padding=1 \
+      --margin=1 \
+      --no-scrollbar \
+      --no-input \--preview=' \
+        kitty icat \
+        --clear \
+        --transfer-mode=memory \
+        --stdin=no \
+        --scale-up \
+        --place=''${FZF_PREVIEW_COLUMNS}x''${FZF_PREVIEW_LINES}@0x0 {} && \
+        swww img {}'
+      '';
+  utsikt = pkgs.writeScriptBin "utsikt" ''
+    kitty -o background_opacity=0 ${utsiktt}/bin/utsiktt $HOME/Pictures/wallpapers
+  '';
   menu = pkgs.writeShellScriptBin "menu"
     # bash
     ''
@@ -18,7 +44,7 @@ let
       # 	tofi-drun --drun-launch=true
       # fi
     '';
-
+  
   powermenu = pkgs.writeShellScriptBin "powermenu"
     # bash
     ''
@@ -86,4 +112,4 @@ esac
     '';
 
 in
-{ home.packages = [ menu powermenu lock quickmenu ]; }
+{ home.packages = [ menu powermenu lock quickmenu utsikt utsiktt ]; }

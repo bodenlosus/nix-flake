@@ -101,6 +101,8 @@ in {
 
       gaa = "git add .";
       gcm = "git commit -m";
+
+      kitty = "kitty -1";
     };
   };
 }

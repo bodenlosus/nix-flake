@@ -6,7 +6,8 @@ let
     user-themes
     alphabetical-app-grid
   ];
-in {
+in
+{
   home.packages = (with pkgs; [ gnome-tweaks gnome-extension-manager ])
     ++ extensions;
   dconf.settings = {

@@ -24,7 +24,7 @@
 
     iconTheme = {
       package = pkgs.nordzy-icon-theme;
-      name = "Nordzy-dark";
+      name = "Nordzy-yellow-dark";
     };
 
     font = { name = config.stylix.fonts.sansSerif.name; };

@@ -18,14 +18,15 @@ in
   console.keyMap = keyboardLayout;
   console = {
     earlySetup = true;
-    font = "${pkgs.terminus_font}/share/consolefonts/ter-132n.psf.gz";
+    font = "${pkgs.terminus_font}/share/consolefonts/ter-218b.psf.gz";
     packages = with pkgs; [ terminus_font ];
   };
 
   environment.variables = {
     XDG_DATA_HOME = "$HOME/.local/share";
     PASSWORD_STORE_DIR = "$HOME/.local/share/password-store";
-    EDITOR = "nvim";
+    EDITOR = "hx";
+    TERMINAL = "kitty";
   };
 
   services.libinput.enable = true;

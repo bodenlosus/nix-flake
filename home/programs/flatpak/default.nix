@@ -7,10 +7,6 @@
       origin = "flathub";
     }
     {
-      appId = "com.brave.Browser";
-      origin = "flathub";
-    }
-    {
       appId = "org.gaphor.Gaphor";
       origin = "flathub";
     }

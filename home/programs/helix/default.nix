@@ -1,7 +1,8 @@
 { pkgs, ... }: {
+  imports = [ ./themes/default.nix ];
   home.packages = with pkgs; [ helix ];
   xdg.configFile."helix/default-config.toml".text = ''
-    theme = "github_dark"
+    theme = "oscura"
 
     [editor]
     cursorline = true

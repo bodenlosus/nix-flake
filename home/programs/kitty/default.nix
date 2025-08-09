@@ -1,6 +1,6 @@
-{ lib, ... }: {
+{ lib, pkgs, ... }: {
   programs.kitty = {
-    enable = true;
+  enable = true;
     keybindings = {
       # Reset existing mappings
       "ctrl+alt+tab" = "next_tab";
@@ -23,7 +23,7 @@
       cursor_shape = "Underline";
       cursor_underline_thickness = 3;
       window_padding_width = 10;
-      background_opacity = lib.mkForce 0.8;
+      background_opacity = lib.mkForce 0.96;
       background_blur = 64;
       hide_window_decorations = true;
     };

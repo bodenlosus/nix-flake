@@ -1,7 +1,7 @@
 { pkgs, config, ... }: {
   programs.niri.settings.binds = with config.lib.niri.actions; {
-    "Mod+Q".action.spawn = "${pkgs.kitty}/bin/kitty";
-    "Mod+E".action.spawn = "${pkgs.nautilus}/bin/nautilus";
+    "Mod+Q".action.spawn = [ "${pkgs.kitty}/bin/kitty" "-1"];
+    "Mod+E".action.spawn = [ "${pkgs.kitty}/bin/kitty" "-1" "yazi"];
     "Mod+X" = {
       cooldown-ms = 500;
       action.spawn = "powermenu";

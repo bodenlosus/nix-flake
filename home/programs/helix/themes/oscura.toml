@@ -1,0 +1,159 @@
+
+# Oscura theme for Helix editor
+# Based on the Oscura color palette by Webhooked
+
+# Syntax highlighting
+attribute = "#54C0A3"
+keyword = "#9099A1"
+"keyword.directive" = "#9099A1"
+namespace = "#E6E7A3"
+punctuation = "#5C6974"
+"punctuation.delimiter" = "#5C6974"
+operator = "#9099A1"
+special = "#9592A4"
+"variable.other.member" = "#E6E6E6"
+variable = "#E6E6E6"
+"variable.parameter" = "#E6E6E6"
+"variable.builtin" = "#9592A4"
+type = "#E6E7A3"
+"type.builtin" = "#E6E7A3"
+constructor = "#E6E7A3"
+function = "#E6E7A3"
+"function.macro" = "#E6E7A3"
+tag = "#E6E7A3"
+comment = "#46474F"
+constant = "#F9B98C"
+"constant.builtin" = "#F9B98C"
+string = "#F9B98C"
+"constant.numeric" = "#F9B98C"
+"constant.character.escape" = "#9592A4"
+label = "#D84F68"
+
+# Markup
+"markup.heading" = "#E6E7A3"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "#479FFA", modifiers = ["underlined"] }
+"markup.link.text" = { fg = "#479FFA", modifiers = ["underlined"] }
+"markup.raw" = "#F9B98C"
+
+# Diff colors
+"diff.plus" = "#54C0A3"
+"diff.minus" = "#D84F68"
+"diff.delta" = "#FFA16C"
+
+# UI elements
+"ui.background" = {bg = "#0a0a0e"}
+"ui.background.separator" = { fg = "#32333B" }
+"ui.linenr" = { fg = "#32333B" }
+"ui.linenr.selected" = { fg = "#E6E6E6" }
+"ui.statusline" = { fg = "#9592A4", bg = "#2C2C31" }
+"ui.statusline.active" = { fg = "#E6E6E6", bg = "#0B0B0F", underline = { color = "#E6E7A3", style = "line" } }
+"ui.statusline.normal" = { fg = "#E6E6E6", bg = "#2C2C31" }
+"ui.statusline.insert" = { fg = "#E6E6E6", bg = "#54C0A3" }
+"ui.statusline.select" = { fg = "#E6E6E6", bg = "#9592A4" }
+"ui.popup" = { fg = "#E6E6E6", bg = "#161616" }
+"ui.popup.info" = { fg = "#E6E6E6", bg = "#161616" }
+"ui.window" = { fg = "#32333B" }
+"ui.help" = { fg = "#E6E6E6", bg = "#161616" }
+
+# Text elements
+"ui.text" = { fg = "#9592A4" }
+"ui.text.focus" = { fg = "#E6E6E6" }
+"ui.text.inactive" = "#6A7782"
+"ui.text.directory" = { fg = "#E6E7A3" }
+"ui.virtual" = { fg = "#46474F" }
+"ui.virtual.ruler" = { bg = "#161616" }
+"ui.virtual.jump-label" = { fg = "#D84F68", modifiers = ["bold"] }
+
+# Selection and cursor
+"ui.selection" = { bg = "#2C2C31" }
+"ui.selection.primary" = { bg = "#2C2C31" }
+"ui.cursor.match" = { fg = "#E6E7A3", modifiers = ["bold"], underline = { style = "line" } }
+"ui.cursor" = { modifiers = ["reversed"] }
+"ui.cursorline.primary" = { bg = "#161616" }
+
+# Menu elements
+"ui.menu" = { fg = "#E6E6E6", bg = "#161616" }
+"ui.menu.selected" = { fg = "#E6E6E6", bg = "#2C2C31" }
+"ui.menu.scroll" = { fg = "#46474F", bg = "#161616" }
+
+# Diagnostics
+"diagnostic.hint" = { underline = { color = "#54C0A3", style = "curl" } }
+"diagnostic.info" = { underline = { color = "#479FFA", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "#FFA16C", style = "curl" } }
+"diagnostic.error" = { underline = { color = "#D84F68", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+# Status colors
+hint = "#54C0A3"
+info = "#479FFA"
+warning = "#FFA16C"
+error = "#D84F68"
+
+[palette]
+# Base colors from Oscura palette
+bg = "#0B0B0F"
+fg = "#E6E6E6"
+line_nr = "#32333B"
+active_line_nr = "#E6E6E6"
+comment = "#46474F"
+selection = "#2C2C31"
+selection_highlight = "#1A1A1F"
+word_highlight = "#2C2C31"
+
+# Syntax colors
+yellow = "#E6E7A3"
+red = "#D84F68"
+orange = "#F9B98C"
+purple = "#9592A4"
+blue = "#479FFA"
+gray = "#9099A1"
+teal = "#54C0A3"
+bracket = "#5C6974"
+
+# UI colors
+dark_gray = "#2C2C31"
+black = "#000000"
+diff_add_bg = "#1A1A1F"
+diff_del_bg = "#2C1A1A"
+
+# Diagnostic colors
+warning_color = "#FFA16C"
+error_color = "#FF5C5C"
+hint_color = "#4EBE96"
+info_color = "#6A7782"
+
+# Sidebar colors
+sidebar_bg = "#0B0B0F"
+sidebar_fg = "#C1C1C1"
+sidebar_title = "#9592A4"
+
+# List colors
+list_active = "#232323"
+list_inactive = "#232323"
+list_hover = "#1A1A1F"
+
+# Input colors
+input_bg = "#2C2C31"
+input_fg = "#E6E6E6"
+
+# Hover colors
+hover_bg = "#161616"
+hover_border = "#282828"
+
+# Scrollbar colors
+scrollbar_bg = "#343434"
+scrollbar_hover = "#343434"
+
+# Terminal colors
+terminal_black = "#0B0B0F"
+terminal_red = "#D84F68"
+terminal_green = "#54C0A3"
+terminal_yellow = "#E6E7A3"
+terminal_blue = "#479FFA"
+terminal_magenta = "#9592A4"
+terminal_cyan = "#F9B98C"
+terminal_white = "#E6E6E6"
