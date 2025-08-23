@@ -106,10 +106,6 @@ in {
     };
 
     overview = { backdrop-color = background; };
-    layer-rules = [{
-      matches = [{ namespace = "swww-daemon"; }];
-      place-within-backdrop = true;
-    }];
 
     window-rules = [{
       geometry-corner-radius = let r = rounding + 0.0;

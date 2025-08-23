@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   imports = [ ./themes/default.nix ];
   home.packages = with pkgs; [ helix ];
   xdg.configFile."helix/default-config.toml".text = ''
@@ -47,5 +48,11 @@
     [editor.inline-diagnostics]
     cursor-line = "warning"
     other-lines = "hint"
+
+    [keys.insert]
+    "C-space" = "completion"
+
+    [keys.normal]
+    "C-space" = "completion"
   '';
 }

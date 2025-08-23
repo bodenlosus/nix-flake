@@ -1,17 +1,19 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   home.packages = with pkgs; [ zed-editor-fhs ];
   xdg.configFile."zed/default-settings.json".text = ''
     {
-      "assistant": {
+      "agent": {
+        "play_sound_when_agent_done": true,
+        "always_allow_tool_actions": true,
         "inline_assistant_model": {
           "provider": "deepseek",
           "model": "deepseek-chat"
         },
         "default_model": {
-          "provider": "deepseek",
-          "model": "deepseek-chat"
-        },
-        "version": "2"
+          "provider": "copilot_chat",
+          "model": "claude-3.5-sonnet"
+        }
       },
       "auto_install_extensions": {
         "basedpyright": true,
@@ -39,7 +41,6 @@
         "nordic-nvim-theme": true,
         "nordic-theme": true,
         "oxocarbon": true,
-        "pylsp": true,
         "rose-pine-theme": true,
         "scss": true,
         "sql": true,
@@ -67,20 +68,19 @@
           ]
         }
       },
-
       "autosave": "on_focus_change",
       "session": {
         "restore_unsaved_buffers": true
       },
       "features": {
-        "edit_prediction_provider": "zed"
+        "edit_prediction_provider": "copilot"
       },
       "ui_font_size": 14,
       "buffer_font_size": 16,
       "theme": {
         "mode": "system",
         "light": "Github Dark",
-        "dark": "Github Dark"
+        "dark": "Everforest Dark Hard"
       },
       "outline_panel": {
         "dock": "right",
@@ -91,7 +91,7 @@
         "scrollbar": { "show": "never" }
       },
       "scrollbar": { "show": "never" },
-      "icon_theme": "Charmed Icons",
+      "icon_theme": "Soft Charmed Icons",
       "vim_mode": true,
       "ui_font_family": "JetBrainsMono Nerd Font Propo",
       "buffer_font_family": "JetBrainsMono Nerd Font Mono",
@@ -127,8 +127,21 @@
         "XML": { "formatter": "prettier", "tab_size": 2 }
       },
       "lsp": {
+        "deno": {
+          "settings": {
+            "deno": { "enable": true }
+          }
+        },
         "rust-analyzer": {
           "initialization_options": {
+            "cargo": {
+              "buildScripts": {
+                "enable": true
+              }
+            },
+            "procMacro": {
+              "enable": true
+            },
             "diagnostics": {
               "experimental": {
                 "enable": true
@@ -136,8 +149,8 @@
             }
           }
         }
-      }
+      },
+      "lsp_document_colors": "background"
     }
-
   '';
 }

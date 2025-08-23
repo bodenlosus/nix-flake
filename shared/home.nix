@@ -20,9 +20,7 @@
     ../home/system/clipman
     ../home/system/tofi
     ../home/scripts
-    # ../home/system/waybar
     ../home/programs/kitty
-    ../home/programs/floorp
     ../home/programs/shell
     ../home/programs/fetch
     ../home/programs/git
@@ -31,13 +29,7 @@
     ../home/programs/markdown
     ../home/programs/nautilus
     ../home/programs/lazygit
-    ../home/programs/nvim/default.nix
     ../home/programs/zed
-    # ../home/system/hyprland
-    # ../home/system/hypridle
-    # ../home/system/hyprpanel
-    # ../home/system/hyprpaper
-    # ../home/system/gnome/default.nix
     ../home/programs/helix
     ../home/programs/flatpak
   ];
@@ -59,10 +51,6 @@
 
     # gnome
     bustle
-    citations
-    hieroglyphic
-
-    palettify
 
     # office
     onlyoffice-desktopeditors
