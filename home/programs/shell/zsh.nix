@@ -1,7 +1,5 @@
 # My shell configuration
-{ pkgs, lib, config, ... }:
-let fetch = config.var.theme.fetch; # neofetch, nerdfetch, pfetch
-in {
+{ pkgs, lib, config, ... }: {
 
   home.packages = with pkgs; [ bat ripgrep tldr sesh ];
 
@@ -16,15 +14,7 @@ in {
 
     initContent = lib.mkBefore ''
       bindkey -e
-      ${if fetch == "fastfetch" then
-        pkgs.fastfetch + "/bin/fastfetch"
-      else if fetch == "nerdfetch" then
-        "nerdfetch"
-      else if fetch == "pfetch" then
-        "echo; ${pkgs.pfetch}/bin/pfetch"
-      else
-        ""}
-        
+       
       function sesh-sessions() {
         session=$(sesh list -t -c | fzf --height 70% --reverse)
         [[ -z "$session" ]] && return
@@ -62,10 +52,6 @@ in {
     # };
 
     shellAliases = {
-      n = "neovide";
-      vim = "nvim";
-      vi = "nvim";
-      v = "nvim";
       c = "clear";
       clera = "clear";
       celar = "clear";
@@ -76,7 +62,7 @@ in {
       sl = "ls";
       open = "${pkgs.xdg-utils}/bin/xdg-open";
       icat = "${pkgs.kitty}/bin/kitty +kitten icat";
-      ssh = "kitty +kitten ssh";
+      ssh = "kitten ssh";
 
       wireguard-import = "nmcli connection import type wireguard file";
 
