@@ -61,7 +61,7 @@ let
 
       case $selected in
           "Logout")
-          hyprctl dispatch exit
+          niri msg action quit
           ;;
           "Suspend")
           systemctl suspend

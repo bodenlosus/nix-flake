@@ -32,6 +32,7 @@
     ../home/programs/zed
     ../home/programs/helix
     ../home/programs/flatpak
+    ../home/programs/nextcloud
   ];
   programs.gh = {
     enable = true;
