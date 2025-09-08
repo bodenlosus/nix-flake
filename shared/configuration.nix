@@ -6,7 +6,7 @@
     ../home/system/niri/system.nix
     ../nixos/printing.nix
     ../nixos/docker.nix
-    ../home/programs/flatpak/system.nix
+    # ../home/programs/flatpak/system.nix
   ];
   stylix.targets.plymouth.enable = true;
   services.gvfs.enable = true;

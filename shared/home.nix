@@ -9,7 +9,7 @@
     ../home/programs/obsidian
     ../home/programs/direnv
     ../home/programs/btop
-    ../home/programs/cava
+    # ../home/programs/cava
     ../home/system/niri
     ../home/system/gtk
     ../home/system/wofi
@@ -22,16 +22,17 @@
     ../home/scripts
     ../home/programs/kitty
     ../home/programs/shell
-    ../home/programs/fetch
+    # ../home/programs/fetch
     ../home/programs/git
     ../home/programs/spicetify
     ../home/programs/yazi
-    ../home/programs/markdown
     ../home/programs/nautilus
     ../home/programs/lazygit
     ../home/programs/zed
     ../home/programs/helix
-    ../home/programs/flatpak
+    ../home/programs/lsp
+    # ../home/programs/flatpak
+    ../home/programs/gowall
   ];
   programs.gh = {
     enable = true;
