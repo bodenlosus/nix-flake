@@ -1,5 +1,7 @@
 { pkgs, inputs, ... }: {
-
+  environment.systemPackages = with pkgs; [
+    libfaketime
+  ];
   xdg.terminal-exec.settings.default = ["kitty.desktop"];
   imports = [
     # ../home/system/gnome/system.nix

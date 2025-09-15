@@ -29,7 +29,7 @@ in
   programs.tmux = {
     enable = true;
     mouse = true;
-    shell = "${pkgs.zsh}/bin/zsh";
+    shell = "${pkgs.nushell}/bin/nu";
     prefix = "C-s";
     terminal = "kitty";
     keyMode = "vi";

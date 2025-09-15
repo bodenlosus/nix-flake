@@ -95,9 +95,6 @@ case $selected in
     "Night-shift")
     night-shift
     ;;
-    "Nixy")
-    kitty zsh -c nixy
-    ;;
     "Hyprpicker")
     sleep 0.2
     ${pkgs.hyprpicker}/bin/hyprpicker -a

@@ -9,6 +9,7 @@
       "ctrl+tab" = "send_text all \\x1b[27;5;9~";
       "ctrl+shift+tab" = "send_text all \\x1b[27;6;9~";
       "alt+tab" = "send_text all \\x1b[27;3;9~";
+      
     };
     settings = {
       scrollback_lines = 10000;

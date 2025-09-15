@@ -8,6 +8,7 @@ in
   programs.starship = {
     enable = true;
     settings = {
+      "$schema" = "https://starship.rs/config-schema.json";
       add_newline = true;
       format = lib.concatStrings [
         "$directory"
@@ -16,7 +17,12 @@ in
         "$git_status"
         "$character"
       ];
-      directory = { style = accent; };
+      right_format = lib.concatStrings [
+        "$time"
+      ];
+      directory = {
+        style = accent;
+      };
 
       character = {
         success_symbol = "[❯](${accent})";
@@ -31,8 +37,7 @@ in
       };
 
       git_status = {
-        format =
-          "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218)($ahead_behind$stashed)]($style)";
+        format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218)($ahead_behind$stashed)]($style)";
         style = "cyan";
         conflicted = "";
         renamed = "";

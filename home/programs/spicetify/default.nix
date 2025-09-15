@@ -26,7 +26,7 @@ in
         main = background;
         sidebar = "${colors.base01}";
         card = player;
-        button = "${colors.base08}";
+        button = "${colors.base0D}";
         button-active = button;
         button-disabled = "${colors.base03}";
       };

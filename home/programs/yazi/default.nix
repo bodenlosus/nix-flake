@@ -3,7 +3,7 @@
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
-
+    enableNushellIntegration = true;
     package = pkgs.yazi.override {_7zz = pkgs._7zz-rar; };
     settings = {
       log = { enabled = false; };

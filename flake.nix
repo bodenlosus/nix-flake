@@ -16,6 +16,7 @@
     niri = {
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.niri-unstable.url = "github:YaLTeR/niri/73ca3964d5bb6aa362c9dbfd826ced48fc37edae";
     };
     sops-nix = {
       url = "github:Mic92/sops-nix";
