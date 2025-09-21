@@ -17,7 +17,7 @@
     ../../nixos/xdg-portal.nix
     ../../nixos/variables-config.nix
     ../../nixos/qemu.nix
-
+    ../../nixos/docker.nix
     ../../themes/stylix/nixy.nix
 
     ../../shared/configuration.nix

@@ -7,7 +7,7 @@
     # ../home/system/gnome/system.nix
     ../home/system/niri/system.nix
     ../nixos/printing.nix
-    ../nixos/docker.nix
+    # ../nixos/docker.nix
     # ../home/programs/flatpak/system.nix
   ];
   stylix.targets.plymouth.enable = true;
