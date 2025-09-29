@@ -2,8 +2,8 @@
 {
   imports = [ ./themes/default.nix ];
   home.packages = with pkgs; [ helix ];
-  xdg.configFile."helix/default-config.toml".text = ''
-    theme = "oscura"
+  xdg.configFile."helix/config.toml".text = ''
+    theme = "kanso"
 
     [editor]
     cursorline = true

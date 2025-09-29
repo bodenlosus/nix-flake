@@ -1,0 +1,178 @@
+# Kanso Dark theme for Helix
+# Based on the Kanso vim colorscheme (zen variant)
+
+"ui.background" = { bg = "bg" }
+"ui.text" = "fg"
+"ui.text.focus" = "fg2"
+"ui.text.inactive" = "gray2"
+"ui.text.info" = "gray2"
+
+"ui.cursor" = { fg = "bg", bg = "fg2" }
+"ui.cursor.primary" = { fg = "bg", bg = "fg2" }
+"ui.cursor.match" = { bg = "bg_p2" }
+"ui.cursor.insert" = { fg = "bg", bg = "green" }
+"ui.cursor.select" = { fg = "bg", bg = "blue" }
+
+"ui.selection" = { bg = "bg_visual" }
+"ui.selection.primary" = { bg = "bg_visual" }
+"ui.cursorline.primary" = { bg = "bg_p2" }
+"ui.cursorline.secondary" = { bg = "bg_p1" }
+"ui.cursorcolumn.primary" = { bg = "bg_p2" }
+
+"ui.linenr" = "gray5"
+"ui.linenr.selected" = "fg2"
+
+"ui.statusline" = { fg = "gray2", bg = "bg" }
+"ui.statusline.inactive" = { fg = "gray5", bg = "bg" }
+"ui.statusline.normal" = { fg = "bg", bg = "blue3" }
+"ui.statusline.insert" = { fg = "bg", bg = "green" }
+"ui.statusline.select" = { fg = "bg", bg = "violet2" }
+
+"ui.help" = { fg = "gray2", bg = "bg" }
+"ui.popup" = { fg = "fg2", bg = "bg" }
+"ui.popup.info" = { fg = "gray2", bg = "bg" }
+"ui.window" = { fg = "bg_m3" }
+"ui.menu" = { fg = "fg2", bg = "bg" }
+"ui.menu.selected" = { bg = "bg_visual" }
+"ui.menu.scroll" = { fg = "gray5", bg = "bg" }
+
+"ui.virtual.whitespace" = "whitespace"
+"ui.virtual.indent-guide" = "indent_line"
+"ui.virtual.ruler" = { bg = "bg_p1" }
+"ui.virtual.inlay-hint" = { fg = "gray4", modifiers = ["italic"] }
+"ui.virtual.jump-label" = { fg = "yellow3", modifiers = ["bold"] }
+
+"markup.heading" = { fg = "blue3", modifiers = ["bold"] }
+"markup.list" = "violet2"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "blue3", underline = { style = "line" } }
+"markup.link.text" = "violet2"
+"markup.quote" = "gray3"
+"markup.raw" = "green3"
+
+"diff.plus" = { fg = "git_green" }
+"diff.minus" = { fg = "git_red" }
+"diff.delta" = { fg = "git_yellow" }
+
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.info" = { underline = { color = "blue2", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "green4", style = "curl" } }
+
+"error" = "red"
+"warning" = "yellow"
+"info" = "blue2"
+"hint" = "green4"
+
+"comment" = { fg = "gray4" }
+"comment.block.documentation" = { fg = "gray4" }
+
+"constant" = "orange"
+"constant.numeric" = "pink"
+"constant.character" = "green3"
+"constant.character.escape" = "red3"
+
+"string" = "green3"
+"string.regexp" = "red3"
+"string.special" = "yellow3"
+
+"variable" = "fg"
+"variable.builtin" = "violet2"
+"variable.parameter" = "gray3"
+"variable.other.member" = "violet2"
+
+"type" = "aqua"
+"type.builtin" = "aqua"
+
+"constructor" = "yellow3"
+
+"function" = "blue3"
+"function.builtin" = "blue3"
+"function.method" = "blue3"
+"function.macro" = "gray3"
+
+"keyword" = "violet2"
+"keyword.control" = "violet2"
+"keyword.control.return" = "violet2"
+"keyword.control.exception" = "violet2"
+"keyword.operator" = "gray3"
+"keyword.directive" = "gray3"
+"keyword.function" = "violet2"
+"keyword.storage" = "violet2"
+
+"operator" = "gray3"
+
+"punctuation" = "gray3"
+"punctuation.delimiter" = "gray3"
+"punctuation.bracket" = "gray3"
+"punctuation.special" = "yellow3"
+
+"label" = "violet2"
+"tag" = "violet2"
+"attribute" = "violet2"
+"namespace" = "violet2"
+
+"special" = "yellow3"
+
+[palette]
+# Zen Bg Shades
+bg = "#090E13"
+bg_p1 = "#1C1E25"
+bg_p2 = "#22262D"
+bg_m3 = "#090E13"
+bg_visual = "#393B44"
+
+# Ink Bg Shades (for indent guides)
+indent_line = "#22262D"
+whitespace = "#393B44"
+
+# Popup and Floats
+alt_blue1 = "#223249"
+alt_blue2 = "#2D4F67"
+
+# Diff and Git
+diff_green = "#2B3328"
+diff_yellow = "#49443C"
+diff_red = "#43242B"
+diff_blue = "#252535"
+git_green = "#76946A"
+git_red = "#C34043"
+git_yellow = "#DCA561"
+
+# Main Colors
+red = "#C34043"
+red2 = "#E46876"
+red3 = "#c4746e"
+yellow = "#DCA561"
+yellow2 = "#E6C384"
+yellow3 = "#c4b28a"
+green = "#98BB6C"
+green2 = "#87a987"
+green3 = "#8a9a7b"
+green4 = "#6A9589"
+green5 = "#7AA89F"
+blue = "#7FB4CA"
+blue2 = "#658594"
+blue3 = "#8ba4b0"
+blue4 = "#8ea4a2"
+violet = "#938AA9"
+violet2 = "#8992a7"
+violet3 = "#949fb5"
+pink = "#a292a3"
+orange = "#b6927b"
+orange2 = "#b98d7b"
+aqua = "#8ea4a2"
+
+# Fg and Comments
+fg = "#C5C9C7"
+fg2 = "#f2f1ef"
+gray = "#717C7C"
+gray2 = "#A4A7A4"
+gray3 = "#909398"
+gray4 = "#75797f"
+gray5 = "#5C6066"
+
+# Search backgrounds
+bg_search = "#2D4F67"
