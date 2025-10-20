@@ -21,6 +21,8 @@
     ../home/system/tofi
     ../home/scripts
     ../home/programs/kitty
+    ../home/programs/ollama
+    ../home/programs/ollama
     ../home/programs/shell
     # ../home/programs/fetch
     ../home/programs/git
