@@ -35,6 +35,7 @@
     ../home/programs/nextcloud
     ../home/programs/lsp
     ../home/programs/gowall
+    # ../home/programs/kakoune
   ];
   programs.gh = {
     enable = true;
@@ -46,6 +47,7 @@
     vlc # Video player
     blanket # White-noise app
     pomodoro-gtk
+    clock-rs
 
     zen-browser
     obsidian
@@ -56,8 +58,7 @@
     bustle
 
     # office
-    onlyoffice-desktopeditors
-
+    libreoffice-fresh
     # Dev
     python3
     jq
