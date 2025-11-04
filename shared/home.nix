@@ -11,6 +11,7 @@
     ../home/programs/btop
     # ../home/programs/cava
     ../home/system/niri
+    ../home/system/mango
     ../home/system/gtk
     ../home/system/wofi
     ../home/system/batsignal

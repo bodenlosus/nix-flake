@@ -55,4 +55,9 @@
     [keys.normal]
     "C-space" = "completion"
   '';
+
+  xdg.desktopEntries.nemo = {
+    name = "Nemo";
+    exec = "${pkgs.kitty}/bin/kitty -1 -o background_opacity=1 hx";
+  };
 }
