@@ -14,9 +14,7 @@
         }
       );
     in
-    {
-      kakoune.override = {
-        plugins = [ config_file ] ++ plugins;
-      };
+    pkgs.kakoune.override {
+      plugins = [ config_file ] ++ plugins;
     };
 }

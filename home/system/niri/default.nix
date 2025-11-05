@@ -6,14 +6,19 @@ let
   border-size = config.var.theme.border-size;
   gaps-out = config.var.theme.gaps-out;
   rounding = config.var.theme.rounding;
-in {
+in
+{
   imports = [ ./binds.nix ];
   programs.niri.settings = {
-    spawn-at-startup = [{
-      command = [ "${pkgs.swww}/bin/swww-daemon" ];
-    }
+    spawn-at-startup = [
+      {
+        command = [ "${pkgs.swww}/bin/swww-daemon" ];
+      }
+      {
+        command = [ "/usr/bin/env clock" ];
+      }
 
-      ];
+    ];
     screenshot-path = "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png";
     hotkey-overlay.skip-at-startup = true;
     clipboard.disable-primary = true;
@@ -82,7 +87,9 @@ in {
         { proportion = 1.0 / 1.0; }
         { proportion = 2.0 / 3.0; }
       ];
-      default-column-width = { proportion = 1.0 / 2.0; };
+      default-column-width = {
+        proportion = 1.0 / 2.0;
+      };
 
       tab-indicator = {
         enable = true;
@@ -93,19 +100,26 @@ in {
       };
     };
 
-    overview = { backdrop-color = background; };
+    overview = {
+      backdrop-color = background;
+    };
 
-    window-rules = [{
-      geometry-corner-radius = let r = rounding + 0.0;
-      in {
-        top-left = r;
-        top-right = r;
-        bottom-left = r;
-        bottom-right = r;
-      };
-      clip-to-geometry = true;
-      draw-border-with-background = false;
-    }];
+    window-rules = [
+      {
+        geometry-corner-radius =
+          let
+            r = rounding + 0.0;
+          in
+          {
+            top-left = r;
+            top-right = r;
+            bottom-left = r;
+            bottom-right = r;
+          };
+        clip-to-geometry = true;
+        draw-border-with-background = false;
+      }
+    ];
   };
   services.mako.enable = true;
   services.mako.settings = {
