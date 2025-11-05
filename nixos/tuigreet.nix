@@ -10,7 +10,7 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [ greetd.tuigreet ];
+  environment.systemPackages = with pkgs; [ tuigreet ];
 
   # this is a life saver.
   # literally no documentation about this anywhere.

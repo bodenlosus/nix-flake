@@ -24,7 +24,7 @@ in
     clipboard.disable-primary = true;
     prefer-no-csd = true;
     environment = {
-      "TERMINAL" = "kitty";
+      "TERM" = "kitty";
       "XDG_CURRENT_DESKTOP" = "Niri";
       "MOZ_ENABLE_WAYLAND" = "1";
       "ANKI_WAYLAND" = "1";

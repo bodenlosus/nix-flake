@@ -26,7 +26,7 @@ in
     XDG_DATA_HOME = "$HOME/.local/share";
     PASSWORD_STORE_DIR = "$HOME/.local/share/password-store";
     EDITOR = "hx";
-    TERMINAL = "kitty";
+    TERM = "kitty";
   };
 
   services.libinput.enable = true;

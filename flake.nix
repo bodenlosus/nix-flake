@@ -26,9 +26,14 @@
     stylix.url = "github:danth/stylix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nur.url = "github:nix-community/NUR";
+
+    mango = {url = "github:DreamMaoMao/mango"; 
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ nixpkgs, ... }:
+  outputs =
+    inputs@{ nixpkgs, ... }:
     let
       system = "x86_64-linux";
       utils = import ./utils.nix { inherit nixpkgs inputs; };
@@ -41,7 +46,7 @@
         })
       ];
       modules = with inputs; [
-        nix-flatpak.nixosModules.nix-flatpak
+        mango.nixosModules.mango        nix-flatpak.nixosModules.nix-flatpak
         nixos-hardware.nixosModules.lenovo-thinkpad-t14 # DONE: CHANGEME: check https://github.com/NixOS/nixos-hardware
         home-manager.nixosModules.home-manager
         stylix.nixosModules.stylix
