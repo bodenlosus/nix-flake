@@ -17,9 +17,9 @@
 
     "Mod+C".action = close-window;
 
-    "Print".action = screenshot { show-pointer = false; };
-    # "Ctrl+Print" = "screenshot-screen";
-    "Alt+Print".action = screenshot-window { };
+    "Print".action.screenshot = [];
+    "Ctrl+Print".action.screenshot-screen = [];
+    "Alt+Print".action.screenshot-window = [];
 
     "Ctrl+Alt+Delete".action = quit;
 

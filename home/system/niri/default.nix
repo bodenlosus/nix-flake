@@ -99,7 +99,6 @@ in
         length.total-proportion = 0.3333333;
       };
     };
-
     overview = {
       backdrop-color = background;
     };
@@ -118,6 +117,18 @@ in
           };
         clip-to-geometry = true;
         draw-border-with-background = false;
+      }
+    ];
+
+    layer-rules = [
+      {
+        matches = [
+          { namespace = "quickshell"; }
+          { namespace = "swww-daemon"; }
+        ];
+
+        place-within-backdrop = true;
+
       }
     ];
   };

@@ -11,15 +11,15 @@
           virglSupport = true;
         };
         runAsRoot = true;
-        ovmf = {
-          enable = true;
-          packages = [
-            (pkgs.OVMFFull.override {
-              secureBoot = true;
-              tpmSupport = true;
-            })
-          ];
-        };
+        # ovmf = {
+        #   enable = true;
+        #   packages = [
+        #     (pkgs.OVMFFull.override {
+        #       secureBoot = true;
+        #       tpmSupport = true;
+        #     })
+        #   ];
+        # };
       };
     };
 
@@ -33,7 +33,7 @@
     spice
     spice-gtk
     spice-protocol
-    win-virtio
+    virtio-win
     win-spice
     adwaita-icon-theme
   ];
@@ -48,7 +48,11 @@
 
   # Add user to required groups
   users.users."${config.var.username}" = {
-    extraGroups = [ "libvirtd" "kvm" "qemu-libvirtd" ];
+    extraGroups = [
+      "libvirtd"
+      "kvm"
+      "qemu-libvirtd"
+    ];
   };
 
   # IOMMU and virtualization CPU flags
@@ -67,4 +71,3 @@
 
   ];
 }
-

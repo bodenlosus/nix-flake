@@ -6,6 +6,10 @@
 }:
 {
   imports = [
+
+    inputs.dms.homeModules.dankMaterialShell.default
+    inputs.dms.homeModules.dankMaterialShell.niri
+    ../home/system/dms
     ../home/programs/obsidian
     ../home/programs/direnv
     ../home/programs/btop
