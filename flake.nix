@@ -27,8 +27,26 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nur.url = "github:nix-community/NUR";
 
-    mango = {url = "github:DreamMaoMao/mango"; 
+    mango = {
+      url = "github:DreamMaoMao/mango";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    dgop = {
+      url = "github:AvengeMedia/dgop";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    dms-cli = {
+      url = "github:AvengeMedia/danklinux";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.dgop.follows = "dgop";
+      inputs.dms-cli.follows = "dms-cli";
     };
   };
 
@@ -46,7 +64,8 @@
         })
       ];
       modules = with inputs; [
-        mango.nixosModules.mango        nix-flatpak.nixosModules.nix-flatpak
+        mango.nixosModules.mango
+        nix-flatpak.nixosModules.nix-flatpak
         nixos-hardware.nixosModules.lenovo-thinkpad-t14 # DONE: CHANGEME: check https://github.com/NixOS/nixos-hardware
         home-manager.nixosModules.home-manager
         stylix.nixosModules.stylix

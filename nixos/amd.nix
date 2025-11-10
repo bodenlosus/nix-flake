@@ -3,7 +3,6 @@
   # For 24.11
   hardware.graphics.extraPackages = with pkgs; [
     rocmPackages.clr.icd
-    amdvlk
   ];
   hardware.graphics = {
     enable = true;

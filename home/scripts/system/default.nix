@@ -10,7 +10,7 @@
 let
   mirror =
     pkgs.writeScriptBin "screen-mirror" # nu
-      ''            
+      ''
         #!/usr/bin/env nu
         let focused: string = niri msg --json focused-output | from json | get name
         let outputs: list = niri msg --json outputs | from json | columns 
@@ -53,47 +53,34 @@ let
   utsikt = pkgs.writeScriptBin "utsikt" ''
     kitty -o background_opacity=0 ${utsiktt}/bin/utsiktt $HOME/Pictures/wallpapers
   '';
-  menu =
-    pkgs.writeShellScriptBin "menu"
-      # bash
-      ''
-        rofi -show drun
-        # if pgrep tofi; then
-        # 	pkill tofi
-        # else
-        # 	tofi-drun --drun-launch=true
-        # fi
-      '';
+  menu = pkgs.writeScriptBin "menu" ''
+    #!/usr/bin/env nu
+    if (pidof dms | is-not-empty ) {
+      dms ipc call spotlight open
+    } else {
+      rofi -show drun
+    }        
+  '';
 
   powermenu =
-    pkgs.writeShellScriptBin "powermenu"
-      # bash
+    pkgs.writeScriptBin "powermenu" /* nu */
       ''
-              #/usr/bin/env bash
-        options=(
-            " 󰍃  Logout"
-            "   Suspend"
-            " 󰑐  Reboot"
-            " 󰿅  Shutdown"
-        )
+        #!/usr/bin/env nu
+        if (pidof dms | is-not-empty ) {
+          dms ipc call powermenu open
+          
+        } else {
+          let opts = {
+            " 󰍃  Logout": {|| niri msg action quit}
+            "   Suspend": {|| systemctl suspend}
+            " 󰑐  Reboot": {|| systemctl reboot}
+            " 󰿅  Shutdown": {|| systemctl poweroff}
+          }
 
-        selected=$(printf '%s\n' "''${options[@]}" | rofi -no-show-icons -dmenu)
-        selected=$(echo "$selected" | cut -d' ' -f4-)
+          let selected = $opts | columns | str join "\n" | rofi -no-show-icons -dmenu
 
-        case $selected in
-            "Logout")
-            niri msg action quit
-            ;;
-            "Suspend")
-            systemctl suspend
-            ;;
-            "Reboot")
-            systemctl reboot
-            ;;
-            "Shutdown")
-            systemctl poweroff
-            ;;
-        esac
+          do ($opts | get $selected)
+        }
       '';
 
   quickmenu = pkgs.writeShellScriptBin "quickmenu" ''

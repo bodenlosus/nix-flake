@@ -13,7 +13,7 @@ let
 in
 {
 
-  home.packages = with pkgs; [ rofi-wayland ];
+  home.packages = with pkgs; [ rofi ];
 
 
   xdg.configFile."rofi/config.rasi".text = ''
