@@ -4,22 +4,22 @@
 
     # Horizon Terminal
     base16Scheme = {
-      base00 = "#070A11";
-      base01 = "#0d1117";
-      base02 = "#151b23";
-      base03 = "#9198a1";
-      base04 = "#656c76";
-      base05 = "#f0f6fc";
-      base06 = "#ffffff";
-      base07 = "#ffffff";
-      base08 = "#ff7b72";
-      base09 = "#ffa657";
-      base0A = "#d29922";
-      base0B = "#3fb950";
-      base0C = "#39c5cf";
-      base0D = "#58a6ff";
-      base0E = "#be8fff";
-      base0F = "#eb3342";
+      base00 = "#090E13";
+      base01 = "#1C1E25";
+      base02 = "#22262D";
+      base03 = "#393B44";
+      base04 = "#5C6066";
+      base06 = "#A4A7A4";
+      base05 = "#C5C9C7";
+      base07 = "#f2f1ef";
+      base08 = "#C34043";
+      base09 = "#b6927b";
+      base0A = "#DCA561";
+      base0B = "#8a9a7b";
+      base0C = "#8ea4a2";
+      base0D = "#8ba4b0";
+      base0E = "#8992a7";
+      base0F = "#a292a3";
     };
 
     cursor = {
@@ -42,7 +42,7 @@
         name = "JetBrains Mono Nerd Font";
       };
       emoji = {
-        package = pkgs.noto-fonts-emoji;
+        package = pkgs.noto-fonts-color-emoji;
         name = "Noto Color Emoji";
       };
       sizes = {
