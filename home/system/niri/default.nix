@@ -1,23 +1,11 @@
 { pkgs, config, ... }:
 let
-
-  stylix = config.lib.stylix.colors.base00;
   accent = "#${config.lib.stylix.colors.base0D}";
-  accent-alt = "#${config.lib.stylix.colors.base03}";
   background = "#${config.lib.stylix.colors.base00}";
-  background-alt = "#${config.lib.stylix.colors.base02}";
   border = "#${config.lib.stylix.colors.base04}";
-  foreground = "#${config.lib.stylix.colors.base05}";
-  font = "${config.stylix.fonts.serif.name}";
-  fontSize = "${toString config.stylix.fonts.sizes.desktop}";
   border-size = config.var.theme.border-size;
-  gaps-in = config.var.theme.gaps-in;
   gaps-out = config.var.theme.gaps-out;
-  active-opacity = config.var.theme.active-opacity;
-  inactive-opacity = config.var.theme.inactive-opacity;
   rounding = config.var.theme.rounding;
-  blur = config.var.theme.blur;
-  keyboardLayout = config.var.keyboardLayout;
 in
 {
   imports = [ ./binds.nix ];
