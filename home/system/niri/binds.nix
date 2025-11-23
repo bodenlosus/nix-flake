@@ -78,7 +78,7 @@
     "Mod+Shift+F".action = fullscreen-window;
 
     "Mod+Shift+Q".action = switch-preset-column-width;
-    "Mod+Shift+C".action.spawn = "clipboard";
+    "Mod+Shift+C".action.spawn =  ["${pkgs.vicinae}/bin/vicinae" "vicinae://extensions/vicinae/clipboard/history"];
 
     "Mod+Home".action = focus-window-previous;
     "XF86AudioRaiseVolume".action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+";

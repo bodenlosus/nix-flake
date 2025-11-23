@@ -32,18 +32,9 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nur.url = "github:nix-community/NUR";
 
-    mango = {
-      url = "github:DreamMaoMao/mango";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     dgop = {
       url = "github:AvengeMedia/dgop";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    dms-cli = {
-      url = "github:AvengeMedia/danklinux";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -51,7 +42,6 @@
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.dgop.follows = "dgop";
-      inputs.dms-cli.follows = "dms-cli";
     };
   };
 
@@ -68,11 +58,15 @@
           zen-browser = inputs.zen-browser.packages."${system}".beta;
         })
         (final: prev: {
+          hyprland = inputs.hyprland.packages.${system}.hyprland;
+          xdg-desktop-portal-hyprland = inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland;
+        })
+        (final: prev: {
           palettify = inputs.palettify.packages."${system}".default;
         })
       ];
       modules = with inputs; [
-        mango.nixosModules.mango
+        # mango.nixosModules.mango
         nix-flatpak.nixosModules.nix-flatpak
         nixos-hardware.nixosModules.lenovo-thinkpad-t14 # DONE: CHANGEME: check https://github.com/NixOS/nixos-hardware
         home-manager.nixosModules.home-manager

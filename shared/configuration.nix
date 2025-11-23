@@ -6,7 +6,7 @@
   imports = [
     # ../home/system/gnome/system.nix
     ../home/system/niri/system.nix
-    ../home/system/mango/system.nix
+    # ../home/system/mango/system.nix
     ../nixos/printing.nix
     # ../nixos/docker.nix
     # ../home/programs/flatpak/system.nix
