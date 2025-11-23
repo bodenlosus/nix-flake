@@ -23,10 +23,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    palettify = {
-      url = "github:bodenlosus/palettify-rust";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # palettify = {
+    #   url = "github:bodenlosus/palettify-rust";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     stylix.url = "github:danth/stylix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
@@ -61,9 +61,9 @@
           hyprland = inputs.hyprland.packages.${system}.hyprland;
           xdg-desktop-portal-hyprland = inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland;
         })
-        (final: prev: {
-          palettify = inputs.palettify.packages."${system}".default;
-        })
+        # (final: prev: {
+        #   palettify = inputs.palettify.packages."${system}".default;
+        # })
       ];
       modules = with inputs; [
         # mango.nixosModules.mango

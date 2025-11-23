@@ -15,6 +15,9 @@ in
         command = [ "${pkgs.swww}/bin/swww-daemon" ];
       }
       {
+        command = [ "${pkgs.vicinae}/bin/vicinae" "server" ];
+      }
+      {
         command = [ "/usr/bin/env clock" ];
       }
 

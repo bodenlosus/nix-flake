@@ -97,6 +97,6 @@
     # Backup
     firefox
 
-    palettify
+    # palettify
   ];
 }
