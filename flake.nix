@@ -23,6 +23,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    palettify = {
+      url = "github:bodenlosus/palettify-rust";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     stylix.url = "github:danth/stylix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nur.url = "github:nix-community/NUR";
@@ -61,6 +66,9 @@
         inputs.niri.overlays.niri
         (final: prev: {
           zen-browser = inputs.zen-browser.packages."${system}".beta;
+        })
+        (final: prev: {
+          palettify = inputs.palettify.packages."${system}".default;
         })
       ];
       modules = with inputs; [
