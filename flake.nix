@@ -15,7 +15,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     niri = {
       url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
       # inputs.niri-unstable.url = "github:YaLTeR/niri/73ca3964d5bb6aa362c9dbfd826ced48fc37edae";
     };
     sops-nix = {
@@ -27,7 +27,7 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nur.url = "github:nix-community/NUR";
 
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     dgop = {
       url = "github:AvengeMedia/dgop";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -38,6 +38,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.dgop.follows = "dgop";
     };
+
+    vicinae = {
+      url = "github:vicinaehq/vicinae";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -46,21 +51,22 @@
       system = "x86_64-linux";
       utils = import ./utils.nix { inherit nixpkgs inputs; };
       overlays = [
-        # inputs.hyprpanel.overlay
         inputs.nur.overlays.default
         inputs.niri.overlays.niri
         (final: prev: {
           zen-browser = inputs.zen-browser.packages."${system}".beta;
         })
         (final: prev: {
-          hyprland = inputs.hyprland.packages.${system}.hyprland;
-          xdg-desktop-portal-hyprland = inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland;
+          # hyprland = inputs.hyprland.packages.${system}.hyprland;
+          # xdg-desktop-portal-hyprland = inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland;
+        })
+        (final: prev: {
+          vicinae = inputs.vicinae.packages.${system}.default;
         })
       ];
       modules = with inputs; [
         # mango.nixosModules.mango
-        nix-flatpak.nixosModules.nix-flatpak
-        nixos-hardware.nixosModules.lenovo-thinkpad-t14 # DONE: CHANGEME: check https://github.com/NixOS/nixos-hardware
+         # enable Home Manager               nixos-hardware.nixosModules.lenovo-thinkpad-t14 # DONE: CHANGEME: check https://github.com/NixOS/nixos-hardware
         home-manager.nixosModules.home-manager
         stylix.nixosModules.stylix
         niri.nixosModules.niri

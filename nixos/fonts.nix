@@ -17,7 +17,11 @@
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
       nerd-fonts.fira-code
+      nerd-fonts.zed-mono
       nerd-fonts.meslo-lg
+      roboto-serif
+      inriafonts
+      poly
       openmoji-color
       twemoji-color-font
       fira-code
@@ -29,15 +33,15 @@
     fontconfig = {
       defaultFonts = {
         monospace = [
-          "FiraCode Nerd Font Mono"
+          "ZedMono Font Mono"
           "Noto Color Emoji"
         ];
         sansSerif = [
-          "FiraCode Nerd Font"
+          "Inter"
           "Noto Color Emoji"
         ];
         serif = [
-          "FiraCode Nerd Font"
+          "Poly"
           "Noto Color Emoji"
         ];
         emoji = [ "Noto Color Emoji" ];
