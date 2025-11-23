@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, inputs, ... }:
 let
   hexToRgb = hex: {
     r = lib.fromHexString (builtins.substring 0 2 hex);
@@ -62,6 +62,11 @@ let
 
 in
 {
+  imports = [
+    
+    inputs.dms.homeModules.dankMaterialShell.default
+    inputs.dms.homeModules.dankMaterialShell.niri
+  ];
 
   programs.dankMaterialShell = {
     enable = true;
