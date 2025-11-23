@@ -72,6 +72,7 @@
     # };
 
     shellAliases = {
+      dmenu = "vicinae dmenu";
       c = "clear";
       clera = "clear";
       celar = "clear";

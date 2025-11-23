@@ -8,6 +8,11 @@
 { pkgs, ... }:
 
 let
+  dmenu =
+    {
+      pl ? "",
+    }:
+    "${pkgs.vicinae}/bin/vicinae dmenu --placeholder \"${pl}\"";
   mirror =
     pkgs.writeScriptBin "screen-mirror" # nu
       ''
@@ -17,7 +22,7 @@ let
 
         let unfocused_outputs = $outputs | where $it != $focused;
 
-        let target = $unfocused_outputs | to text | rofi -dmenu
+        let target = $unfocused_outputs | to text | ${dmenu { pl = "Select an output..."; }}
 
         ${pkgs.wl-mirror}/bin/wl-mirror --fullscreen-output $target $focused
       '';
@@ -55,74 +60,49 @@ let
   '';
   menu = pkgs.writeScriptBin "menu" ''
     #!/usr/bin/env nu
+    # if (pidof dms | is-not-empty ) {
+    #   dms ipc call spotlight open
+    # } else {
+      vicinae open
+    # }        
+  '';
+
+  powermenu = pkgs.writeScriptBin "powermenu" /* nu */ ''
+    #!/usr/bin/env nu
     if (pidof dms | is-not-empty ) {
-      dms ipc call spotlight open
+      dms ipc call powermenu open
+      
     } else {
-      rofi -show drun
-    }        
+      let opts = {
+        "󰍃  Logout": {|| niri msg action quit}
+        "  Suspend": {|| systemctl suspend}
+        "󰑐  Reboot": {|| systemctl reboot}
+        "󰿅  Shutdown": {|| systemctl poweroff}
+      }
+
+      let selected = $opts | columns | str join "\n" | ${dmenu { pl = "Select an action ..."; }}
+
+      do ($opts | get $selected)
+    }
   '';
 
-  powermenu =
-    pkgs.writeScriptBin "powermenu" /* nu */
-      ''
-        #!/usr/bin/env nu
-        if (pidof dms | is-not-empty ) {
-          dms ipc call powermenu open
-          
-        } else {
-          let opts = {
-            " 󰍃  Logout": {|| niri msg action quit}
-            "   Suspend": {|| systemctl suspend}
-            " 󰑐  Reboot": {|| systemctl reboot}
-            " 󰿅  Shutdown": {|| systemctl poweroff}
-          }
+  quickmenu = pkgs.writeScriptBin "quickmenu" /* nu */ ''
+      #!/usr/bin/env nu
+      let opts = {
+          "󰅶  Caffeine": {|| caffeine}
+          "󰖔  Night-shift": {|| night-shift}
+          "󰈊  Hyprpicker": {|| sleep 200ms;  ${pkgs.hyprpicker}/bin/hyprpicker -a}
+      }
 
-          let selected = $opts | columns | str join "\n" | rofi -no-show-icons -dmenu
-
-          do ($opts | get $selected)
-        }
-      '';
-
-  quickmenu = pkgs.writeShellScriptBin "quickmenu" ''
-
-    #/usr/bin/env bash
-    options=(
-        " 󰅶  Caffeine"
-        " 󰖔  Night-shift"
-        "   Nixy"
-        " 󰈊  Hyprpicker"
-    )
-
-    selected=$(printf '%s\n' "''${options[@]}" | rofi -no-show-icons -dmenu)
-    selected=$(echo "$selected" | cut -d' ' -f4-)
-
-    case $selected in
-        "Caffeine")
-        caffeine
-        ;;
-        "Night-shift")
-        night-shift
-        ;;
-        "Hyprpicker")
-        sleep 0.2
-        ${pkgs.hyprpicker}/bin/hyprpicker -a
-        ;;
-    esac
+      let selected = $opts | columns | str join "\n" | ${dmenu { pl = "Select an action ..."; }}
+      do ($opts | get $selected)
   '';
-
-  lock =
-    pkgs.writeShellScriptBin "lock"
-      # bash
-      ''
-        ${pkgs.hyprlock}/bin/hyprlock
-      '';
 
 in
 {
   home.packages = [
     menu
     powermenu
-    lock
     quickmenu
     utsikt
     utsiktt

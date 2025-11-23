@@ -15,7 +15,7 @@
     ../home/programs/btop
     # ../home/programs/cava
     ../home/system/niri
-    ../home/system/mango
+    # ../home/system/mango
     ../home/system/gtk
     ../home/system/wofi
     ../home/system/batsignal
@@ -53,6 +53,10 @@
     blanket # White-noise app
     pomodoro-gtk
     clock-rs
+    vicinae
+
+    proton-pass
+    protonmail-desktop
 
     zen-browser
     obsidian
