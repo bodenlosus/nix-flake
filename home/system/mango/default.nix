@@ -62,7 +62,6 @@ in
       tag_animation_direction=0      
       layer_animations=1
       layer_shadows=1
-      layer_blur=1
       
       shadows_size=0
       shadows_blur=0
@@ -72,7 +71,7 @@ in
       scroller_prefer_center=1
 
       blur=1
-      blur_layer=0
+      blur_layer=1
       blur_params_radius=10
       blur_params_num_passes=3
       blur_params_brightness=1
