@@ -3,7 +3,7 @@
   imports = [ ./themes/default.nix ];
   home.packages = with pkgs; [ helix ];
   xdg.configFile."helix/config.toml".text = ''
-    theme = "kanso"
+    theme = "github_dark_high_contrast"
 
     [editor]
     cursorline = true
@@ -56,8 +56,4 @@
     "C-space" = "completion"
   '';
 
-  xdg.desktopEntries.nemo = {
-    name = "Nemo";
-    exec = "${pkgs.kitty}/bin/kitty -1 -o background_opacity=1 hx";
-  };
 }

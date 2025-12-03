@@ -2,14 +2,17 @@
 {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "$mod,RETURN, exec, uwsm app -- ${pkgs.kitty}/bin/kitty -1" # Ghostty (terminal)
-      "$mod,E, exec, uwsm app -- ${pkgs.kitty}/bin/kitty -1 yazi"
-      "$mod,K, exec,  uwsm app -- ${pkgs.proton-pass}/bin/proton-pass" # Proton Pass
+      "$mod,RETURN, exec, ${pkgs.kitty}/bin/kitty -1" # Ghostty (terminal)
+      "$mod,E, exec, ${pkgs.kitty}/bin/kitty -1 yazi"
+      "$mod,K, exec,  ${pkgs.proton-pass}/bin/proton-pass" # Proton Pass
       "$mod,X, exec, powermenu" # Powermenu
-      "$mod,SPACE, exec, menu" # Launcher
+      "$mod,R, exec, menu" # Launcher
 
-      "$shiftMod,SPACE, exec, hyprfocus-toggle" # Toggle HyprFocus
-
+      "$mod,A, layoutmsg, move -col"
+      "$mod,D, layoutmsg, move +col"
+      "$mod,A, layoutmsg, move -col"
+      "$mod,D, layoutmsg, move +col"
+      
       "$mod,Q, killactive," # Close window
       "$mod,T, togglefloating," # Toggle Floating
       "$mod,F, fullscreen" # Toggle Fullscreen

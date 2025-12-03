@@ -1,26 +1,25 @@
-{ pkgs, inputs, ... }:
-{
+{ pkgs, inputs, ... }: {
   stylix = {
     enable = true;
 
     # Horizon Terminal
     base16Scheme = {
-      base00 = "#000000";
-      base01 = "#1f1f1f";
-      base02 = "#2e2e2e";
-      base03 = "#a1a1a1";
-      base04 = "#878787";
-      base05 = "#ededed";
-      base06 = "#f5f5f5";
+      base00 = "#070A11";
+      base01 = "#0d1117";
+      base02 = "#151b23";
+      base03 = "#9198a1";
+      base04 = "#656c76";
+      base05 = "#f0f6fc";
+      base06 = "#ffffff";
       base07 = "#ffffff";
-      base08 = "#f75f8f";
-      base09 = "#ff9907";
-      base0A = "#52a8ff";
-      base0B = "#62c073";
-      base0C = "#1da9b0";
-      base0D = "#c472fb";
-      base0E = "#f75f8f";
-      base0F = "#52a8ff";
+      base08 = "#ff7b72";
+      base09 = "#ffa657";
+      base0A = "#d29922";
+      base0B = "#3fb950";
+      base0C = "#39c5cf";
+      base0D = "#58a6ff";
+      base0E = "#be8fff";
+      base0F = "#eb3342";
     };
 
     cursor = {

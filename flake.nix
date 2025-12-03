@@ -15,7 +15,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     niri = {
       url = "github:sodiboo/niri-flake";
-      # inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
       # inputs.niri-unstable.url = "github:YaLTeR/niri/73ca3964d5bb6aa362c9dbfd826ced48fc37edae";
     };
     sops-nix = {
@@ -30,7 +30,6 @@
 
     stylix.url = "github:danth/stylix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    nur.url = "github:nix-community/NUR";
 
     # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     dgop = {
@@ -57,7 +56,6 @@
       system = "x86_64-linux";
       utils = import ./utils.nix { inherit nixpkgs inputs; };
       overlays = [
-        inputs.nur.overlays.default
         inputs.niri.overlays.niri
         (final: prev: {
           zen-browser = inputs.zen-browser.packages."${system}".beta;
