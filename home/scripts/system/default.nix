@@ -85,6 +85,21 @@ let
       do ($opts | get $selected)
     }
   '';
+  powermode = pkgs.writeScriptBin "powermode" /* nu */ ''
+    #!/usr/bin/env nu
+    let opts = {
+      "󰾆  Battery Saver": "power-saver"
+      "󰾅  Balanced": "balanced"
+      "󰓅  Performance": "performance"
+    }
+
+    let selected = $opts | columns | str join "\n" | ${dmenu { pl = "Select an action ..."; }}
+
+    let value = $opts | get $selected
+    powerprofilesctl set $value
+    notify-send $"($selected) enabled" -a "Power Profiles" -i battery-symbolic
+
+    '';
 
   quickmenu = pkgs.writeScriptBin "quickmenu" /* nu */ ''
       #!/usr/bin/env nu
@@ -92,6 +107,8 @@ let
           "󰅶  Caffeine": {|| caffeine}
           "󰖔  Night-shift": {|| night-shift}
           "󰈊  Hyprpicker": {|| sleep 200ms;  ${pkgs.hyprpicker}/bin/hyprpicker -a}
+          "󱜤  Screen Mirror": {|| screen-mirror}
+          "󰚥  Power Mode": {|| powermode}
       }
 
       let selected = $opts | columns | str join "\n" | ${dmenu { pl = "Select an action ..."; }}
@@ -108,5 +125,6 @@ in
     utsiktt
     clock
     mirror
+    powermode
   ];
 }
