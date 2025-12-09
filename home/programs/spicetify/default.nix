@@ -19,13 +19,13 @@ in
     customColorScheme =
       rec {
         text = "${colors.base07}";
-        subtext = "${colors.base03}";
-        extratext = "${colors.base04}";
+        subtext = "${colors.base04}";
+        extratext = "${colors.base05}";
         background = "${colors.base00}";
-        player = "${colors.base02}";
+        player = "${colors.base00}";
         main = background;
-        sidebar = "${colors.base01}";
-        card = player;
+        sidebar = "${colors.base00}";
+        card = "${colors.base01}";
         button = "${colors.base0D}";
         button-active = button;
         button-disabled = "${colors.base03}";

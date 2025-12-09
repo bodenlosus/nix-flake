@@ -67,6 +67,7 @@
 
     # office
     libreoffice-fresh
+    onlyoffice-desktopeditors
     # Dev
     python3
     jq

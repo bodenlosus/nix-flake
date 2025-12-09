@@ -11,15 +11,19 @@ in
   imports = [ ./binds.nix ];
   programs.niri.settings = {
     spawn-at-startup = [
-      {
-        command = [ "${pkgs.swww}/bin/swww-daemon" ];
-      }
+      # {
+      #   command = [ "${pkgs.swww}/bin/swww-daemon" ];
+      # }
+
       {
         command = [ "${pkgs.vicinae}/bin/vicinae" "server" ];
       }
       {
-        command = [ "/usr/bin/env clock" ];
+        command = [ "dms" "run" "-d" ];
       }
+      # {
+      #   command = [ "/usr/bin/env clock" ];
+      # }
 
     ];
     screenshot-path = "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png";
@@ -135,7 +139,7 @@ in
       }
     ];
   };
-  services.mako.enable = true;
+  # services.mako.enable = true;
   services.mako.settings = {
     border-radius = rounding;
     inherit border-size;

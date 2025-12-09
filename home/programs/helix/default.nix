@@ -3,7 +3,7 @@
   imports = [ ./themes/default.nix ];
   home.packages = with pkgs; [ helix ];
   xdg.configFile."helix/config.toml".text = ''
-    theme = "github_dark_high_contrast"
+    theme = "vercel"
 
     [editor]
     cursorline = true
