@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }:
+{
   boot = {
     bootspec.enable = true;
     loader = {
@@ -10,9 +11,7 @@
     };
     binfmt.emulatedSystems = [ "aarch64-linux" ];
     tmp.cleanOnBoot = true;
-    kernelPackages =
-      pkgs.linuxPackages_latest; # _zen, _hardened, _rt, _rt_latest, etc.
-
+    kernelPackages = pkgs.linuxPackages_latest; # _zen, _hardened, _rt, _rt_latest, etc.
 
     plymouth = {
       enable = true;
@@ -33,7 +32,6 @@
       "udev.log_priority=3"
       "psmouse.synaptics_intertouch=0"
     ];
-    consoleLogLevel = 3;
     initrd.verbose = false;
   };
 }

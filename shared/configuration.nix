@@ -1,8 +1,10 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
   environment.systemPackages = with pkgs; [
     libfaketime
+    ddcutil
   ];
-  xdg.terminal-exec.settings.default = ["kitty.desktop"];
+  xdg.terminal-exec.settings.default = [ "kitty.desktop" ];
   imports = [
     # ../home/system/gnome/system.nix
     ../home/system/niri/system.nix
@@ -13,4 +15,10 @@
   ];
   stylix.targets.plymouth.enable = true;
   services.gvfs.enable = true;
+
+  boot.kernelModules = [
+    "i2c-dev"
+    "i2c-algo-bit"
+  ];
+  hardware.i2c.enable = true;
 }
