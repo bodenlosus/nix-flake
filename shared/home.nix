@@ -6,7 +6,7 @@
 }:
 {
   imports = [
-    
+    ../secrets    
     ../home/system/dms
     ../home/programs/obsidian
     ../home/programs/direnv
@@ -67,6 +67,10 @@
 
     # office
     libreoffice-fresh
+    hunspell
+    hunspellDicts.de-de
+    hunspellDicts.en-us-large
+    zotero-beta
     onlyoffice-desktopeditors
     # Dev
     python3

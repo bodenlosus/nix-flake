@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     libfaketime
     ddcutil
+    openjdk
   ];
   xdg.terminal-exec.settings.default = [ "kitty.desktop" ];
   imports = [

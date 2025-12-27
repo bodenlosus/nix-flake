@@ -12,7 +12,7 @@ let
     {
       pl ? "",
     }:
-    "${pkgs.vicinae}/bin/vicinae dmenu --placeholder \"${pl}\"";
+    "${pkgs.sherlock-launcher}/bin/sherlock dmenu --placeholder \"${pl}\"";
   mirror =
     pkgs.writeScriptBin "screen-mirror" # nu
       ''
