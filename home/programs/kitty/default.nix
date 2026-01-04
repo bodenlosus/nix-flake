@@ -1,18 +1,24 @@
-{ lib, pkgs, ... }: {
+{ lib, pkgs, ... }:
+{
 
   programs.kitty = {
-  enable = true;
+    enable = true;
     keybindings = {
-      # Reset existing mappings
-      "ctrl+alt+tab" = "next_tab";
-      "ctrl+alt+shift+tab" = "previous_tab";
-      # Send Ctrl Tab and Ctrl + Shift + Tab for Tmux navigation
-      "ctrl+tab" = "send_text all \\x1b[27;5;9~";
-      "ctrl+shift+tab" = "send_text all \\x1b[27;6;9~";
-      "alt+tab" = "send_text all \\x1b[27;3;9~";
-      
+      "alt+q" = "new_window";
+      "alt+a" = "previous_window";
+      "alt+d" = "next_window";
+      "alt+c" = "close_window";
+      "shift+alt+q" = "next_layout";
+      "ctrl+alt+a" = "previous_tab";
+      "ctrl+alt+d" = "next_tab";
+      "ctrl+alt+c" = "close_tab";
+      "ctrl+alt+q" = "new_tab";
+      "shift+alt+a" = "move_window_backward";
+      "shift+alt+d" = "move_window_forward";
+      "shift+alt+w" = "move_window_to_top";
     };
     settings = {
+      placement_strategy = "top-left";
       scrollback_lines = 10000;
       initial_window_width = 1200;
       initial_window_height = 600;
@@ -28,6 +34,10 @@
       background_opacity = lib.mkForce 0.96;
       background_blur = 64;
       hide_window_decorations = true;
+      tab_bar_edge = "bottom";
+      tab_style = "slant";
+      tab_switch_strategy = "left";
+      enabled_layouts = "grid,horizontal,vertical";
     };
   };
 }

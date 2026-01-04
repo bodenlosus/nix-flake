@@ -31,6 +31,7 @@ in
     clipboard.disable-primary = true;
     prefer-no-csd = true;
     environment = {
+
       "TERM" = "kitty";
       "XDG_CURRENT_DESKTOP" = "Niri";
       "MOZ_ENABLE_WAYLAND" = "1";

@@ -42,23 +42,25 @@
         $env.PROMPT_MULTILINE_INDICATOR = "::: "
 
         $env.config = {
+          show_banner: false
+          completions: {
+            case_sensitive: false
+            quick: true
+            partial: true
+            algorithm: "fuzzy"
+            external: {
+              enable: true 
+              max_results: 100 
+              completer: $carapace_completer 
+            }
+          }
+        } # This brace closes $env.config
 
-         show_banner: false,
-         completions: {
-         case_sensitive: false # case-sensitive completions
-         quick: true    # set to false to prevent auto-selecting completions
-         partial: true    # set to false to prevent partial filling of the prompt
-         algorithm: "fuzzy"    # prefix or fuzzy
-         external: {
-         # set to false to prevent nushell looking into $env.PATH to find more suggestions
-             enable: true 
-         # set to lower can improve completion performance at the cost of omitting some options
-             max_results: 100 
-             completer: $carapace_completer # check 'carapace_completer' 
-           }
-         }
-        } 
-        '';
+        # Now add the secret logic outside the config record
+        if ($"${config.sops.secrets.gemini_api_key.path}" | path exists) {
+          $env.GEMINI_API_KEY = (open "${config.sops.secrets.gemini_api_key.path}" | str trim)
+        }
+      '';
     # NOTE- for btop to show gpu usage
     #may want to check the driver version with:
     #nix path-info -r /run/current-system | grep nvidia-x11
@@ -70,6 +72,7 @@
     #     "$LD_LIBRARY_PATH"
     #   ];
     # };
+
 
     shellAliases = {
       dmenu = "vicinae dmenu";
