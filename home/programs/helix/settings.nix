@@ -1,6 +1,6 @@
-{
+{lib, ...}: {
   programs.helix.settings = {
-    theme = "vercel";
+    theme = lib.mkForce "vercel";
 
     editor = {
       cursorline = true;
