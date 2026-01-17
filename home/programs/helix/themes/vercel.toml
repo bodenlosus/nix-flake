@@ -1,0 +1,117 @@
+
+# Vercel Dark theme for Helix
+# Based on the Vercel Dark color scheme
+
+"ui.background" = { bg = "#0a0a0a" }
+"ui.text" = "#ededed"
+"ui.text.focus" = "#ededed"
+"ui.text.info" = "#ededed"
+"ui.virtual" = "#2e2e2e"
+"ui.virtual.whitespace" = "#2e2e2e"
+"ui.virtual.ruler" = { bg = "#1a1a1a" }
+"ui.virtual.indent-guide" = "#2e2e2e"
+
+"ui.cursor" = { fg = "#0a0a0a", bg = "#ededed" }
+"ui.cursor.primary" = { fg = "#0a0a0a", bg = "#ededed" }
+"ui.cursor.match" = { fg = "#0a0a0a", bg = "#52a8ff" }
+"ui.selection" = { bg = "#52a8ff33" }
+"ui.selection.primary" = { bg = "#52a8ff33" }
+"ui.cursorline.primary" = { bg = "#1a1a1a" }
+
+"ui.linenr" = "#878787"
+"ui.linenr.selected" = "#ededed"
+
+"ui.statusline" = { fg = "#ededed", bg = "#000000" }
+"ui.statusline.inactive" = { fg = "#a1a1a1", bg = "#000000" }
+"ui.statusline.normal" = { fg = "#0a0a0a", bg = "#52a8ff" }
+"ui.statusline.insert" = { fg = "#0a0a0a", bg = "#62c073" }
+"ui.statusline.select" = { fg = "#0a0a0a", bg = "#c472fb" }
+
+"ui.menu" = { fg = "#ededed", bg = "#1f1f1f" }
+"ui.menu.selected" = { fg = "#ededed", bg = "#1a1a1a" }
+"ui.menu.scroll" = { fg = "#a1a1a1", bg = "#1f1f1f" }
+
+"ui.popup" = { fg = "#ededed", bg = "#000000" }
+"ui.popup.info" = { fg = "#ededed", bg = "#000000" }
+"ui.window" = { fg = "#2e2e2e" }
+"ui.help" = { fg = "#ededed", bg = "#000000" }
+
+"diagnostic.error" = { underline = { color = "#f75f8f", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "#ff9907", style = "curl" } }
+"diagnostic.info" = { underline = { color = "#52a8ff", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "#a1a1a1", style = "curl" } }
+
+"error" = "#f75f8f"
+"warning" = "#ff9907"
+"info" = "#52a8ff"
+"hint" = "#a1a1a1"
+
+"diff.plus" = "#62c073"
+"diff.minus" = "#f75f8f"
+"diff.delta" = "#ff9907"
+
+"markup.heading" = "#52a8ff"
+"markup.list" = "#f75f8f"
+"markup.bold" = { fg = "#ededed", modifiers = ["bold"] }
+"markup.italic" = { fg = "#ededed", modifiers = ["italic"] }
+"markup.link.url" = "#52a8ff"
+"markup.link.text" = "#52a8ff"
+"markup.quote" = "#62c073"
+"markup.raw" = "#62c073"
+
+# Syntax highlighting
+"comment" = "#a1a1a1"
+"comment.block.documentation" = "#a1a1a1"
+
+"constant" = "#52a8ff"
+"constant.numeric" = "#52a8ff"
+"constant.character.escape" = "#62c073"
+
+"string" = "#62c073"
+"string.regexp" = "#62c073"
+"string.special" = "#62c073"
+
+"attribute" = "#c472fb"
+"type" = "#c472fb"
+"type.builtin" = "#c472fb"
+"constructor" = "#62c073"
+
+"function" = "#c472fb"
+"function.builtin" = "#c472fb"
+"function.macro" = "#c472fb"
+"function.method" = "#c472fb"
+
+"keyword" = "#f75f8f"
+"keyword.control" = "#f75f8f"
+"keyword.control.import" = "#f75f8f"
+"keyword.control.return" = "#f75f8f"
+"keyword.control.conditional" = "#f75f8f"
+"keyword.control.repeat" = "#f75f8f"
+"keyword.control.exception" = "#f75f8f"
+"keyword.operator" = "#f75f8f"
+"keyword.directive" = "#f75f8f"
+"keyword.function" = "#f75f8f"
+"keyword.storage" = "#f75f8f"
+"keyword.storage.type" = "#f75f8f"
+"keyword.storage.modifier" = "#f75f8f"
+
+"operator" = "#f75f8f"
+
+"variable" = "#ededed"
+"variable.builtin" = "#52a8ff"
+"variable.parameter" = "#ededed"
+"variable.other.member" = "#52a8ff"
+
+"property" = "#52a8ff"
+
+"label" = "#52a8ff"
+
+"namespace" = "#c472fb"
+
+"special" = "#52a8ff"
+
+"punctuation" = "#ededed"
+"punctuation.delimiter" = "#ededed"
+"punctuation.bracket" = "#ededed"
+
+"tag" = "#62c073"
