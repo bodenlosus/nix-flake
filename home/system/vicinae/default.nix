@@ -42,7 +42,6 @@
     toml.generate "system.toml" theme;
   services.vicinae = {
     enable = true; # default: false
-    autoStart = true; # default: true
     package = pkgs.vicinae;
     settings = {
       closeOnFocusLoss = true;

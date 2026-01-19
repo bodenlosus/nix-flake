@@ -29,6 +29,10 @@
         command = "nginx-language-server";
         args = [ ];
       };
+      wgsl-analyzer = {
+        command = "wgsl-analyzer";
+        args = [ ];
+      };
     };
   };
 }

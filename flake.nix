@@ -32,15 +32,10 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
     # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    dgop = {
-      url = "github:AvengeMedia/dgop";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     dms = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.dgop.follows = "dgop";
     };
 
     vicinae = {
