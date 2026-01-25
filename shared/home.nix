@@ -6,7 +6,7 @@
 }:
 {
   imports = [
-    ../secrets
+    # ../secrets
     ../home/system/dms
     ../home/programs/obsidian
     # ../home/programs/sherlock
