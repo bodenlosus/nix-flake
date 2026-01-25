@@ -56,10 +56,6 @@
           }
         } # This brace closes $env.config
 
-        # Now add the secret logic outside the config record
-        if ($"${config.sops.secrets.gemini_api_key.path}" | path exists) {
-          $env.GEMINI_API_KEY = (open "${config.sops.secrets.gemini_api_key.path}" | str trim)
-        }
       '';
     # NOTE- for btop to show gpu usage
     #may want to check the driver version with:

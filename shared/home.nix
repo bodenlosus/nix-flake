@@ -12,7 +12,7 @@
     # ../home/programs/sherlock
     ../home/programs/direnv
     ../home/programs/btop
-    ../home/programs/gemini
+    # ../home/programs/gemini
     # ../home/programs/cava
     ../home/system/niri
     # ../home/system/mango
