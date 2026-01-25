@@ -40,6 +40,8 @@
       };
     in
     toml.generate "system.toml" theme;
+
+  home.packages = with pkgs; [ vicinae ];
   services.vicinae = {
     enable = true; # default: false
     package = pkgs.vicinae;
@@ -48,8 +50,10 @@
       considerPreedit = false;
       faviconService = "twenty";
       font = {
-        normal = "Inter";
-        size = 11;
+        normal = {
+          family = config.var.theme.font.name;
+          size = 11;
+        };
       };
       keybinding = "default";
       keybinds = { };
@@ -62,9 +66,9 @@
         name = "stylix";
       };
       window = {
-        csd = true;
         opacity = lib.mkForce 1.0;
-        rounding = 10;
+        csd = false;
+        rounding = config.var.theme.rounding;
       };
     };
 

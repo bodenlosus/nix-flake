@@ -9,6 +9,7 @@
   border-size = 1;
   animation-speed = "fast"; # "fast" | "medium" | "slow"
   fetch = "fastfetch"; # "nerdfetch" | "neofetch" | "pfetch" | "none"
+  font.name = "JetBrains Mono Nerd Font";
 
   bar = {
     position = "bottom"; # "top" | "bottom"

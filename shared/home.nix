@@ -6,9 +6,10 @@
 }:
 {
   imports = [
-    ../secrets    
+    ../secrets
     ../home/system/dms
     ../home/programs/obsidian
+    # ../home/programs/sherlock
     ../home/programs/direnv
     ../home/programs/btop
     ../home/programs/gemini
@@ -61,7 +62,6 @@
     zen-browser
     obsidian
     vscode
-    kdePackages.kdenlive
 
     # gnome
     bustle
@@ -102,6 +102,20 @@
     # Backup
     firefox
 
+    biome
+
     # palettify
   ];
+
+  home = {
+    inherit (config.var) username;
+    homeDirectory = "/home/" + config.var.username;
+
+    # Import my profile picture, used by the hyprpanel dashboard
+
+    # Don't touch this
+    stateVersion = "26.05";
+  };
+
+  programs.home-manager.enable = true;
 }

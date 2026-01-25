@@ -2,7 +2,7 @@
 {
   imports = [
     ../../nixos/audio.nix
-    ../../nixos/auto-upgrade.nix
+    # ../../nixos/auto-upgrade.nix
     ../../nixos/bluetooth.nix
     ../../nixos/fonts.nix
     ../../nixos/home-manager.nix
@@ -29,5 +29,5 @@
   home-manager.users."${config.var.username}" = import ./home.nix;
   home-manager.backupFileExtension = "backup";
   # Don't touch this
-  system.stateVersion = "25.05";
+  system.stateVersion = "26.05";
 }

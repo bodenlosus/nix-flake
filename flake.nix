@@ -56,7 +56,7 @@
           zen-browser = inputs.zen-browser.packages."${system}".beta;
           # hyprland = inputs.hyprland.packages.${system}.hyprland;
           # xdg-desktop-portal-hyprland = inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland;
-          vicinae = inputs.vicinae.packages.${system}.default;
+          # vicinae = inputs.vicinae.packages.${system}.default;
         })
         # (final: prev: {
         #   palettify = inputs.palettify.packages."${system}".default;

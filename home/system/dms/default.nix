@@ -64,15 +64,15 @@ in
 {
   imports = [
     
-    inputs.dms.homeModules.dankMaterialShell.default
-    inputs.dms.homeModules.dankMaterialShell.niri
+    inputs.dms.homeModules.dank-material-shell
+    # inputs.dms.homeModules.dankMaterialShell.niri
   ];
 
-  programs.dankMaterialShell = {
+  programs.dank-material-shell = {
     enable = true;
 
     # Core features
-    enableSystemd = false; # Systemd service for auto-start
+    systemd.enable = false; # Systemd service for auto-start
     enableSystemMonitoring = true; # System monitoring widgets (dgop)
     enableVPN = false; # VPN management widget
     enableDynamicTheming = false; # Wallpaper-based theming (matugen)

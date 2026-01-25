@@ -1,7 +1,7 @@
 # Spicetify is a spotify client customizer
 { pkgs, config, lib, inputs, ... }:
 let
-  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
   colors = config.lib.stylix.colors;
 
 in
