@@ -8,6 +8,7 @@
     ../../nixos/home-manager.nix
     ../../nixos/network-manager.nix
     ../../nixos/nix.nix
+    ../../nixos/fingerprint.nix
     ../../nixos/systemd-boot.nix
     ../../nixos/timezone.nix
     ../../nixos/tuigreet.nix
