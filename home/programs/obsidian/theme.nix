@@ -72,14 +72,14 @@ with config.lib.stylix.colors.withHashtag;
 
           --text-highlight-bg: ${base0E}66; /*Search Matches*/
           --text-highlight-bg-active: ${base0A}66; /*Active Search Match (Preview Mode)*/
-          --text-selection: ${base0D}FC; /*Text Selections*/
+          --text-selection: ${base0D}44; /*Text Selections*/
 
           --interactive-normal: ${base01}; /*Button Color*/
           --interactive-hover: ${base00}; /*Button Hovered Color*/
           --interactive-accent: ${magenta}; /*Workspace Note Title Underline*/
           --interactive-accent-hover: ${green}; /*Menu Button Hover*/
           
-          --scrollbar-bg: {base00}0D /*Scrollbar Gutter Background*/
+          --scrollbar-bg: ${base00}0D; /*Scrollbar Gutter Background*/
           --scrollbar-thumb-bg: ${base05}0D; /*Scrollbar Color*/
           --scrollbar-active-thumb-bg: ${base05}0D; /*Scrollbar Color*/
 
