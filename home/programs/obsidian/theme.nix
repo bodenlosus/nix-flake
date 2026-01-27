@@ -34,7 +34,27 @@ with config.lib.stylix.colors.withHashtag;
 
         .workspace-split.mod-sidedock.mod-left-split .workspace-tab-header-container {
 
-          background-color: var(--background-secondary) !important;
+          background-color: transparent !important;
+        }
+
+        .workspace-split.mod-sidedock.mod-right-split {
+
+          background-color: color-mix(in hsl, var(--background-secondary) 60%, transparent) !important;
+        }
+
+        .workspace-split.mod-sidedock .workspace-tab-container {
+
+          background-color: transparent !important;
+        }
+
+        .workspace-split.mod-sidedock .workspace-tab-container .workspace-leaf {
+
+          background-color: transparent !important;
+        }
+
+        .workspace-split.mod-sidedock.mod-right-split .workspace-tab-header-container {
+
+          background-color: transparent !important;
         }
 
         .workspace-split.mod-root.mod-vertical .workspace-tab-header-container {
@@ -48,8 +68,27 @@ with config.lib.stylix.colors.withHashtag;
           border-color: var(--background-modifier-border);
         }
 
+        .workspace-split.mod-sidedock.mod-right-split>.workspace-leaf-resize-handle {
+          top: 0;
+          height: 100%;
+          border-color: var(--background-modifier-border);
+        }
+
         .modal>.modal-content>.vertical-tab-header {
           background-color: var(--background-secondary) !important;
+        }
+
+        .mod-header.mod-ui,
+        .cm-header,
+        .el-h1,
+        .el-h2,
+        .el-h3,
+        .el-h4,
+        .el-h5,
+        .el-h6,
+        .el-h7,
+        .el-h8 {
+          font-family: var(--font-interface);
         }
 
         .theme-dark {
