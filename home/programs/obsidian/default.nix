@@ -59,5 +59,6 @@ let
   };
 in
 {
+  imports = [ ./theme.nix ];
   home.file.".style-settings.json".text = builtins.toJSON content;
 }

@@ -1,0 +1,79 @@
+
+
+        :root {
+           --color-red: #f75f8f;
+           --color-orange: #ff9907;
+           --color-yellow: #52a8ff;
+           --color-green: #62c073;
+           --color-cyan: #1da9b0;
+           --color-blue: #c472fb;
+           --color-purple: #f75f8f;
+           --color-pink: #f75f8f;
+
+           --bold-color: #f75f8f;
+           --italic-color: #f75f8f;
+           --text-normal: #ededed;
+           --text-muted: #878787;
+           --text-selection: #c472fb;
+           --text-highlight-bg: #000000;
+        }
+
+        .workspace-ribbon.side-dock-ribbon.mod-left::before {
+          background-color: var(--background-secondary) !important;
+        }
+
+        .workspace-split.mod-sidedock.mod-left-split .workspace-tab-header-container {
+
+          background-color: var(--background-secondary) !important;
+        }
+
+        .workspace-split.mod-root.mod-vertical .workspace-tab-header-container {
+
+          background-color: var(--background-primary) !important;
+        }
+
+        .workspace-split.mod-sidedock.mod-left-split>.workspace-leaf-resize-handle {
+          top: 0;
+          height: 100%;
+          border-color: var(--background-modifier-border);
+        }
+
+        .modal>.modal-content>.vertical-tab-header {
+          background-color: var(--background-secondary) !important;
+        }
+
+        .theme-dark {
+          --background-primary: #000000;
+          --background-secondary: #1f1f1f;
+
+          --background-modifier-cover: #1f1f1fCC; /*Obsidian Title Bar Bg*/
+          --background-primary: #000000; /*Note background*/
+          --background-primary-alt: #1f1f1f; /*Note Title background active*/
+          --background-secondary: #1f1f1f; /*Sidebar background*/
+          --background-secondary-alt: #000000; /*Sidebar Title background*/
+          
+          --background-modifier-border: #87878755; /*Border outline of quotes, tables, line breaks*/
+          
+          --text-normal: #ededed; /*Text body of note*/
+          --text-muted: #878787; /*Text darker for sidebar, toggles, inactive, tags, etc*/
+          --text-accent: #c472fb; /*Links*/
+          --text-accent-hover: #1da9b0; /*Links hover*/
+          --text-faint: #878787; /*Link brackets color & Gutter Numbers*/
+
+          --text-highlight-bg: #f75f8f66; /*Search Matches*/
+          --text-highlight-bg-active: #52a8ff66; /*Active Search Match (Preview Mode)*/
+          --text-selection: #c472fbFC; /*Text Selections*/
+
+          --interactive-normal: #1f1f1f; /*Button Color*/
+          --interactive-hover: #000000; /*Button Hovered Color*/
+          --interactive-accent: #f75f8f; /*Workspace Note Title Underline*/
+          --interactive-accent-hover: #62c073; /*Menu Button Hover*/
+          
+          --scrollbar-bg: {base00}0D /*Scrollbar Gutter Background*/
+          --scrollbar-thumb-bg: #c472fb1A; /*Scrollbar Color*/
+          --scrollbar-active-thumb-bg: #2551A; /*Scrollbar Color*/
+
+        }
+
+
+    
