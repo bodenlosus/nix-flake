@@ -28,8 +28,15 @@ with config.lib.stylix.colors.withHashtag;
            --text-highlight-bg: ${base00};
         }
 
-        .workspace-ribbon.side-dock-ribbon.mod-left::before {
+        .workspace.is-left-sidedock-open .workspace-ribbon.side-dock-ribbon.mod-left::before {
           background-color: var(--background-secondary) !important;
+          transition: none;
+        }
+
+        .workspace .workspace-ribbon.side-dock-ribbon.mod-left::before {
+          background-color: transparent !important;
+          transition: background-color 250ms 95ms ease-in-out normal;
+          border-right: 1px solid var(--background-modifier-border) !important;
         }
 
         .workspace-split.mod-sidedock.mod-left-split .workspace-tab-header-container {
@@ -90,6 +97,7 @@ with config.lib.stylix.colors.withHashtag;
         .el-h8 {
           font-family: var(--font-interface);
         }
+
 
         .theme-dark {
           --background-primary: ${base00};
