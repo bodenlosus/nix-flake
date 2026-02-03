@@ -28,18 +28,18 @@
 
   services.gvfs.enable = true;
 
-  fileSystems."/mnt/space" = {
-    device = "/dev/disk/by-uuid/aa22865e-7e8a-43d1-a164-c446dfa9f62f";
-    fsType = "ext4";
-    options = [
-      "users"
-      "nofail"
-      "exec"
-      "rw"
-      "user_xattr"
-      "acl"
-    ];
-  };
+  # fileSystems."/mnt/space" = {
+  #   device = "/dev/disk/by-uuid/aa22865e-7e8a-43d1-a164-c446dfa9f62f";
+  #   fsType = "ext4";
+  #   options = [
+  #     "users"
+  #     "nofail"
+  #     "exec"
+  #     "rw"
+  #     "user_xattr"
+  #     "acl"
+  #   ];
+  # };
 
   home-manager.users."${config.var.username}" = import ./home.nix;
   home-manager.backupFileExtension = "backup";

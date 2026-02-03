@@ -128,7 +128,7 @@
         };
         
         Python = {
-          language_servers = [ "ty" "!basedpyright" ];
+          language_servers = [ "ruff" "ty" "!basedpyright" ];
         };
       };
       
