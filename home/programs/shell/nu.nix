@@ -56,6 +56,11 @@
           }
         } # This brace closes $env.config
 
+        def trash
+
+        alias rm-unsafe = rm;
+        alias rm-notrash = rm -i;
+        alias rm = rm -i -t
       '';
     # NOTE- for btop to show gpu usage
     #may want to check the driver version with:
@@ -80,7 +85,6 @@
       # ls = "eza --icons=always --no-quotes";
       tree = "eza --icons=always --tree --no-quotes";
       sl = "ls";
-      open = "${pkgs.xdg-utils}/bin/xdg-open";
       icat = "${pkgs.kitty}/bin/kitty +kitten icat";
       ssh = "kitten ssh";
 

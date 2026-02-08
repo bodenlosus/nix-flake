@@ -14,8 +14,8 @@
 "ui.cursor" = { fg = "#0a0a0a", bg = "#ededed" }
 "ui.cursor.primary" = { fg = "#0a0a0a", bg = "#ededed" }
 "ui.cursor.match" = { fg = "#0a0a0a", bg = "#52a8ff" }
-"ui.selection" = { bg = "#52a8ff33" }
-"ui.selection.primary" = { bg = "#52a8ff33" }
+"ui.selection" = { bg = "#003870" }
+"ui.selection.primary" = { bg = "#003870" }
 "ui.cursorline.primary" = { bg = "#1a1a1a" }
 
 "ui.linenr" = "#878787"

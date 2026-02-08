@@ -1,9 +1,14 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   programs.zed-editor = {
     enable = true;
-    
+
     # Auto-install extensions
     extensions = [
       "basedpyright"
@@ -40,19 +45,19 @@
       "xml"
       "zig"
     ];
-    
+
     userSettings = {
       # Indent guides
       indent_guides = {
         coloring = "indent_aware";
         background_coloring = "indent_aware";
       };
-      
+
       # Minimap
       minimap = {
         show = "always";
       };
-      
+
       # Languages configuration
       languages = {
         TypeScript = {
@@ -60,7 +65,11 @@
           formatter = {
             external = {
               command = "biome";
-              arguments = [ "format" "--write" "--stdin-file-path={buffer_path}" ];
+              arguments = [
+                "format"
+                "--write"
+                "--stdin-file-path={buffer_path}"
+              ];
             };
           };
           jsx_tag_auto_close = {
@@ -71,34 +80,58 @@
             background_coloring = "indent_aware";
             enabled = true;
           };
-          language_servers = [ "typescript-language-server" "!vtsls" "..." ];
+          language_servers = [
+            "typescript-language-server"
+            "!vtsls"
+            "..."
+          ];
         };
-        
+
         TSX = {
           formatter = {
             external = {
               command = "biome";
-              arguments = [ "format" "--write" "--stdin-file-path={buffer_path}" ];
+              arguments = [
+                "format"
+                "--write"
+                "--stdin-file-path={buffer_path}"
+              ];
             };
           };
-          language_servers = [ "typescript-language-server" "!vtsls" "..." ];
+          language_servers = [
+            "typescript-language-server"
+            "!vtsls"
+            "..."
+          ];
         };
-        
+
         JavaScript = {
           formatter = {
             external = {
               command = "biome";
-              arguments = [ "format" "--write" "--stdin-file-path={buffer_path}" ];
+              arguments = [
+                "format"
+                "--write"
+                "--stdin-file-path={buffer_path}"
+              ];
             };
           };
-          language_servers = [ "typescript-language-server" "!vtsls" "..." ];
+          language_servers = [
+            "typescript-language-server"
+            "!vtsls"
+            "..."
+          ];
         };
-        
+
         JSON = {
           formatter = {
             external = {
               command = "biome";
-              arguments = [ "format" "--write" "--stdin-file-path={buffer_path}" ];
+              arguments = [
+                "format"
+                "--write"
+                "--stdin-file-path={buffer_path}"
+              ];
             };
           };
           indent_guides = {
@@ -107,12 +140,16 @@
             enabled = true;
           };
         };
-        
+
         JSONC = {
           formatter = {
             external = {
               command = "biome";
-              arguments = [ "format" "--write" "--stdin-file-path={buffer_path}" ];
+              arguments = [
+                "format"
+                "--write"
+                "--stdin-file-path={buffer_path}"
+              ];
             };
           };
           indent_guides = {
@@ -121,17 +158,21 @@
             enabled = true;
           };
         };
-        
+
         XML = {
           formatter = "prettier";
           tab_size = 2;
         };
-        
+
         Python = {
-          language_servers = [ "ty" "!basedpyright" ];
+          language_servers = [
+            "ruff"
+            "ty"
+            "!basedpyright"
+          ];
         };
       };
-      
+
       # Agent configuration
       agent = {
         play_sound_when_agent_done = true;
@@ -145,7 +186,7 @@
           model = "deepseek-reasoner";
         };
       };
-      
+
       # Language models
       language_models = {
         deepseek = {
@@ -165,29 +206,29 @@
           ];
         };
       };
-      
+
       # Autosave and session
       autosave = "on_focus_change";
       session = {
         restore_unsaved_buffers = true;
       };
-      
+
       # Features
       features = {
         edit_prediction_provider = "zed";
       };
-      
+
       # UI settings
       ui_font_size = lib.mkForce 14;
       buffer_font_size = lib.mkForce 16;
-      
+
       # Theme
       theme = lib.mkForce {
         mode = "system";
         light = "Github Dark";
         dark = "Vercel Dark";
       };
-      
+
       # Panels
       outline_panel = {
         dock = "left";
@@ -195,24 +236,24 @@
           show = "never";
         };
       };
-      
+
       project_panel = {
         dock = "right";
         scrollbar = {
           show = "never";
         };
       };
-      
+
       scrollbar = {
         show = "never";
       };
-      
+
       # Icon theme
       icon_theme = "Soft Charmed Icons";
-      
+
       # Helix mode
       helix_mode = true;
-      
+
       # Git configuration
       git = {
         git_gutter = "tracked_files";
@@ -222,44 +263,47 @@
         };
         hunk_style = null;
       };
-      
+
       git_panel = {
         dock = "left";
       };
-      
+
       # Terminal
       terminal = {
         dock = "bottom";
       };
-      
+
       # Toolbar
       toolbar = {
         breadcrumbs = true;
         quick_actions = true;
         selections_menu = true;
       };
-      
+
       # Gutter
       gutter = {
         folds = true;
         line_numbers = true;
       };
-      
+
       # Edit predictions
       edit_predictions = {
         mode = "eager";
       };
-      
+
       # Inlay hints
       inlay_hints = {
-        enabled = true;
+        enabled = false;
         show_type_hints = true;
         show_background = true;
+        toggle_on_modifiers_press = {
+          control = true;
+        };
       };
-      
+
       # Language server
       enable_language_server = true;
-      
+
       # LSP configuration
       lsp = {
         tailwindcss-language-server = {
@@ -279,7 +323,7 @@
             };
           };
         };
-        
+
         rust-analyzer = {
           initialization_options = {
             cargo = {
@@ -298,23 +342,22 @@
           };
         };
       };
-      
+
       lsp_document_colors = "background";
     };
   };
-  
+
   # Install required packages
   home.packages = with pkgs; [
     # Formatters
     biome
     nodePackages.prettier
-    
+
     # Language servers
     nodePackages.typescript-language-server
     tailwindcss-language-server
 
-    
     # Fonts
   ];
- 
+
 }

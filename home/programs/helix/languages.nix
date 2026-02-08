@@ -22,8 +22,22 @@
           args = [ "-" ];
         };
       }
-    ];
 
+      {
+        name = "python";
+        language-servers = [
+          "ty"
+          "ruff"
+        ];
+        formatter = {
+          command = "ruff";
+          args = [
+            "format"
+            "-"
+          ];
+        };
+      }
+    ];
     language-server = {
       nginx-language-server = {
         command = "nginx-language-server";
@@ -32,6 +46,14 @@
       wgsl-analyzer = {
         command = "wgsl-analyzer";
         args = [ ];
+      };
+      ruff = {
+        command = "ruff";
+        args = [ "server" ];
+      };
+      ty = {
+        command = "ty";
+        args = [ "server" ];
       };
     };
   };

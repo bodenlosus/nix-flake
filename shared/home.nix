@@ -9,6 +9,7 @@
     # ../secrets
     ../home/system/dms
     ../home/programs/obsidian
+    ../home/programs/affinity
     # ../home/programs/sherlock
     ../home/programs/direnv
     ../home/programs/btop
@@ -103,6 +104,7 @@
     firefox
 
     biome
+    jupyter-all
 
     # palettify
   ];

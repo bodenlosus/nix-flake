@@ -43,6 +43,10 @@
       # inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    affinity = {
+      url = "github:mrshmllow/affinity-nix";
+    };
+
   };
 
   outputs =
@@ -53,7 +57,8 @@
       overlays = [
         inputs.niri.overlays.niri
         (final: prev: {
-          zen-browser = inputs.zen-browser.packages."${system}".beta;
+          zen-browser = inputs.zen-browser.packages.${system}.beta;
+          affinity = inputs.affinity.packages.${system}.v3;
           # hyprland = inputs.hyprland.packages.${system}.hyprland;
           # xdg-desktop-portal-hyprland = inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland;
           # vicinae = inputs.vicinae.packages.${system}.default;
