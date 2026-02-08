@@ -104,6 +104,7 @@
     firefox
 
     biome
+    jupyter-all
 
     # palettify
   ];
